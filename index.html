@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GitMaster Pro — A comprehensive, interactive Git tutorial by Dr. Mohammad Arafah. Learn Git from zero to hero with interactive terminals, visual graphs, quizzes, and bilingual support (English/Arabic).">
+    <meta name="keywords" content="Git, tutorial, version control, GitHub, interactive, learning, Dr. Mohammad Arafah, University of Petra, Jordan">
+    <meta name="author" content="Dr. Mohammad Arafah">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="GitMaster Pro — Master Git From Zero to Hero">
+    <meta property="og:description" content="A comprehensive, interactive Git tutorial with terminal simulation, visual graphs, quizzes, and bilingual support.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ar_JO">
+    <meta property="og:site_name" content="GitMaster Pro">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GitMaster Pro — Master Git From Zero to Hero">
+    <meta name="twitter:description" content="Interactive Git tutorial by Dr. Mohammad Arafah, University of Petra.">
+
+    <title>GitMaster Pro — Interactive Git Tutorial | Dr. Mohammad Arafah</title>
+
+    <!-- Favicon (Git-themed inline SVG as data URI) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%234000A5'/%3E%3Cstop offset='100%25' stop-color='%2300C2FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='45' fill='url(%23g)'/%3E%3Cpath d='M50 20 L50 80 M30 40 L50 40 M50 60 L70 60' stroke='white' stroke-width='6' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='50' cy='20' r='5' fill='white'/%3E%3Ccircle cx='50' cy='80' r='5' fill='white'/%3E%3Ccircle cx='30' cy='40' r='5' fill='white'/%3E%3Ccircle cx='70' cy='60' r='5' fill='white'/%3E%3C/svg%3E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css?v=8">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "GitMaster Pro — Interactive Git Tutorial",
+        "description": "A comprehensive, interactive Git tutorial covering everything from basic version control concepts to advanced workflows, with interactive terminal simulation, visual commit graphs, quizzes, and bilingual (English/Arabic) support.",
+        "provider": {
+            "@type": "Person",
+            "name": "Dr. Mohammad Arafah",
+            "jobTitle": "Assistant Professor",
+            "affiliation": {
+                "@type": "CollegeOrUniversity",
+                "name": "University of Petra",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Amman",
+                    "addressCountry": "Jordan"
+                }
+            }
+        },
+        "educationalLevel": ["Beginner", "Intermediate", "Advanced"],
+        "inLanguage": ["en", "ar"],
+        "isAccessibleForFree": true,
+        "teaches": ["Git version control", "GitHub workflows", "Branching strategies", "Collaboration with Git"],
+        "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "courseWorkload": "PT16H"
+        }
+    }
+    </script>
+
+    <!-- Inline fallback styles for gradient backgrounds before CSS loads -->
+    <style>
+        /* Loading spinner */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0514 0%, #150a2b 50%, #0a0514 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .loader .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(139, 92, 246, 0.2);
+            border-top-color: #8B5CF6;
+            border-right-color: #00C2FF;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        .loader .loader-text {
+            color: #ECE9F7;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        /* Scroll progress indicator */
+        .progress-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, #4000A5, #00C2FF, #2DD4BF);
+            z-index: 100001;
+            transition: width 0.1s linear;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== LOADER ==================== -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+        <div class="loader-text" data-i18n="loader.text">Initializing GitMaster Pro...</div>
+    </div>
+
+    <!-- ==================== SCROLL PROGRESS INDICATOR ==================== -->
+    <div class="progress-indicator" id="progress-indicator"></div>
+
+    <!-- ==================== NOSCRIPT ==================== -->
+    <noscript>
+        <div style="padding: 2rem; text-align: center; background: #fff3cd; color: #856404; font-family: 'Inter', sans-serif; font-size: 1.1rem; border-bottom: 2px solid #ffc107;">
+            <strong>JavaScript Required:</strong> GitMaster Pro requires JavaScript to run. Please enable JavaScript in your browser settings to use this interactive Git tutorial.
+        </div>
+    </noscript>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <i class="fa-brands fa-git-alt"></i>
+            <span data-i18n="nav.brand">GitMaster Pro</span>
+        </div>
+
+        <div class="nav-links" id="nav-links">
+            <a href="#hero" class="nav-link active" data-i18n="nav.home">Home</a>
+            <a href="#learning-path" class="nav-link" data-i18n="nav.learn">Learn</a>
+            <a href="#terminal-playground" class="nav-link" data-i18n="nav.terminal">Terminal</a>
+            <a href="#git-visualizer" class="nav-link" data-i18n="nav.visualizer">Visualizer</a>
+            <a href="#cheatsheet" class="nav-link" data-i18n="nav.cheatsheet">Cheat Sheet</a>
+            <a href="#quiz-section" class="nav-link" data-i18n="nav.quiz">Quiz</a>
+        </div>
+
+        <div class="nav-controls">
+            <select id="os-select" aria-label="Select operating system">
+                <option value="windows">Windows</option>
+                <option value="mac">macOS</option>
+                <option value="linux">Linux</option>
+            </select>
+
+            <button id="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button id="lang-toggle" aria-label="Toggle language" title="Switch language">
+                <span data-i18n="nav.langToggle">العربية</span>
+            </button>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="hero-glow hero-glow-3"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fa-solid fa-code-branch"></i>
+                <span data-i18n="hero.badge">Interactive Git Learning Platform</span>
+            </div>
+
+            <h1 class="hero-title-gradient" data-i18n="hero.title">GitMaster Pro</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Learn Git interactively. Practice commands, visualize workflows, and master version control.</p>
+
+            <div class="hero-buttons">
+                <a href="#learning-path" class="btn btn-hero-primary">
+                    <i class="fa-solid fa-rocket"></i>
+                    <span data-i18n="hero.cta.start">Start Learning</span>
+                    <i class="fa-solid fa-arrow-right hero-btn-arrow"></i>
+                </a>
+                <a href="#terminal-playground" class="btn btn-hero-secondary">
+                    <i class="fa-solid fa-terminal"></i>
+                    <span data-i18n="hero.cta.terminal">Try Terminal</span>
+                </a>
+                <a href="#cheatsheet" class="btn btn-hero-secondary">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span data-i18n="hero.cta.cheatsheet">Cheat Sheet</span>
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-cubes"></i></div>
+                    <div class="stat-number">21+</div>
+                    <div class="stat-label" data-i18n="hero.stat.modules">Modules</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-terminal"></i></div>
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label" data-i18n="hero.stat.commands">Commands</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-brands fa-windows"></i></div>
+                    <div class="stat-number">3</div>
+                    <div class="stat-label" data-i18n="hero.stat.os">OS Supported</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-language"></i></div>
+                    <div class="stat-number">2</div>
+                    <div class="stat-label" data-i18n="hero.stat.languages">Languages</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-terminal">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <span class="terminal-title">bash</span>
+                </div>
+                <div class="terminal-body" id="hero-terminal-body">
+                    <!-- JS will animate commands here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURES SECTION ==================== -->
+    <section id="features" class="features-section" style="background: linear-gradient(180deg, #f3f0fa 0%, #ffffff 50%, #f3f0fa 100%);">
+        <div class="section-header">
+            <h2 data-i18n="features.title">Why GitMaster Pro?</h2>
+            <p data-i18n="features.subtitle">Everything you need to master Git in one place</p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #F05032, #ff7b5e);">
+                    <i class="fa-solid fa-terminal"></i>
+                </div>
+                <h3 data-i18n="features.terminal.title">Interactive Terminal</h3>
+                <p data-i18n="features.terminal.desc">Practice Git commands in a safe, simulated terminal environment without affecting real repositories.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #2ea44f, #56d364);">
+                    <i class="fa-solid fa-project-diagram"></i>
+                </div>
+                <h3 data-i18n="features.visualizer.title">Visual Git Graph</h3>
+                <p data-i18n="features.visualizer.desc">See your commits, branches, and merges come alive with real-time animated commit graph visualizations.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #0078d4, #4da6ff);">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3 data-i18n="features.multios.title">Multi-OS Support</h3>
+                <p data-i18n="features.multios.desc">Tailored instructions for Windows, macOS, and Linux. Switch your OS and see platform-specific commands instantly.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #007ACC, #3dc9f6);">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3 data-i18n="features.vscode.title">VSCode Integration</h3>
+                <p data-i18n="features.vscode.desc">Learn how to leverage Git directly within Visual Studio Code with guided walkthroughs and tips.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #4000A5, #6E33D6);">
+                    <i class="fa-solid fa-language"></i>
+                </div>
+                <h3 data-i18n="features.bilingual.title">Bilingual Content</h3>
+                <p data-i18n="features.bilingual.desc">Full English and Arabic support with proper RTL layout, making Git accessible to a wider audience.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon" style="background: linear-gradient(135deg, #da3633, #f78166);">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3 data-i18n="features.progress.title">Progress Tracking</h3>
+                <p data-i18n="features.progress.desc">Track your learning journey with completion indicators, quizzes, and achievement milestones.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LEARNING PATH SECTION ==================== -->
+    <section id="learning-path" class="learning-section" style="background: linear-gradient(180deg, #f3f0fa 0%, #f8fafc 50%, #ffffff 100%);">
+        <div class="section-header">
+            <h2 data-i18n="learning.title">Learning Path</h2>
+            <p data-i18n="learning.subtitle">Follow a structured curriculum from Git basics to advanced workflows</p>
+        </div>
+
+        <div class="path-filter">
+            <button class="filter-btn active" data-filter="all" data-i18n="learning.filter.all">All</button>
+            <button class="filter-btn" data-filter="beginner" data-i18n="learning.filter.beginner">Beginner</button>
+            <button class="filter-btn" data-filter="intermediate" data-i18n="learning.filter.intermediate">Intermediate</button>
+            <button class="filter-btn" data-filter="advanced" data-i18n="learning.filter.advanced">Advanced</button>
+        </div>
+
+        <div class="module-grid" id="module-grid">
+            <!-- JS will populate module cards here -->
+        </div>
+
+        <div class="progress-overview">
+            <div class="progress-overview-header">
+                <h3 data-i18n="learning.progress.title">Overall Progress</h3>
+                <span class="progress-percentage" id="overall-progress-text">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="overall-progress-bar" style="width: 0%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MODULE VIEW (INDIVIDUAL MODULE) ==================== -->
+    <section id="module-view" class="module-section" style="display: none;">
+        <div class="module-header">
+            <button class="btn btn-back" id="module-back" data-i18n="module.back">
+                <i class="fa-solid fa-arrow-left"></i> Back to Modules
+            </button>
+            <h2 class="module-title" id="module-title" data-i18n="module.title">Module Title</h2>
+            <div class="module-progress">
+                <span class="module-progress-text" id="module-progress-text" data-i18n="module.progress">Progress: 0%</span>
+                <div class="progress-bar-container small">
+                    <div class="progress-bar" id="module-progress-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="module-content" id="module-content">
+            <!-- JS will populate steps here -->
+        </div>
+
+        <div class="module-nav">
+            <button class="btn btn-nav" id="prev-module" data-i18n="module.prev">
+                <i class="fa-solid fa-chevron-left"></i> Previous Module
+            </button>
+            <button class="btn btn-nav" id="next-module" data-i18n="module.next">
+                Next Module <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- ==================== TERMINAL PLAYGROUND ==================== -->
+    <section id="terminal-playground" class="terminal-section" style="background: linear-gradient(135deg, #0a0514 0%, #150a2b 50%, #0f0720 100%);">
+        <div class="section-header light">
+            <h2 data-i18n="terminal.title">Interactive Git Terminal</h2>
+            <p data-i18n="terminal.subtitle">Practice Git commands in a safe, simulated environment</p>
+        </div>
+
+        <!-- Challenge Bar -->
+        <div class="term-challenge-bar" id="term-challenge-bar">
+            <div class="challenge-selector">
+                <span class="challenge-label"><i class="fa-solid fa-bullseye"></i> <span data-i18n="terminal.challenge">Challenge</span>:</span>
+                <div class="challenge-level-tabs" id="challenge-level-tabs">
+                    <button class="ch-level-btn active" data-level="all"><i class="fa-solid fa-layer-group"></i> <span data-i18n="learning.filter.all">All</span></button>
+                    <button class="ch-level-btn" data-level="beginner"><i class="fa-solid fa-seedling"></i> <span data-i18n="terminal.ch.level.beginner">Beginner</span></button>
+                    <button class="ch-level-btn" data-level="intermediate"><i class="fa-solid fa-fire"></i> <span data-i18n="terminal.ch.level.intermediate">Intermediate</span></button>
+                    <button class="ch-level-btn" data-level="advanced"><i class="fa-solid fa-bolt"></i> <span data-i18n="terminal.ch.level.advanced">Advanced</span></button>
+                </div>
+                <div class="challenge-tabs" id="challenge-tabs"></div>
+                <button class="ch-reset-btn" id="ch-reset-btn" title="Reset progress"><i class="fa-solid fa-rotate-left"></i> <span data-i18n="terminal.ch.reset">Reset Progress</span></button>
+            </div>
+        </div>
+
+        <div class="playground-container">
+            <!-- Git State Panel (left) -->
+            <div class="term-state-panel" id="term-state-panel">
+                <div class="state-section state-branch" id="state-branch">
+                    <div class="state-heading"><i class="fa-solid fa-code-branch"></i> <span data-i18n="terminal.state.branch">Branch</span></div>
+                    <div class="state-value" id="state-branch-name">—</div>
+                </div>
+                <div class="state-section state-files">
+                    <div class="state-heading"><i class="fa-solid fa-folder-tree"></i> <span data-i18n="terminal.state.files">File Explorer</span></div>
+                    <div class="file-tree" id="file-tree"></div>
+                </div>
+                <div class="state-section state-commits">
+                    <div class="state-heading"><i class="fa-solid fa-timeline"></i> <span data-i18n="terminal.state.commits">Commits</span></div>
+                    <div class="commit-mini-graph" id="commit-mini-graph"></div>
+                </div>
+                <div class="state-section state-achievements">
+                    <div class="state-heading"><i class="fa-solid fa-trophy"></i> <span data-i18n="terminal.achievements">Achievements</span></div>
+                    <div class="achievements-list" id="achievements-list"></div>
+                </div>
+            </div>
+
+            <!-- Terminal (center) -->
+            <div class="terminal terminal-large">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <div class="terminal-tab-bar" id="terminal-tab-bar">
+                        <button class="term-tab active" data-tab="0">Terminal 1</button>
+                        <button class="term-tab-add" id="term-tab-add" title="New terminal">+</button>
+                    </div>
+                </div>
+                <div class="terminal-body" id="playground-terminal"></div>
+                <div class="cmd-breakdown" id="cmd-breakdown"></div>
+                <div class="terminal-input-line">
+                    <span class="terminal-prompt"></span>
+                    <input type="text" id="terminal-input" placeholder="Type a git command..." autocomplete="off" spellcheck="false" aria-label="Git command input">
+                </div>
+            </div>
+
+            <!-- Sidebar (right) — switches between quick commands and guide panel -->
+            <div class="terminal-sidebar" id="terminal-sidebar">
+                <div class="sidebar-quick" id="sidebar-quick">
+                    <h3 class="sidebar-title" data-i18n="terminal.quickCommands">Quick Commands</h3>
+                    <div class="quick-commands" id="quick-commands"></div>
+                    <div class="terminal-help">
+                        <p data-i18n="terminal.help.text">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Type <code>help</code> to see all available commands, or click a quick command above to try it.
+                        </p>
+                    </div>
+                </div>
+                <div class="sidebar-guide" id="sidebar-guide" style="display:none;">
+                    <div class="guide-header">
+                        <h3 class="guide-title" id="guide-title"></h3>
+                        <button class="guide-close-btn" id="guide-close-btn" title="Close"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <p class="guide-desc" id="guide-desc"></p>
+                    <div class="guide-progress-bar">
+                        <div class="guide-progress-fill" id="guide-progress-fill"></div>
+                    </div>
+                    <div class="guide-progress-text" id="guide-progress-text"></div>
+                    <div class="guide-steps" id="guide-steps"></div>
+                    <div class="guide-complete-msg" id="guide-complete-msg" style="display:none;">
+                        <i class="fa-solid fa-trophy"></i>
+                        <span data-i18n="terminal.ch.complete">Challenge Complete!</span>
+                        <button class="btn btn-sm guide-next-btn" id="guide-next-btn">
+                            <span data-i18n="terminal.ch.nextChallenge">Next Challenge</span> <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Command Timeline & Export -->
+        <div class="term-bottom-bar">
+            <div class="cmd-timeline" id="cmd-timeline">
+                <span class="timeline-label"><i class="fa-solid fa-clock-rotate-left"></i> <span data-i18n="terminal.history">History</span></span>
+                <div class="timeline-items" id="timeline-items"></div>
+            </div>
+            <div class="term-bottom-actions">
+                <button class="btn btn-sm btn-export" id="btn-export-session" title="Export session as .sh script">
+                    <i class="fa-solid fa-download"></i> <span data-i18n="terminal.export">Export .sh</span>
+                </button>
+                <button class="btn btn-sm btn-clear-all" id="btn-clear-terminal" title="Reset terminal">
+                    <i class="fa-solid fa-rotate-left"></i> <span data-i18n="terminal.reset">Reset</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GIT VISUALIZER ==================== -->
+    <section id="git-visualizer" class="visualizer-section">
+        <div class="section-header light">
+            <h2 data-i18n="visualizer.title">Git Workflow Visualizer</h2>
+            <p data-i18n="visualizer.subtitle">Watch Git operations come to life with animated commit graphs</p>
+        </div>
+
+        <div class="visualizer-container">
+            <div class="visualizer-controls">
+                <button class="viz-btn" data-action="init" data-i18n="visualizer.btn.init">
+                    <i class="fa-solid fa-play"></i> Init
+                </button>
+                <button class="viz-btn" data-action="commit" data-i18n="visualizer.btn.commit">
+                    <i class="fa-solid fa-circle-check"></i> Commit
+                </button>
+                <button class="viz-btn" data-action="branch" data-i18n="visualizer.btn.branch">
+                    <i class="fa-solid fa-code-branch"></i> Branch
+                </button>
+                <button class="viz-btn" data-action="merge" data-i18n="visualizer.btn.merge">
+                    <i class="fa-solid fa-code-merge"></i> Merge
+                </button>
+                <button class="viz-btn" data-action="reset" data-i18n="visualizer.btn.reset">
+                    <i class="fa-solid fa-rotate-left"></i> Reset
+                </button>
+                <button class="viz-btn viz-btn-danger" data-action="clear" data-i18n="visualizer.btn.clear">
+                    <i class="fa-solid fa-trash"></i> Clear
+                </button>
+            </div>
+
+            <div class="visualizer-canvas">
+                <canvas id="git-canvas" width="800" height="400"></canvas>
+            </div>
+
+            <div class="visualizer-info" id="visualizer-info">
+                <p data-i18n="visualizer.info.default">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Click <strong>Init</strong> to initialize a new repository and start visualizing Git operations.
+                </p>
+            </div>
+        </div>
+
+        <div class="viz-practices" id="viz-practices">
+            <!-- JS populates best practices and pitfalls -->
+        </div>
+    </section>
+
+    <!-- ==================== CHEAT SHEET ==================== -->
+    <section id="cheatsheet" class="cheatsheet-section" style="background: linear-gradient(180deg, #f3f0fa 0%, #f8fafc 50%, #ffffff 100%);">
+        <div class="section-header">
+            <h2 data-i18n="cheatsheet.title">Git Cheat Sheet</h2>
+            <p data-i18n="cheatsheet.subtitle">Quick reference for the most commonly used Git commands</p>
+        </div>
+
+        <div class="cheat-search">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" id="cheat-search" placeholder="Search commands..." data-i18n-placeholder="cheatsheet.searchPlaceholder" aria-label="Search Git commands" autocomplete="off">
+        </div>
+
+        <div class="cheat-grid" id="cheat-grid">
+            <!-- JS populates cheat sheet cards -->
+            <!--
+                Card template structure:
+                <div class="cheat-card">
+                    <div class="cheat-category" style="background: ...;">
+                        <i class="fa-solid fa-..."></i>
+                        <span>Category Name</span>
+                    </div>
+                    <div class="cheat-items">
+                        <div class="cheat-item">
+                            <code class="cheat-command">git command</code>
+                            <span class="cheat-description">Description of the command</span>
+                        </div>
+                    </div>
+                </div>
+            -->
+        </div>
+    </section>
+
+    <!-- ==================== QUIZ SECTION ==================== -->
+    <section id="quiz-section" class="quiz-section" style="background: linear-gradient(180deg, #ffffff 0%, #f8fafc 50%, #f3f0fa 100%);">
+        <div class="section-header">
+            <h2 data-i18n="quiz.title">Test Your Knowledge</h2>
+            <p data-i18n="quiz.subtitle">Challenge yourself with Git quizzes at various difficulty levels</p>
+        </div>
+
+        <div class="quiz-controls">
+            <div class="quiz-level-selector">
+                <button class="quiz-level-btn active" data-level="beginner" data-i18n="quiz.level.beginner">
+                    <i class="fa-solid fa-seedling"></i> Beginner
+                </button>
+                <button class="quiz-level-btn" data-level="intermediate" data-i18n="quiz.level.intermediate">
+                    <i class="fa-solid fa-tree"></i> Intermediate
+                </button>
+                <button class="quiz-level-btn" data-level="advanced" data-i18n="quiz.level.advanced">
+                    <i class="fa-solid fa-mountain"></i> Advanced
+                </button>
+            </div>
+            <div class="quiz-score-display">
+                <i class="fa-solid fa-trophy"></i>
+                <span data-i18n="quiz.score">Score:</span>
+                <span id="quiz-score" class="quiz-score-value">0/0</span>
+            </div>
+        </div>
+
+        <div class="quiz-container" id="quiz-container">
+            <!-- JS populates quiz cards -->
+        </div>
+
+        <div class="quiz-result" id="quiz-result" style="display: none;">
+            <div class="quiz-result-content">
+                <div class="quiz-result-icon">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <h3 class="quiz-result-title" data-i18n="quiz.result.title">Quiz Complete!</h3>
+                <p class="quiz-result-score" id="quiz-result-score"></p>
+                <p class="quiz-result-message" id="quiz-result-message"></p>
+                <button class="btn btn-primary" id="quiz-retry" data-i18n="quiz.result.retry">
+                    <i class="fa-solid fa-rotate"></i> Try Again
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WORKFLOWS SECTION ==================== -->
+    <section id="workflows" class="workflows-section">
+        <div class="section-header light">
+            <h2 data-i18n="workflows.title">Git Workflows &amp; Strategies</h2>
+            <p data-i18n="workflows.subtitle">Explore popular branching strategies used by development teams worldwide</p>
+        </div>
+
+        <div class="workflow-tabs">
+            <button class="workflow-tab active" data-workflow="gitflow" data-i18n="workflows.tab.gitflow">
+                <i class="fa-solid fa-code-branch"></i> GitFlow
+            </button>
+            <button class="workflow-tab" data-workflow="githubflow" data-i18n="workflows.tab.githubflow">
+                <i class="fa-brands fa-github"></i> GitHub Flow
+            </button>
+            <button class="workflow-tab" data-workflow="trunk" data-i18n="workflows.tab.trunk">
+                <i class="fa-solid fa-timeline"></i> Trunk-Based
+            </button>
+        </div>
+
+        <div class="workflow-content" id="workflow-content">
+            <!-- JS populates SVG diagrams and descriptions -->
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" style="background: linear-gradient(135deg, #0a0514 0%, #150a2b 50%, #0a0514 100%);">
+        <div class="footer-content">
+            <div class="footer-column footer-brand">
+                <div class="footer-logo">
+                    <i class="fa-brands fa-git-alt"></i>
+                    <span data-i18n="footer.brand">GitMaster Pro</span>
+                </div>
+                <p data-i18n="footer.description">A comprehensive, interactive Git tutorial designed to take you from a complete beginner to a confident Git user. Built with passion for education and open-source.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/marafah" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mohammad-arafah/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://marafah.github.io/Portfolio/" target="_blank" rel="noopener" aria-label="Portfolio" title="Portfolio"><i class="fa-solid fa-globe"></i></a>
+                    <a href="mailto:mohammad_arafah@hotmail.com" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-links">
+                <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+                <ul>
+                    <li><a href="#hero" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#learning-path" data-i18n="nav.learn">Learn</a></li>
+                    <li><a href="#terminal-playground" data-i18n="nav.terminal">Terminal</a></li>
+                    <li><a href="#git-visualizer" data-i18n="nav.visualizer">Visualizer</a></li>
+                    <li><a href="#cheatsheet" data-i18n="nav.cheatsheet">Cheat Sheet</a></li>
+                    <li><a href="#quiz-section" data-i18n="nav.quiz">Quiz</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-author">
+                <h4 data-i18n="footer.createdBy">Created By</h4>
+                <div class="author-info">
+                    <div class="author-avatar">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="author-details">
+                        <strong data-i18n="footer.author.name">Dr. Mohammad Arafah</strong>
+                        <span data-i18n="footer.author.title">Assistant Professor</span>
+                        <span data-i18n="footer.author.university">University of Petra, Jordan</span>
+                        <div class="author-links">
+                            <a href="https://marafah.github.io/Portfolio/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> <span data-i18n="footer.author.portfolio">Portfolio</span></a>
+                            <a href="https://github.com/marafah" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+                            <a href="https://www.linkedin.com/in/mohammad-arafah/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                <span data-i18n="footer.copyright">&copy; 2026 GitMaster Pro. All rights reserved.</span>
+                <span class="footer-separator">|</span>
+                <span data-i18n="footer.powered">Powered by GitMaster Pro</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING ELEMENTS ==================== -->
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top" title="Back to top" style="display: none;">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- ==================== MODAL TEMPLATE ==================== -->
+    <div class="modal" id="command-modal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title" data-i18n="modal.title">Command Details</h3>
+                <button class="modal-close" id="modal-close" aria-label="Close modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- JS populates modal content -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modal-close-btn" data-i18n="modal.close">Close</button>
+                <button class="btn btn-primary" id="modal-try-btn" data-i18n="modal.tryIt">
+                    <i class="fa-solid fa-terminal"></i> Try in Terminal
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="js/script.js?v=9"></script>
+</body>
+</html>
