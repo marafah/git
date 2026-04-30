@@ -284,9 +284,9 @@ section {
   width: 100%;
   z-index: 1000;
   padding: 0 20px;
-  background: rgba(228, 218, 244, 0.82);
-  backdrop-filter: saturate(180%) blur(18px);
-  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  background: rgba(240, 234, 249, 0.75);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid transparent;
   transition: background 0.3s cubic-bezier(0.4,0,0.2,1), border-color 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
 }
@@ -296,6 +296,7 @@ section {
 }
 
 .navbar.scrolled {
+  background: rgba(228, 218, 244, 0.92);
   border-bottom-color: var(--border-color);
   box-shadow: 0 4px 24px -12px rgba(64, 0, 165, 0.15);
 }
