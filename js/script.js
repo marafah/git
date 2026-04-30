@@ -924,6 +924,223 @@ en: {
 'mod21.s6.desc': 'Use "git blame <file>" to see who last modified each line, along with the commit hash and date. This helps trace when and why a specific change was made. In VSCode, the GitLens extension provides inline blame annotations.',
 'mod21.s6.vscode': 'Install the GitLens extension for inline blame annotations, commit details on hover, and rich history visualization.',
 
+// Module 22: Command Line Essentials
+'mod22.title': 'Command Line Essentials',
+'mod22.desc': 'Master the terminal basics every developer needs — navigating directories, creating and managing files, and understanding paths before diving into Git.',
+'mod22.s1.title': 'What is the Command Line?',
+'mod22.s1.desc': 'The command line (terminal, shell, CLI) is a text-based interface for interacting with your computer. Unlike graphical interfaces, you type commands to navigate folders, create files, and run programs. On macOS it\'s called Terminal, on Windows you can use Command Prompt, PowerShell, or Git Bash.',
+'mod22.s2.title': 'Navigating Directories',
+'mod22.s2.desc': 'Use "pwd" (print working directory) to see where you are, "ls" to list files and folders, and "cd" to change directories. "cd .." goes up one level, "cd ~" goes to your home directory.',
+'mod22.s3.title': 'Absolute vs Relative Paths',
+'mod22.s3.desc': 'An absolute path starts from the root of the filesystem (e.g., /Users/name/projects). A relative path starts from your current directory (e.g., ./src/app.js or ../config). Use "." for the current directory and ".." for the parent directory.',
+'mod22.s4.title': 'Creating & Deleting Files and Folders',
+'mod22.s4.desc': 'Create files with "touch filename" (Mac/Linux) or "echo. > filename" (Windows). Create directories with "mkdir dirname". Remove files with "rm filename" and directories with "rm -r dirname". Use "rmdir" for empty directories.',
+'mod22.s4.warning': 'The "rm -r" command permanently deletes files and folders without sending them to the trash. Double-check before running it!',
+'mod22.s5.title': 'Copying & Moving Files',
+'mod22.s5.desc': 'Copy files with "cp source destination" and directories with "cp -r source destination". Move or rename files with "mv source destination". Moving a file to a new name in the same directory renames it.',
+'mod22.s6.title': 'Essential Commands Overview',
+'mod22.s6.desc': 'Quick reference: "cat filename" displays file contents, "head/tail" shows beginning/end, "clear" clears the screen, "history" shows recent commands, and "man command" (Mac/Linux) opens the manual page. On Windows Git Bash, most Unix commands work the same way.',
+'mod22.s6.tip': 'Use the Tab key to auto-complete file and folder names — this saves time and avoids typos.',
+
+// Module 23: SSH Authentication for GitHub
+'mod23.title': 'SSH Authentication for GitHub',
+'mod23.desc': 'Set up SSH keys to securely authenticate with GitHub without entering your password every time you push or pull.',
+'mod23.s1.title': 'Why SSH?',
+'mod23.s1.desc': 'SSH (Secure Shell) uses public-key cryptography to authenticate you with GitHub. Instead of typing your username and password (or Personal Access Token) every time, SSH keys provide a seamless, secure connection. Once set up, Git operations over SSH are automatic.',
+'mod23.s2.title': 'Generate an SSH Key Pair',
+'mod23.s2.desc': 'Generate a new SSH key pair using the Ed25519 algorithm (recommended) or RSA. The private key stays on your machine and must never be shared. The public key is added to your GitHub account.',
+'mod23.s3.title': 'Add Key to SSH Agent',
+'mod23.s3.desc': 'The SSH agent manages your keys in memory so you don\'t have to enter the passphrase each time. Start the agent and add your private key.',
+'mod23.s4.title': 'Add Public Key to GitHub',
+'mod23.s4.desc': 'Copy your public key and add it to GitHub: go to Settings → SSH and GPG Keys → New SSH Key. Paste the key and give it a descriptive title (e.g., "Work Laptop 2026").',
+'mod23.s5.title': 'Test the SSH Connection',
+'mod23.s5.desc': 'Verify your SSH connection to GitHub. A successful test will show "Hi username! You\'ve successfully authenticated" confirming your key is properly linked to your GitHub account.',
+'mod23.s6.title': 'Clone Using SSH',
+'mod23.s6.desc': 'Now use SSH URLs instead of HTTPS when cloning repositories. SSH URLs look like git@github.com:user/repo.git. For existing repositories, update the remote URL from HTTPS to SSH.',
+'mod23.s6.tip': 'If you have multiple GitHub accounts, create an SSH config file (~/.ssh/config) to map different keys to different hosts.',
+
+// Module 24: GitHub Deep Dive — Organizations & Permissions
+'mod24.title': 'GitHub Deep Dive — Organizations & Permissions',
+'mod24.desc': 'Explore GitHub account types, organizations, teams, collaborator permissions, and project management features for professional workflows.',
+'mod24.s1.title': 'GitHub Account Types',
+'mod24.s1.desc': 'GitHub offers personal accounts (free and Pro) and organization accounts. Personal accounts own repositories directly. Organizations provide shared ownership, team management, and enhanced collaboration features for companies and open-source projects.',
+'mod24.s2.title': 'Public vs Private Repositories',
+'mod24.s2.desc': 'Public repositories are visible to everyone and are ideal for open-source projects. Private repositories restrict access to you and your collaborators. You can change a repository\'s visibility at any time in Settings → Danger Zone.',
+'mod24.s3.title': 'Adding Collaborators',
+'mod24.s3.desc': 'For personal repositories, add collaborators via Settings → Collaborators → "Add people". Collaborators receive push access. You can set their permission level to Read, Triage, Write, Maintain, or Admin.',
+'mod24.s4.title': 'Creating & Managing Organizations',
+'mod24.s4.desc': 'Organizations group repositories and people together. Create one from the GitHub menu → "New organization". Organizations have owners (full admin), members (configurable default permissions), and outside collaborators (per-repo access).',
+'mod24.s5.title': 'Teams & Repository Permissions',
+'mod24.s5.desc': 'Inside organizations, create teams to manage repository access at scale. Instead of adding individuals to each repo, assign teams with specific permission levels. Teams can be nested (e.g., "Engineering" → "Frontend", "Backend").',
+'mod24.s6.title': 'GitHub Projects & Issues',
+'mod24.s6.desc': 'GitHub Projects provide kanban-style boards for task management. Create issues to track bugs, features, and tasks. Link issues to pull requests for automatic closure. Use labels, milestones, and assignees to organize work.',
+'mod24.s7.title': 'GitHub Stars, README & Presenting Yourself',
+'mod24.s7.desc': 'Star repositories you find useful — it bookmarks them and shows appreciation. Create a README.md in your profile repository (username/username) to showcase yourself. A good README includes your bio, skills, projects, and contribution graph.',
+'mod24.s7.tip': 'Create a special repository named after your GitHub username to add a profile README that appears on your GitHub profile page.',
+'mod24.s8.title': 'GitHub Pages — Free Static Site Hosting',
+'mod24.s8.desc': 'GitHub Pages lets you host static websites directly from a repository — perfect for project documentation, portfolios, or blogs. Enable it in Settings → Pages, choose a branch (usually main or gh-pages) and optionally a /docs folder. Your site is live at username.github.io/repo-name. You can add a custom domain and HTTPS is free.',
+'mod24.s8.tip': 'Use GitHub Actions to auto-build and deploy your site on every push. Frameworks like Jekyll, Hugo, and Next.js have built-in GitHub Pages support.',
+
+// Module 25: Git Diff, Restore & Clean
+'mod25.title': 'Git Diff, Restore & Clean',
+'mod25.desc': 'Master the essential inspection and undo commands — comparing changes with diff, restoring files with restore, and cleaning untracked files.',
+'mod25.s1.title': 'Git Diff — Unstaged Changes',
+'mod25.s1.desc': 'The "git diff" command shows line-by-line differences between your working directory and the staging area. Lines prefixed with "+" are additions, "-" are deletions. This helps you review exactly what changed before staging.',
+'mod25.s2.title': 'Git Diff — Staged Changes',
+'mod25.s2.desc': 'Use "git diff --staged" (or --cached) to see changes that have been staged but not yet committed. This is your last chance to review what will be included in the next commit.',
+'mod25.s3.title': 'Comparing Branches & Commits',
+'mod25.s3.desc': 'Compare two branches with "git diff branch1..branch2" or two commits with "git diff commit1..commit2". Add "--stat" for a summary showing which files changed and how many lines were added/removed.',
+'mod25.s4.title': 'Git Restore — Discard Working Changes',
+'mod25.s4.desc': 'The "git restore <file>" command discards changes in your working directory, reverting the file to its last committed/staged state. This is the modern replacement for "git checkout -- <file>".',
+'mod25.s4.warning': 'git restore discards changes permanently — there is no undo. Make sure you really want to lose those changes before running it.',
+'mod25.s5.title': 'Git Restore — Unstage Files',
+'mod25.s5.desc': 'Use "git restore --staged <file>" to unstage a file without losing the working directory changes. This is the modern replacement for "git reset HEAD <file>".',
+'mod25.s6.title': 'Git Clean — Remove Untracked Files',
+'mod25.s6.desc': 'The "git clean" command removes untracked files from your working directory. Use "-n" for a dry run (preview), "-f" to force deletion, and "-d" to include untracked directories. Combine with "-x" to also remove files listed in .gitignore.',
+'mod25.s6.warning': 'Always run "git clean -n" first to preview what will be deleted. Once removed, untracked files cannot be recovered!',
+
+// Module 26: Forking & Open Source Contribution
+'mod26.title': 'Forking & Open Source Contribution',
+'mod26.desc': 'Learn the fork-and-pull workflow used in open-source development — fork a repository, make changes, and submit pull requests to contribute back.',
+'mod26.s1.title': 'What is Forking?',
+'mod26.s1.desc': 'Forking creates your own copy of someone else\'s repository on GitHub. Unlike cloning (which creates a local copy), forking creates a remote copy under your account. You have full push access to your fork but not to the original repository.',
+'mod26.s2.title': 'Fork a Repository',
+'mod26.s2.desc': 'Click the "Fork" button on any GitHub repository page. GitHub creates a copy under your account. Then clone your fork locally to start working on changes.',
+'mod26.s3.title': 'Set Up the Upstream Remote',
+'mod26.s3.desc': 'After cloning your fork, add the original repository as an "upstream" remote. This lets you pull in new changes from the original project to keep your fork up to date.',
+'mod26.s4.title': 'Make Changes & Push to Your Fork',
+'mod26.s4.desc': 'Create a feature branch, make your changes, commit, and push to your fork (origin). Never work directly on the main branch of your fork — always use feature branches for clean pull requests.',
+'mod26.s4.tip': 'Name your branch descriptively: fix/typo-in-readme, feature/add-dark-mode, docs/update-api-guide.',
+'mod26.s5.title': 'Create a Pull Request',
+'mod26.s5.desc': 'On GitHub, navigate to your fork and click "Contribute → Open pull request". Write a clear title and description explaining your changes. The PR will be submitted to the original repository for review by the maintainers.',
+'mod26.s6.title': 'Sync Your Fork',
+'mod26.s6.desc': 'Keep your fork updated by fetching from upstream and merging or rebasing. On GitHub, you can also click "Sync fork" to update your fork\'s main branch with one click. Locally, fetch upstream and merge into your main branch.',
+'mod26.s7.title': 'Code Review & Iteration',
+'mod26.s7.desc': 'Maintainers may request changes to your PR. Push new commits to the same branch — the PR updates automatically. Address review comments, resolve conversations, and once approved, the maintainer merges your contribution.',
+'mod26.s7.tip': 'Read the project\'s CONTRIBUTING.md before submitting a PR. It explains code style, testing requirements, and PR conventions.',
+
+// ── Module 27: Git Reflog & Recovery ──
+'mod27.title': 'Git Reflog & Recovery',
+'mod27.desc': 'Master git reflog to recover lost commits, deleted branches, and undo disastrous resets. Your safety net for Git mistakes.',
+'mod27.s1.title': 'What is the Reflog?',
+'mod27.s1.desc': 'The reflog (reference log) records every time HEAD moves — commits, checkouts, resets, merges, rebases. Unlike git log which shows commit ancestry, reflog shows your local history of actions. It\'s your personal undo history that persists even when commits seem lost.',
+'mod27.s2.title': 'Viewing the Reflog',
+'mod27.s2.desc': 'Use git reflog to see a chronological list of all HEAD movements. Each entry has an index (HEAD@{n}) you can reference. The reflog keeps entries for 90 days by default (30 for unreachable commits).',
+'mod27.s3.title': 'Recovering a Deleted Branch',
+'mod27.s3.desc': 'If you accidentally delete a branch, its commits still exist in the reflog. Find the commit hash from the reflog and create a new branch pointing to it. The commits are safe as long as they haven\'t been garbage collected.',
+'mod27.s4.title': 'Undoing a Hard Reset',
+'mod27.s4.desc': 'Ran git reset --hard and lost work? The reflog still has a record of where HEAD was before the reset. You can reset back to the previous state using the reflog reference.',
+'mod27.s4.warning': 'Reflog entries expire after 90 days (30 for unreachable). Act quickly to recover lost work.',
+'mod27.s5.title': 'Recovering Lost Commits After Rebase',
+'mod27.s5.desc': 'A rebase rewrites history and can seem to lose commits. The original commits still exist and are reachable via the reflog. You can find the pre-rebase state and restore it if needed.',
+'mod27.s5.tip': 'Before risky operations, create a backup branch: git branch backup-before-rebase. It costs nothing and saves headaches.',
+'mod27.s6.title': 'Reflog for Specific Branches',
+'mod27.s6.desc': 'Each branch has its own reflog. You can inspect a specific branch\'s reflog to see its movement history, which is useful when debugging what happened to a particular branch.',
+'mod27.s7.title': 'Expiring and Managing Reflog',
+'mod27.s7.desc': 'Reflog entries expire automatically, but you can manage them manually. You can expire old entries or clear the reflog entirely. Understanding expiration helps you know your recovery window.',
+'mod27.s7.tip': 'In a team, each person\'s reflog is local — you cannot recover someone else\'s lost work from your reflog.',
+
+// ── Module 28: Git Submodules ──
+'mod28.title': 'Git Submodules',
+'mod28.desc': 'Include and manage external Git repositories inside your project. Learn to add, update, clone, and remove submodules.',
+'mod28.s1.title': 'What Are Submodules?',
+'mod28.s1.desc': 'Git submodules let you embed one Git repository inside another as a subdirectory. The parent repo tracks a specific commit of the submodule. This is useful for shared libraries, vendor code, or components maintained in separate repositories.',
+'mod28.s2.title': 'Adding a Submodule',
+'mod28.s2.desc': 'Use git submodule add to include an external repository. Git creates a .gitmodules file tracking the submodule URL and path, and clones the repo into the specified directory.',
+'mod28.s3.title': 'Cloning a Repo with Submodules',
+'mod28.s3.desc': 'When you clone a repository that contains submodules, the submodule directories are created but empty. You need to initialize and fetch them. Alternatively, use --recurse-submodules during clone to do it in one step.',
+'mod28.s3.tip': 'Always use --recurse-submodules when cloning a project with submodules to avoid confusion about empty directories.',
+'mod28.s4.title': 'Updating Submodules',
+'mod28.s4.desc': 'Submodules don\'t auto-update when the remote changes. You must explicitly fetch and update them. You can update to the latest remote commit or to the specific commit the parent repo tracks.',
+'mod28.s5.title': 'Working Inside a Submodule',
+'mod28.s5.desc': 'You can cd into a submodule, make changes, commit, and push just like any normal repo. Then in the parent repo, the submodule reference will show as modified — you need to commit that change too.',
+'mod28.s5.warning': 'Submodules track a specific commit, not a branch. If you make changes inside a submodule, commit and push them before updating the parent repo\'s reference.',
+'mod28.s6.title': 'Running Commands Across Submodules',
+'mod28.s6.desc': 'Use git submodule foreach to run a command in every submodule at once. This is powerful for batch operations like pulling updates, checking status, or running builds across all submodules.',
+'mod28.s7.title': 'Removing a Submodule',
+'mod28.s7.desc': 'Removing a submodule requires multiple steps: deinitialize it, remove it from the working tree, and clean up the .gitmodules file and .git/modules directory.',
+'mod28.s7.tip': 'Consider git subtree as an alternative if submodule complexity is too high for your use case. Subtrees merge the external repo directly into your tree.',
+
+// ── Module 29: Git LFS & .gitattributes ──
+'mod29.title': 'Git LFS & .gitattributes',
+'mod29.desc': 'Handle large binary files efficiently with Git LFS and configure file-specific behaviors with .gitattributes.',
+'mod29.s1.title': 'Why Git Struggles with Large Files',
+'mod29.s1.desc': 'Git stores the full content of every version of every file. Large binary files (images, videos, datasets, compiled assets) bloat the repository, slow cloning, and waste bandwidth. Git LFS solves this by storing pointer files in Git and the actual content on a separate server.',
+'mod29.s2.title': 'Installing Git LFS',
+'mod29.s2.desc': 'Git LFS is a Git extension that must be installed separately. After installing, you need to initialize it once per user account with git lfs install.',
+'mod29.s3.title': 'Tracking Files with LFS',
+'mod29.s3.desc': 'Use git lfs track to tell LFS which files to manage. This creates or updates a .gitattributes file with filter rules. Always commit the .gitattributes file so other collaborators get the same LFS configuration.',
+'mod29.s3.tip': 'Track file patterns, not individual files: git lfs track "*.psd" is better than tracking each file by name.',
+'mod29.s4.title': 'Working with LFS Files',
+'mod29.s4.desc': 'Once tracking is set up, use Git normally — add, commit, push. Git LFS intercepts the tracked files transparently. You can list LFS-managed files and check their status at any time.',
+'mod29.s5.title': 'Understanding .gitattributes',
+'mod29.s5.desc': 'The .gitattributes file controls per-path settings: line ending normalization (text/binary), diff behavior, merge strategies, and LFS filters. It ensures consistent behavior across platforms and contributors.',
+'mod29.s6.title': 'Line Ending Normalization',
+'mod29.s6.desc': 'Different operating systems use different line endings (CRLF on Windows, LF on Unix/Mac). The .gitattributes file can enforce consistent line endings in the repository regardless of the contributor\'s OS.',
+'mod29.s6.tip': 'Add "* text=auto" as the first line of .gitattributes to let Git handle line endings automatically for text files.',
+'mod29.s7.title': 'Custom Diff and Merge Settings',
+'mod29.s7.desc': 'You can mark files as binary to skip diff output, define custom diff drivers for specific file types, or set merge strategies per path. This is especially useful for generated files, lock files, or files that should always favor one side during merges.',
+
+// ── Module 30: CI/CD Integration with Git ──
+'mod30.title': 'CI/CD Integration with Git',
+'mod30.desc': 'Automate testing, building, and deployment using Git-triggered CI/CD pipelines with GitHub Actions, GitLab CI, and more.',
+'mod30.s1.title': 'What is CI/CD?',
+'mod30.s1.desc': 'Continuous Integration (CI) automatically builds and tests code on every push or pull request. Continuous Deployment (CD) automatically deploys passing builds to staging or production. Together, CI/CD catches bugs early and delivers features faster.',
+'mod30.s2.title': 'GitHub Actions Basics',
+'mod30.s2.desc': 'GitHub Actions uses YAML workflow files in .github/workflows/ to define automated pipelines. Workflows are triggered by events like push, pull_request, or schedule. Each workflow contains jobs that run on virtual machines (runners).',
+'mod30.s3.title': 'Creating Your First Workflow',
+'mod30.s3.desc': 'Create a workflow file that runs tests on every push and pull request. The workflow checks out code, sets up the environment, installs dependencies, and runs the test suite.',
+'mod30.s3.tip': 'Start with a simple test workflow and expand gradually. A CI pipeline that runs is better than a perfect one that doesn\'t exist yet.',
+'mod30.s4.title': 'GitLab CI/CD Pipelines',
+'mod30.s4.desc': 'GitLab uses a .gitlab-ci.yml file in the repository root. It defines stages (build, test, deploy) and jobs within each stage. GitLab runners execute the jobs in Docker containers or virtual machines.',
+'mod30.s5.title': 'Branch Protection & Required Checks',
+'mod30.s5.desc': 'Configure branch protection rules to require CI checks to pass before merging. This prevents broken code from reaching the main branch. On GitHub, go to Settings → Branches → Branch protection rules. On GitLab, use Protected Branches settings.',
+'mod30.s5.warning': 'Never skip CI checks to merge faster. A broken main branch blocks the entire team.',
+'mod30.s6.title': 'Secrets and Environment Variables',
+'mod30.s6.desc': 'CI/CD pipelines often need API keys, tokens, or credentials. Store these as encrypted secrets in your platform\'s settings — never commit them to the repository. Reference secrets in workflow files using the platform\'s secret syntax.',
+'mod30.s6.warning': 'Never hardcode secrets in workflow files or commit them to the repository. Use your platform\'s encrypted secrets feature.',
+'mod30.s7.title': 'Skipping CI and Status Badges',
+'mod30.s7.desc': 'Add [skip ci] or [ci skip] to a commit message to skip pipeline execution for trivial changes like documentation updates. Add status badges to your README to show build status at a glance.',
+'mod30.s7.tip': 'Use [skip ci] sparingly and only for non-code changes. It\'s tempting to skip CI for "small" code changes, but those are exactly the ones that break things.',
+
+// ── Module 31: GitHub Codespaces & Dev Environments ──
+'mod31.title': 'GitHub Codespaces & Dev Environments',
+'mod31.desc': 'Develop in the cloud with GitHub Codespaces, github.dev editor, and configure reproducible dev environments with devcontainers.',
+'mod31.s1.title': 'What Are Cloud Dev Environments?',
+'mod31.s1.desc': 'Cloud development environments run your code in remote machines, giving you a fully configured IDE in the browser. This eliminates "works on my machine" problems and lets you start coding on any project in seconds without local setup.',
+'mod31.s2.title': 'GitHub.dev — Instant Browser Editor',
+'mod31.s2.desc': 'Press the period key (.) on any GitHub repository to open it in github.dev, a lightweight VS Code editor in the browser. It\'s perfect for quick edits, code reviews, and navigation — no Codespace needed. Changes can be committed directly.',
+'mod31.s2.tip': 'Use github.dev for quick edits and code review. Switch to a full Codespace when you need a terminal, build tools, or running servers.',
+'mod31.s3.title': 'Creating a Codespace',
+'mod31.s3.desc': 'Click "Code" → "Codespaces" → "Create codespace on main" on any GitHub repository. GitHub provisions a cloud VM with VS Code, a terminal, and your repo cloned. You can also create Codespaces from branches or pull requests for isolated testing.',
+'mod31.s4.title': 'DevContainer Configuration',
+'mod31.s4.desc': 'Add a .devcontainer/devcontainer.json file to your repository to define the development environment: base Docker image, VS Code extensions, port forwarding, environment variables, and post-create setup commands. This ensures everyone gets an identical environment.',
+'mod31.s5.title': 'Port Forwarding & Previewing',
+'mod31.s5.desc': 'When you start a server in a Codespace, ports are automatically forwarded. You can access your running application in the browser, share the URL with teammates for review, and control port visibility (private, org, or public).',
+'mod31.s6.title': 'Managing Codespaces',
+'mod31.s6.desc': 'List, stop, restart, and delete Codespaces from GitHub or the CLI. Stopped Codespaces retain your work but don\'t consume compute hours. Set auto-delete policies to clean up idle Codespaces and manage costs.',
+'mod31.s6.tip': 'Stop Codespaces when not in use — active ones consume billable compute hours. Use "gh codespace stop" or set idle timeout in your settings.',
+
+// ── Module 32: GPG Signing & Commit Verification ──
+'mod32.title': 'GPG Signing & Commit Verification',
+'mod32.desc': 'Cryptographically sign your commits and tags to prove authorship. Learn GPG key management and verified badges on GitHub/GitLab.',
+'mod32.s1.title': 'Why Sign Commits?',
+'mod32.s1.desc': 'Anyone can set any name and email in git config. Signed commits use cryptographic keys to prove that the commit actually came from the claimed author. Platforms like GitHub show a "Verified" badge on signed commits, building trust in open-source contributions.',
+'mod32.s2.title': 'Generating a GPG Key',
+'mod32.s2.desc': 'Generate a GPG key pair (public + private) to use for signing. The key should use your Git email address. After generating, note the key ID — you\'ll need it for Git configuration.',
+'mod32.s3.title': 'Configuring Git for Signing',
+'mod32.s3.desc': 'Tell Git which GPG key to use for signing, and optionally enable auto-signing so every commit is signed without the -S flag.',
+'mod32.s4.title': 'Signing Commits',
+'mod32.s4.desc': 'Use the -S flag to sign a commit, or enable auto-signing in your config. You can verify signatures on existing commits to check their authenticity.',
+'mod32.s5.title': 'Signing Tags',
+'mod32.s5.desc': 'Tags can be signed too, which is especially important for release tags. A signed tag proves the release was created by an authorized maintainer. Use lowercase -s for tags (vs uppercase -S for commits).',
+'mod32.s5.tip': 'Always sign release tags in open-source projects. It lets users verify that the release is authentic and hasn\'t been tampered with.',
+'mod32.s6.title': 'Adding Your Key to GitHub/GitLab',
+'mod32.s6.desc': 'Export your public GPG key and add it to your GitHub or GitLab account. This lets the platform verify your signatures and show the "Verified" badge on your commits and tags.',
+'mod32.s7.title': 'SSH Signing (Modern Alternative)',
+'mod32.s7.desc': 'Git 2.34+ supports signing commits with SSH keys instead of GPG. This is simpler if you already have SSH keys set up. Configure Git to use SSH for signing and add your SSH signing key to GitHub.',
+'mod32.s7.tip': 'SSH signing is simpler than GPG and works well if you already use SSH for authentication. GitHub supports it since 2022.',
+
 // New Quiz Questions
 'quiz.b9.q': 'What is the difference between "git switch" and "git checkout"?',
 'quiz.b9.o1': 'They are exactly the same command',
@@ -1009,6 +1226,78 @@ en: {
 'quiz.a14.o3': 'Finds and reports code style violations',
 'quiz.a14.o4': 'Identifies merge conflicts in a file',
 'quiz.a14.explain': '"git blame <file>" annotates each line with the commit hash, author, and date of the last modification. It helps you understand when and why a line was changed and who to ask about it.',
+
+// Quiz — Intermediate (new: reflog, codespaces)
+'quiz.i13.q': 'What does "git reflog" show?',
+'quiz.i13.o1': 'A chronological log of all HEAD movements in your local repository',
+'quiz.i13.o2': 'A list of all commits on the remote server',
+'quiz.i13.o3': 'A log of file changes in the working directory',
+'quiz.i13.o4': 'A list of branches that have been merged',
+'quiz.i13.explain': 'git reflog records every time HEAD changes — commits, checkouts, resets, merges, rebases. It\'s local only and is your safety net for recovering lost commits.',
+
+'quiz.i14.q': 'How can you recover a branch you accidentally deleted?',
+'quiz.i14.o1': 'Find the commit hash in git reflog and create a new branch pointing to it',
+'quiz.i14.o2': 'Run "git branch --recover" to restore it',
+'quiz.i14.o3': 'Deleted branches cannot be recovered',
+'quiz.i14.o4': 'Run "git pull" to fetch it from the remote',
+'quiz.i14.explain': 'Even after deleting a branch, its commits remain in the reflog. Use "git reflog" to find the last commit of the deleted branch, then "git branch new-name <hash>" to restore it.',
+
+'quiz.i15.q': 'How do you open any GitHub repository in a browser-based VS Code editor instantly?',
+'quiz.i15.o1': 'Press the period key (.) on the repository page',
+'quiz.i15.o2': 'Click the "Edit" button on any file',
+'quiz.i15.o3': 'Run "gh codespace edit" in your terminal',
+'quiz.i15.o4': 'Install the GitHub Desktop application',
+'quiz.i15.explain': 'Pressing "." on any GitHub repository opens it in github.dev, a lightweight browser-based VS Code editor. For a full development environment with a terminal, use GitHub Codespaces.',
+
+'quiz.i16.q': 'What does "git clean -fd" do?',
+'quiz.i16.o1': 'Removes untracked files and directories from the working tree',
+'quiz.i16.o2': 'Cleans up the git cache',
+'quiz.i16.o3': 'Removes all commits from the current branch',
+'quiz.i16.o4': 'Deletes all branches except main',
+'quiz.i16.explain': '"git clean -fd" removes untracked files (-f for force) and directories (-d). Always run "git clean -n" first for a dry run to see what would be deleted.',
+
+// Quiz — Advanced (new: submodules, LFS, CI/CD, signing)
+'quiz.a15.q': 'What is the purpose of Git submodules?',
+'quiz.a15.o1': 'To include and track external Git repositories inside your project at specific commits',
+'quiz.a15.o2': 'To split a single repository into smaller files',
+'quiz.a15.o3': 'To create backup copies of your repository',
+'quiz.a15.o4': 'To merge multiple branches simultaneously',
+'quiz.a15.explain': 'Git submodules let you embed one Git repository inside another. The parent repo tracks a specific commit of the submodule, useful for shared libraries or vendor code.',
+
+'quiz.a16.q': 'What problem does Git LFS solve?',
+'quiz.a16.o1': 'Efficiently handles large binary files by storing pointer files in Git and actual content on a separate server',
+'quiz.a16.o2': 'Compresses all files in the repository',
+'quiz.a16.o3': 'Limits the number of commits in a repository',
+'quiz.a16.o4': 'Speeds up git clone by removing old branches',
+'quiz.a16.explain': 'Git stores full content of every file version. Large binaries bloat the repo. Git LFS replaces them with small pointer files, storing the actual data on a dedicated LFS server.',
+
+'quiz.a17.q': 'In a GitHub Actions workflow file, what does "on: [push, pull_request]" specify?',
+'quiz.a17.o1': 'The events that trigger the workflow to run',
+'quiz.a17.o2': 'The branches to deploy to',
+'quiz.a17.o3': 'The list of commands to execute',
+'quiz.a17.o4': 'The order of job execution',
+'quiz.a17.explain': 'The "on" key in a GitHub Actions workflow defines which events trigger it. [push, pull_request] means the workflow runs on every push and on pull request creation/update.',
+
+'quiz.a18.q': 'Why should you sign your Git commits with GPG or SSH keys?',
+'quiz.a18.o1': 'To cryptographically prove that the commit came from the claimed author',
+'quiz.a18.o2': 'To encrypt the source code in the repository',
+'quiz.a18.o3': 'To prevent others from reading your commits',
+'quiz.a18.o4': 'To speed up the push and pull operations',
+'quiz.a18.explain': 'Anyone can set any name/email in git config. Signing commits cryptographically proves authorship. Platforms like GitHub show a "Verified" badge on signed commits.',
+
+'quiz.a19.q': 'What does "* text=auto" in a .gitattributes file do?',
+'quiz.a19.o1': 'Lets Git auto-detect text files and normalize their line endings',
+'quiz.a19.o2': 'Converts all files to plain text format',
+'quiz.a19.o3': 'Enables automatic spell checking for text files',
+'quiz.a19.o4': 'Marks all files as auto-generated',
+'quiz.a19.explain': '"* text=auto" tells Git to automatically detect text files and normalize line endings to LF in the repo, converting to the OS-native format on checkout. This prevents CRLF/LF conflicts across platforms.',
+
+'quiz.a20.q': 'What does adding "[skip ci]" to a commit message do?',
+'quiz.a20.o1': 'Tells the CI/CD platform to skip running the pipeline for this commit',
+'quiz.a20.o2': 'Removes the commit from the CI/CD history',
+'quiz.a20.o3': 'Forces the CI pipeline to run in fast mode',
+'quiz.a20.o4': 'Skips the staging area and commits directly',
+'quiz.a20.explain': 'Most CI/CD platforms (GitHub Actions, GitLab CI, etc.) recognize [skip ci] or [ci skip] in commit messages and will not trigger a pipeline run. Use it sparingly for non-code changes like docs.',
 
 // New challenge translations
 'terminal.ch.detachedHead': 'Detached HEAD Navigation',
@@ -1207,6 +1496,48 @@ en: {
 'cheat.adv.addUpstream': 'Add upstream remote for forks',
 'cheat.adv.fetchUpstream': 'Fetch from upstream remote',
 'cheat.adv.worktree': 'Create a linked worktree',
+
+// Cheat sheet — Submodules
+'cheat.cat.submodules': 'Submodules',
+'cheat.sub.add': 'Add an external repo as a submodule',
+'cheat.sub.init': 'Initialize submodule configuration locally',
+'cheat.sub.update': 'Fetch and checkout the commit tracked by the parent',
+'cheat.sub.updateRemote': 'Update submodules to the latest remote commit',
+'cheat.sub.status': 'Show the current commit of each submodule',
+'cheat.sub.foreach': 'Run a command in every submodule',
+'cheat.sub.deinit': 'Unregister a submodule',
+'cheat.sub.cloneRecurse': 'Clone a repo and initialize all submodules',
+
+// Cheat sheet — LFS & .gitattributes
+'cheat.cat.lfs': 'LFS & .gitattributes',
+'cheat.lfs.install': 'Initialize Git LFS for your user account',
+'cheat.lfs.track': 'Track a file pattern with LFS',
+'cheat.lfs.untrack': 'Stop tracking a pattern with LFS',
+'cheat.lfs.lsFiles': 'List all files managed by LFS',
+'cheat.lfs.status': 'Show the status of LFS objects',
+'cheat.lfs.textAuto': 'Auto-normalize line endings for text files (.gitattributes)',
+'cheat.lfs.binary': 'Mark files as binary to skip diff (.gitattributes)',
+'cheat.lfs.checkAttr': 'Check .gitattributes rules for a specific file',
+
+// Cheat sheet — CI/CD
+'cheat.cat.cicd': 'CI/CD Integration',
+'cheat.ci.mkdirWorkflows': 'Create GitHub Actions workflow directory',
+'cheat.ci.skipCi': 'Skip CI pipeline for this commit',
+'cheat.ci.pushTags': 'Push all tags to trigger release workflows',
+'cheat.ci.runList': 'List recent workflow runs (GitHub CLI)',
+'cheat.ci.runView': 'View details of a specific workflow run',
+'cheat.ci.runWatch': 'Watch a workflow run in real-time',
+
+// Cheat sheet — GPG Signing
+'cheat.cat.signing': 'GPG Signing & Verification',
+'cheat.sign.genKey': 'Generate a new GPG key pair',
+'cheat.sign.listKeys': 'List your GPG secret keys with long format',
+'cheat.sign.configKey': 'Set the GPG key for Git signing',
+'cheat.sign.autoSign': 'Enable automatic commit signing',
+'cheat.sign.signCommit': 'Create a GPG-signed commit',
+'cheat.sign.signTag': 'Create a GPG-signed tag',
+'cheat.sign.verify': 'Show commit signatures in log',
+'cheat.sign.sshFormat': 'Use SSH keys for signing instead of GPG',
 
 // Quiz questions — Beginner
 'quiz.b1.q': 'What does the command "git init" do?',
@@ -2218,6 +2549,223 @@ ar: {
 'mod21.s6.desc': 'استخدم "git blame <file>" لرؤية من عدّل كل سطر آخر مرة، مع هاش الإيداع والتاريخ. في VSCode، إضافة GitLens توفر تعليقات blame مدمجة.',
 'mod21.s6.vscode': 'ثبّت إضافة GitLens للحصول على تعليقات blame مدمجة وتفاصيل الإيداعات عند التمرير.',
 
+// Module 22: أساسيات سطر الأوامر
+'mod22.title': 'أساسيات سطر الأوامر',
+'mod22.desc': 'أتقن أساسيات الطرفية التي يحتاجها كل مطور — التنقل بين المجلدات، إنشاء وإدارة الملفات، وفهم المسارات قبل البدء بـ Git.',
+'mod22.s1.title': 'ما هو سطر الأوامر؟',
+'mod22.s1.desc': 'سطر الأوامر (الطرفية، الشِل، CLI) هو واجهة نصية للتفاعل مع حاسوبك. بدلاً من الواجهات الرسومية، تكتب أوامر للتنقل بين المجلدات وإنشاء الملفات وتشغيل البرامج. في macOS يُسمى Terminal، وفي Windows يمكنك استخدام Command Prompt أو PowerShell أو Git Bash.',
+'mod22.s2.title': 'التنقل بين المجلدات',
+'mod22.s2.desc': 'استخدم "pwd" لمعرفة موقعك الحالي، "ls" لعرض الملفات والمجلدات، و"cd" للتنقل بين المجلدات. "cd .." ينقلك مستوى أعلى، "cd ~" ينقلك إلى المجلد الرئيسي.',
+'mod22.s3.title': 'المسارات المطلقة والنسبية',
+'mod22.s3.desc': 'المسار المطلق يبدأ من جذر نظام الملفات (مثل /Users/name/projects). المسار النسبي يبدأ من مجلدك الحالي (مثل ./src/app.js أو ../config). استخدم "." للمجلد الحالي و".." للمجلد الأب.',
+'mod22.s4.title': 'إنشاء وحذف الملفات والمجلدات',
+'mod22.s4.desc': 'أنشئ ملفات بـ "touch filename" (Mac/Linux) أو "echo. > filename" (Windows). أنشئ مجلدات بـ "mkdir dirname". احذف ملفات بـ "rm filename" ومجلدات بـ "rm -r dirname".',
+'mod22.s4.warning': 'الأمر "rm -r" يحذف الملفات والمجلدات نهائياً بدون نقلها لسلة المهملات. تأكد قبل تنفيذه!',
+'mod22.s5.title': 'نسخ ونقل الملفات',
+'mod22.s5.desc': 'انسخ ملفات بـ "cp source destination" ومجلدات بـ "cp -r source destination". انقل أو أعد تسمية ملفات بـ "mv source destination". نقل ملف لاسم جديد في نفس المجلد يعيد تسميته.',
+'mod22.s6.title': 'نظرة عامة على الأوامر الأساسية',
+'mod22.s6.desc': 'مرجع سريع: "cat filename" يعرض محتوى الملف، "head/tail" يعرض البداية/النهاية، "clear" يمسح الشاشة، "history" يعرض الأوامر الأخيرة، و"man command" (Mac/Linux) يفتح صفحة المساعدة.',
+'mod22.s6.tip': 'استخدم مفتاح Tab للإكمال التلقائي لأسماء الملفات والمجلدات — يوفر الوقت ويتجنب الأخطاء الإملائية.',
+
+// Module 23: مصادقة SSH لـ GitHub
+'mod23.title': 'مصادقة SSH لـ GitHub',
+'mod23.desc': 'أعد إعداد مفاتيح SSH للمصادقة الآمنة مع GitHub بدون إدخال كلمة المرور في كل مرة تدفع أو تسحب.',
+'mod23.s1.title': 'لماذا SSH؟',
+'mod23.s1.desc': 'SSH (الصدفة الآمنة) يستخدم تشفير المفتاح العام للمصادقة مع GitHub. بدلاً من كتابة اسم المستخدم وكلمة المرور (أو رمز الوصول الشخصي) في كل مرة، توفر مفاتيح SSH اتصالاً آمناً وسلساً. بعد الإعداد، تصبح عمليات Git عبر SSH تلقائية.',
+'mod23.s2.title': 'إنشاء زوج مفاتيح SSH',
+'mod23.s2.desc': 'أنشئ زوج مفاتيح SSH جديد باستخدام خوارزمية Ed25519 (الموصى بها) أو RSA. المفتاح الخاص يبقى على جهازك ويجب ألا يُشارك أبداً. المفتاح العام يُضاف لحساب GitHub.',
+'mod23.s3.title': 'إضافة المفتاح لوكيل SSH',
+'mod23.s3.desc': 'وكيل SSH يدير مفاتيحك في الذاكرة حتى لا تحتاج لإدخال عبارة المرور كل مرة. شغّل الوكيل وأضف مفتاحك الخاص.',
+'mod23.s4.title': 'إضافة المفتاح العام لـ GitHub',
+'mod23.s4.desc': 'انسخ مفتاحك العام وأضفه لـ GitHub: اذهب إلى Settings → SSH and GPG Keys → New SSH Key. الصق المفتاح وأعطه عنواناً وصفياً.',
+'mod23.s5.title': 'اختبار اتصال SSH',
+'mod23.s5.desc': 'تحقق من اتصال SSH بـ GitHub. اختبار ناجح سيعرض "Hi username! You\'ve successfully authenticated" مؤكداً ربط مفتاحك بحساب GitHub.',
+'mod23.s6.title': 'الاستنساخ باستخدام SSH',
+'mod23.s6.desc': 'الآن استخدم روابط SSH بدلاً من HTTPS عند استنساخ المستودعات. روابط SSH تبدو مثل git@github.com:user/repo.git. للمستودعات الموجودة، حدّث رابط الريموت من HTTPS إلى SSH.',
+'mod23.s6.tip': 'إذا كان لديك حسابات GitHub متعددة، أنشئ ملف إعدادات SSH (~/.ssh/config) لربط مفاتيح مختلفة بمضيفين مختلفين.',
+
+// Module 24: GitHub بالتفصيل — المنظمات والصلاحيات
+'mod24.title': 'GitHub بالتفصيل — المنظمات والصلاحيات',
+'mod24.desc': 'استكشف أنواع حسابات GitHub، المنظمات، الفرق، صلاحيات المتعاونين، وميزات إدارة المشاريع لسير العمل الاحترافي.',
+'mod24.s1.title': 'أنواع حسابات GitHub',
+'mod24.s1.desc': 'يوفر GitHub حسابات شخصية (مجانية و Pro) وحسابات منظمات. الحسابات الشخصية تملك المستودعات مباشرة. المنظمات توفر ملكية مشتركة وإدارة الفرق وميزات تعاون محسّنة للشركات ومشاريع المصدر المفتوح.',
+'mod24.s2.title': 'المستودعات العامة والخاصة',
+'mod24.s2.desc': 'المستودعات العامة مرئية للجميع ومثالية لمشاريع المصدر المفتوح. المستودعات الخاصة تقيّد الوصول لك ولمتعاونيك. يمكنك تغيير رؤية المستودع في أي وقت من Settings → Danger Zone.',
+'mod24.s3.title': 'إضافة متعاونين',
+'mod24.s3.desc': 'للمستودعات الشخصية، أضف متعاونين عبر Settings → Collaborators → "Add people". المتعاونون يحصلون على صلاحية الدفع. يمكنك تعيين مستوى صلاحيتهم: قراءة، فرز، كتابة، صيانة، أو إدارة.',
+'mod24.s4.title': 'إنشاء وإدارة المنظمات',
+'mod24.s4.desc': 'المنظمات تجمع المستودعات والأشخاص معاً. أنشئ واحدة من قائمة GitHub → "New organization". للمنظمات مالكون (إدارة كاملة)، أعضاء (صلاحيات افتراضية قابلة للتخصيص)، ومتعاونون خارجيون (وصول لكل مستودع).',
+'mod24.s5.title': 'الفرق وصلاحيات المستودعات',
+'mod24.s5.desc': 'داخل المنظمات، أنشئ فرقاً لإدارة الوصول للمستودعات. بدلاً من إضافة أفراد لكل مستودع، عيّن فرقاً بمستويات صلاحيات محددة. يمكن تداخل الفرق (مثل "الهندسة" → "الواجهة الأمامية"، "الواجهة الخلفية").',
+'mod24.s6.title': 'مشاريع GitHub والقضايا',
+'mod24.s6.desc': 'مشاريع GitHub توفر لوحات بنمط كانبان لإدارة المهام. أنشئ قضايا لتتبع الأخطاء والميزات والمهام. اربط القضايا بطلبات السحب للإغلاق التلقائي. استخدم التسميات والمعالم والمعيّنين لتنظيم العمل.',
+'mod24.s7.title': 'نجوم GitHub وREADME وتقديم نفسك',
+'mod24.s7.desc': 'أنجم المستودعات المفيدة — يضعها في المفضلة ويُظهر التقدير. أنشئ README.md في مستودع ملفك الشخصي (username/username) لعرض نفسك. README جيد يتضمن سيرتك ومهاراتك ومشاريعك.',
+'mod24.s7.tip': 'أنشئ مستودعاً خاصاً باسم مستخدم GitHub الخاص بك لإضافة README للملف الشخصي يظهر على صفحة ملفك الشخصي في GitHub.',
+'mod24.s8.title': 'GitHub Pages — استضافة مواقع ثابتة مجانية',
+'mod24.s8.desc': 'يتيح لك GitHub Pages استضافة مواقع ويب ثابتة مباشرة من مستودع — مثالي لتوثيق المشاريع أو المحافظ أو المدونات. فعّله من Settings → Pages، اختر فرعاً (عادةً main أو gh-pages) واختيارياً مجلد /docs. موقعك يعمل على username.github.io/repo-name. يمكنك إضافة نطاق مخصص وHTTPS مجاني.',
+'mod24.s8.tip': 'استخدم GitHub Actions لبناء ونشر موقعك تلقائياً عند كل دفع. أطر مثل Jekyll وHugo وNext.js لديها دعم مدمج لـ GitHub Pages.',
+
+// Module 25: Git Diff و Restore و Clean
+'mod25.title': 'Git Diff و Restore و Clean',
+'mod25.desc': 'أتقن أوامر الفحص والتراجع الأساسية — مقارنة التغييرات بـ diff، استعادة الملفات بـ restore، وتنظيف الملفات غير المتتبعة.',
+'mod25.s1.title': 'Git Diff — التغييرات غير المُرحّلة',
+'mod25.s1.desc': 'أمر "git diff" يعرض الفروقات سطراً بسطر بين مجلد العمل ومنطقة الترحيل. الأسطر بعلامة "+" إضافات، و"-" حذف. يساعدك على مراجعة ما تغيّر بالضبط قبل الترحيل.',
+'mod25.s2.title': 'Git Diff — التغييرات المُرحّلة',
+'mod25.s2.desc': 'استخدم "git diff --staged" (أو --cached) لرؤية التغييرات المُرحّلة التي لم تُودع بعد. هذه فرصتك الأخيرة لمراجعة ما سيُضمّن في الإيداع القادم.',
+'mod25.s3.title': 'مقارنة الفروع والإيداعات',
+'mod25.s3.desc': 'قارن فرعين بـ "git diff branch1..branch2" أو إيداعين بـ "git diff commit1..commit2". أضف "--stat" لملخص يوضح الملفات المتغيرة وعدد الأسطر المضافة/المحذوفة.',
+'mod25.s4.title': 'Git Restore — التراجع عن تغييرات العمل',
+'mod25.s4.desc': 'أمر "git restore <file>" يتجاهل التغييرات في مجلد عملك ويعيد الملف لحالته الأخيرة المودعة/المُرحّلة. هذا البديل الحديث لـ "git checkout -- <file>".',
+'mod25.s4.warning': 'git restore يتجاهل التغييرات نهائياً — لا يوجد تراجع. تأكد أنك تريد فقدان تلك التغييرات قبل تنفيذه.',
+'mod25.s5.title': 'Git Restore — إلغاء ترحيل الملفات',
+'mod25.s5.desc': 'استخدم "git restore --staged <file>" لإلغاء ترحيل ملف بدون فقدان تغييرات مجلد العمل. هذا البديل الحديث لـ "git reset HEAD <file>".',
+'mod25.s6.title': 'Git Clean — إزالة الملفات غير المتتبعة',
+'mod25.s6.desc': 'أمر "git clean" يزيل الملفات غير المتتبعة من مجلد عملك. استخدم "-n" للمعاينة، "-f" للحذف الإجباري، و"-d" لتشمل المجلدات غير المتتبعة. ادمج مع "-x" لإزالة ملفات .gitignore أيضاً.',
+'mod25.s6.warning': 'دائماً نفّذ "git clean -n" أولاً لمعاينة ما سيُحذف. بعد الإزالة، لا يمكن استرداد الملفات غير المتتبعة!',
+
+// Module 26: الـ Fork والمساهمة في المصدر المفتوح
+'mod26.title': 'الـ Fork والمساهمة في المصدر المفتوح',
+'mod26.desc': 'تعلّم سير عمل Fork-and-Pull المستخدم في تطوير المصدر المفتوح — انسخ مستودعاً، أجرِ تعديلات، وقدّم طلبات سحب للمساهمة.',
+'mod26.s1.title': 'ما هو الـ Fork؟',
+'mod26.s1.desc': 'الـ Fork ينشئ نسختك الخاصة من مستودع شخص آخر على GitHub. بخلاف الاستنساخ (الذي ينشئ نسخة محلية)، الـ Fork ينشئ نسخة بعيدة تحت حسابك. لديك صلاحية دفع كاملة لنسختك لكن ليس للمستودع الأصلي.',
+'mod26.s2.title': 'عمل Fork لمستودع',
+'mod26.s2.desc': 'اضغط زر "Fork" في أي صفحة مستودع على GitHub. ينشئ GitHub نسخة تحت حسابك. ثم استنسخ نسختك محلياً لبدء العمل على التغييرات.',
+'mod26.s3.title': 'إعداد الريموت Upstream',
+'mod26.s3.desc': 'بعد استنساخ نسختك، أضف المستودع الأصلي كريموت "upstream". هذا يسمح لك بسحب التغييرات الجديدة من المشروع الأصلي للحفاظ على نسختك محدّثة.',
+'mod26.s4.title': 'إجراء تغييرات ودفعها لنسختك',
+'mod26.s4.desc': 'أنشئ فرع ميزة، أجرِ تغييراتك، أودع، وادفع لنسختك (origin). لا تعمل مباشرة على الفرع الرئيسي لنسختك — استخدم دائماً فروع الميزات لطلبات سحب نظيفة.',
+'mod26.s4.tip': 'سمّ فرعك بشكل وصفي: fix/typo-in-readme, feature/add-dark-mode, docs/update-api-guide.',
+'mod26.s5.title': 'إنشاء طلب سحب',
+'mod26.s5.desc': 'على GitHub، انتقل لنسختك واضغط "Contribute → Open pull request". اكتب عنواناً ووصفاً واضحاً يشرح تغييراتك. سيُقدَّم طلب السحب للمستودع الأصلي لمراجعته من المشرفين.',
+'mod26.s6.title': 'مزامنة نسختك',
+'mod26.s6.desc': 'حافظ على تحديث نسختك بالجلب من upstream والدمج أو إعادة الأساس. على GitHub، يمكنك الضغط على "Sync fork" لتحديث الفرع الرئيسي لنسختك بنقرة واحدة.',
+'mod26.s7.title': 'مراجعة الكود والتكرار',
+'mod26.s7.desc': 'قد يطلب المشرفون تغييرات على طلب السحب. ادفع إيداعات جديدة لنفس الفرع — يتحدث طلب السحب تلقائياً. عالج تعليقات المراجعة، حلّ المحادثات، وبعد الموافقة يدمج المشرف مساهمتك.',
+'mod26.s7.tip': 'اقرأ ملف CONTRIBUTING.md للمشروع قبل تقديم طلب سحب. يشرح أسلوب الكود ومتطلبات الاختبار واتفاقيات طلبات السحب.',
+
+// ── Module 27: Git Reflog & Recovery (Arabic) ──
+'mod27.title': 'سجل المراجع والاسترداد في Git',
+'mod27.desc': 'أتقن git reflog لاسترداد الإيداعات المفقودة والفروع المحذوفة والتراجع عن عمليات إعادة التعيين الكارثية. شبكة الأمان لأخطاء Git.',
+'mod27.s1.title': 'ما هو سجل المراجع (Reflog)؟',
+'mod27.s1.desc': 'يسجل reflog (سجل المراجع) كل مرة يتحرك فيها HEAD — الإيداعات والتبديلات وإعادة التعيين والدمج وإعادة القاعدة. بخلاف git log الذي يعرض سلسلة الإيداعات، يعرض reflog سجل أفعالك المحلي. إنه سجل التراجع الشخصي الذي يستمر حتى عندما تبدو الإيداعات مفقودة.',
+'mod27.s2.title': 'عرض سجل المراجع',
+'mod27.s2.desc': 'استخدم git reflog لرؤية قائمة زمنية لجميع حركات HEAD. كل إدخال له فهرس (HEAD@{n}) يمكنك الإشارة إليه. يحتفظ سجل المراجع بالإدخالات لمدة 90 يومًا افتراضيًا (30 يومًا للإيداعات غير القابلة للوصول).',
+'mod27.s3.title': 'استرداد فرع محذوف',
+'mod27.s3.desc': 'إذا حذفت فرعًا عن طريق الخطأ، فإن إيداعاته لا تزال موجودة في سجل المراجع. ابحث عن hash الإيداع من سجل المراجع وأنشئ فرعًا جديدًا يشير إليه. الإيداعات آمنة طالما لم يتم تنظيفها بواسطة جامع القمامة.',
+'mod27.s4.title': 'التراجع عن إعادة تعيين صلبة',
+'mod27.s4.desc': 'نفذت git reset --hard وفقدت عملك؟ لا يزال سجل المراجع يحتفظ بسجل لمكان HEAD قبل إعادة التعيين. يمكنك إعادة التعيين إلى الحالة السابقة باستخدام مرجع سجل المراجع.',
+'mod27.s4.warning': 'تنتهي صلاحية إدخالات سجل المراجع بعد 90 يومًا (30 يومًا لغير القابلة للوصول). تصرف بسرعة لاسترداد العمل المفقود.',
+'mod27.s5.title': 'استرداد إيداعات مفقودة بعد إعادة القاعدة',
+'mod27.s5.desc': 'تعيد إعادة القاعدة كتابة التاريخ ويمكن أن تبدو وكأنها فقدت إيداعات. الإيداعات الأصلية لا تزال موجودة ويمكن الوصول إليها عبر سجل المراجع. يمكنك العثور على الحالة قبل إعادة القاعدة واستعادتها إذا لزم الأمر.',
+'mod27.s5.tip': 'قبل العمليات الخطرة، أنشئ فرع نسخة احتياطية: git branch backup-before-rebase. لا يكلف شيئًا ويوفر عليك المتاعب.',
+'mod27.s6.title': 'سجل المراجع لفروع محددة',
+'mod27.s6.desc': 'كل فرع له سجل مراجع خاص به. يمكنك فحص سجل مراجع فرع محدد لرؤية تاريخ حركته، وهو مفيد عند تصحيح ما حدث لفرع معين.',
+'mod27.s7.title': 'انتهاء صلاحية وإدارة سجل المراجع',
+'mod27.s7.desc': 'تنتهي صلاحية إدخالات سجل المراجع تلقائيًا، لكن يمكنك إدارتها يدويًا. يمكنك إنهاء صلاحية الإدخالات القديمة أو مسح سجل المراجع بالكامل. فهم انتهاء الصلاحية يساعدك على معرفة نافذة الاسترداد الخاصة بك.',
+'mod27.s7.tip': 'في الفريق، سجل المراجع لكل شخص محلي — لا يمكنك استرداد عمل شخص آخر المفقود من سجل مراجعك.',
+
+// ── Module 28: Git Submodules (Arabic) ──
+'mod28.title': 'الوحدات الفرعية في Git',
+'mod28.desc': 'تضمين وإدارة مستودعات Git الخارجية داخل مشروعك. تعلم الإضافة والتحديث والاستنساخ والإزالة للوحدات الفرعية.',
+'mod28.s1.title': 'ما هي الوحدات الفرعية؟',
+'mod28.s1.desc': 'تتيح لك الوحدات الفرعية في Git تضمين مستودع Git داخل مستودع آخر كمجلد فرعي. يتتبع المستودع الأصل إيداعًا محددًا من الوحدة الفرعية. هذا مفيد للمكتبات المشتركة وكود الموردين أو المكونات المصانة في مستودعات منفصلة.',
+'mod28.s2.title': 'إضافة وحدة فرعية',
+'mod28.s2.desc': 'استخدم git submodule add لتضمين مستودع خارجي. ينشئ Git ملف .gitmodules يتتبع عنوان URL ومسار الوحدة الفرعية، ويستنسخ المستودع في المجلد المحدد.',
+'mod28.s3.title': 'استنساخ مستودع يحتوي على وحدات فرعية',
+'mod28.s3.desc': 'عند استنساخ مستودع يحتوي على وحدات فرعية، تُنشأ مجلدات الوحدات الفرعية لكنها فارغة. تحتاج إلى تهيئتها وجلبها. بدلاً من ذلك، استخدم --recurse-submodules أثناء الاستنساخ للقيام بذلك في خطوة واحدة.',
+'mod28.s3.tip': 'استخدم دائمًا --recurse-submodules عند استنساخ مشروع يحتوي على وحدات فرعية لتجنب الارتباك بشأن المجلدات الفارغة.',
+'mod28.s4.title': 'تحديث الوحدات الفرعية',
+'mod28.s4.desc': 'لا تتحدث الوحدات الفرعية تلقائيًا عندما يتغير المصدر البعيد. يجب عليك جلبها وتحديثها صراحة. يمكنك التحديث إلى أحدث إيداع بعيد أو إلى الإيداع المحدد الذي يتتبعه المستودع الأصل.',
+'mod28.s5.title': 'العمل داخل وحدة فرعية',
+'mod28.s5.desc': 'يمكنك الدخول إلى مجلد وحدة فرعية وإجراء تغييرات وإيداعها ودفعها تمامًا مثل أي مستودع عادي. ثم في المستودع الأصل، سيظهر مرجع الوحدة الفرعية كمعدّل — تحتاج إلى إيداع هذا التغيير أيضًا.',
+'mod28.s5.warning': 'تتتبع الوحدات الفرعية إيداعًا محددًا وليس فرعًا. إذا أجريت تغييرات داخل وحدة فرعية، قم بإيداعها ودفعها قبل تحديث مرجع المستودع الأصل.',
+'mod28.s6.title': 'تنفيذ أوامر عبر الوحدات الفرعية',
+'mod28.s6.desc': 'استخدم git submodule foreach لتنفيذ أمر في كل وحدة فرعية دفعة واحدة. هذا مفيد للعمليات المجمعة مثل سحب التحديثات أو التحقق من الحالة أو تنفيذ عمليات البناء عبر جميع الوحدات الفرعية.',
+'mod28.s7.title': 'إزالة وحدة فرعية',
+'mod28.s7.desc': 'تتطلب إزالة وحدة فرعية خطوات متعددة: إلغاء تهيئتها وإزالتها من شجرة العمل وتنظيف ملف .gitmodules ومجلد .git/modules.',
+'mod28.s7.tip': 'فكر في git subtree كبديل إذا كان تعقيد الوحدات الفرعية عاليًا جدًا لحالة استخدامك. تدمج الأشجار الفرعية المستودع الخارجي مباشرة في شجرتك.',
+
+// ── Module 29: Git LFS & .gitattributes (Arabic) ──
+'mod29.title': 'Git LFS و .gitattributes',
+'mod29.desc': 'تعامل مع الملفات الثنائية الكبيرة بكفاءة باستخدام Git LFS وقم بتكوين سلوكيات خاصة بالملفات باستخدام .gitattributes.',
+'mod29.s1.title': 'لماذا يواجه Git صعوبة مع الملفات الكبيرة',
+'mod29.s1.desc': 'يخزن Git المحتوى الكامل لكل نسخة من كل ملف. الملفات الثنائية الكبيرة (الصور، الفيديوهات، مجموعات البيانات، الأصول المترجمة) تُضخم المستودع وتُبطئ الاستنساخ وتُهدر النطاق الترددي. يحل Git LFS هذه المشكلة بتخزين ملفات المؤشرات في Git والمحتوى الفعلي على خادم منفصل.',
+'mod29.s2.title': 'تثبيت Git LFS',
+'mod29.s2.desc': 'Git LFS هو امتداد لـ Git يجب تثبيته بشكل منفصل. بعد التثبيت، تحتاج إلى تهيئته مرة واحدة لكل حساب مستخدم بأمر git lfs install.',
+'mod29.s3.title': 'تتبع الملفات باستخدام LFS',
+'mod29.s3.desc': 'استخدم git lfs track لإخبار LFS بالملفات التي يجب إدارتها. ينشئ هذا ملف .gitattributes أو يحدّثه بقواعد التصفية. قم دائمًا بإيداع ملف .gitattributes حتى يحصل المتعاونون الآخرون على نفس تكوين LFS.',
+'mod29.s3.tip': 'تتبع أنماط الملفات وليس الملفات الفردية: git lfs track "*.psd" أفضل من تتبع كل ملف باسمه.',
+'mod29.s4.title': 'العمل مع ملفات LFS',
+'mod29.s4.desc': 'بمجرد إعداد التتبع، استخدم Git بشكل طبيعي — add و commit و push. يعترض Git LFS الملفات المتتبعة بشكل شفاف. يمكنك سرد الملفات المدارة بواسطة LFS والتحقق من حالتها في أي وقت.',
+'mod29.s5.title': 'فهم .gitattributes',
+'mod29.s5.desc': 'يتحكم ملف .gitattributes في الإعدادات لكل مسار: تطبيع نهايات الأسطر (نصي/ثنائي)، سلوك الفروقات، استراتيجيات الدمج، ومرشحات LFS. يضمن سلوكًا متسقًا عبر المنصات والمساهمين.',
+'mod29.s6.title': 'تطبيع نهايات الأسطر',
+'mod29.s6.desc': 'تستخدم أنظمة التشغيل المختلفة نهايات أسطر مختلفة (CRLF على Windows، LF على Unix/Mac). يمكن لملف .gitattributes فرض نهايات أسطر متسقة في المستودع بغض النظر عن نظام تشغيل المساهم.',
+'mod29.s6.tip': 'أضف "* text=auto" كأول سطر في .gitattributes للسماح لـ Git بالتعامل مع نهايات الأسطر تلقائيًا للملفات النصية.',
+'mod29.s7.title': 'إعدادات فروقات ودمج مخصصة',
+'mod29.s7.desc': 'يمكنك تحديد الملفات كثنائية لتخطي عرض الفروقات، أو تعريف محركات فروقات مخصصة لأنواع ملفات محددة، أو تعيين استراتيجيات دمج لكل مسار. هذا مفيد بشكل خاص للملفات المولّدة وملفات القفل أو الملفات التي يجب أن تفضل جانبًا واحدًا دائمًا أثناء الدمج.',
+
+// ── Module 30: CI/CD Integration with Git (Arabic) ──
+'mod30.title': 'تكامل CI/CD مع Git',
+'mod30.desc': 'أتمت الاختبار والبناء والنشر باستخدام خطوط أنابيب CI/CD المُشغّلة بـ Git مع GitHub Actions و GitLab CI والمزيد.',
+'mod30.s1.title': 'ما هو CI/CD؟',
+'mod30.s1.desc': 'التكامل المستمر (CI) يبني ويختبر الكود تلقائيًا عند كل دفع أو طلب سحب. النشر المستمر (CD) ينشر البنيات الناجحة تلقائيًا إلى بيئة التجربة أو الإنتاج. معًا، يكتشف CI/CD الأخطاء مبكرًا ويقدم الميزات بشكل أسرع.',
+'mod30.s2.title': 'أساسيات GitHub Actions',
+'mod30.s2.desc': 'يستخدم GitHub Actions ملفات سير عمل YAML في .github/workflows/ لتعريف خطوط الأنابيب الآلية. تُشغّل سير العمل بأحداث مثل push و pull_request أو جدول زمني. كل سير عمل يحتوي على وظائف تعمل على أجهزة افتراضية (runners).',
+'mod30.s3.title': 'إنشاء أول سير عمل',
+'mod30.s3.desc': 'أنشئ ملف سير عمل يشغّل الاختبارات عند كل دفع وطلب سحب. يقوم سير العمل بسحب الكود وإعداد البيئة وتثبيت التبعيات وتشغيل مجموعة الاختبارات.',
+'mod30.s3.tip': 'ابدأ بسير عمل اختبار بسيط ووسّعه تدريجيًا. خط أنابيب CI يعمل أفضل من خط مثالي غير موجود بعد.',
+'mod30.s4.title': 'خطوط أنابيب GitLab CI/CD',
+'mod30.s4.desc': 'يستخدم GitLab ملف .gitlab-ci.yml في جذر المستودع. يعرّف المراحل (البناء، الاختبار، النشر) والوظائف داخل كل مرحلة. يقوم GitLab runners بتنفيذ الوظائف في حاويات Docker أو أجهزة افتراضية.',
+'mod30.s5.title': 'حماية الفروع والفحوصات المطلوبة',
+'mod30.s5.desc': 'قم بتكوين قواعد حماية الفروع لتتطلب نجاح فحوصات CI قبل الدمج. هذا يمنع الكود المعطل من الوصول إلى الفرع الرئيسي. على GitHub، اذهب إلى Settings → Branches → Branch protection rules. على GitLab، استخدم إعدادات الفروع المحمية.',
+'mod30.s5.warning': 'لا تتخطَ أبدًا فحوصات CI للدمج بشكل أسرع. الفرع الرئيسي المعطل يعيق الفريق بأكمله.',
+'mod30.s6.title': 'الأسرار ومتغيرات البيئة',
+'mod30.s6.desc': 'تحتاج خطوط أنابيب CI/CD غالبًا إلى مفاتيح API ورموز وبيانات اعتماد. خزّنها كأسرار مشفرة في إعدادات منصتك — لا تقم أبدًا بإيداعها في المستودع. أشر إلى الأسرار في ملفات سير العمل باستخدام صيغة الأسرار الخاصة بالمنصة.',
+'mod30.s6.warning': 'لا تقم أبدًا بتضمين الأسرار في ملفات سير العمل أو إيداعها في المستودع. استخدم ميزة الأسرار المشفرة في منصتك.',
+'mod30.s7.title': 'تخطي CI وشارات الحالة',
+'mod30.s7.desc': 'أضف [skip ci] أو [ci skip] إلى رسالة الإيداع لتخطي تنفيذ خط الأنابيب للتغييرات البسيطة مثل تحديثات التوثيق. أضف شارات الحالة إلى ملف README لعرض حالة البناء بنظرة سريعة.',
+'mod30.s7.tip': 'استخدم [skip ci] باعتدال وفقط للتغييرات غير المتعلقة بالكود. من المغري تخطي CI لتغييرات "صغيرة" في الكود، لكن تلك هي بالضبط التي تسبب المشاكل.',
+
+// ── Module 31: GitHub Codespaces & Dev Environments (Arabic) ──
+'mod31.title': 'GitHub Codespaces وبيئات التطوير',
+'mod31.desc': 'طوّر في السحابة مع GitHub Codespaces ومحرر github.dev وقم بتكوين بيئات تطوير قابلة لإعادة الإنتاج باستخدام devcontainers.',
+'mod31.s1.title': 'ما هي بيئات التطوير السحابية؟',
+'mod31.s1.desc': 'تشغّل بيئات التطوير السحابية كودك على أجهزة بعيدة، مما يمنحك بيئة تطوير متكاملة مكونة بالكامل في المتصفح. هذا يزيل مشاكل "يعمل على جهازي" ويتيح لك البدء بالبرمجة في أي مشروع خلال ثوانٍ دون إعداد محلي.',
+'mod31.s2.title': 'github.dev — محرر فوري في المتصفح',
+'mod31.s2.desc': 'اضغط على مفتاح النقطة (.) على أي مستودع GitHub لفتحه في github.dev، محرر VS Code خفيف في المتصفح. إنه مثالي للتعديلات السريعة ومراجعة الكود والتنقل — لا حاجة لـ Codespace. يمكن إيداع التغييرات مباشرة.',
+'mod31.s2.tip': 'استخدم github.dev للتعديلات السريعة ومراجعة الكود. انتقل إلى Codespace كامل عندما تحتاج إلى طرفية أو أدوات بناء أو خوادم قيد التشغيل.',
+'mod31.s3.title': 'إنشاء Codespace',
+'mod31.s3.desc': 'انقر على "Code" ← "Codespaces" ← "Create codespace on main" على أي مستودع GitHub. يوفر GitHub جهازًا افتراضيًا سحابيًا مع VS Code وطرفية ومستودعك مستنسخًا. يمكنك أيضًا إنشاء Codespaces من الفروع أو طلبات السحب للاختبار المعزول.',
+'mod31.s4.title': 'تكوين DevContainer',
+'mod31.s4.desc': 'أضف ملف .devcontainer/devcontainer.json إلى مستودعك لتعريف بيئة التطوير: صورة Docker الأساسية وامتدادات VS Code وتوجيه المنافذ ومتغيرات البيئة وأوامر الإعداد بعد الإنشاء. هذا يضمن حصول الجميع على بيئة متطابقة.',
+'mod31.s5.title': 'توجيه المنافذ والمعاينة',
+'mod31.s5.desc': 'عند تشغيل خادم في Codespace، يتم توجيه المنافذ تلقائيًا. يمكنك الوصول إلى تطبيقك قيد التشغيل في المتصفح ومشاركة الرابط مع الزملاء للمراجعة والتحكم في رؤية المنفذ (خاص، مؤسسة، أو عام).',
+'mod31.s6.title': 'إدارة Codespaces',
+'mod31.s6.desc': 'اسرد وأوقف وأعد تشغيل واحذف Codespaces من GitHub أو واجهة سطر الأوامر. تحتفظ Codespaces المتوقفة بعملك لكنها لا تستهلك ساعات الحوسبة. عيّن سياسات الحذف التلقائي لتنظيف Codespaces الخاملة وإدارة التكاليف.',
+'mod31.s6.tip': 'أوقف Codespaces عند عدم الاستخدام — النشطة تستهلك ساعات حوسبة مدفوعة. استخدم "gh codespace stop" أو عيّن مهلة الخمول في إعداداتك.',
+
+// ── Module 32: GPG Signing & Commit Verification (Arabic) ──
+'mod32.title': 'توقيع GPG والتحقق من الإيداعات',
+'mod32.desc': 'وقّع إيداعاتك وعلاماتك تشفيريًا لإثبات تأليفك. تعلم إدارة مفاتيح GPG وشارات التحقق على GitHub/GitLab.',
+'mod32.s1.title': 'لماذا نوقّع الإيداعات؟',
+'mod32.s1.desc': 'يمكن لأي شخص تعيين أي اسم وبريد إلكتروني في git config. تستخدم الإيداعات الموقعة مفاتيح تشفير لإثبات أن الإيداع جاء فعلاً من المؤلف المُدّعى. تعرض منصات مثل GitHub شارة "Verified" على الإيداعات الموقعة، مما يبني الثقة في المساهمات مفتوحة المصدر.',
+'mod32.s2.title': 'إنشاء مفتاح GPG',
+'mod32.s2.desc': 'أنشئ زوج مفاتيح GPG (عام + خاص) لاستخدامه في التوقيع. يجب أن يستخدم المفتاح عنوان بريدك الإلكتروني في Git. بعد الإنشاء، سجّل معرّف المفتاح — ستحتاجه لتكوين Git.',
+'mod32.s3.title': 'تكوين Git للتوقيع',
+'mod32.s3.desc': 'أخبر Git بمفتاح GPG الذي يجب استخدامه للتوقيع، واختياريًا فعّل التوقيع التلقائي لتوقيع كل إيداع بدون علامة -S.',
+'mod32.s4.title': 'توقيع الإيداعات',
+'mod32.s4.desc': 'استخدم علامة -S لتوقيع إيداع، أو فعّل التوقيع التلقائي في التكوين. يمكنك التحقق من التوقيعات على الإيداعات الموجودة للتأكد من صحتها.',
+'mod32.s5.title': 'توقيع العلامات',
+'mod32.s5.desc': 'يمكن توقيع العلامات أيضًا، وهو مهم بشكل خاص لعلامات الإصدار. تثبت العلامة الموقعة أن الإصدار تم إنشاؤه بواسطة مشرف مصرّح. استخدم -s الصغيرة للعلامات (مقابل -S الكبيرة للإيداعات).',
+'mod32.s5.tip': 'وقّع دائمًا علامات الإصدار في المشاريع مفتوحة المصدر. يتيح للمستخدمين التحقق من أن الإصدار أصلي ولم يتم العبث به.',
+'mod32.s6.title': 'إضافة مفتاحك إلى GitHub/GitLab',
+'mod32.s6.desc': 'صدّر مفتاح GPG العام وأضفه إلى حسابك على GitHub أو GitLab. هذا يتيح للمنصة التحقق من توقيعاتك وعرض شارة "Verified" على إيداعاتك وعلاماتك.',
+'mod32.s7.title': 'التوقيع بـ SSH (بديل حديث)',
+'mod32.s7.desc': 'يدعم Git 2.34+ توقيع الإيداعات بمفاتيح SSH بدلاً من GPG. هذا أبسط إذا كان لديك مفاتيح SSH معدة بالفعل. قم بتكوين Git لاستخدام SSH للتوقيع وأضف مفتاح توقيع SSH إلى GitHub.',
+'mod32.s7.tip': 'توقيع SSH أبسط من GPG ويعمل جيدًا إذا كنت تستخدم SSH بالفعل للمصادقة. يدعمه GitHub منذ 2022.',
+
 // New Quiz (Arabic)
 'quiz.b9.q': 'ما الفرق بين "git switch" و "git checkout"؟',
 'quiz.b9.o1': 'هما نفس الأمر تماماً',
@@ -2303,6 +2851,78 @@ ar: {
 'quiz.a14.o3': 'يجد ويبلّغ عن انتهاكات أسلوب الكود',
 'quiz.a14.o4': 'يحدد تعارضات الدمج في ملف',
 'quiz.a14.explain': '"git blame <file>" يضع تعليقاً على كل سطر بهاش الإيداع والمؤلف والتاريخ لآخر تعديل.',
+
+// Quiz — Intermediate (Arabic: new reflog, codespaces)
+'quiz.i13.q': 'ماذا يعرض "git reflog"؟',
+'quiz.i13.o1': 'سجل زمني لجميع حركات HEAD في مستودعك المحلي',
+'quiz.i13.o2': 'قائمة بجميع الإيداعات على الخادم البعيد',
+'quiz.i13.o3': 'سجل لتغييرات الملفات في مجلد العمل',
+'quiz.i13.o4': 'قائمة بالفروع التي تم دمجها',
+'quiz.i13.explain': 'يسجل git reflog كل مرة يتغير فيها HEAD — الإيداعات والتبديلات وإعادة التعيين والدمج وإعادة القاعدة. إنه محلي فقط وهو شبكة أمانك لاسترداد الإيداعات المفقودة.',
+
+'quiz.i14.q': 'كيف يمكنك استرداد فرع حذفته عن طريق الخطأ؟',
+'quiz.i14.o1': 'ابحث عن هاش الإيداع في git reflog وأنشئ فرعاً جديداً يشير إليه',
+'quiz.i14.o2': 'شغّل "git branch --recover" لاستعادته',
+'quiz.i14.o3': 'الفروع المحذوفة لا يمكن استردادها',
+'quiz.i14.o4': 'شغّل "git pull" لجلبه من البعيد',
+'quiz.i14.explain': 'حتى بعد حذف فرع، تبقى إيداعاته في سجل المراجع. استخدم "git reflog" للعثور على آخر إيداع للفرع المحذوف، ثم "git branch new-name <hash>" لاستعادته.',
+
+'quiz.i15.q': 'كيف تفتح أي مستودع GitHub في محرر VS Code في المتصفح فوراً؟',
+'quiz.i15.o1': 'اضغط مفتاح النقطة (.) على صفحة المستودع',
+'quiz.i15.o2': 'انقر زر "تحرير" على أي ملف',
+'quiz.i15.o3': 'شغّل "gh codespace edit" في الطرفية',
+'quiz.i15.o4': 'ثبّت تطبيق GitHub Desktop',
+'quiz.i15.explain': 'الضغط على "." على أي مستودع GitHub يفتحه في github.dev، محرر VS Code خفيف في المتصفح. لبيئة تطوير كاملة مع طرفية، استخدم GitHub Codespaces.',
+
+'quiz.i16.q': 'ماذا يفعل "git clean -fd"؟',
+'quiz.i16.o1': 'يزيل الملفات والمجلدات غير المتتبعة من شجرة العمل',
+'quiz.i16.o2': 'ينظف ذاكرة التخزين المؤقتة لـ Git',
+'quiz.i16.o3': 'يزيل جميع الإيداعات من الفرع الحالي',
+'quiz.i16.o4': 'يحذف جميع الفروع ما عدا main',
+'quiz.i16.explain': '"git clean -fd" يزيل الملفات غير المتتبعة (-f للإجبار) والمجلدات (-d). شغّل دائماً "git clean -n" أولاً لمعاينة ما سيُحذف.',
+
+// Quiz — Advanced (Arabic: new submodules, LFS, CI/CD, signing)
+'quiz.a15.q': 'ما الغرض من الوحدات الفرعية في Git؟',
+'quiz.a15.o1': 'تضمين وتتبع مستودعات Git خارجية داخل مشروعك عند إيداعات محددة',
+'quiz.a15.o2': 'تقسيم مستودع واحد إلى ملفات أصغر',
+'quiz.a15.o3': 'إنشاء نسخ احتياطية من المستودع',
+'quiz.a15.o4': 'دمج فروع متعددة في آن واحد',
+'quiz.a15.explain': 'تتيح الوحدات الفرعية تضمين مستودع Git داخل آخر. يتتبع المستودع الأصل إيداعاً محدداً من الوحدة الفرعية، وهو مفيد للمكتبات المشتركة أو كود الموردين.',
+
+'quiz.a16.q': 'ما المشكلة التي يحلها Git LFS؟',
+'quiz.a16.o1': 'يتعامل بكفاءة مع الملفات الثنائية الكبيرة بتخزين ملفات مؤشرات في Git والمحتوى الفعلي على خادم منفصل',
+'quiz.a16.o2': 'يضغط جميع الملفات في المستودع',
+'quiz.a16.o3': 'يحد من عدد الإيداعات في المستودع',
+'quiz.a16.o4': 'يسرّع git clone بإزالة الفروع القديمة',
+'quiz.a16.explain': 'يخزن Git المحتوى الكامل لكل نسخة ملف. الملفات الثنائية الكبيرة تُضخم المستودع. يستبدلها Git LFS بملفات مؤشرات صغيرة ويخزن البيانات الفعلية على خادم LFS مخصص.',
+
+'quiz.a17.q': 'في ملف سير عمل GitHub Actions، ماذا يحدد "on: [push, pull_request]"؟',
+'quiz.a17.o1': 'الأحداث التي تشغّل سير العمل',
+'quiz.a17.o2': 'الفروع المراد النشر إليها',
+'quiz.a17.o3': 'قائمة الأوامر المراد تنفيذها',
+'quiz.a17.o4': 'ترتيب تنفيذ الوظائف',
+'quiz.a17.explain': 'مفتاح "on" في سير عمل GitHub Actions يحدد الأحداث المُشغّلة. [push, pull_request] تعني تشغيل سير العمل عند كل دفع وعند إنشاء/تحديث طلب سحب.',
+
+'quiz.a18.q': 'لماذا يجب توقيع إيداعات Git بمفاتيح GPG أو SSH؟',
+'quiz.a18.o1': 'لإثبات تشفيرياً أن الإيداع جاء من المؤلف المُدّعى',
+'quiz.a18.o2': 'لتشفير الكود المصدري في المستودع',
+'quiz.a18.o3': 'لمنع الآخرين من قراءة إيداعاتك',
+'quiz.a18.o4': 'لتسريع عمليات الدفع والسحب',
+'quiz.a18.explain': 'يمكن لأي شخص تعيين أي اسم/بريد في git config. توقيع الإيداعات يثبت التأليف تشفيرياً. تعرض منصات مثل GitHub شارة "Verified" على الإيداعات الموقعة.',
+
+'quiz.a19.q': 'ماذا يفعل "* text=auto" في ملف .gitattributes؟',
+'quiz.a19.o1': 'يسمح لـ Git بالكشف التلقائي عن الملفات النصية وتطبيع نهايات أسطرها',
+'quiz.a19.o2': 'يحول جميع الملفات إلى تنسيق نص عادي',
+'quiz.a19.o3': 'يُفعّل التدقيق الإملائي التلقائي للملفات النصية',
+'quiz.a19.o4': 'يحدد جميع الملفات كمولّدة تلقائياً',
+'quiz.a19.explain': '"* text=auto" يخبر Git بالكشف التلقائي عن الملفات النصية وتطبيع نهايات الأسطر إلى LF في المستودع، مع التحويل إلى تنسيق نظام التشغيل عند السحب.',
+
+'quiz.a20.q': 'ماذا تفعل إضافة "[skip ci]" إلى رسالة الإيداع؟',
+'quiz.a20.o1': 'تخبر منصة CI/CD بتخطي تشغيل خط الأنابيب لهذا الإيداع',
+'quiz.a20.o2': 'تزيل الإيداع من سجل CI/CD',
+'quiz.a20.o3': 'تُجبر خط أنابيب CI على التشغيل في الوضع السريع',
+'quiz.a20.o4': 'تتخطى منطقة التجهيز وتودع مباشرة',
+'quiz.a20.explain': 'معظم منصات CI/CD (GitHub Actions، GitLab CI، إلخ) تتعرف على [skip ci] في رسائل الإيداع ولن تشغّل خط الأنابيب. استخدمها باعتدال للتغييرات غير المتعلقة بالكود.',
 
 // New challenges (Arabic)
 'terminal.ch.detachedHead': 'تنقل HEAD المنفصل',
@@ -2501,6 +3121,48 @@ ar: {
 'cheat.adv.addUpstream': 'إضافة مصدر بعيد أصلي للنسخ المتفرعة',
 'cheat.adv.fetchUpstream': 'جلب من المصدر البعيد الأصلي',
 'cheat.adv.worktree': 'إنشاء شجرة عمل مرتبطة',
+
+// Cheat sheet — Submodules (Arabic)
+'cheat.cat.submodules': 'الوحدات الفرعية',
+'cheat.sub.add': 'إضافة مستودع خارجي كوحدة فرعية',
+'cheat.sub.init': 'تهيئة تكوين الوحدة الفرعية محلياً',
+'cheat.sub.update': 'جلب وسحب الإيداع المتتبع من الأصل',
+'cheat.sub.updateRemote': 'تحديث الوحدات الفرعية إلى أحدث إيداع بعيد',
+'cheat.sub.status': 'عرض الإيداع الحالي لكل وحدة فرعية',
+'cheat.sub.foreach': 'تنفيذ أمر في كل وحدة فرعية',
+'cheat.sub.deinit': 'إلغاء تسجيل وحدة فرعية',
+'cheat.sub.cloneRecurse': 'استنساخ مستودع وتهيئة جميع الوحدات الفرعية',
+
+// Cheat sheet — LFS & .gitattributes (Arabic)
+'cheat.cat.lfs': 'LFS و .gitattributes',
+'cheat.lfs.install': 'تهيئة Git LFS لحساب المستخدم',
+'cheat.lfs.track': 'تتبع نمط ملفات باستخدام LFS',
+'cheat.lfs.untrack': 'إيقاف تتبع نمط باستخدام LFS',
+'cheat.lfs.lsFiles': 'سرد جميع الملفات المدارة بواسطة LFS',
+'cheat.lfs.status': 'عرض حالة كائنات LFS',
+'cheat.lfs.textAuto': 'تطبيع نهايات الأسطر تلقائياً للملفات النصية (.gitattributes)',
+'cheat.lfs.binary': 'تحديد الملفات كثنائية لتخطي الفروقات (.gitattributes)',
+'cheat.lfs.checkAttr': 'فحص قواعد .gitattributes لملف محدد',
+
+// Cheat sheet — CI/CD (Arabic)
+'cheat.cat.cicd': 'تكامل CI/CD',
+'cheat.ci.mkdirWorkflows': 'إنشاء مجلد سير عمل GitHub Actions',
+'cheat.ci.skipCi': 'تخطي خط أنابيب CI لهذا الإيداع',
+'cheat.ci.pushTags': 'دفع جميع العلامات لتشغيل سير عمل الإصدار',
+'cheat.ci.runList': 'سرد عمليات التشغيل الأخيرة (GitHub CLI)',
+'cheat.ci.runView': 'عرض تفاصيل تشغيل محدد',
+'cheat.ci.runWatch': 'مراقبة تشغيل سير العمل في الوقت الفعلي',
+
+// Cheat sheet — GPG Signing (Arabic)
+'cheat.cat.signing': 'توقيع GPG والتحقق',
+'cheat.sign.genKey': 'إنشاء زوج مفاتيح GPG جديد',
+'cheat.sign.listKeys': 'سرد مفاتيح GPG السرية بالتنسيق الطويل',
+'cheat.sign.configKey': 'تعيين مفتاح GPG لتوقيع Git',
+'cheat.sign.autoSign': 'تفعيل التوقيع التلقائي للإيداعات',
+'cheat.sign.signCommit': 'إنشاء إيداع موقع بـ GPG',
+'cheat.sign.signTag': 'إنشاء علامة موقعة بـ GPG',
+'cheat.sign.verify': 'عرض توقيعات الإيداعات في السجل',
+'cheat.sign.sshFormat': 'استخدام مفاتيح SSH للتوقيع بدلاً من GPG',
 
 // Quiz questions — Beginner (Arabic)
 'quiz.b1.q': 'ماذا يفعل أمر "git init"؟',
@@ -3072,6 +3734,146 @@ const modules = [
         { titleKey: 'mod21.s5.title', descKey: 'mod21.s5.desc', commands: { windows: 'git bisect start\ngit bisect bad\ngit bisect good HEAD~20\ngit bisect run npm test', mac: 'git bisect start\ngit bisect bad\ngit bisect good HEAD~20\ngit bisect run npm test', linux: 'git bisect start\ngit bisect bad\ngit bisect good HEAD~20\ngit bisect run npm test' }, output: null, vscodeKey: null, tipKey: null, warningKey: null },
         { titleKey: 'mod21.s6.title', descKey: 'mod21.s6.desc', commands: { windows: 'git blame src\\app.js', mac: 'git blame src/app.js', linux: 'git blame src/app.js' }, output: 'a1b2c3d (Dr. Arafah 2026-01-15 09:30) function init() {\nf4e5d6c (Ahmad     2026-02-20 14:15)   setupDB();\n7a8b9c0 (Dr. Arafah 2026-03-10 11:45)   loadConfig();', vscodeKey: 'mod21.s6.vscode', tipKey: null, warningKey: null }
     ]
+},
+{
+    id: 22, titleKey: 'mod22.title', descKey: 'mod22.desc', level: 'beginner', duration: 20,
+    icon: 'fa-solid fa-terminal', gradient: 'linear-gradient(135deg, #1e293b, #475569)',
+    steps: [
+        { titleKey: 'mod22.s1.title', descKey: 'mod22.s1.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod22.s2.title', descKey: 'mod22.s2.desc', commands: { windows: 'cd\ndir\ncd Desktop\\my-project', mac: 'pwd\nls\ncd ~/Desktop/my-project', linux: 'pwd\nls\ncd ~/Desktop/my-project' }, output: '/Users/name/Desktop/my-project', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod22.s3.title', descKey: 'mod22.s3.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod22.s4.title', descKey: 'mod22.s4.desc', commands: { windows: 'echo. > newfile.txt\nmkdir new-folder\ndel newfile.txt\nrmdir new-folder', mac: 'touch newfile.txt\nmkdir new-folder\nrm newfile.txt\nrmdir new-folder', linux: 'touch newfile.txt\nmkdir new-folder\nrm newfile.txt\nrmdir new-folder' }, output: null, vscodeKey: null, tipKey: null, warningKey: 'mod22.s4.warning' },
+        { titleKey: 'mod22.s5.title', descKey: 'mod22.s5.desc', commands: { windows: 'copy file.txt backup.txt\nmove file.txt new-name.txt', mac: 'cp file.txt backup.txt\nmv file.txt new-name.txt', linux: 'cp file.txt backup.txt\nmv file.txt new-name.txt' }, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod22.s6.title', descKey: 'mod22.s6.desc', commands: { windows: 'type file.txt\ncls\ndoskey /history', mac: 'cat file.txt\nclear\nhistory', linux: 'cat file.txt\nclear\nhistory' }, output: null, vscodeKey: null, tipKey: 'mod22.s6.tip', warningKey: null }
+    ]
+},
+{
+    id: 23, titleKey: 'mod23.title', descKey: 'mod23.desc', level: 'intermediate', duration: 20,
+    icon: 'fa-solid fa-key', gradient: 'linear-gradient(135deg, #059669, #10b981)',
+    steps: [
+        { titleKey: 'mod23.s1.title', descKey: 'mod23.s1.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod23.s2.title', descKey: 'mod23.s2.desc', commands: { windows: 'ssh-keygen -t ed25519 -C "your_email@example.com"', mac: 'ssh-keygen -t ed25519 -C "your_email@example.com"', linux: 'ssh-keygen -t ed25519 -C "your_email@example.com"' }, output: 'Generating public/private ed25519 key pair.\nEnter file in which to save the key (/Users/you/.ssh/id_ed25519):\nYour identification has been saved in /Users/you/.ssh/id_ed25519\nYour public key has been saved in /Users/you/.ssh/id_ed25519.pub', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod23.s3.title', descKey: 'mod23.s3.desc', commands: { windows: 'eval $(ssh-agent -s)\nssh-add ~/.ssh/id_ed25519', mac: 'eval "$(ssh-agent -s)"\nssh-add --apple-use-keychain ~/.ssh/id_ed25519', linux: 'eval "$(ssh-agent -s)"\nssh-add ~/.ssh/id_ed25519' }, output: 'Agent pid 12345\nIdentity added: /Users/you/.ssh/id_ed25519 (your_email@example.com)', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod23.s4.title', descKey: 'mod23.s4.desc', commands: { windows: 'clip < ~/.ssh/id_ed25519.pub', mac: 'pbcopy < ~/.ssh/id_ed25519.pub', linux: 'cat ~/.ssh/id_ed25519.pub' }, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod23.s5.title', descKey: 'mod23.s5.desc', commands: { windows: 'ssh -T git@github.com', mac: 'ssh -T git@github.com', linux: 'ssh -T git@github.com' }, output: 'Hi username! You\'ve successfully authenticated, but GitHub does not provide shell access.', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod23.s6.title', descKey: 'mod23.s6.desc', commands: { windows: 'git clone git@github.com:user/repo.git\ngit remote set-url origin git@github.com:user/repo.git', mac: 'git clone git@github.com:user/repo.git\ngit remote set-url origin git@github.com:user/repo.git', linux: 'git clone git@github.com:user/repo.git\ngit remote set-url origin git@github.com:user/repo.git' }, output: null, vscodeKey: null, tipKey: 'mod23.s6.tip', warningKey: null }
+    ]
+},
+{
+    id: 24, titleKey: 'mod24.title', descKey: 'mod24.desc', level: 'advanced', duration: 25,
+    icon: 'fa-brands fa-github', gradient: 'linear-gradient(135deg, #1a1a2e, #16213e)',
+    steps: [
+        { titleKey: 'mod24.s1.title', descKey: 'mod24.s1.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod24.s2.title', descKey: 'mod24.s2.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod24.s3.title', descKey: 'mod24.s3.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod24.s4.title', descKey: 'mod24.s4.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod24.s5.title', descKey: 'mod24.s5.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod24.s6.title', descKey: 'mod24.s6.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod24.s7.title', descKey: 'mod24.s7.desc', commands: null, output: null, vscodeKey: null, tipKey: 'mod24.s7.tip', warningKey: null },
+        { titleKey: 'mod24.s8.title', descKey: 'mod24.s8.desc', commands: { windows: '# Enable in: Settings → Pages → Source: main branch\n# Or use GitHub CLI:\ngh api repos/{owner}/{repo}/pages --method POST --field source=\'{"branch":"main","path":"/"}\'', mac: '# Enable in: Settings → Pages → Source: main branch\n# Or use GitHub CLI:\ngh api repos/{owner}/{repo}/pages --method POST --field source=\'{"branch":"main","path":"/"}\'', linux: '# Enable in: Settings → Pages → Source: main branch\n# Or use GitHub CLI:\ngh api repos/{owner}/{repo}/pages --method POST --field source=\'{"branch":"main","path":"/"}\'' }, output: 'Your site is published at https://username.github.io/repo-name/', vscodeKey: null, tipKey: 'mod24.s8.tip', warningKey: null }
+    ]
+},
+{
+    id: 25, titleKey: 'mod25.title', descKey: 'mod25.desc', level: 'intermediate', duration: 18,
+    icon: 'fa-solid fa-magnifying-glass-minus', gradient: 'linear-gradient(135deg, #0ea5e9, #38bdf8)',
+    steps: [
+        { titleKey: 'mod25.s1.title', descKey: 'mod25.s1.desc', commands: { windows: 'git diff', mac: 'git diff', linux: 'git diff' }, output: 'diff --git a/app.js b/app.js\n--- a/app.js\n+++ b/app.js\n@@ -1,3 +1,4 @@\n function init() {\n+  console.log("starting...");\n   loadConfig();\n }', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod25.s2.title', descKey: 'mod25.s2.desc', commands: { windows: 'git diff --staged', mac: 'git diff --staged', linux: 'git diff --staged' }, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod25.s3.title', descKey: 'mod25.s3.desc', commands: { windows: 'git diff main..feature-branch\ngit diff HEAD~3..HEAD --stat', mac: 'git diff main..feature-branch\ngit diff HEAD~3..HEAD --stat', linux: 'git diff main..feature-branch\ngit diff HEAD~3..HEAD --stat' }, output: ' src/app.js   | 12 ++++++---\n src/utils.js |  5 +++++\n 2 files changed, 14 insertions(+), 3 deletions(-)', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod25.s4.title', descKey: 'mod25.s4.desc', commands: { windows: 'git restore app.js\ngit restore .', mac: 'git restore app.js\ngit restore .', linux: 'git restore app.js\ngit restore .' }, output: null, vscodeKey: null, tipKey: null, warningKey: 'mod25.s4.warning' },
+        { titleKey: 'mod25.s5.title', descKey: 'mod25.s5.desc', commands: { windows: 'git restore --staged app.js\ngit restore --staged .', mac: 'git restore --staged app.js\ngit restore --staged .', linux: 'git restore --staged app.js\ngit restore --staged .' }, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod25.s6.title', descKey: 'mod25.s6.desc', commands: { windows: 'git clean -n\ngit clean -fd', mac: 'git clean -n\ngit clean -fd', linux: 'git clean -n\ngit clean -fd' }, output: 'Would remove build/\nWould remove temp.log\nRemoving build/\nRemoving temp.log', vscodeKey: null, tipKey: null, warningKey: 'mod25.s6.warning' }
+    ]
+},
+{
+    id: 26, titleKey: 'mod26.title', descKey: 'mod26.desc', level: 'intermediate', duration: 22,
+    icon: 'fa-solid fa-code-fork', gradient: 'linear-gradient(135deg, #8b5cf6, #a78bfa)',
+    steps: [
+        { titleKey: 'mod26.s1.title', descKey: 'mod26.s1.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod26.s2.title', descKey: 'mod26.s2.desc', commands: { windows: 'git clone https://github.com/YOUR-USERNAME/forked-repo.git\ncd forked-repo', mac: 'git clone https://github.com/YOUR-USERNAME/forked-repo.git\ncd forked-repo', linux: 'git clone https://github.com/YOUR-USERNAME/forked-repo.git\ncd forked-repo' }, output: 'Cloning into \'forked-repo\'...\nremote: Enumerating objects: 156, done.', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod26.s3.title', descKey: 'mod26.s3.desc', commands: { windows: 'git remote add upstream https://github.com/ORIGINAL-OWNER/repo.git\ngit remote -v', mac: 'git remote add upstream https://github.com/ORIGINAL-OWNER/repo.git\ngit remote -v', linux: 'git remote add upstream https://github.com/ORIGINAL-OWNER/repo.git\ngit remote -v' }, output: 'origin    https://github.com/YOUR-USERNAME/forked-repo.git (fetch)\norigin    https://github.com/YOUR-USERNAME/forked-repo.git (push)\nupstream  https://github.com/ORIGINAL-OWNER/repo.git (fetch)\nupstream  https://github.com/ORIGINAL-OWNER/repo.git (push)', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod26.s4.title', descKey: 'mod26.s4.desc', commands: { windows: 'git switch -c feature/my-improvement\ngit add .\ngit commit -m "Add: my improvement"\ngit push origin feature/my-improvement', mac: 'git switch -c feature/my-improvement\ngit add .\ngit commit -m "Add: my improvement"\ngit push origin feature/my-improvement', linux: 'git switch -c feature/my-improvement\ngit add .\ngit commit -m "Add: my improvement"\ngit push origin feature/my-improvement' }, output: null, vscodeKey: null, tipKey: 'mod26.s4.tip', warningKey: null },
+        { titleKey: 'mod26.s5.title', descKey: 'mod26.s5.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod26.s6.title', descKey: 'mod26.s6.desc', commands: { windows: 'git fetch upstream\ngit switch main\ngit merge upstream/main\ngit push origin main', mac: 'git fetch upstream\ngit switch main\ngit merge upstream/main\ngit push origin main', linux: 'git fetch upstream\ngit switch main\ngit merge upstream/main\ngit push origin main' }, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod26.s7.title', descKey: 'mod26.s7.desc', commands: null, output: null, vscodeKey: null, tipKey: 'mod26.s7.tip', warningKey: null }
+    ]
+},
+{
+    id: 27, titleKey: 'mod27.title', descKey: 'mod27.desc', level: 'intermediate', duration: 18,
+    icon: 'fa-solid fa-clock-rotate-left', gradient: 'linear-gradient(135deg, #f59e0b, #d97706)',
+    steps: [
+        { titleKey: 'mod27.s1.title', descKey: 'mod27.s1.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod27.s2.title', descKey: 'mod27.s2.desc', commands: { windows: 'git reflog\ngit reflog show --date=relative', mac: 'git reflog\ngit reflog show --date=relative', linux: 'git reflog\ngit reflog show --date=relative' }, output: 'a1b2c3d HEAD@{0}: commit: Add new feature\ne4f5g6h HEAD@{1}: checkout: moving from dev to main\ni7j8k9l HEAD@{2}: commit: Fix login bug\nm0n1o2p HEAD@{3}: reset: moving to HEAD~2', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod27.s3.title', descKey: 'mod27.s3.desc', commands: { windows: 'git reflog\n# Find the commit hash of the deleted branch tip\ngit branch recovered-branch a1b2c3d', mac: 'git reflog\n# Find the commit hash of the deleted branch tip\ngit branch recovered-branch a1b2c3d', linux: 'git reflog\n# Find the commit hash of the deleted branch tip\ngit branch recovered-branch a1b2c3d' }, output: 'Created branch \'recovered-branch\' at a1b2c3d.', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod27.s4.title', descKey: 'mod27.s4.desc', commands: { windows: 'git reflog\n# Find HEAD@{n} before the reset\ngit reset --hard HEAD@{2}', mac: 'git reflog\n# Find HEAD@{n} before the reset\ngit reset --hard HEAD@{2}', linux: 'git reflog\n# Find HEAD@{n} before the reset\ngit reset --hard HEAD@{2}' }, output: 'HEAD is now at e4f5g6h Fix login bug', vscodeKey: null, tipKey: null, warningKey: 'mod27.s4.warning' },
+        { titleKey: 'mod27.s5.title', descKey: 'mod27.s5.desc', commands: { windows: 'git reflog\n# Find the pre-rebase commit\ngit reset --hard HEAD@{5}', mac: 'git reflog\n# Find the pre-rebase commit\ngit reset --hard HEAD@{5}', linux: 'git reflog\n# Find the pre-rebase commit\ngit reset --hard HEAD@{5}' }, output: 'HEAD is now at m0n1o2p Original commit before rebase', vscodeKey: null, tipKey: 'mod27.s5.tip', warningKey: null },
+        { titleKey: 'mod27.s6.title', descKey: 'mod27.s6.desc', commands: { windows: 'git reflog show main\ngit reflog show feature-branch', mac: 'git reflog show main\ngit reflog show feature-branch', linux: 'git reflog show main\ngit reflog show feature-branch' }, output: 'a1b2c3d main@{0}: merge feature: Fast-forward\ne4f5g6h main@{1}: commit: Update README\ni7j8k9l main@{2}: commit: Initial commit', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod27.s7.title', descKey: 'mod27.s7.desc', commands: { windows: 'git reflog expire --expire=30.days refs/heads/main\ngit reflog expire --expire-unreachable=now --all\ngit gc', mac: 'git reflog expire --expire=30.days refs/heads/main\ngit reflog expire --expire-unreachable=now --all\ngit gc', linux: 'git reflog expire --expire=30.days refs/heads/main\ngit reflog expire --expire-unreachable=now --all\ngit gc' }, output: null, vscodeKey: null, tipKey: 'mod27.s7.tip', warningKey: null }
+    ]
+},
+{
+    id: 28, titleKey: 'mod28.title', descKey: 'mod28.desc', level: 'advanced', duration: 22,
+    icon: 'fa-solid fa-cubes', gradient: 'linear-gradient(135deg, #6366f1, #818cf8)',
+    steps: [
+        { titleKey: 'mod28.s1.title', descKey: 'mod28.s1.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod28.s2.title', descKey: 'mod28.s2.desc', commands: { windows: 'git submodule add https://github.com/user/shared-lib.git libs/shared-lib\ngit status', mac: 'git submodule add https://github.com/user/shared-lib.git libs/shared-lib\ngit status', linux: 'git submodule add https://github.com/user/shared-lib.git libs/shared-lib\ngit status' }, output: 'Cloning into \'libs/shared-lib\'...\nOn branch main\nChanges to be committed:\n  new file:   .gitmodules\n  new file:   libs/shared-lib', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod28.s3.title', descKey: 'mod28.s3.desc', commands: { windows: 'git clone --recurse-submodules https://github.com/user/project.git\n# Or if already cloned:\ngit submodule init\ngit submodule update', mac: 'git clone --recurse-submodules https://github.com/user/project.git\n# Or if already cloned:\ngit submodule init\ngit submodule update', linux: 'git clone --recurse-submodules https://github.com/user/project.git\n# Or if already cloned:\ngit submodule init\ngit submodule update' }, output: 'Submodule \'libs/shared-lib\' registered for path \'libs/shared-lib\'\nCloning into \'libs/shared-lib\'...\nSubmodule path \'libs/shared-lib\': checked out \'a1b2c3d\'', vscodeKey: null, tipKey: 'mod28.s3.tip', warningKey: null },
+        { titleKey: 'mod28.s4.title', descKey: 'mod28.s4.desc', commands: { windows: 'git submodule update --remote\ngit submodule status', mac: 'git submodule update --remote\ngit submodule status', linux: 'git submodule update --remote\ngit submodule status' }, output: 'Submodule path \'libs/shared-lib\': checked out \'e4f5g6h\'\n e4f5g6h libs/shared-lib (v2.1.0)', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod28.s5.title', descKey: 'mod28.s5.desc', commands: { windows: 'cd libs/shared-lib\ngit switch main\ngit pull\n# Make changes, commit, push\ncd ../..\ngit add libs/shared-lib\ngit commit -m "Update shared-lib submodule"', mac: 'cd libs/shared-lib\ngit switch main\ngit pull\n# Make changes, commit, push\ncd ../..\ngit add libs/shared-lib\ngit commit -m "Update shared-lib submodule"', linux: 'cd libs/shared-lib\ngit switch main\ngit pull\n# Make changes, commit, push\ncd ../..\ngit add libs/shared-lib\ngit commit -m "Update shared-lib submodule"' }, output: null, vscodeKey: null, tipKey: null, warningKey: 'mod28.s5.warning' },
+        { titleKey: 'mod28.s6.title', descKey: 'mod28.s6.desc', commands: { windows: 'git submodule foreach git pull origin main\ngit submodule foreach git status', mac: 'git submodule foreach git pull origin main\ngit submodule foreach git status', linux: 'git submodule foreach git pull origin main\ngit submodule foreach git status' }, output: 'Entering \'libs/shared-lib\'\nAlready up to date.\nEntering \'libs/utils\'\nUpdating a1b2c3d..e4f5g6h\nFast-forward', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod28.s7.title', descKey: 'mod28.s7.desc', commands: { windows: 'git submodule deinit libs/shared-lib\ngit rm libs/shared-lib\ngit commit -m "Remove shared-lib submodule"', mac: 'git submodule deinit libs/shared-lib\ngit rm libs/shared-lib\ngit commit -m "Remove shared-lib submodule"', linux: 'git submodule deinit libs/shared-lib\ngit rm libs/shared-lib\ngit commit -m "Remove shared-lib submodule"' }, output: 'Cleared directory \'libs/shared-lib\'\nrm \'libs/shared-lib\'', vscodeKey: null, tipKey: 'mod28.s7.tip', warningKey: null }
+    ]
+},
+{
+    id: 29, titleKey: 'mod29.title', descKey: 'mod29.desc', level: 'advanced', duration: 20,
+    icon: 'fa-solid fa-database', gradient: 'linear-gradient(135deg, #0ea5e9, #38bdf8)',
+    steps: [
+        { titleKey: 'mod29.s1.title', descKey: 'mod29.s1.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod29.s2.title', descKey: 'mod29.s2.desc', commands: { windows: 'git lfs install', mac: 'brew install git-lfs\ngit lfs install', linux: 'sudo apt install git-lfs\ngit lfs install' }, output: 'Git LFS initialized.', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod29.s3.title', descKey: 'mod29.s3.desc', commands: { windows: 'git lfs track "*.psd"\ngit lfs track "*.zip"\ngit lfs track "assets/videos/**"\ngit add .gitattributes', mac: 'git lfs track "*.psd"\ngit lfs track "*.zip"\ngit lfs track "assets/videos/**"\ngit add .gitattributes', linux: 'git lfs track "*.psd"\ngit lfs track "*.zip"\ngit lfs track "assets/videos/**"\ngit add .gitattributes' }, output: 'Tracking "*.psd"\nTracking "*.zip"\nTracking "assets/videos/**"', vscodeKey: null, tipKey: 'mod29.s3.tip', warningKey: null },
+        { titleKey: 'mod29.s4.title', descKey: 'mod29.s4.desc', commands: { windows: 'git add design.psd\ngit commit -m "Add design file"\ngit push\ngit lfs ls-files\ngit lfs status', mac: 'git add design.psd\ngit commit -m "Add design file"\ngit push\ngit lfs ls-files\ngit lfs status', linux: 'git add design.psd\ngit commit -m "Add design file"\ngit push\ngit lfs ls-files\ngit lfs status' }, output: 'a1b2c3d4e5 * design.psd', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod29.s5.title', descKey: 'mod29.s5.desc', commands: { windows: 'type .gitattributes', mac: 'cat .gitattributes', linux: 'cat .gitattributes' }, output: '*.psd filter=lfs diff=lfs merge=lfs -text\n*.zip filter=lfs diff=lfs merge=lfs -text\n* text=auto\n*.sln text eol=crlf\n*.sh text eol=lf', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod29.s6.title', descKey: 'mod29.s6.desc', commands: { windows: 'echo * text=auto > .gitattributes\necho *.sln text eol=crlf >> .gitattributes\necho *.sh text eol=lf >> .gitattributes\ngit add .gitattributes', mac: 'echo "* text=auto" > .gitattributes\necho "*.sh text eol=lf" >> .gitattributes\ngit add .gitattributes', linux: 'echo "* text=auto" > .gitattributes\necho "*.sh text eol=lf" >> .gitattributes\ngit add .gitattributes' }, output: null, vscodeKey: null, tipKey: 'mod29.s6.tip', warningKey: null },
+        { titleKey: 'mod29.s7.title', descKey: 'mod29.s7.desc', commands: { windows: 'echo *.lock binary >> .gitattributes\necho package-lock.json merge=ours >> .gitattributes\ngit check-attr --all -- design.psd', mac: 'echo "*.lock binary" >> .gitattributes\necho "package-lock.json merge=ours" >> .gitattributes\ngit check-attr --all -- design.psd', linux: 'echo "*.lock binary" >> .gitattributes\necho "package-lock.json merge=ours" >> .gitattributes\ngit check-attr --all -- design.psd' }, output: 'design.psd: filter: lfs\ndesign.psd: diff: lfs\ndesign.psd: merge: lfs\ndesign.psd: text: unset', vscodeKey: null, tipKey: null, warningKey: null }
+    ]
+},
+{
+    id: 30, titleKey: 'mod30.title', descKey: 'mod30.desc', level: 'advanced', duration: 25,
+    icon: 'fa-solid fa-gears', gradient: 'linear-gradient(135deg, #10b981, #34d399)',
+    steps: [
+        { titleKey: 'mod30.s1.title', descKey: 'mod30.s1.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod30.s2.title', descKey: 'mod30.s2.desc', commands: { windows: 'mkdir -p .github/workflows', mac: 'mkdir -p .github/workflows', linux: 'mkdir -p .github/workflows' }, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod30.s3.title', descKey: 'mod30.s3.desc', commands: { windows: 'type nul > .github/workflows/ci.yml\n# Add YAML content:\n# name: CI\n# on: [push, pull_request]\n# jobs:\n#   test:\n#     runs-on: ubuntu-latest\n#     steps:\n#       - uses: actions/checkout@v4\n#       - uses: actions/setup-node@v4\n#       - run: npm ci\n#       - run: npm test', mac: 'touch .github/workflows/ci.yml\n# Add YAML content:\n# name: CI\n# on: [push, pull_request]\n# jobs:\n#   test:\n#     runs-on: ubuntu-latest\n#     steps:\n#       - uses: actions/checkout@v4\n#       - uses: actions/setup-node@v4\n#       - run: npm ci\n#       - run: npm test', linux: 'touch .github/workflows/ci.yml\n# Add YAML content:\n# name: CI\n# on: [push, pull_request]\n# jobs:\n#   test:\n#     runs-on: ubuntu-latest\n#     steps:\n#       - uses: actions/checkout@v4\n#       - uses: actions/setup-node@v4\n#       - run: npm ci\n#       - run: npm test' }, output: null, vscodeKey: null, tipKey: 'mod30.s3.tip', warningKey: null },
+        { titleKey: 'mod30.s4.title', descKey: 'mod30.s4.desc', commands: { windows: '# .gitlab-ci.yml in repo root:\n# stages: [build, test, deploy]\n# test:\n#   stage: test\n#   image: node:20\n#   script:\n#     - npm ci\n#     - npm test', mac: '# .gitlab-ci.yml in repo root:\n# stages: [build, test, deploy]\n# test:\n#   stage: test\n#   image: node:20\n#   script:\n#     - npm ci\n#     - npm test', linux: '# .gitlab-ci.yml in repo root:\n# stages: [build, test, deploy]\n# test:\n#   stage: test\n#   image: node:20\n#   script:\n#     - npm ci\n#     - npm test' }, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod30.s5.title', descKey: 'mod30.s5.desc', commands: { windows: 'gh api repos/{owner}/{repo}/branches/main/protection \\\n  --method PUT \\\n  --field required_status_checks=\'{"strict":true,"contexts":["test"]}\'', mac: 'gh api repos/{owner}/{repo}/branches/main/protection \\\n  --method PUT \\\n  --field required_status_checks=\'{"strict":true,"contexts":["test"]}\'', linux: 'gh api repos/{owner}/{repo}/branches/main/protection \\\n  --method PUT \\\n  --field required_status_checks=\'{"strict":true,"contexts":["test"]}\''},output: null, vscodeKey: null, tipKey: null, warningKey: 'mod30.s5.warning' },
+        { titleKey: 'mod30.s6.title', descKey: 'mod30.s6.desc', commands: { windows: '# GitHub: Settings → Secrets → New repository secret\n# In workflow YAML:\n# env:\n#   API_KEY: ${{ secrets.API_KEY }}\n# GitLab: Settings → CI/CD → Variables', mac: '# GitHub: Settings → Secrets → New repository secret\n# In workflow YAML:\n# env:\n#   API_KEY: ${{ secrets.API_KEY }}\n# GitLab: Settings → CI/CD → Variables', linux: '# GitHub: Settings → Secrets → New repository secret\n# In workflow YAML:\n# env:\n#   API_KEY: ${{ secrets.API_KEY }}\n# GitLab: Settings → CI/CD → Variables' }, output: null, vscodeKey: null, tipKey: null, warningKey: 'mod30.s6.warning' },
+        { titleKey: 'mod30.s7.title', descKey: 'mod30.s7.desc', commands: { windows: 'git commit -m "Update docs [skip ci]"\n# README badge (GitHub Actions):\n# ![CI](https://github.com/user/repo/actions/workflows/ci.yml/badge.svg)', mac: 'git commit -m "Update docs [skip ci]"\n# README badge (GitHub Actions):\n# ![CI](https://github.com/user/repo/actions/workflows/ci.yml/badge.svg)', linux: 'git commit -m "Update docs [skip ci]"\n# README badge (GitHub Actions):\n# ![CI](https://github.com/user/repo/actions/workflows/ci.yml/badge.svg)' }, output: null, vscodeKey: null, tipKey: 'mod30.s7.tip', warningKey: null }
+    ]
+},
+{
+    id: 31, titleKey: 'mod31.title', descKey: 'mod31.desc', level: 'intermediate', duration: 18,
+    icon: 'fa-solid fa-cloud-arrow-up', gradient: 'linear-gradient(135deg, #8b5cf6, #c084fc)',
+    steps: [
+        { titleKey: 'mod31.s1.title', descKey: 'mod31.s1.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod31.s2.title', descKey: 'mod31.s2.desc', commands: null, output: null, vscodeKey: null, tipKey: 'mod31.s2.tip', warningKey: null },
+        { titleKey: 'mod31.s3.title', descKey: 'mod31.s3.desc', commands: { windows: 'gh codespace create --repo user/project --branch main\ngh codespace list', mac: 'gh codespace create --repo user/project --branch main\ngh codespace list', linux: 'gh codespace create --repo user/project --branch main\ngh codespace list' }, output: 'codespace-name  user/project  main  AVAILABLE  ...', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod31.s4.title', descKey: 'mod31.s4.desc', commands: { windows: 'mkdir .devcontainer\ntype nul > .devcontainer/devcontainer.json\n# {\n#   "name": "My Project",\n#   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",\n#   "features": {},\n#   "customizations": { "vscode": { "extensions": [] } },\n#   "postCreateCommand": "npm install"\n# }', mac: 'mkdir -p .devcontainer\ntouch .devcontainer/devcontainer.json\n# {\n#   "name": "My Project",\n#   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",\n#   "features": {},\n#   "customizations": { "vscode": { "extensions": [] } },\n#   "postCreateCommand": "npm install"\n# }', linux: 'mkdir -p .devcontainer\ntouch .devcontainer/devcontainer.json\n# {\n#   "name": "My Project",\n#   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",\n#   "features": {},\n#   "customizations": { "vscode": { "extensions": [] } },\n#   "postCreateCommand": "npm install"\n# }' }, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod31.s5.title', descKey: 'mod31.s5.desc', commands: { windows: 'gh codespace ports\ngh codespace ports visibility 3000:public -c codespace-name', mac: 'gh codespace ports\ngh codespace ports visibility 3000:public -c codespace-name', linux: 'gh codespace ports\ngh codespace ports visibility 3000:public -c codespace-name' }, output: 'PORT  VISIBILITY  BROWSE URL\n3000  private     https://codespace-name-3000.app.github.dev', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod31.s6.title', descKey: 'mod31.s6.desc', commands: { windows: 'gh codespace list\ngh codespace stop -c codespace-name\ngh codespace delete -c codespace-name', mac: 'gh codespace list\ngh codespace stop -c codespace-name\ngh codespace delete -c codespace-name', linux: 'gh codespace list\ngh codespace stop -c codespace-name\ngh codespace delete -c codespace-name' }, output: 'codespace-name  STOPPED  user/project  main', vscodeKey: null, tipKey: 'mod31.s6.tip', warningKey: null }
+    ]
+},
+{
+    id: 32, titleKey: 'mod32.title', descKey: 'mod32.desc', level: 'advanced', duration: 20,
+    icon: 'fa-solid fa-shield-halved', gradient: 'linear-gradient(135deg, #f43f5e, #fb7185)',
+    steps: [
+        { titleKey: 'mod32.s1.title', descKey: 'mod32.s1.desc', commands: null, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod32.s2.title', descKey: 'mod32.s2.desc', commands: { windows: 'gpg --full-generate-key\n# Select: RSA and RSA, 4096 bits, no expiry, your Git email\ngpg --list-secret-keys --keyid-format=long', mac: 'gpg --full-generate-key\n# Select: RSA and RSA, 4096 bits, no expiry, your Git email\ngpg --list-secret-keys --keyid-format=long', linux: 'gpg --full-generate-key\n# Select: RSA and RSA, 4096 bits, no expiry, your Git email\ngpg --list-secret-keys --keyid-format=long' }, output: 'sec   rsa4096/3AA5C34371567BD2 2024-01-15\n      A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0\nuid           [ultimate] Your Name <you@example.com>\nssb   rsa4096/4BB6D27986A31CC3 2024-01-15', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod32.s3.title', descKey: 'mod32.s3.desc', commands: { windows: 'git config --global user.signingkey 3AA5C34371567BD2\ngit config --global commit.gpgsign true\ngit config --global gpg.program "C:/Program Files (x86)/GnuPG/bin/gpg.exe"', mac: 'git config --global user.signingkey 3AA5C34371567BD2\ngit config --global commit.gpgsign true', linux: 'git config --global user.signingkey 3AA5C34371567BD2\ngit config --global commit.gpgsign true' }, output: null, vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod32.s4.title', descKey: 'mod32.s4.desc', commands: { windows: 'git commit -S -m "Signed commit message"\ngit log --show-signature -1', mac: 'git commit -S -m "Signed commit message"\ngit log --show-signature -1', linux: 'git commit -S -m "Signed commit message"\ngit log --show-signature -1' }, output: 'commit a1b2c3d (HEAD -> main)\ngpg: Signature made Wed Jan 15 10:30:00 2024\ngpg: Good signature from "Your Name <you@example.com>"\nAuthor: Your Name <you@example.com>\n\n    Signed commit message', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod32.s5.title', descKey: 'mod32.s5.desc', commands: { windows: 'git tag -s v1.0.0 -m "Release v1.0.0"\ngit tag -v v1.0.0', mac: 'git tag -s v1.0.0 -m "Release v1.0.0"\ngit tag -v v1.0.0', linux: 'git tag -s v1.0.0 -m "Release v1.0.0"\ngit tag -v v1.0.0' }, output: 'object a1b2c3d\ntype commit\ntag v1.0.0\ntagger Your Name <you@example.com>\n\nRelease v1.0.0\ngpg: Good signature from "Your Name <you@example.com>"', vscodeKey: null, tipKey: 'mod32.s5.tip', warningKey: null },
+        { titleKey: 'mod32.s6.title', descKey: 'mod32.s6.desc', commands: { windows: 'gpg --armor --export 3AA5C34371567BD2 | clip\n# Paste at: GitHub → Settings → SSH and GPG keys → New GPG key', mac: 'gpg --armor --export 3AA5C34371567BD2 | pbcopy\n# Paste at: GitHub → Settings → SSH and GPG keys → New GPG key', linux: 'gpg --armor --export 3AA5C34371567BD2\n# Copy output to: GitHub → Settings → SSH and GPG keys → New GPG key' }, output: '-----BEGIN PGP PUBLIC KEY BLOCK-----\nmQINBGW...\n-----END PGP PUBLIC KEY BLOCK-----', vscodeKey: null, tipKey: null, warningKey: null },
+        { titleKey: 'mod32.s7.title', descKey: 'mod32.s7.desc', commands: { windows: 'git config --global gpg.format ssh\ngit config --global user.signingkey ~/.ssh/id_ed25519.pub\ngit config --global commit.gpgsign true', mac: 'git config --global gpg.format ssh\ngit config --global user.signingkey ~/.ssh/id_ed25519.pub\ngit config --global commit.gpgsign true', linux: 'git config --global gpg.format ssh\ngit config --global user.signingkey ~/.ssh/id_ed25519.pub\ngit config --global commit.gpgsign true' }, output: null, vscodeKey: null, tipKey: 'mod32.s7.tip', warningKey: null }
+    ]
 }
 ];
 
@@ -3209,6 +4011,56 @@ const cheatSheetData = [
       { cmd: 'git fetch upstream', descKey: 'cheat.adv.fetchUpstream' },
       { cmd: 'git worktree add ../feature feature-branch', descKey: 'cheat.adv.worktree' }
     ]
+  },
+  {
+    categoryKey: 'cheat.cat.submodules', gradient: 'linear-gradient(135deg, #6366f1, #818cf8)', icon: 'fa-solid fa-cubes',
+    commands: [
+      { cmd: 'git submodule add <url> <path>', descKey: 'cheat.sub.add' },
+      { cmd: 'git submodule init', descKey: 'cheat.sub.init' },
+      { cmd: 'git submodule update', descKey: 'cheat.sub.update' },
+      { cmd: 'git submodule update --remote', descKey: 'cheat.sub.updateRemote' },
+      { cmd: 'git submodule status', descKey: 'cheat.sub.status' },
+      { cmd: 'git submodule foreach <cmd>', descKey: 'cheat.sub.foreach' },
+      { cmd: 'git submodule deinit <path>', descKey: 'cheat.sub.deinit' },
+      { cmd: 'git clone --recurse-submodules <url>', descKey: 'cheat.sub.cloneRecurse' }
+    ]
+  },
+  {
+    categoryKey: 'cheat.cat.lfs', gradient: 'linear-gradient(135deg, #0ea5e9, #38bdf8)', icon: 'fa-solid fa-database',
+    commands: [
+      { cmd: 'git lfs install', descKey: 'cheat.lfs.install' },
+      { cmd: 'git lfs track "*.psd"', descKey: 'cheat.lfs.track' },
+      { cmd: 'git lfs untrack "*.psd"', descKey: 'cheat.lfs.untrack' },
+      { cmd: 'git lfs ls-files', descKey: 'cheat.lfs.lsFiles' },
+      { cmd: 'git lfs status', descKey: 'cheat.lfs.status' },
+      { cmd: '* text=auto', descKey: 'cheat.lfs.textAuto' },
+      { cmd: '*.lock binary', descKey: 'cheat.lfs.binary' },
+      { cmd: 'git check-attr --all -- <file>', descKey: 'cheat.lfs.checkAttr' }
+    ]
+  },
+  {
+    categoryKey: 'cheat.cat.cicd', gradient: 'linear-gradient(135deg, #10b981, #34d399)', icon: 'fa-solid fa-gears',
+    commands: [
+      { cmd: 'mkdir -p .github/workflows', descKey: 'cheat.ci.mkdirWorkflows' },
+      { cmd: 'git commit -m "msg [skip ci]"', descKey: 'cheat.ci.skipCi' },
+      { cmd: 'git push --tags', descKey: 'cheat.ci.pushTags' },
+      { cmd: 'gh run list', descKey: 'cheat.ci.runList' },
+      { cmd: 'gh run view <run-id>', descKey: 'cheat.ci.runView' },
+      { cmd: 'gh run watch <run-id>', descKey: 'cheat.ci.runWatch' }
+    ]
+  },
+  {
+    categoryKey: 'cheat.cat.signing', gradient: 'linear-gradient(135deg, #f43f5e, #fb7185)', icon: 'fa-solid fa-shield-halved',
+    commands: [
+      { cmd: 'gpg --full-generate-key', descKey: 'cheat.sign.genKey' },
+      { cmd: 'gpg --list-secret-keys --keyid-format=long', descKey: 'cheat.sign.listKeys' },
+      { cmd: 'git config --global user.signingkey <key-id>', descKey: 'cheat.sign.configKey' },
+      { cmd: 'git config --global commit.gpgsign true', descKey: 'cheat.sign.autoSign' },
+      { cmd: 'git commit -S -m "message"', descKey: 'cheat.sign.signCommit' },
+      { cmd: 'git tag -s v1.0 -m "Release"', descKey: 'cheat.sign.signTag' },
+      { cmd: 'git log --show-signature', descKey: 'cheat.sign.verify' },
+      { cmd: 'git config --global gpg.format ssh', descKey: 'cheat.sign.sshFormat' }
+    ]
   }
 ];
 
@@ -3240,7 +4092,11 @@ const quizzes = {
     { questionKey: 'quiz.i9.q', optionKeys: ['quiz.i9.o1','quiz.i9.o2','quiz.i9.o3','quiz.i9.o4'], correct: 1, explanationKey: 'quiz.i9.explain' },
     { questionKey: 'quiz.i10.q', optionKeys: ['quiz.i10.o1','quiz.i10.o2','quiz.i10.o3','quiz.i10.o4'], correct: 3, explanationKey: 'quiz.i10.explain' },
     { questionKey: 'quiz.i11.q', optionKeys: ['quiz.i11.o1','quiz.i11.o2','quiz.i11.o3','quiz.i11.o4'], correct: 1, explanationKey: 'quiz.i11.explain' },
-    { questionKey: 'quiz.i12.q', optionKeys: ['quiz.i12.o1','quiz.i12.o2','quiz.i12.o3','quiz.i12.o4'], correct: 1, explanationKey: 'quiz.i12.explain' }
+    { questionKey: 'quiz.i12.q', optionKeys: ['quiz.i12.o1','quiz.i12.o2','quiz.i12.o3','quiz.i12.o4'], correct: 1, explanationKey: 'quiz.i12.explain' },
+    { questionKey: 'quiz.i13.q', optionKeys: ['quiz.i13.o1','quiz.i13.o2','quiz.i13.o3','quiz.i13.o4'], correct: 0, explanationKey: 'quiz.i13.explain' },
+    { questionKey: 'quiz.i14.q', optionKeys: ['quiz.i14.o1','quiz.i14.o2','quiz.i14.o3','quiz.i14.o4'], correct: 0, explanationKey: 'quiz.i14.explain' },
+    { questionKey: 'quiz.i15.q', optionKeys: ['quiz.i15.o1','quiz.i15.o2','quiz.i15.o3','quiz.i15.o4'], correct: 0, explanationKey: 'quiz.i15.explain' },
+    { questionKey: 'quiz.i16.q', optionKeys: ['quiz.i16.o1','quiz.i16.o2','quiz.i16.o3','quiz.i16.o4'], correct: 0, explanationKey: 'quiz.i16.explain' }
   ],
   advanced: [
     { questionKey: 'quiz.a1.q', optionKeys: ['quiz.a1.o1','quiz.a1.o2','quiz.a1.o3','quiz.a1.o4'], correct: 1, explanationKey: 'quiz.a1.explain' },
@@ -3256,7 +4112,13 @@ const quizzes = {
     { questionKey: 'quiz.a11.q', optionKeys: ['quiz.a11.o1','quiz.a11.o2','quiz.a11.o3','quiz.a11.o4'], correct: 1, explanationKey: 'quiz.a11.explain' },
     { questionKey: 'quiz.a12.q', optionKeys: ['quiz.a12.o1','quiz.a12.o2','quiz.a12.o3','quiz.a12.o4'], correct: 1, explanationKey: 'quiz.a12.explain' },
     { questionKey: 'quiz.a13.q', optionKeys: ['quiz.a13.o1','quiz.a13.o2','quiz.a13.o3','quiz.a13.o4'], correct: 1, explanationKey: 'quiz.a13.explain' },
-    { questionKey: 'quiz.a14.q', optionKeys: ['quiz.a14.o1','quiz.a14.o2','quiz.a14.o3','quiz.a14.o4'], correct: 1, explanationKey: 'quiz.a14.explain' }
+    { questionKey: 'quiz.a14.q', optionKeys: ['quiz.a14.o1','quiz.a14.o2','quiz.a14.o3','quiz.a14.o4'], correct: 1, explanationKey: 'quiz.a14.explain' },
+    { questionKey: 'quiz.a15.q', optionKeys: ['quiz.a15.o1','quiz.a15.o2','quiz.a15.o3','quiz.a15.o4'], correct: 0, explanationKey: 'quiz.a15.explain' },
+    { questionKey: 'quiz.a16.q', optionKeys: ['quiz.a16.o1','quiz.a16.o2','quiz.a16.o3','quiz.a16.o4'], correct: 0, explanationKey: 'quiz.a16.explain' },
+    { questionKey: 'quiz.a17.q', optionKeys: ['quiz.a17.o1','quiz.a17.o2','quiz.a17.o3','quiz.a17.o4'], correct: 0, explanationKey: 'quiz.a17.explain' },
+    { questionKey: 'quiz.a18.q', optionKeys: ['quiz.a18.o1','quiz.a18.o2','quiz.a18.o3','quiz.a18.o4'], correct: 0, explanationKey: 'quiz.a18.explain' },
+    { questionKey: 'quiz.a19.q', optionKeys: ['quiz.a19.o1','quiz.a19.o2','quiz.a19.o3','quiz.a19.o4'], correct: 0, explanationKey: 'quiz.a19.explain' },
+    { questionKey: 'quiz.a20.q', optionKeys: ['quiz.a20.o1','quiz.a20.o2','quiz.a20.o3','quiz.a20.o4'], correct: 0, explanationKey: 'quiz.a20.explain' }
   ]
 };
 
@@ -3299,15 +4161,22 @@ function processCommand(input) {
 
   if (cmd === 'help') {
     return '<span class="terminal-info">Available commands:</span>\n' +
-      '  git init, git status, git add, git commit\n' +
-      '  git log, git log --oneline, git diff\n' +
-      '  git branch, git switch, git checkout\n' +
-      '  git merge, git rebase, git cherry-pick\n' +
-      '  git remote, git push, git pull, git clone\n' +
-      '  git stash, git stash pop, git stash list\n' +
-      '  git tag, git reset, git revert, git reflog\n' +
-      '  git blame, git show, git config\n' +
-      '  touch, echo, ls, cat, mkdir, pwd, clear\n\n' +
+      '  <span class="terminal-output">Setup:</span>       git init, git clone, git config\n' +
+      '  <span class="terminal-output">Basics:</span>      git status, git add, git commit, git commit --amend\n' +
+      '  <span class="terminal-output">Diff:</span>        git diff, git diff --staged, git diff --stat\n' +
+      '  <span class="terminal-output">History:</span>     git log, git log --oneline, git log --graph, git show\n' +
+      '  <span class="terminal-output">Branching:</span>   git branch, git branch -m, git switch, git checkout\n' +
+      '  <span class="terminal-output">Merging:</span>     git merge, git merge --squash, git rebase, git cherry-pick\n' +
+      '  <span class="terminal-output">Remote:</span>      git remote, git push, git pull, git fetch\n' +
+      '  <span class="terminal-output">Stash:</span>       git stash, git stash pop/apply/drop/clear/list/show\n' +
+      '  <span class="terminal-output">Tags:</span>        git tag, git tag -a, git tag -s, git tag -d, git tag -v\n' +
+      '  <span class="terminal-output">Undo:</span>        git restore, git reset, git revert, git clean\n' +
+      '  <span class="terminal-output">Inspect:</span>     git blame, git reflog, git bisect\n' +
+      '  <span class="terminal-output">Signing:</span>     git commit -S, gpg --full-generate-key\n' +
+      '  <span class="terminal-output">Submodules:</span>  git submodule add/status/init/update/foreach\n' +
+      '  <span class="terminal-output">LFS:</span>         git lfs install/track/ls-files/status\n' +
+      '  <span class="terminal-output">Files:</span>       git rm, git rm --cached\n' +
+      '  <span class="terminal-output">Shell:</span>       touch, echo, ls, cat, mkdir, pwd, clear\n\n' +
       '<span class="terminal-info">Tips:</span>\n' +
       '  Press <span class="terminal-output">Tab</span> for auto-completion\n' +
       '  Press <span class="terminal-output">↑/↓</span> to navigate command history\n' +
@@ -3609,6 +4478,304 @@ function processCommand(input) {
     return '<span class="terminal-info">commit ' + last.hash + '</span>\nAuthor: Your Name\n\n    ' + last.message;
   }
 
+  if (cmd === 'git diff --staged' || cmd === 'git diff --cached') {
+    if (terminalState.staged.length === 0) return '';
+    return terminalState.staged.map(f =>
+      '<span class="terminal-info">diff --git a/' + f + ' b/' + f + '</span>\n<span class="terminal-error">--- /dev/null</span>\n<span class="terminal-output">+++ b/' + f + '</span>\n<span class="terminal-output">+' + escapeHtml(terminalState.files[f] || '(new file)') + '</span>'
+    ).join('\n');
+  }
+
+  const diffBranch = cmd.match(/^git diff (\S+)\.\.(\S+)$/);
+  if (diffBranch) {
+    return '<span class="terminal-info">diff --git comparing ' + diffBranch[1] + '..' + diffBranch[2] + '</span>\n<span class="terminal-output">Files changed between branches</span>';
+  }
+  if (cmd === 'git diff --stat') {
+    if (terminalState.modified.length === 0 && terminalState.staged.length === 0) return '';
+    const all = [...terminalState.modified, ...terminalState.staged];
+    return all.map(f => ' ' + f + ' | 1 <span class="terminal-output">+</span>').join('\n') + '\n ' + all.length + ' file(s) changed';
+  }
+
+  if (cmd === 'git log --graph' || cmd === 'git log --graph --oneline --all' || cmd === 'git log --oneline --graph --all') {
+    if (terminalState.commits.length === 0) return '<span class="terminal-error">fatal: no commits yet</span>';
+    return terminalState.commits.slice().reverse().map((c, i) =>
+      '<span class="terminal-output">*</span> <span class="terminal-info">' + c.hash + '</span>' + (i === 0 ? ' <span class="terminal-output">(HEAD -> ' + terminalState.branch + ')</span>' : '') + ' ' + escapeHtml(c.message)
+    ).join('\n');
+  }
+
+  if (cmd === 'git fetch' || cmd.startsWith('git fetch ')) {
+    if (Object.keys(terminalState.remotes).length === 0) return '<span class="terminal-error">fatal: No remote configured</span>';
+    return '<span class="terminal-output">From ' + Object.values(terminalState.remotes)[0] + '\n * [new branch]      main -> origin/main</span>';
+  }
+
+  if (cmd === 'git clean -n' || cmd === 'git clean --dry-run') {
+    if (terminalState.untracked.length === 0) return '';
+    return terminalState.untracked.map(f => 'Would remove ' + f).join('\n');
+  }
+  if (cmd === 'git clean -fd' || cmd === 'git clean -f') {
+    if (terminalState.untracked.length === 0) return '';
+    const removed = terminalState.untracked.map(f => 'Removing ' + f).join('\n');
+    terminalState.untracked.forEach(f => delete terminalState.files[f]);
+    terminalState.untracked = [];
+    return '<span class="terminal-output">' + removed + '</span>';
+  }
+
+  if (cmd.startsWith('git restore --staged ')) {
+    const file = cmd.substring(21).trim();
+    if (file === '.') {
+      terminalState.modified.push(...terminalState.staged);
+      terminalState.staged = [];
+      return '';
+    }
+    const idx = terminalState.staged.indexOf(file);
+    if (idx >= 0) { terminalState.staged.splice(idx, 1); terminalState.modified.push(file); return ''; }
+    return '<span class="terminal-error">error: pathspec \'' + file + '\' did not match any file(s)</span>';
+  }
+  if (cmd.startsWith('git restore ') && !cmd.includes('--staged')) {
+    const file = cmd.substring(12).trim();
+    if (file === '.') { terminalState.modified = []; return ''; }
+    const idx = terminalState.modified.indexOf(file);
+    if (idx >= 0) { terminalState.modified.splice(idx, 1); return ''; }
+    return '<span class="terminal-error">error: pathspec \'' + file + '\' did not match any file(s)</span>';
+  }
+
+  if (cmd === 'git stash drop') {
+    if (!terminalState.stash.length) return '<span class="terminal-error">No stash entries found.</span>';
+    terminalState.stash.pop();
+    return '<span class="terminal-output">Dropped refs/stash@{0}</span>';
+  }
+  if (cmd === 'git stash clear') {
+    terminalState.stash = [];
+    return '';
+  }
+  if (cmd.startsWith('git stash push -m ') || cmd.startsWith('git stash save ')) {
+    if (!terminalState.modified.length && !terminalState.staged.length) return '<span class="terminal-error">No local changes to save</span>';
+    const msg = cmd.replace(/^git stash (?:push -m|save)\s+["']?/, '').replace(/["']?$/, '');
+    terminalState.stash.push({ modified: [...terminalState.modified], staged: [...terminalState.staged], msg });
+    terminalState.modified = []; terminalState.staged = [];
+    return '<span class="terminal-output">Saved working directory: ' + escapeHtml(msg) + '</span>';
+  }
+  if (cmd === 'git stash show') {
+    if (!terminalState.stash.length) return '<span class="terminal-error">No stash entries found.</span>';
+    const entry = terminalState.stash[terminalState.stash.length - 1];
+    const all = [...entry.modified, ...entry.staged];
+    return all.map(f => ' ' + f + ' | 1 +').join('\n') + '\n ' + all.length + ' file(s) changed';
+  }
+  if (cmd === 'git stash branch' || cmd.match(/^git stash branch (\S+)$/)) {
+    if (!terminalState.stash.length) return '<span class="terminal-error">No stash entries found.</span>';
+    const branchName = cmd.split(' ')[3] || 'stash-branch';
+    const entry = terminalState.stash.pop();
+    if (!terminalState.branches.includes(branchName)) terminalState.branches.push(branchName);
+    terminalState.branch = branchName;
+    terminalState.modified.push(...entry.modified); terminalState.staged.push(...entry.staged);
+    return '<span class="terminal-output">Switched to a new branch \'' + branchName + '\'</span>';
+  }
+
+  const commitAmend = cmd.match(/^git commit --amend -m ["'](.+)["']$/);
+  if (commitAmend) {
+    if (terminalState.commits.length === 0) return '<span class="terminal-error">fatal: no commits to amend</span>';
+    terminalState.commits[terminalState.commits.length - 1].message = commitAmend[1];
+    const hash = generateHash();
+    terminalState.commits[terminalState.commits.length - 1].hash = hash;
+    return '<span class="terminal-output">[' + terminalState.branch + ' ' + hash + '] ' + escapeHtml(commitAmend[1]) + '</span>';
+  }
+  if (cmd === 'git commit --amend') {
+    if (terminalState.commits.length === 0) return '<span class="terminal-error">fatal: no commits to amend</span>';
+    const hash = generateHash();
+    terminalState.commits[terminalState.commits.length - 1].hash = hash;
+    if (terminalState.staged.length > 0) {
+      terminalState.commits[terminalState.commits.length - 1].files.push(...terminalState.staged);
+      terminalState.staged = [];
+    }
+    return '<span class="terminal-output">[' + terminalState.branch + ' ' + hash + '] ' + escapeHtml(terminalState.commits[terminalState.commits.length - 1].message) + '</span>';
+  }
+
+  if (cmd === 'git commit -S -m' || cmd.match(/^git commit -S -m ["'](.+)["']$/)) {
+    const signMatch = cmd.match(/^git commit -S -m ["'](.+)["']$/);
+    if (!signMatch) return '<span class="terminal-warning">💡 Usage: git commit -S -m "message"</span>';
+    if (terminalState.staged.length === 0) return '<span class="terminal-error">nothing to commit, working tree clean</span>';
+    const msg = signMatch[1], hash = generateHash();
+    const count = terminalState.staged.length;
+    terminalState.commits.push({ hash, message: msg, branch: terminalState.branch, files: [...terminalState.staged], signed: true });
+    terminalState.staged = [];
+    return '<span class="terminal-output">[' + terminalState.branch + ' ' + hash + '] ' + escapeHtml(msg) + '\n ' + count + ' file(s) changed</span>\n<span class="terminal-info">gpg: Signature made using RSA key\ngpg: Good signature from "Your Name &lt;you@example.com&gt;"</span>';
+  }
+
+  if (cmd.startsWith('git tag -s ')) {
+    const tagSignMatch = cmd.match(/^git tag -s (\S+) -m ["'](.+)["']$/);
+    if (tagSignMatch) {
+      terminalState.tags.push(tagSignMatch[1]);
+      return '<span class="terminal-output">Signed tag \'' + tagSignMatch[1] + '\' created</span>\n<span class="terminal-info">gpg: Signature made using RSA key</span>';
+    }
+  }
+  if (cmd.startsWith('git tag -v ')) {
+    const tagName = cmd.substring(11).trim();
+    if (terminalState.tags.includes(tagName))
+      return '<span class="terminal-info">object ' + generateHash() + '\ntag ' + tagName + '\ntagger Your Name &lt;you@example.com&gt;</span>\n<span class="terminal-output">gpg: Good signature from "Your Name &lt;you@example.com&gt;"</span>';
+    return '<span class="terminal-error">error: tag \'' + tagName + '\' not found</span>';
+  }
+  if (cmd.startsWith('git tag -d ')) {
+    const tagName = cmd.substring(11).trim();
+    const idx = terminalState.tags.indexOf(tagName);
+    if (idx >= 0) { terminalState.tags.splice(idx, 1); return '<span class="terminal-output">Deleted tag \'' + tagName + '\'</span>'; }
+    return '<span class="terminal-error">error: tag \'' + tagName + '\' not found</span>';
+  }
+
+  if (cmd.startsWith('git reflog show ')) {
+    const branch = cmd.substring(16).trim();
+    if (!terminalState.branches.includes(branch)) return '<span class="terminal-error">fatal: ambiguous argument \'' + branch + '\'</span>';
+    const branchCommits = terminalState.commits.filter(c => c.branch === branch);
+    if (!branchCommits.length) return '';
+    return branchCommits.slice().reverse().map((c, i) =>
+      '<span class="terminal-info">' + c.hash + '</span> ' + branch + '@{' + i + '}: commit: ' + c.message
+    ).join('\n');
+  }
+
+  if (cmd.match(/^git reflog expire/)) return '<span class="terminal-output">Expiring reflog entries...</span>';
+
+  if (cmd.startsWith('git submodule add ')) {
+    const parts = cmd.substring(18).trim().split(/\s+/);
+    const url = parts[0], path = parts[1] || url.split('/').pop().replace('.git', '');
+    terminalState.files[path + '/'] = null;
+    terminalState.files['.gitmodules'] = '[submodule "' + path + '"]\n\tpath = ' + path + '\n\turl = ' + url;
+    terminalState.staged.push('.gitmodules', path);
+    return '<span class="terminal-output">Cloning into \'' + path + '\'...\nremote: Enumerating objects: 24, done.\nReceiving objects: 100%, done.</span>';
+  }
+  if (cmd === 'git submodule status') {
+    const content = terminalState.files['.gitmodules'] || '';
+    if (!content) return '';
+    const pathMatch = content.match(/path\s*=\s*(.+)/g);
+    if (!pathMatch) return '';
+    return pathMatch.map(p => ' ' + generateHash() + ' ' + p.replace('path = ', '').trim() + ' (heads/main)').join('\n');
+  }
+  if (cmd === 'git submodule init') return '<span class="terminal-output">Submodule registered for path</span>';
+  if (cmd === 'git submodule update' || cmd === 'git submodule update --remote') return '<span class="terminal-output">Submodule path: checked out latest commit</span>';
+  if (cmd.startsWith('git submodule foreach ')) {
+    const subCmd = cmd.substring(21).trim();
+    return '<span class="terminal-output">Entering submodule...\n' + escapeHtml(subCmd) + ' executed in all submodules</span>';
+  }
+  if (cmd.startsWith('git submodule deinit ')) {
+    const path = cmd.substring(20).trim();
+    return '<span class="terminal-output">Cleared directory \'' + path + '\'</span>';
+  }
+
+  if (cmd === 'git lfs install') return '<span class="terminal-output">Git LFS initialized.</span>';
+  if (cmd.startsWith('git lfs track ')) {
+    const pattern = cmd.substring(14).trim().replace(/["']/g, '');
+    const existing = terminalState.files['.gitattributes'] || '';
+    terminalState.files['.gitattributes'] = existing + (existing ? '\n' : '') + pattern + ' filter=lfs diff=lfs merge=lfs -text';
+    return '<span class="terminal-output">Tracking "' + pattern + '"</span>';
+  }
+  if (cmd === 'git lfs ls-files') {
+    const content = terminalState.files['.gitattributes'] || '';
+    if (!content) return '';
+    return '<span class="terminal-output">' + content.split('\n').filter(l => l.includes('filter=lfs')).map(l => generateHash().substring(0,10) + ' * ' + l.split(' ')[0]).join('\n') + '</span>';
+  }
+  if (cmd === 'git lfs status') return '<span class="terminal-output">Git LFS objects:\nLocal objects: 0\nFetch: 0/0</span>';
+  if (cmd.startsWith('git lfs untrack ')) {
+    const pattern = cmd.substring(16).trim().replace(/["']/g, '');
+    return '<span class="terminal-output">Untracking "' + pattern + '"</span>';
+  }
+
+  if (cmd.match(/^gpg --full-generate-key$/)) return '<span class="terminal-output">gpg: key 3AA5C34371567BD2 marked as ultimately trusted\npub   rsa4096 2024-01-15 [SC]\n      A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0\nuid           [ultimate] Your Name &lt;you@example.com&gt;\nsub   rsa4096 2024-01-15 [E]</span>';
+  if (cmd.match(/^gpg --list-secret-keys/)) return '<span class="terminal-output">sec   rsa4096/3AA5C34371567BD2 2024-01-15\n      A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0\nuid           [ultimate] Your Name &lt;you@example.com&gt;\nssb   rsa4096/4BB6D27986A31CC3 2024-01-15</span>';
+  if (cmd.match(/^gpg --armor --export/)) return '<span class="terminal-output">-----BEGIN PGP PUBLIC KEY BLOCK-----\nmQINBGW...(exported public key)...\n-----END PGP PUBLIC KEY BLOCK-----</span>';
+
+  if (cmd === 'git log --show-signature' || cmd === 'git log --show-signature -1') {
+    if (terminalState.commits.length === 0) return '<span class="terminal-error">fatal: no commits yet</span>';
+    const last = terminalState.commits[terminalState.commits.length - 1];
+    let out = '<span class="terminal-info">commit ' + last.hash + '</span> (HEAD -> ' + last.branch + ')\n';
+    if (last.signed) out += '<span class="terminal-output">gpg: Good signature from "Your Name &lt;you@example.com&gt;"</span>\n';
+    out += 'Author: Your Name &lt;you@example.com&gt;\n\n    ' + escapeHtml(last.message);
+    return out;
+  }
+
+  if (cmd.match(/^git format-patch/)) return '<span class="terminal-output">0001-patch.patch</span>';
+  if (cmd.startsWith('git apply ')) return '<span class="terminal-output">Applied patch successfully.</span>';
+
+  if (cmd === 'git gc') return '<span class="terminal-output">Enumerating objects: done.\nCounting objects: done.\nCompressing objects: done.</span>';
+
+  if (cmd === 'git remote show origin') {
+    if (!terminalState.remotes['origin']) return '<span class="terminal-error">fatal: \'origin\' does not appear to be a git repository</span>';
+    return '<span class="terminal-output">* remote origin\n  Fetch URL: ' + terminalState.remotes['origin'] + '\n  Push  URL: ' + terminalState.remotes['origin'] + '\n  HEAD branch: main</span>';
+  }
+  if (cmd.startsWith('git remote remove ') || cmd.startsWith('git remote rm ')) {
+    const name = cmd.split(' ').pop();
+    if (terminalState.remotes[name]) { delete terminalState.remotes[name]; return ''; }
+    return '<span class="terminal-error">fatal: No such remote: \'' + name + '\'</span>';
+  }
+  if (cmd.startsWith('git remote rename ')) {
+    const parts = cmd.substring(18).trim().split(/\s+/);
+    if (parts.length === 2 && terminalState.remotes[parts[0]]) {
+      terminalState.remotes[parts[1]] = terminalState.remotes[parts[0]];
+      delete terminalState.remotes[parts[0]];
+      return '';
+    }
+    return '<span class="terminal-error">fatal: No such remote: \'' + parts[0] + '\'</span>';
+  }
+
+  if (cmd.match(/^git check-attr/)) return '<span class="terminal-output">file: text: auto</span>';
+
+  if (cmd === 'git branch -m' || cmd.match(/^git branch -m (\S+)$/)) {
+    const newName = cmd.split(' ').pop();
+    if (newName === '-m') return '<span class="terminal-warning">💡 Usage: git branch -m new-name</span>';
+    const idx = terminalState.branches.indexOf(terminalState.branch);
+    if (idx >= 0) terminalState.branches[idx] = newName;
+    const old = terminalState.branch;
+    terminalState.branch = newName;
+    return '<span class="terminal-output">Branch \'' + old + '\' renamed to \'' + newName + '\'</span>';
+  }
+  const branchRename = cmd.match(/^git branch -m (\S+) (\S+)$/);
+  if (branchRename) {
+    const idx = terminalState.branches.indexOf(branchRename[1]);
+    if (idx < 0) return '<span class="terminal-error">error: refname refs/heads/' + branchRename[1] + ' not found</span>';
+    terminalState.branches[idx] = branchRename[2];
+    if (terminalState.branch === branchRename[1]) terminalState.branch = branchRename[2];
+    return '<span class="terminal-output">Branch \'' + branchRename[1] + '\' renamed to \'' + branchRename[2] + '\'</span>';
+  }
+
+  if (cmd.startsWith('git rm --cached ')) {
+    const file = cmd.substring(16).trim();
+    const idx = terminalState.staged.indexOf(file);
+    if (idx >= 0) { terminalState.staged.splice(idx, 1); terminalState.untracked.push(file); }
+    return '<span class="terminal-output">rm \'' + file + '\'</span>';
+  }
+  if (cmd.startsWith('git rm ')) {
+    const file = cmd.substring(7).trim();
+    if (terminalState.files[file] !== undefined) {
+      delete terminalState.files[file];
+      terminalState.modified = terminalState.modified.filter(f => f !== file);
+      terminalState.untracked = terminalState.untracked.filter(f => f !== file);
+      return '<span class="terminal-output">rm \'' + file + '\'</span>';
+    }
+    return '<span class="terminal-error">fatal: pathspec \'' + file + '\' did not match any files</span>';
+  }
+
+  if (cmd === 'git merge --squash' || cmd.match(/^git merge --squash (\S+)$/)) {
+    const branch = cmd.split(' ').pop();
+    if (branch === '--squash') return '<span class="terminal-warning">💡 Usage: git merge --squash branch-name</span>';
+    if (!terminalState.branches.includes(branch)) return '<span class="terminal-error">merge: ' + branch + ' - not something we can merge</span>';
+    terminalState.staged.push('squashed-changes');
+    terminalState.files['squashed-changes'] = '';
+    return '<span class="terminal-output">Squash commit -- not updating HEAD\nAutomatic merge went well; stopped before committing as requested</span>';
+  }
+
+  if (cmd === 'git bisect start') {
+    terminalState.bisecting = true;
+    return '<span class="terminal-output">status: waiting for both good and bad commits</span>';
+  }
+  if (cmd === 'git bisect bad') {
+    if (!terminalState.bisecting) return '<span class="terminal-error">You need to start by "git bisect start"</span>';
+    return '<span class="terminal-output">Bisecting: roughly 3 revisions left to test</span>';
+  }
+  if (cmd.startsWith('git bisect good')) {
+    if (!terminalState.bisecting) return '<span class="terminal-error">You need to start by "git bisect start"</span>';
+    return '<span class="terminal-output">Bisecting: roughly 1 revision left to test</span>';
+  }
+  if (cmd === 'git bisect reset') {
+    terminalState.bisecting = false;
+    return '<span class="terminal-output">Previous HEAD position was... Switched to branch \'' + terminalState.branch + '\'</span>';
+  }
+
   // Common mistakes detection
   var mistake = detectCommonMistake(cmd);
   if (mistake) return mistake;
@@ -3655,14 +4822,18 @@ function detectCommonMistake(cmd) {
   // Subcommand suggestions for partial git commands
   if (cmd === 'git') {
     return '<span class="terminal-info">Available git subcommands:</span>\n' +
-      '  <span class="terminal-output">Setup:</span>      init, clone, config\n' +
-      '  <span class="terminal-output">Basics:</span>     status, add, commit, diff, log\n' +
-      '  <span class="terminal-output">Branching:</span>  branch, switch, checkout, merge, rebase\n' +
-      '  <span class="terminal-output">Remote:</span>     remote, push, pull, fetch, clone\n' +
-      '  <span class="terminal-output">Undo:</span>       restore, reset, revert, stash\n' +
-      '  <span class="terminal-output">Inspect:</span>    log, show, blame, diff, reflog\n' +
-      '  <span class="terminal-output">Tags:</span>       tag\n' +
-      '  <span class="terminal-output">Advanced:</span>   cherry-pick, rebase, stash\n\n' +
+      '  <span class="terminal-output">Setup:</span>       init, clone, config\n' +
+      '  <span class="terminal-output">Basics:</span>      status, add, commit, diff, log, show\n' +
+      '  <span class="terminal-output">Branching:</span>   branch, switch, checkout, merge, rebase\n' +
+      '  <span class="terminal-output">Remote:</span>      remote, push, pull, fetch\n' +
+      '  <span class="terminal-output">Undo:</span>        restore, reset, revert, clean, stash\n' +
+      '  <span class="terminal-output">Inspect:</span>     log, show, blame, reflog, bisect\n' +
+      '  <span class="terminal-output">Tags:</span>        tag\n' +
+      '  <span class="terminal-output">Advanced:</span>    cherry-pick, rebase -i, format-patch, apply\n' +
+      '  <span class="terminal-output">Submodules:</span>  submodule add/status/init/update/foreach\n' +
+      '  <span class="terminal-output">LFS:</span>         lfs install/track/ls-files/status\n' +
+      '  <span class="terminal-output">Files:</span>       rm, rm --cached\n' +
+      '  <span class="terminal-output">Signing:</span>     commit -S, tag -s, tag -v\n\n' +
       'Type a full command like <span class="terminal-info">git init</span> or <span class="terminal-info">git status</span>';
   }
 
@@ -3670,14 +4841,33 @@ function detectCommonMistake(cmd) {
 }
 
 var terminalCommands = [
-  'git init', 'git status', 'git add .', 'git add', 'git commit -m "', 'git log', 'git log --oneline',
-  'git diff', 'git branch', 'git switch ', 'git switch -c ', 'git checkout ', 'git checkout -b ',
-  'git merge ', 'git rebase ', 'git remote add origin ', 'git remote -v', 'git push', 'git push -u origin main',
-  'git pull', 'git clone ', 'git stash', 'git stash pop', 'git stash list', 'git stash apply',
-  'git tag ', 'git tag -a ', 'git reset --soft HEAD~1', 'git reset --hard HEAD~1', 'git reset HEAD',
-  'git revert ', 'git reflog', 'git cherry-pick ', 'git blame ', 'git show ', 'git config --list',
-  'git --version', 'touch ', 'echo "content" > file.txt', 'ls', 'ls -la', 'cat ', 'mkdir ', 'pwd', 'clear', 'help',
-  'git restore ', 'git restore --staged ', 'git branch -d ', 'git branch -a'
+  'git init', 'git status', 'git add .', 'git add ', 'git commit -m "', 'git commit --amend', 'git commit --amend -m "',
+  'git commit -S -m "', 'git log', 'git log --oneline', 'git log --graph', 'git log --graph --oneline --all',
+  'git log --show-signature', 'git diff', 'git diff --staged', 'git diff --stat',
+  'git branch', 'git branch -a', 'git branch -m ', 'git branch -d ', 'git branch -D ',
+  'git switch ', 'git switch -c ', 'git checkout ', 'git checkout -b ',
+  'git merge ', 'git merge --squash ', 'git merge --abort', 'git rebase ', 'git rebase -i HEAD~',
+  'git rebase --abort', 'git remote add origin ', 'git remote -v', 'git remote show origin',
+  'git remote remove ', 'git remote rename ', 'git push', 'git push -u origin main',
+  'git push --force-with-lease', 'git push --tags', 'git pull', 'git fetch', 'git fetch upstream',
+  'git clone ', 'git clone --recurse-submodules ',
+  'git stash', 'git stash pop', 'git stash list', 'git stash apply', 'git stash drop', 'git stash clear',
+  'git stash show', 'git stash push -m "', 'git stash branch ',
+  'git tag ', 'git tag -a ', 'git tag -s ', 'git tag -d ', 'git tag -v ',
+  'git reset --soft HEAD~1', 'git reset --hard HEAD~1', 'git reset HEAD',
+  'git revert ', 'git reflog', 'git reflog show ',
+  'git cherry-pick ', 'git blame ', 'git show ',
+  'git restore ', 'git restore --staged ', 'git clean -n', 'git clean -fd',
+  'git rm ', 'git rm --cached ',
+  'git bisect start', 'git bisect bad', 'git bisect good ', 'git bisect reset',
+  'git submodule add ', 'git submodule status', 'git submodule init', 'git submodule update',
+  'git submodule update --remote', 'git submodule foreach ', 'git submodule deinit ',
+  'git lfs install', 'git lfs track "', 'git lfs ls-files', 'git lfs status', 'git lfs untrack "',
+  'git format-patch ', 'git apply ', 'git gc', 'git check-attr --all -- ',
+  'git config --list', 'git config --global user.signingkey ', 'git config --global commit.gpgsign true',
+  'git config --global gpg.format ssh', 'git --version',
+  'gpg --full-generate-key', 'gpg --list-secret-keys --keyid-format=long', 'gpg --armor --export ',
+  'touch ', 'echo "content" > file.txt', 'ls', 'ls -la', 'cat ', 'mkdir ', 'pwd', 'clear', 'help'
 ];
 
 function setupTerminal() {
@@ -3746,8 +4936,11 @@ function setupQuickCommands() {
   const container = document.getElementById('quick-commands');
   if (!container) return;
   ['git init','git status','git add .','git commit -m "message"','git log --oneline',
-   'git branch','git switch -c feature','git merge feature','git diff','git stash',
-   'git remote -v','git push','touch file.txt','ls','clear','help'].forEach(cmd => {
+   'git branch','git switch -c feature','git merge feature','git diff','git diff --staged',
+   'git stash','git stash pop','git remote -v','git push','git fetch','git reflog',
+   'git clean -n','git restore --staged .','git tag','git bisect start',
+   'git submodule status','git lfs ls-files',
+   'touch file.txt','ls','clear','help'].forEach(cmd => {
     const btn = document.createElement('button');
     btn.className = 'quick-cmd-btn';
     btn.textContent = cmd;
@@ -5544,7 +6737,8 @@ function renderModules(filter) {
   let cardIdx = 0;
 
   activeLevels.forEach(level => {
-    const levelModules = modules.filter(m => m.level === level.key);
+    const sortMap = {22:0, 1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 25:7, 7:8, 8:9, 11:10, 9:11, 23:12, 10:13, 26:14, 27:15, 31:16, 17:17, 13:18, 14:19, 12:20, 18:21, 15:22, 28:23, 29:24, 20:25, 19:26, 30:27, 32:28, 21:29, 16:30, 24:31};
+    const levelModules = modules.filter(m => m.level === level.key).sort((a,b) => (sortMap[a.id] || a.id) - (sortMap[b.id] || b.id));
     if (levelModules.length === 0) return;
 
     const section = document.createElement('div');
@@ -6038,7 +7232,7 @@ function renderWorkflow(type) {
       desc: currentLang === 'ar'
         ? 'GitFlow هو نموذج تفريع يستخدم فروع رئيسية (main, develop) وفروع دعم (feature, release, hotfix). مناسب للمشاريع ذات الإصدارات المجدولة.'
         : 'GitFlow uses two permanent branches (main, develop) and supporting branches (feature, release, hotfix). Best for projects with scheduled releases.',
-      svg: '<svg viewBox="0 0 800 340" class="workflow-svg">' +
+      svg: '<svg viewBox="0 0 800 340" class="workflow-svg" direction="ltr">' +
         '<defs>' +
           '<marker id="arrow-green" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#10b981"/></marker>' +
           '<marker id="arrow-purple" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#8B5CF6"/></marker>' +
@@ -6100,7 +7294,7 @@ function renderWorkflow(type) {
       desc: currentLang === 'ar'
         ? 'GitHub Flow هو سير عمل مبسط يستخدم فرع main واحد مع فروع ميزات قصيرة العمر. مثالي للنشر المستمر.'
         : 'GitHub Flow is a simplified workflow with a single main branch and short-lived feature branches. Perfect for continuous deployment.',
-      svg: '<svg viewBox="0 0 800 250" class="workflow-svg">' +
+      svg: '<svg viewBox="0 0 800 250" class="workflow-svg" direction="ltr">' +
         '<defs>' +
           '<marker id="arr-g2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#10b981"/></marker>' +
           '<marker id="arr-p2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#8B5CF6"/></marker>' +
@@ -6151,7 +7345,7 @@ function renderWorkflow(type) {
       desc: currentLang === 'ar'
         ? 'التطوير القائم على الجذع يعتمد على فرع رئيسي واحد (trunk) مع فروع ميزات قصيرة جداً (أقل من يوم). يركز على التكامل المستمر.'
         : 'Trunk-Based Development uses a single main branch (trunk) with very short-lived feature branches (less than a day). Focuses on continuous integration.',
-      svg: '<svg viewBox="0 0 800 220" class="workflow-svg">' +
+      svg: '<svg viewBox="0 0 800 220" class="workflow-svg" direction="ltr">' +
         '<defs>' +
           '<marker id="arr-g3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#10b981"/></marker>' +
           '<filter id="glow3"><feGaussianBlur stdDeviation="2" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
