@@ -1,5 +1,5 @@
 ﻿/* ============================================================
-   GitMaster Pro - Complete JavaScript
+   LearnGit.io - Complete JavaScript
    Author: Dr. Mohammad Arafah, University of Petra, Jordan
    ============================================================ */
 
@@ -64,9 +64,9 @@ function copyToClipboard(text, button) {
 const translations = {
 en: {
 // Loader
-'loader.text': 'Initializing GitMaster Pro...',
+'loader.text': 'Initializing LearnGit.io...',
 // Nav
-'nav.brand': 'GitMaster Pro',
+'nav.brand': 'LearnGit.io',
 'nav.home': 'Home',
 'nav.learn': 'Learn',
 'nav.terminal': 'Terminal',
@@ -75,7 +75,7 @@ en: {
 'nav.quiz': 'Quiz',
 'nav.langToggle': 'العربية',
 // Hero
-'hero.title': 'GitMaster Pro',
+'hero.title': 'LearnGit.io',
 'hero.subtitle': 'Learn Git interactively. Practice commands, visualize workflows, and master version control.',
 'hero.stat.modules': 'Modules',
 'hero.stat.commands': 'Commands',
@@ -86,7 +86,7 @@ en: {
 'hero.cta.terminal': 'Try Terminal',
 'hero.cta.cheatsheet': 'Cheat Sheet',
 // Features
-'features.title': 'Why GitMaster Pro?',
+'features.title': 'Why LearnGit.io?',
 'features.subtitle': 'Everything you need to master Git in one place',
 'features.terminal.title': 'Interactive Terminal',
 'features.terminal.desc': 'Practice Git commands in a safe, simulated terminal environment without affecting real repositories.',
@@ -520,7 +520,7 @@ en: {
 'workflows.trunk.title': 'Trunk-Based Development',
 'workflows.trunk.desc': 'Trunk-Based Development is a strategy where developers commit small, frequent changes directly to the main branch (trunk) or via very short-lived feature branches. It minimizes merge conflicts and supports continuous integration.',
 // Footer
-'footer.brand': 'GitMaster Pro',
+'footer.brand': 'LearnGit.io',
 'footer.description': 'A comprehensive, interactive Git tutorial designed to take you from a complete beginner to a confident Git user. Built with passion for education and open-source.',
 'footer.quickLinks': 'Quick Links',
 'footer.createdBy': 'Created By',
@@ -528,8 +528,8 @@ en: {
 'footer.author.title': 'Assistant Professor',
 'footer.author.university': 'University of Petra, Jordan',
 'footer.author.portfolio': 'Portfolio',
-'footer.copyright': '© 2026 GitMaster Pro. All rights reserved.',
-'footer.powered': 'Powered by GitMaster Pro',
+'footer.copyright': '© 2026 LearnGit.io. All rights reserved.',
+'footer.powered': 'Powered by LearnGit.io',
 // Modal
 'modal.title': 'Command Details',
 'modal.close': 'Close',
@@ -1868,9 +1868,9 @@ en: {
 
 ar: {
 // Loader
-'loader.text': 'جاري تهيئة GitMaster Pro...',
+'loader.text': 'جاري تهيئة LearnGit.io...',
 // Nav
-'nav.brand': 'GitMaster Pro',
+'nav.brand': 'LearnGit.io',
 'nav.home': 'الرئيسية',
 'nav.learn': 'تعلّم',
 'nav.terminal': 'الطرفية',
@@ -1879,7 +1879,7 @@ ar: {
 'nav.quiz': 'اختبارات',
 'nav.langToggle': 'English',
 // Hero
-'hero.title': 'GitMaster Pro',
+'hero.title': 'LearnGit.io',
 'hero.subtitle': 'تعلّم Git بشكل تفاعلي. تدرّب على الأوامر، تصوّر سير العمل، وأتقن إدارة الإصدارات.',
 'hero.stat.modules': 'وحدات تعليمية',
 'hero.stat.commands': 'أوامر',
@@ -1890,7 +1890,7 @@ ar: {
 'hero.cta.terminal': 'جرّب الطرفية',
 'hero.cta.cheatsheet': 'المرجع السريع',
 // Features
-'features.title': 'لماذا GitMaster Pro؟',
+'features.title': 'لماذا LearnGit.io؟',
 'features.subtitle': 'كل ما تحتاجه لإتقان Git في مكان واحد',
 'features.terminal.title': 'طرفية تفاعلية',
 'features.terminal.desc': 'تدرّب على أوامر Git في بيئة طرفية محاكاة آمنة دون التأثير على مستودعات حقيقية.',
@@ -2324,7 +2324,7 @@ ar: {
 'workflows.trunk.title': 'التطوير القائم على الجذع',
 'workflows.trunk.desc': 'التطوير القائم على الجذع هو استراتيجية يلتزم فيها المطورون بإرسال تغييرات صغيرة ومتكررة مباشرة إلى الفرع الرئيسي أو عبر فروع ميزات قصيرة العمر جداً. يقلل من تعارضات الدمج ويدعم التكامل المستمر.',
 // Footer
-'footer.brand': 'GitMaster Pro',
+'footer.brand': 'LearnGit.io',
 'footer.description': 'دليل تعليمي شامل وتفاعلي لنظام Git مصمم لنقلك من مبتدئ تماماً إلى مستخدم Git واثق. صُنع بشغف للتعليم والمصادر المفتوحة.',
 'footer.quickLinks': 'روابط سريعة',
 'footer.createdBy': 'صنع بواسطة',
@@ -2332,8 +2332,8 @@ ar: {
 'footer.author.title': 'أستاذ مساعد',
 'footer.author.university': 'جامعة البتراء، الأردن',
 'footer.author.portfolio': 'الملف الشخصي',
-'footer.copyright': '© 2026 GitMaster Pro. جميع الحقوق محفوظة.',
-'footer.powered': 'مدعوم من GitMaster Pro',
+'footer.copyright': '© 2026 LearnGit.io. جميع الحقوق محفوظة.',
+'footer.powered': 'مدعوم من LearnGit.io',
 // Modal
 'modal.title': 'تفاصيل الأمر',
 'modal.close': 'إغلاق',
@@ -5972,7 +5972,7 @@ function renderTabBar() {
 function exportSession() {
   var cmds = terminalState.commandHistory.filter(function(c) { return c !== 'clear' && c !== 'help' && c !== 'pwd'; });
   if (cmds.length === 0) return;
-  var content = '#!/bin/bash\n# GitMaster Pro - Terminal Session Export\n# Date: ' + new Date().toISOString().split('T')[0] + '\n# Generated by GitMaster Pro (Dr. Mohammad Arafah)\n\n';
+  var content = '#!/bin/bash\n# LearnGit.io - Terminal Session Export\n# Date: ' + new Date().toISOString().split('T')[0] + '\n# Generated by LearnGit.io (Dr. Mohammad Arafah)\n\n';
   cmds.forEach(function(c) { content += c + '\n'; });
   var blob = new Blob([content], { type: 'text/x-sh' });
   var a = document.createElement('a');

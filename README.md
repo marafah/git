@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Header Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:4000A5,50:6E33D6,100:00C2FF&height=220&section=header&text=GitMaster%20Pro&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Master%20Git%20From%20Zero%20to%20Hero&descSize=20&descAlignY=55" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:4000A5,50:6E33D6,100:00C2FF&height=220&section=header&text=LearnGit.io&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Master%20Git%20From%20Zero%20to%20Hero&descSize=20&descAlignY=55" width="100%" />
 
 <br/>
 
@@ -63,11 +63,11 @@
 
 ## About the Project
 
-**GitMaster Pro** is a feature-rich, browser-based Git tutorial designed for learners at every level. Whether you're writing your first `git init` or mastering interactive rebases, this platform provides hands-on, risk-free practice with instant visual feedback.
+**LearnGit.io** is a feature-rich, browser-based Git tutorial designed for learners at every level. Whether you're writing your first `git init` or mastering interactive rebases, this platform provides hands-on, risk-free practice with instant visual feedback.
 
 Built as a single-page application with **zero backend dependencies**, it runs entirely in your browser with no installation, no sign-up, and no risk to real repositories.
 
-### Why GitMaster Pro?
+### Why LearnGit.io?
 
 | | Feature | Description |
 |---|---|---|
@@ -432,7 +432,7 @@ Unlock **12 achievements** as you learn:
 
 ## Contributing
 
-Contributions are welcome! If you'd like to improve GitMaster Pro:
+Contributions are welcome! If you'd like to improve LearnGit.io:
 
 1. **Fork** the repository
 2. **Create** a feature branch (`git switch -c feature/amazing-feature`)
