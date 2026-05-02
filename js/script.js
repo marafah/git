@@ -128,6 +128,8 @@ en: {
 'step.tip': 'Tip',
 'step.warning': 'Warning',
 'step.whatHappened': 'What Happened',
+'step.concept': 'Concept',
+'step.hands_on': 'Hands-on',
 // Step explanations (what happened after running)
 'mod1.s4.explain': 'Git printed its installed version. This confirms Git is properly installed on your system and ready to use.',
 'mod2.s1.explain': 'The Git installer was downloaded. After running it, Git is now available as a command-line tool on your system.',
@@ -238,6 +240,15 @@ en: {
 'terminal.ch.undo': 'Undo Changes',
 'terminal.ch.cherryPick': 'Cherry Pick',
 'terminal.ch.rebase': 'Rebase Flow',
+'terminal.ch.gitignore': 'Ignore Files',
+'terminal.ch.logFormats': 'Viewing History',
+'terminal.ch.removingFiles': 'Removing Files',
+'terminal.ch.renameMove': 'Rename & Move',
+'terminal.ch.mergeConflict': 'Merge Conflicts',
+'terminal.ch.cloneFetch': 'Clone & Fetch',
+'terminal.ch.branchMgmt': 'Branch Management',
+'terminal.ch.gitRevert': 'Git Revert',
+'terminal.ch.submodules': 'Submodules',
 'terminal.ch.started': 'Challenge started',
 'terminal.ch.select': 'Select a challenge above to begin a guided exercise',
 'terminal.ch.complete': 'Challenge Complete!',
@@ -1392,6 +1403,155 @@ en: {
 'terminal.ch.forcePush.s6.hint': 'git commit --amend -m "improved initial"',
 'terminal.ch.forcePush.s7': 'Safe force push',
 'terminal.ch.forcePush.s7.hint': 'git push --force-with-lease',
+'terminal.ch.gitignore.desc': 'Create a .gitignore file to tell Git which files and folders to never track.',
+'terminal.ch.gitignore.s1': 'Initialize a new Git repository',
+'terminal.ch.gitignore.s1.hint': 'git init',
+'terminal.ch.gitignore.s2': 'Create a file you want tracked',
+'terminal.ch.gitignore.s2.hint': 'touch app.js',
+'terminal.ch.gitignore.s3': 'Create a .gitignore and add a pattern',
+'terminal.ch.gitignore.s3.hint': 'touch .gitignore',
+'terminal.ch.gitignore.s4': 'Check status — ignored files are hidden',
+'terminal.ch.gitignore.s4.hint': 'git status',
+'terminal.ch.gitignore.s5': 'Stage the tracked files only',
+'terminal.ch.gitignore.s5.hint': 'git add .',
+'terminal.ch.gitignore.s6': 'Commit with a message',
+'terminal.ch.gitignore.s6.hint': 'git commit -m "Add app with gitignore"',
+'terminal.ch.gitignore.s7': 'Confirm ignored files are not staged',
+'terminal.ch.gitignore.s7.hint': 'git status',
+'terminal.ch.logFormats.desc': 'Explore commit history using git log with --oneline, --graph, and --all flags.',
+'terminal.ch.logFormats.s1': 'Initialize a repository',
+'terminal.ch.logFormats.s1.hint': 'git init',
+'terminal.ch.logFormats.s2': 'Create a file',
+'terminal.ch.logFormats.s2.hint': 'touch file1.txt',
+'terminal.ch.logFormats.s3': 'Stage the file',
+'terminal.ch.logFormats.s3.hint': 'git add .',
+'terminal.ch.logFormats.s4': 'Make the first commit',
+'terminal.ch.logFormats.s4.hint': 'git commit -m "First commit"',
+'terminal.ch.logFormats.s5': 'Create a second file',
+'terminal.ch.logFormats.s5.hint': 'touch file2.txt',
+'terminal.ch.logFormats.s6': 'Stage the second file',
+'terminal.ch.logFormats.s6.hint': 'git add .',
+'terminal.ch.logFormats.s7': 'Make a second commit',
+'terminal.ch.logFormats.s7.hint': 'git commit -m "Second commit"',
+'terminal.ch.logFormats.s8': 'View compact one-line log',
+'terminal.ch.logFormats.s8.hint': 'git log --oneline',
+'terminal.ch.logFormats.s9': 'View log with graph decoration',
+'terminal.ch.logFormats.s9.hint': 'git log --oneline --graph --all',
+'terminal.ch.removingFiles.desc': 'Use git rm to properly remove tracked files from the repository and working tree.',
+'terminal.ch.removingFiles.s1': 'Initialize a repository',
+'terminal.ch.removingFiles.s1.hint': 'git init',
+'terminal.ch.removingFiles.s2': 'Create two files',
+'terminal.ch.removingFiles.s2.hint': 'touch app.js old.txt',
+'terminal.ch.removingFiles.s3': 'Stage and commit both files',
+'terminal.ch.removingFiles.s3.hint': 'git add .',
+'terminal.ch.removingFiles.s4': 'Commit',
+'terminal.ch.removingFiles.s4.hint': 'git commit -m "Add initial files"',
+'terminal.ch.removingFiles.s5': 'Remove the old file from Git tracking and disk',
+'terminal.ch.removingFiles.s5.hint': 'git rm old.txt',
+'terminal.ch.removingFiles.s6': 'Check status — deletion is staged',
+'terminal.ch.removingFiles.s6.hint': 'git status',
+'terminal.ch.removingFiles.s7': 'Commit the removal',
+'terminal.ch.removingFiles.s7.hint': 'git commit -m "Remove old.txt"',
+'terminal.ch.renameMove.desc': 'Use git mv to rename and move files so Git tracks the operation as a rename.',
+'terminal.ch.renameMove.s1': 'Initialize a repository',
+'terminal.ch.renameMove.s1.hint': 'git init',
+'terminal.ch.renameMove.s2': 'Create a file with an old name',
+'terminal.ch.renameMove.s2.hint': 'touch old-name.txt',
+'terminal.ch.renameMove.s3': 'Stage the file',
+'terminal.ch.renameMove.s3.hint': 'git add .',
+'terminal.ch.renameMove.s4': 'Commit the file',
+'terminal.ch.renameMove.s4.hint': 'git commit -m "Add old-name.txt"',
+'terminal.ch.renameMove.s5': 'Rename it using git mv',
+'terminal.ch.renameMove.s5.hint': 'git mv old-name.txt new-name.txt',
+'terminal.ch.renameMove.s6': 'Check status — Git shows a rename, not delete+add',
+'terminal.ch.renameMove.s6.hint': 'git status',
+'terminal.ch.renameMove.s7': 'Commit the rename',
+'terminal.ch.renameMove.s7.hint': 'git commit -m "Rename to new-name.txt"',
+'terminal.ch.mergeConflict.desc': 'Deliberately create a merge conflict between two branches, then resolve it and complete the merge.',
+'terminal.ch.mergeConflict.s1': 'Initialize a repository',
+'terminal.ch.mergeConflict.s1.hint': 'git init',
+'terminal.ch.mergeConflict.s2': 'Create a shared file and commit on main',
+'terminal.ch.mergeConflict.s2.hint': 'touch notes.txt',
+'terminal.ch.mergeConflict.s3': 'Stage the file',
+'terminal.ch.mergeConflict.s3.hint': 'git add .',
+'terminal.ch.mergeConflict.s4': 'Commit the base',
+'terminal.ch.mergeConflict.s4.hint': 'git commit -m "Add notes"',
+'terminal.ch.mergeConflict.s5': 'Create and switch to a feature branch',
+'terminal.ch.mergeConflict.s5.hint': 'git switch -c feature',
+'terminal.ch.mergeConflict.s6': 'Edit the shared file on the feature branch',
+'terminal.ch.mergeConflict.s6.hint': 'echo "feature line" >> notes.txt',
+'terminal.ch.mergeConflict.s7': 'Stage the change',
+'terminal.ch.mergeConflict.s7.hint': 'git add notes.txt',
+'terminal.ch.mergeConflict.s8': 'Commit on feature branch',
+'terminal.ch.mergeConflict.s8.hint': 'git commit -m "Feature edit"',
+'terminal.ch.mergeConflict.s9': 'Switch back to main',
+'terminal.ch.mergeConflict.s9.hint': 'git switch main',
+'terminal.ch.mergeConflict.s10': 'Merge feature — observe and resolve the conflict',
+'terminal.ch.mergeConflict.s10.hint': 'git merge feature',
+'terminal.ch.cloneFetch.desc': 'Clone a remote repository locally, then use git fetch to download updates without merging automatically.',
+'terminal.ch.cloneFetch.s1': 'Clone a remote repository',
+'terminal.ch.cloneFetch.s1.hint': 'git clone https://github.com/user/repo.git',
+'terminal.ch.cloneFetch.s2': 'Inspect the configured remote',
+'terminal.ch.cloneFetch.s2.hint': 'git remote -v',
+'terminal.ch.cloneFetch.s3': 'View the cloned commit history',
+'terminal.ch.cloneFetch.s3.hint': 'git log --oneline',
+'terminal.ch.cloneFetch.s4': 'Fetch latest changes from the remote',
+'terminal.ch.cloneFetch.s4.hint': 'git fetch origin',
+'terminal.ch.cloneFetch.s5': 'Check if your branch is behind',
+'terminal.ch.cloneFetch.s5.hint': 'git status',
+'terminal.ch.cloneFetch.s6': 'Merge fetched changes into your branch',
+'terminal.ch.cloneFetch.s6.hint': 'git merge origin/main',
+'terminal.ch.branchMgmt.desc': 'List all branches, rename an existing branch, and safely delete a merged branch.',
+'terminal.ch.branchMgmt.s1': 'Initialize a repository',
+'terminal.ch.branchMgmt.s1.hint': 'git init',
+'terminal.ch.branchMgmt.s2': 'Create a file and commit',
+'terminal.ch.branchMgmt.s2.hint': 'touch app.js',
+'terminal.ch.branchMgmt.s3': 'Stage and commit',
+'terminal.ch.branchMgmt.s3.hint': 'git add .',
+'terminal.ch.branchMgmt.s4': 'Make a commit',
+'terminal.ch.branchMgmt.s4.hint': 'git commit -m "Initial"',
+'terminal.ch.branchMgmt.s5': 'Create a new branch',
+'terminal.ch.branchMgmt.s5.hint': 'git branch old-feature',
+'terminal.ch.branchMgmt.s6': 'Rename the branch to a better name',
+'terminal.ch.branchMgmt.s6.hint': 'git branch -m old-feature new-feature',
+'terminal.ch.branchMgmt.s7': 'List all branches to confirm the rename',
+'terminal.ch.branchMgmt.s7.hint': 'git branch -a',
+'terminal.ch.gitRevert.desc': 'Safely undo a published commit by creating a new revert commit, preserving the full history.',
+'terminal.ch.gitRevert.s1': 'Initialize a repository',
+'terminal.ch.gitRevert.s1.hint': 'git init',
+'terminal.ch.gitRevert.s2': 'Create a file',
+'terminal.ch.gitRevert.s2.hint': 'touch app.js',
+'terminal.ch.gitRevert.s3': 'Stage the file',
+'terminal.ch.gitRevert.s3.hint': 'git add .',
+'terminal.ch.gitRevert.s4': 'Commit a good version',
+'terminal.ch.gitRevert.s4.hint': 'git commit -m "Good commit"',
+'terminal.ch.gitRevert.s5': 'Introduce a bad change',
+'terminal.ch.gitRevert.s5.hint': 'echo "bad code" >> app.js',
+'terminal.ch.gitRevert.s6': 'Stage the bad change',
+'terminal.ch.gitRevert.s6.hint': 'git add .',
+'terminal.ch.gitRevert.s7': 'Commit the bad change',
+'terminal.ch.gitRevert.s7.hint': 'git commit -m "Bad commit"',
+'terminal.ch.gitRevert.s8': 'View log to identify the bad commit hash',
+'terminal.ch.gitRevert.s8.hint': 'git log --oneline',
+'terminal.ch.gitRevert.s9': 'Revert the bad commit — creates a new undo commit',
+'terminal.ch.gitRevert.s9.hint': 'git revert HEAD',
+'terminal.ch.submodules.desc': 'Embed another Git repository inside your project as a submodule and learn to initialize and update it.',
+'terminal.ch.submodules.s1': 'Initialize the parent repository',
+'terminal.ch.submodules.s1.hint': 'git init',
+'terminal.ch.submodules.s2': 'Create a project file',
+'terminal.ch.submodules.s2.hint': 'touch main.js',
+'terminal.ch.submodules.s3': 'Stage the file',
+'terminal.ch.submodules.s3.hint': 'git add .',
+'terminal.ch.submodules.s4': 'Commit the base project',
+'terminal.ch.submodules.s4.hint': 'git commit -m "Initial project"',
+'terminal.ch.submodules.s5': 'Add an external repo as a submodule',
+'terminal.ch.submodules.s5.hint': 'git submodule add https://github.com/user/lib.git libs/lib',
+'terminal.ch.submodules.s6': 'Check status — see .gitmodules and the submodule folder',
+'terminal.ch.submodules.s6.hint': 'git status',
+'terminal.ch.submodules.s7': 'Commit the new submodule reference',
+'terminal.ch.submodules.s7.hint': 'git commit -m "Add submodule"',
+'terminal.ch.submodules.s8': 'Initialize and update submodule contents',
+'terminal.ch.submodules.s8.hint': 'git submodule update --init --recursive',
 
 // Cheat sheet categories
 'cheat.cat.setup': 'Setup & Config',
@@ -1756,6 +1916,8 @@ ar: {
 'step.tip': 'نصيحة',
 'step.warning': 'تحذير',
 'step.whatHappened': 'ماذا حدث',
+'step.concept': 'مفهوم',
+'step.hands_on': 'تطبيق عملي',
 // Step explanations (Arabic)
 'mod1.s4.explain': 'طبع Git رقم الإصدار المثبت. هذا يؤكد أن Git مثبت بشكل صحيح وجاهز للاستخدام.',
 'mod2.s1.explain': 'تم تنزيل مثبّت Git. بعد تشغيله، أصبح Git متاحاً كأداة سطر أوامر.',
@@ -1866,6 +2028,15 @@ ar: {
 'terminal.ch.undo': 'التراجع عن التغييرات',
 'terminal.ch.cherryPick': 'Cherry Pick',
 'terminal.ch.rebase': 'تدفق Rebase',
+'terminal.ch.gitignore': 'تجاهل الملفات',
+'terminal.ch.logFormats': 'عرض التاريخ',
+'terminal.ch.removingFiles': 'حذف الملفات',
+'terminal.ch.renameMove': 'إعادة التسمية والنقل',
+'terminal.ch.mergeConflict': 'تعارضات الدمج',
+'terminal.ch.cloneFetch': 'استنساخ وجلب',
+'terminal.ch.branchMgmt': 'إدارة الفروع',
+'terminal.ch.gitRevert': 'إرجاع الإيداع',
+'terminal.ch.submodules': 'الوحدات الفرعية',
 'terminal.ch.started': 'بدأ التحدي',
 'terminal.ch.select': 'اختر تحدياً أعلاه لبدء تمرين موجّه',
 'terminal.ch.complete': 'اكتمل التحدي!',
@@ -3017,6 +3188,155 @@ ar: {
 'terminal.ch.forcePush.s6.hint': 'git commit --amend -m "improved initial"',
 'terminal.ch.forcePush.s7': 'ادفع إجبارياً بأمان',
 'terminal.ch.forcePush.s7.hint': 'git push --force-with-lease',
+'terminal.ch.gitignore.desc': 'أنشئ ملف .gitignore لإخبار Git بالملفات والمجلدات التي يجب ألا يتتبعها.',
+'terminal.ch.gitignore.s1': 'تهيئة مستودع Git جديد',
+'terminal.ch.gitignore.s1.hint': 'git init',
+'terminal.ch.gitignore.s2': 'إنشاء ملف تريد تتبعه',
+'terminal.ch.gitignore.s2.hint': 'touch app.js',
+'terminal.ch.gitignore.s3': 'إنشاء .gitignore وإضافة نمط تجاهل',
+'terminal.ch.gitignore.s3.hint': 'touch .gitignore',
+'terminal.ch.gitignore.s4': 'فحص الحالة — يجب أن تختفي الملفات المتجاهلة',
+'terminal.ch.gitignore.s4.hint': 'git status',
+'terminal.ch.gitignore.s5': 'تجهيز الملفات المتتبعة فقط',
+'terminal.ch.gitignore.s5.hint': 'git add .',
+'terminal.ch.gitignore.s6': 'إيداع برسالة',
+'terminal.ch.gitignore.s6.hint': 'git commit -m "Add app with gitignore"',
+'terminal.ch.gitignore.s7': 'التأكد من أن الملفات المتجاهلة ليست مُجهَّزة',
+'terminal.ch.gitignore.s7.hint': 'git status',
+'terminal.ch.logFormats.desc': 'استكشف تاريخ الإيداعات باستخدام git log مع خيارات --oneline و--graph و--all.',
+'terminal.ch.logFormats.s1': 'تهيئة مستودع',
+'terminal.ch.logFormats.s1.hint': 'git init',
+'terminal.ch.logFormats.s2': 'إنشاء ملف أول',
+'terminal.ch.logFormats.s2.hint': 'touch file1.txt',
+'terminal.ch.logFormats.s3': 'تجهيز الملف',
+'terminal.ch.logFormats.s3.hint': 'git add .',
+'terminal.ch.logFormats.s4': 'عمل أول إيداع',
+'terminal.ch.logFormats.s4.hint': 'git commit -m "First commit"',
+'terminal.ch.logFormats.s5': 'إنشاء ملف ثانٍ',
+'terminal.ch.logFormats.s5.hint': 'touch file2.txt',
+'terminal.ch.logFormats.s6': 'تجهيز الملف الثاني',
+'terminal.ch.logFormats.s6.hint': 'git add .',
+'terminal.ch.logFormats.s7': 'عمل إيداع ثانٍ',
+'terminal.ch.logFormats.s7.hint': 'git commit -m "Second commit"',
+'terminal.ch.logFormats.s8': 'عرض السجل في سطر واحد',
+'terminal.ch.logFormats.s8.hint': 'git log --oneline',
+'terminal.ch.logFormats.s9': 'عرض السجل مع مخطط الفروع',
+'terminal.ch.logFormats.s9.hint': 'git log --oneline --graph --all',
+'terminal.ch.removingFiles.desc': 'استخدم git rm لحذف الملفات المتتبعة بشكل صحيح من المستودع وشجرة العمل.',
+'terminal.ch.removingFiles.s1': 'تهيئة مستودع',
+'terminal.ch.removingFiles.s1.hint': 'git init',
+'terminal.ch.removingFiles.s2': 'إنشاء ملفين',
+'terminal.ch.removingFiles.s2.hint': 'touch app.js old.txt',
+'terminal.ch.removingFiles.s3': 'تجهيز وإيداع كلا الملفين',
+'terminal.ch.removingFiles.s3.hint': 'git add .',
+'terminal.ch.removingFiles.s4': 'إيداع',
+'terminal.ch.removingFiles.s4.hint': 'git commit -m "Add initial files"',
+'terminal.ch.removingFiles.s5': 'حذف الملف القديم من تتبع Git والقرص',
+'terminal.ch.removingFiles.s5.hint': 'git rm old.txt',
+'terminal.ch.removingFiles.s6': 'فحص الحالة — الحذف مُجهَّز للإيداع',
+'terminal.ch.removingFiles.s6.hint': 'git status',
+'terminal.ch.removingFiles.s7': 'إيداع الحذف',
+'terminal.ch.removingFiles.s7.hint': 'git commit -m "Remove old.txt"',
+'terminal.ch.renameMove.desc': 'استخدم git mv لإعادة تسمية الملفات ونقلها حتى يتتبع Git العملية كتغيير اسم.',
+'terminal.ch.renameMove.s1': 'تهيئة مستودع',
+'terminal.ch.renameMove.s1.hint': 'git init',
+'terminal.ch.renameMove.s2': 'إنشاء ملف باسم قديم',
+'terminal.ch.renameMove.s2.hint': 'touch old-name.txt',
+'terminal.ch.renameMove.s3': 'تجهيز الملف',
+'terminal.ch.renameMove.s3.hint': 'git add .',
+'terminal.ch.renameMove.s4': 'إيداع الملف',
+'terminal.ch.renameMove.s4.hint': 'git commit -m "Add old-name.txt"',
+'terminal.ch.renameMove.s5': 'إعادة تسميته باستخدام git mv',
+'terminal.ch.renameMove.s5.hint': 'git mv old-name.txt new-name.txt',
+'terminal.ch.renameMove.s6': 'فحص الحالة — Git يُظهر إعادة تسمية وليس حذفاً وإضافة',
+'terminal.ch.renameMove.s6.hint': 'git status',
+'terminal.ch.renameMove.s7': 'إيداع إعادة التسمية',
+'terminal.ch.renameMove.s7.hint': 'git commit -m "Rename to new-name.txt"',
+'terminal.ch.mergeConflict.desc': 'أنشئ تعارض دمج متعمداً بين فرعين، ثم حلّه وأكمل الدمج.',
+'terminal.ch.mergeConflict.s1': 'تهيئة مستودع',
+'terminal.ch.mergeConflict.s1.hint': 'git init',
+'terminal.ch.mergeConflict.s2': 'إنشاء ملف مشترك وإيداعه على main',
+'terminal.ch.mergeConflict.s2.hint': 'touch notes.txt',
+'terminal.ch.mergeConflict.s3': 'تجهيز الملف',
+'terminal.ch.mergeConflict.s3.hint': 'git add .',
+'terminal.ch.mergeConflict.s4': 'إيداع القاعدة',
+'terminal.ch.mergeConflict.s4.hint': 'git commit -m "Add notes"',
+'terminal.ch.mergeConflict.s5': 'إنشاء والانتقال إلى فرع ميزة',
+'terminal.ch.mergeConflict.s5.hint': 'git switch -c feature',
+'terminal.ch.mergeConflict.s6': 'تعديل الملف المشترك على فرع الميزة',
+'terminal.ch.mergeConflict.s6.hint': 'echo "feature line" >> notes.txt',
+'terminal.ch.mergeConflict.s7': 'تجهيز التغيير',
+'terminal.ch.mergeConflict.s7.hint': 'git add notes.txt',
+'terminal.ch.mergeConflict.s8': 'إيداع على فرع الميزة',
+'terminal.ch.mergeConflict.s8.hint': 'git commit -m "Feature edit"',
+'terminal.ch.mergeConflict.s9': 'العودة إلى main',
+'terminal.ch.mergeConflict.s9.hint': 'git switch main',
+'terminal.ch.mergeConflict.s10': 'دمج الميزة — لاحظ التعارض وحلّه',
+'terminal.ch.mergeConflict.s10.hint': 'git merge feature',
+'terminal.ch.cloneFetch.desc': 'استنسخ مستودعاً بعيداً محلياً، ثم استخدم git fetch لتنزيل التحديثات دون دمج تلقائي.',
+'terminal.ch.cloneFetch.s1': 'استنساخ مستودع بعيد',
+'terminal.ch.cloneFetch.s1.hint': 'git clone https://github.com/user/repo.git',
+'terminal.ch.cloneFetch.s2': 'فحص المستودع البعيد المُعدّ',
+'terminal.ch.cloneFetch.s2.hint': 'git remote -v',
+'terminal.ch.cloneFetch.s3': 'عرض تاريخ الإيداعات المستنسخة',
+'terminal.ch.cloneFetch.s3.hint': 'git log --oneline',
+'terminal.ch.cloneFetch.s4': 'جلب آخر التغييرات من البعيد',
+'terminal.ch.cloneFetch.s4.hint': 'git fetch origin',
+'terminal.ch.cloneFetch.s5': 'التحقق من تأخر فرعك عن البعيد',
+'terminal.ch.cloneFetch.s5.hint': 'git status',
+'terminal.ch.cloneFetch.s6': 'دمج التغييرات المجلوبة في فرعك',
+'terminal.ch.cloneFetch.s6.hint': 'git merge origin/main',
+'terminal.ch.branchMgmt.desc': 'اعرض جميع الفروع، أعد تسمية فرع موجود، واحذف فرعاً مدموجاً بأمان.',
+'terminal.ch.branchMgmt.s1': 'تهيئة مستودع',
+'terminal.ch.branchMgmt.s1.hint': 'git init',
+'terminal.ch.branchMgmt.s2': 'إنشاء ملف وإيداعه',
+'terminal.ch.branchMgmt.s2.hint': 'touch app.js',
+'terminal.ch.branchMgmt.s3': 'تجهيز وإيداع',
+'terminal.ch.branchMgmt.s3.hint': 'git add .',
+'terminal.ch.branchMgmt.s4': 'عمل إيداع',
+'terminal.ch.branchMgmt.s4.hint': 'git commit -m "Initial"',
+'terminal.ch.branchMgmt.s5': 'إنشاء فرع جديد',
+'terminal.ch.branchMgmt.s5.hint': 'git branch old-feature',
+'terminal.ch.branchMgmt.s6': 'إعادة تسمية الفرع إلى اسم أوضح',
+'terminal.ch.branchMgmt.s6.hint': 'git branch -m old-feature new-feature',
+'terminal.ch.branchMgmt.s7': 'عرض جميع الفروع للتأكيد',
+'terminal.ch.branchMgmt.s7.hint': 'git branch -a',
+'terminal.ch.gitRevert.desc': 'تراجع بأمان عن إيداع منشور بإنشاء إيداع إرجاع جديد مع الحفاظ على التاريخ الكامل.',
+'terminal.ch.gitRevert.s1': 'تهيئة مستودع',
+'terminal.ch.gitRevert.s1.hint': 'git init',
+'terminal.ch.gitRevert.s2': 'إنشاء ملف',
+'terminal.ch.gitRevert.s2.hint': 'touch app.js',
+'terminal.ch.gitRevert.s3': 'تجهيز الملف',
+'terminal.ch.gitRevert.s3.hint': 'git add .',
+'terminal.ch.gitRevert.s4': 'إيداع نسخة جيدة',
+'terminal.ch.gitRevert.s4.hint': 'git commit -m "Good commit"',
+'terminal.ch.gitRevert.s5': 'إدخال تغيير سيئ',
+'terminal.ch.gitRevert.s5.hint': 'echo "bad code" >> app.js',
+'terminal.ch.gitRevert.s6': 'تجهيز التغيير السيئ',
+'terminal.ch.gitRevert.s6.hint': 'git add .',
+'terminal.ch.gitRevert.s7': 'إيداع التغيير السيئ',
+'terminal.ch.gitRevert.s7.hint': 'git commit -m "Bad commit"',
+'terminal.ch.gitRevert.s8': 'عرض السجل لتحديد hash الإيداع السيئ',
+'terminal.ch.gitRevert.s8.hint': 'git log --oneline',
+'terminal.ch.gitRevert.s9': 'إرجاع الإيداع السيئ — ينشئ إيداع تراجع جديداً',
+'terminal.ch.gitRevert.s9.hint': 'git revert HEAD',
+'terminal.ch.submodules.desc': 'أدرج مستودع Git آخر داخل مشروعك كوحدة فرعية وتعلّم كيفية تهيئتها وتحديثها.',
+'terminal.ch.submodules.s1': 'تهيئة المستودع الأصلي',
+'terminal.ch.submodules.s1.hint': 'git init',
+'terminal.ch.submodules.s2': 'إنشاء ملف للمشروع',
+'terminal.ch.submodules.s2.hint': 'touch main.js',
+'terminal.ch.submodules.s3': 'تجهيز الملف',
+'terminal.ch.submodules.s3.hint': 'git add .',
+'terminal.ch.submodules.s4': 'إيداع المشروع الأساسي',
+'terminal.ch.submodules.s4.hint': 'git commit -m "Initial project"',
+'terminal.ch.submodules.s5': 'إضافة مستودع خارجي كوحدة فرعية',
+'terminal.ch.submodules.s5.hint': 'git submodule add https://github.com/user/lib.git libs/lib',
+'terminal.ch.submodules.s6': 'فحص الحالة — شاهد .gitmodules ومجلد الوحدة الفرعية',
+'terminal.ch.submodules.s6.hint': 'git status',
+'terminal.ch.submodules.s7': 'إيداع مرجع الوحدة الفرعية الجديدة',
+'terminal.ch.submodules.s7.hint': 'git commit -m "Add submodule"',
+'terminal.ch.submodules.s8': 'تهيئة وتحديث محتويات الوحدة الفرعية',
+'terminal.ch.submodules.s8.hint': 'git submodule update --init --recursive',
 
 // Cheat sheet categories (Arabic)
 'cheat.cat.setup': 'الإعداد والتكوين',
@@ -5026,6 +5346,44 @@ var termChallenges = [
     { cmd: 'git switch main', labelKey: 'terminal.ch.branching.s6', hintKey: 'terminal.ch.branching.s6.hint', alt: ['git checkout main'] },
     { cmd: 'git merge', labelKey: 'terminal.ch.branching.s7', hintKey: 'terminal.ch.branching.s7.hint' }
   ]},
+  { id: 'gitignore', nameKey: 'terminal.ch.gitignore', descKey: 'terminal.ch.gitignore.desc', level: 'beginner', steps: [
+    { cmd: 'git init', labelKey: 'terminal.ch.gitignore.s1', hintKey: 'terminal.ch.gitignore.s1.hint' },
+    { cmd: 'touch', labelKey: 'terminal.ch.gitignore.s2', hintKey: 'terminal.ch.gitignore.s2.hint', alt: ['echo'] },
+    { cmd: 'touch', labelKey: 'terminal.ch.gitignore.s3', hintKey: 'terminal.ch.gitignore.s3.hint', alt: ['echo'] },
+    { cmd: 'git status', labelKey: 'terminal.ch.gitignore.s4', hintKey: 'terminal.ch.gitignore.s4.hint' },
+    { cmd: 'git add', labelKey: 'terminal.ch.gitignore.s5', hintKey: 'terminal.ch.gitignore.s5.hint' },
+    { cmd: 'git commit', labelKey: 'terminal.ch.gitignore.s6', hintKey: 'terminal.ch.gitignore.s6.hint' },
+    { cmd: 'git status', labelKey: 'terminal.ch.gitignore.s7', hintKey: 'terminal.ch.gitignore.s7.hint' }
+  ]},
+  { id: 'log-formats', nameKey: 'terminal.ch.logFormats', descKey: 'terminal.ch.logFormats.desc', level: 'beginner', steps: [
+    { cmd: 'git init', labelKey: 'terminal.ch.logFormats.s1', hintKey: 'terminal.ch.logFormats.s1.hint' },
+    { cmd: 'touch', labelKey: 'terminal.ch.logFormats.s2', hintKey: 'terminal.ch.logFormats.s2.hint', alt: ['echo'] },
+    { cmd: 'git add', labelKey: 'terminal.ch.logFormats.s3', hintKey: 'terminal.ch.logFormats.s3.hint' },
+    { cmd: 'git commit', labelKey: 'terminal.ch.logFormats.s4', hintKey: 'terminal.ch.logFormats.s4.hint' },
+    { cmd: 'touch', labelKey: 'terminal.ch.logFormats.s5', hintKey: 'terminal.ch.logFormats.s5.hint', alt: ['echo'] },
+    { cmd: 'git add', labelKey: 'terminal.ch.logFormats.s6', hintKey: 'terminal.ch.logFormats.s6.hint' },
+    { cmd: 'git commit', labelKey: 'terminal.ch.logFormats.s7', hintKey: 'terminal.ch.logFormats.s7.hint' },
+    { cmd: 'git log', labelKey: 'terminal.ch.logFormats.s8', hintKey: 'terminal.ch.logFormats.s8.hint', alt: ['git log'] },
+    { cmd: 'git log', labelKey: 'terminal.ch.logFormats.s9', hintKey: 'terminal.ch.logFormats.s9.hint', alt: ['git log'] }
+  ]},
+  { id: 'removing-files', nameKey: 'terminal.ch.removingFiles', descKey: 'terminal.ch.removingFiles.desc', level: 'beginner', steps: [
+    { cmd: 'git init', labelKey: 'terminal.ch.removingFiles.s1', hintKey: 'terminal.ch.removingFiles.s1.hint' },
+    { cmd: 'touch', labelKey: 'terminal.ch.removingFiles.s2', hintKey: 'terminal.ch.removingFiles.s2.hint', alt: ['echo'] },
+    { cmd: 'git add', labelKey: 'terminal.ch.removingFiles.s3', hintKey: 'terminal.ch.removingFiles.s3.hint' },
+    { cmd: 'git commit', labelKey: 'terminal.ch.removingFiles.s4', hintKey: 'terminal.ch.removingFiles.s4.hint' },
+    { cmd: 'git rm', labelKey: 'terminal.ch.removingFiles.s5', hintKey: 'terminal.ch.removingFiles.s5.hint' },
+    { cmd: 'git status', labelKey: 'terminal.ch.removingFiles.s6', hintKey: 'terminal.ch.removingFiles.s6.hint' },
+    { cmd: 'git commit', labelKey: 'terminal.ch.removingFiles.s7', hintKey: 'terminal.ch.removingFiles.s7.hint' }
+  ]},
+  { id: 'rename-move', nameKey: 'terminal.ch.renameMove', descKey: 'terminal.ch.renameMove.desc', level: 'beginner', steps: [
+    { cmd: 'git init', labelKey: 'terminal.ch.renameMove.s1', hintKey: 'terminal.ch.renameMove.s1.hint' },
+    { cmd: 'touch', labelKey: 'terminal.ch.renameMove.s2', hintKey: 'terminal.ch.renameMove.s2.hint', alt: ['echo'] },
+    { cmd: 'git add', labelKey: 'terminal.ch.renameMove.s3', hintKey: 'terminal.ch.renameMove.s3.hint' },
+    { cmd: 'git commit', labelKey: 'terminal.ch.renameMove.s4', hintKey: 'terminal.ch.renameMove.s4.hint' },
+    { cmd: 'git mv', labelKey: 'terminal.ch.renameMove.s5', hintKey: 'terminal.ch.renameMove.s5.hint' },
+    { cmd: 'git status', labelKey: 'terminal.ch.renameMove.s6', hintKey: 'terminal.ch.renameMove.s6.hint' },
+    { cmd: 'git commit', labelKey: 'terminal.ch.renameMove.s7', hintKey: 'terminal.ch.renameMove.s7.hint' }
+  ]},
   // Intermediate
   { id: 'remote-flow', nameKey: 'terminal.ch.remote', descKey: 'terminal.ch.remote.desc', level: 'intermediate', steps: [
     { cmd: 'git init', labelKey: 'terminal.ch.remote.s1', hintKey: 'terminal.ch.remote.s1.hint' },
@@ -5116,6 +5474,35 @@ var termChallenges = [
     { cmd: 'touch', labelKey: 'terminal.ch.pullRebase.s6', hintKey: 'terminal.ch.pullRebase.s6.hint', alt: ['echo'] },
     { cmd: 'git pull --rebase', labelKey: 'terminal.ch.pullRebase.s7', hintKey: 'terminal.ch.pullRebase.s7.hint', alt: ['git pull'] }
   ]},
+  { id: 'merge-conflict', nameKey: 'terminal.ch.mergeConflict', descKey: 'terminal.ch.mergeConflict.desc', level: 'intermediate', steps: [
+    { cmd: 'git init', labelKey: 'terminal.ch.mergeConflict.s1', hintKey: 'terminal.ch.mergeConflict.s1.hint' },
+    { cmd: 'touch', labelKey: 'terminal.ch.mergeConflict.s2', hintKey: 'terminal.ch.mergeConflict.s2.hint', alt: ['echo'] },
+    { cmd: 'git add', labelKey: 'terminal.ch.mergeConflict.s3', hintKey: 'terminal.ch.mergeConflict.s3.hint' },
+    { cmd: 'git commit', labelKey: 'terminal.ch.mergeConflict.s4', hintKey: 'terminal.ch.mergeConflict.s4.hint' },
+    { cmd: 'git switch -c', labelKey: 'terminal.ch.mergeConflict.s5', hintKey: 'terminal.ch.mergeConflict.s5.hint', alt: ['git checkout -b'] },
+    { cmd: 'echo', labelKey: 'terminal.ch.mergeConflict.s6', hintKey: 'terminal.ch.mergeConflict.s6.hint' },
+    { cmd: 'git add', labelKey: 'terminal.ch.mergeConflict.s7', hintKey: 'terminal.ch.mergeConflict.s7.hint' },
+    { cmd: 'git commit', labelKey: 'terminal.ch.mergeConflict.s8', hintKey: 'terminal.ch.mergeConflict.s8.hint' },
+    { cmd: 'git switch main', labelKey: 'terminal.ch.mergeConflict.s9', hintKey: 'terminal.ch.mergeConflict.s9.hint', alt: ['git checkout main'] },
+    { cmd: 'git merge', labelKey: 'terminal.ch.mergeConflict.s10', hintKey: 'terminal.ch.mergeConflict.s10.hint' }
+  ]},
+  { id: 'clone-fetch', nameKey: 'terminal.ch.cloneFetch', descKey: 'terminal.ch.cloneFetch.desc', level: 'intermediate', steps: [
+    { cmd: 'git clone', labelKey: 'terminal.ch.cloneFetch.s1', hintKey: 'terminal.ch.cloneFetch.s1.hint' },
+    { cmd: 'git remote', labelKey: 'terminal.ch.cloneFetch.s2', hintKey: 'terminal.ch.cloneFetch.s2.hint', alt: ['git remote'] },
+    { cmd: 'git log', labelKey: 'terminal.ch.cloneFetch.s3', hintKey: 'terminal.ch.cloneFetch.s3.hint', alt: ['git log'] },
+    { cmd: 'git fetch', labelKey: 'terminal.ch.cloneFetch.s4', hintKey: 'terminal.ch.cloneFetch.s4.hint' },
+    { cmd: 'git status', labelKey: 'terminal.ch.cloneFetch.s5', hintKey: 'terminal.ch.cloneFetch.s5.hint' },
+    { cmd: 'git merge', labelKey: 'terminal.ch.cloneFetch.s6', hintKey: 'terminal.ch.cloneFetch.s6.hint', alt: ['git pull'] }
+  ]},
+  { id: 'branch-management', nameKey: 'terminal.ch.branchMgmt', descKey: 'terminal.ch.branchMgmt.desc', level: 'intermediate', steps: [
+    { cmd: 'git init', labelKey: 'terminal.ch.branchMgmt.s1', hintKey: 'terminal.ch.branchMgmt.s1.hint' },
+    { cmd: 'touch', labelKey: 'terminal.ch.branchMgmt.s2', hintKey: 'terminal.ch.branchMgmt.s2.hint', alt: ['echo'] },
+    { cmd: 'git add', labelKey: 'terminal.ch.branchMgmt.s3', hintKey: 'terminal.ch.branchMgmt.s3.hint' },
+    { cmd: 'git commit', labelKey: 'terminal.ch.branchMgmt.s4', hintKey: 'terminal.ch.branchMgmt.s4.hint' },
+    { cmd: 'git branch', labelKey: 'terminal.ch.branchMgmt.s5', hintKey: 'terminal.ch.branchMgmt.s5.hint' },
+    { cmd: 'git branch', labelKey: 'terminal.ch.branchMgmt.s6', hintKey: 'terminal.ch.branchMgmt.s6.hint', alt: ['git branch'] },
+    { cmd: 'git branch', labelKey: 'terminal.ch.branchMgmt.s7', hintKey: 'terminal.ch.branchMgmt.s7.hint', alt: ['git branch'] }
+  ]},
   { id: 'interactive-rebase', nameKey: 'terminal.ch.interactiveRebase', descKey: 'terminal.ch.interactiveRebase.desc', level: 'advanced', steps: [
     { cmd: 'git init', labelKey: 'terminal.ch.interactiveRebase.s1', hintKey: 'terminal.ch.interactiveRebase.s1.hint' },
     { cmd: 'touch', labelKey: 'terminal.ch.interactiveRebase.s2', hintKey: 'terminal.ch.interactiveRebase.s2.hint', alt: ['echo'] },
@@ -5146,6 +5533,27 @@ var termChallenges = [
     { cmd: 'git push', labelKey: 'terminal.ch.forcePush.s5', hintKey: 'terminal.ch.forcePush.s5.hint' },
     { cmd: 'git commit --amend', labelKey: 'terminal.ch.forcePush.s6', hintKey: 'terminal.ch.forcePush.s6.hint', alt: ['git commit'] },
     { cmd: 'git push --force-with-lease', labelKey: 'terminal.ch.forcePush.s7', hintKey: 'terminal.ch.forcePush.s7.hint', alt: ['git push'] }
+  ]},
+  { id: 'git-revert', nameKey: 'terminal.ch.gitRevert', descKey: 'terminal.ch.gitRevert.desc', level: 'advanced', steps: [
+    { cmd: 'git init', labelKey: 'terminal.ch.gitRevert.s1', hintKey: 'terminal.ch.gitRevert.s1.hint' },
+    { cmd: 'touch', labelKey: 'terminal.ch.gitRevert.s2', hintKey: 'terminal.ch.gitRevert.s2.hint', alt: ['echo'] },
+    { cmd: 'git add', labelKey: 'terminal.ch.gitRevert.s3', hintKey: 'terminal.ch.gitRevert.s3.hint' },
+    { cmd: 'git commit', labelKey: 'terminal.ch.gitRevert.s4', hintKey: 'terminal.ch.gitRevert.s4.hint' },
+    { cmd: 'echo', labelKey: 'terminal.ch.gitRevert.s5', hintKey: 'terminal.ch.gitRevert.s5.hint' },
+    { cmd: 'git add', labelKey: 'terminal.ch.gitRevert.s6', hintKey: 'terminal.ch.gitRevert.s6.hint' },
+    { cmd: 'git commit', labelKey: 'terminal.ch.gitRevert.s7', hintKey: 'terminal.ch.gitRevert.s7.hint' },
+    { cmd: 'git log', labelKey: 'terminal.ch.gitRevert.s8', hintKey: 'terminal.ch.gitRevert.s8.hint', alt: ['git log'] },
+    { cmd: 'git revert', labelKey: 'terminal.ch.gitRevert.s9', hintKey: 'terminal.ch.gitRevert.s9.hint' }
+  ]},
+  { id: 'submodules', nameKey: 'terminal.ch.submodules', descKey: 'terminal.ch.submodules.desc', level: 'advanced', steps: [
+    { cmd: 'git init', labelKey: 'terminal.ch.submodules.s1', hintKey: 'terminal.ch.submodules.s1.hint' },
+    { cmd: 'touch', labelKey: 'terminal.ch.submodules.s2', hintKey: 'terminal.ch.submodules.s2.hint', alt: ['echo'] },
+    { cmd: 'git add', labelKey: 'terminal.ch.submodules.s3', hintKey: 'terminal.ch.submodules.s3.hint' },
+    { cmd: 'git commit', labelKey: 'terminal.ch.submodules.s4', hintKey: 'terminal.ch.submodules.s4.hint' },
+    { cmd: 'git submodule add', labelKey: 'terminal.ch.submodules.s5', hintKey: 'terminal.ch.submodules.s5.hint', alt: ['git submodule'] },
+    { cmd: 'git status', labelKey: 'terminal.ch.submodules.s6', hintKey: 'terminal.ch.submodules.s6.hint' },
+    { cmd: 'git commit', labelKey: 'terminal.ch.submodules.s7', hintKey: 'terminal.ch.submodules.s7.hint' },
+    { cmd: 'git submodule update', labelKey: 'terminal.ch.submodules.s8', hintKey: 'terminal.ch.submodules.s8.hint', alt: ['git submodule'] }
   ]}
 ];
 var currentChallenge = null;
@@ -5455,16 +5863,19 @@ function renderCommandTimeline() {
   var el = document.getElementById('timeline-items');
   if (!el) return;
   var cmds = terminalState.commandHistory.filter(function(c) { return c !== 'clear' && c !== 'help'; });
-  if (cmds.length === 0) { el.innerHTML = '<span style="color:#484f58;font-size:0.65rem">' + t('terminal.history.empty') + '</span>'; return; }
+  if (cmds.length === 0) { el.innerHTML = '<span class="tl-empty">' + t('terminal.history.empty') + '</span>'; return; }
   var html = '';
   var shown = cmds.slice(-20);
   shown.forEach(function(c, i) {
-    if (i > 0) html += '<span class="tl-arrow"><i class="fa-solid fa-chevron-right"></i></span>';
-    html += '<span class="tl-item" data-cmd="' + c.replace(/"/g, '&quot;') + '">' + escapeHtml(c.length > 25 ? c.substring(0, 22) + '...' : c) + '</span>';
+    var isLast = i === shown.length - 1;
+    html += '<div class="tl-step' + (isLast ? ' tl-step-latest' : '') + '" data-cmd="' + c.replace(/"/g, '&quot;') + '">' +
+      '<div class="tl-dot"></div>' +
+      '<span class="tl-cmd">' + escapeHtml(c.length > 30 ? c.substring(0, 27) + '...' : c) + '</span>' +
+      '</div>';
   });
   el.innerHTML = html;
-  el.scrollLeft = el.scrollWidth;
-  el.querySelectorAll('.tl-item').forEach(function(item) {
+  el.scrollTop = el.scrollHeight;
+  el.querySelectorAll('.tl-step').forEach(function(item) {
     item.addEventListener('click', function() {
       var input = document.getElementById('terminal-input');
       if (input) { input.value = item.dataset.cmd; input.focus(); }
@@ -5491,7 +5902,7 @@ function switchTab(id) {
   var tab = terminalTabs.find(function(t) { return t.id === id; });
   if (!tab) return;
   if (tab.state) {
-    Object.assign(terminalState, tab.state);
+    terminalState = JSON.parse(JSON.stringify(tab.state));
   } else {
     terminalState = { initialized: false, branch: 'main', branches: ['main'], commits: [], staged: [], untracked: [], modified: [], files: {}, remotes: {}, stash: [], tags: [], commandHistory: [], historyIndex: -1 };
   }
@@ -5617,6 +6028,12 @@ function initTerminalEnhancements() {
     renderCommandBreakdown('');
     challengeProgress = 0;
     renderGuidePanel();
+  });
+
+  var clearScreenBtn = document.getElementById('btn-clear-screen');
+  if (clearScreenBtn) clearScreenBtn.addEventListener('click', function() {
+    var body = document.getElementById('playground-terminal');
+    if (body) body.innerHTML = '';
   });
 
   // Fix button delegation for mistake coach
@@ -6763,22 +7180,20 @@ function renderModules(filter) {
       card.style.animationDelay = (cardIdx * 0.05) + 's';
       cardIdx++;
       const pct = mod.steps.length > 0 ? Math.round((Math.min(progress.get(mod.id), mod.steps.length) / mod.steps.length) * 100) : 0;
-      const levelLabel = t('learning.filter.' + mod.level);
+      card.style.setProperty('--card-gradient', mod.gradient);
       card.innerHTML =
-        '<div class="module-card-header" style="background:' + mod.gradient + '">' +
-          '<div class="module-number">' + mod.id + '</div>' +
-          '<div class="module-badge">' + levelLabel + '</div>' +
+        '<div class="module-card-header">' +
+          '<div class="module-number" style="background:' + mod.gradient + '">' + mod.id + '</div>' +
+          '<h3 class="module-card-title"><i class="' + mod.icon + '" style="background:' + mod.gradient + ';-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"></i> ' + t(mod.titleKey) + '</h3>' +
         '</div>' +
         '<div class="module-card-body">' +
-          '<h3><i class="' + mod.icon + '"></i> ' + t(mod.titleKey) + '</h3>' +
           '<p>' + t(mod.descKey) + '</p>' +
-          '<div class="module-meta">' +
-            '<span><i class="fa-solid fa-clock"></i> ' + mod.duration + ' ' + t('module.minutes') + '</span>' +
-            '<span><i class="fa-solid fa-list-check"></i> ' + mod.steps.length + ' ' + t('module.steps') + '</span>' +
-          '</div>' +
         '</div>' +
         '<div class="module-card-footer">' +
-          '<div class="progress-bar-small"><div class="progress-fill-small" style="width:' + pct + '%"></div></div>' +
+          '<div class="module-footer-meta">' +
+            '<span class="meta-pill"><i class="fa-solid fa-clock"></i> ' + mod.duration + ' ' + t('module.minutes') + '</span>' +
+            '<span class="meta-pill"><i class="fa-solid fa-list-check"></i> ' + mod.steps.length + ' ' + t('module.steps') + '</span>' +
+          '</div>' +
           '<button class="btn btn-module" onclick="openModule(' + mod.id + ')">' +
             (progress.isCompleted(mod.id) ? '<i class="fa-solid fa-check-circle"></i> ' + t('module.completed') :
              pct > 0 ? '<i class="fa-solid fa-play"></i> ' + t('module.continue') :
@@ -6845,18 +7260,44 @@ function renderModuleContent(mod) {
   container.innerHTML = '';
   const savedStep = progress.get(mod.id);
 
-  mod.steps.forEach((step, idx) => {
-    const stepEl = document.createElement('div');
-    stepEl.className = 'step-card fade-in visible' + (idx < savedStep ? ' step-completed' : '');
-    stepEl.style.animationDelay = (idx * 0.08) + 's';
+  var timelineEl = document.createElement('div');
+  timelineEl.className = 'steps-timeline';
 
-    let html = '<div class="step-header">' +
-      '<div class="step-number">' + (idx + 1) + '</div>' +
+  mod.steps.forEach((step, idx) => {
+    const isCompleted = idx < savedStep;
+    const isCurrent = idx === savedStep;
+    const isTheory = !step.commands;
+
+    var itemEl = document.createElement('div');
+    itemEl.className = 'step-timeline-item fade-in visible' + (isCompleted ? ' step-completed' : '');
+    itemEl.style.animationDelay = (idx * 0.08) + 's';
+
+    var nodeClass = 'step-number' + (isCompleted ? ' step-number-done' : '') + (isCurrent ? ' step-number-current' : '');
+    var totalSteps = mod.steps.length;
+    var stepLabel = (currentLang === 'ar')
+      ? (t('step.stepLabel') !== 'step.stepLabel' ? t('step.stepLabel').replace('{n}', (idx + 1)).replace('{total}', totalSteps) : 'الخطوة ' + (idx + 1) + ' من ' + totalSteps)
+      : 'Step ' + (idx + 1) + ' of ' + totalSteps;
+
+    let html = '<div class="step-timeline-node">' +
+      '<div class="' + nodeClass + '">' +
+      (isCompleted ? '<i class="fa-solid fa-check"></i>' : (idx + 1)) + '</div>' +
+      '</div>';
+
+    html += '<div class="step-card">';
+    var badgeClass = isTheory ? 'step-badge step-badge-concept' : 'step-badge step-badge-handson';
+    html += '<div class="step-header">' +
+      '<div class="step-header-text">' +
+      '<div class="step-label">' + stepLabel + '</div>' +
       '<h3 class="step-title">' + t(step.titleKey) + '</h3>' +
       '</div>' +
-      '<div class="step-description">' + t(step.descKey) + '</div>';
+      '<span class="' + badgeClass + '">' + (isTheory ? '<i class="fa-solid fa-book-open"></i> ' + t('step.concept') : '<i class="fa-solid fa-terminal"></i> ' + t('step.hands_on')) + '</span>' +
+      '</div>';
+
+    html += '<div class="step-body">';
+    html += '<div class="step-description">' + t(step.descKey) + '</div>';
 
     if (step.commands) {
+      html += '<div class="step-cmd-section">';
       html += '<div class="os-tabs">' +
         '<button class="os-tab' + (currentOS === 'windows' ? ' active' : '') + '" data-os="windows"><i class="fa-brands fa-windows"></i> Windows</button>' +
         '<button class="os-tab' + (currentOS === 'mac' ? ' active' : '') + '" data-os="mac"><i class="fa-brands fa-apple"></i> macOS</button>' +
@@ -6870,6 +7311,7 @@ function renderModuleContent(mod) {
           '<button class="copy-btn" data-copy="' + cmdText.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;') + '"><i class="fa-solid fa-copy"></i></button>' +
           '</div>';
       });
+      html += '</div>';
     }
 
     var explainKey = step.titleKey.replace('.title', '.explain');
@@ -6899,26 +7341,42 @@ function renderModuleContent(mod) {
       html += renderStepDiagram(step);
     }
 
-    if (step.vscodeKey && t(step.vscodeKey) !== step.vscodeKey) {
-      html += '<div class="step-vscode"><i class="fa-solid fa-code"></i> <strong>' + t('step.vscode') + ':</strong> ' + t(step.vscodeKey) + '</div>';
-    }
-    if (step.tipKey && t(step.tipKey) !== step.tipKey) {
-      html += '<div class="step-tip"><i class="fa-solid fa-lightbulb"></i> <strong>' + t('step.tip') + ':</strong> ' + t(step.tipKey) + '</div>';
-    }
-    if (step.warningKey && t(step.warningKey) !== step.warningKey) {
-      html += '<div class="step-warning"><i class="fa-solid fa-triangle-exclamation"></i> <strong>' + t('step.warning') + ':</strong> ' + t(step.warningKey) + '</div>';
+    var hasCallouts = (step.vscodeKey && t(step.vscodeKey) !== step.vscodeKey) ||
+      (step.tipKey && t(step.tipKey) !== step.tipKey) ||
+      (step.warningKey && t(step.warningKey) !== step.warningKey);
+
+    if (hasCallouts) {
+      html += '<div class="step-callouts">';
+      if (step.vscodeKey && t(step.vscodeKey) !== step.vscodeKey) {
+        html += '<div class="step-vscode"><i class="fa-solid fa-code"></i> <strong>' + t('step.vscode') + ':</strong> ' + t(step.vscodeKey) + '</div>';
+      }
+      if (step.tipKey && t(step.tipKey) !== step.tipKey) {
+        html += '<div class="step-tip"><i class="fa-solid fa-lightbulb"></i> <strong>' + t('step.tip') + ':</strong> ' + t(step.tipKey) + '</div>';
+      }
+      if (step.warningKey && t(step.warningKey) !== step.warningKey) {
+        html += '<div class="step-warning"><i class="fa-solid fa-triangle-exclamation"></i> <strong>' + t('step.warning') + ':</strong> ' + t(step.warningKey) + '</div>';
+      }
+      html += '</div>';
     }
 
-    // Mark complete button
-    html += '<div class="step-actions">' +
-      '<button class="btn btn-sm btn-step-complete" data-module-id="' + mod.id + '" data-step-index="' + (idx + 1) + '"' +
-      (idx < savedStep ? ' disabled' : '') + '>' +
-      (idx < savedStep ? '<i class="fa-solid fa-check-circle"></i> ' + t('module.completed') : '<i class="fa-regular fa-circle"></i> ' + t('module.markComplete')) +
+    html += '</div>';
+
+    var footerIcon = isTheory ? 'fa-solid fa-book-open' : 'fa-solid fa-code';
+    var footerText = isTheory ? t('step.concept') : t('step.hands_on');
+    html += '<div class="step-footer">' +
+      '<span class="step-footer-label"><i class="' + footerIcon + '"></i> ' + footerText + '</span>' +
+      '<button class="btn btn-sm btn-step-complete' + (isCompleted ? ' completed' : '') + '" data-module-id="' + mod.id + '" data-step-index="' + (idx + 1) + '"' +
+      (isCompleted ? ' disabled' : '') + '>' +
+      (isCompleted ? '<i class="fa-solid fa-check-circle"></i> ' + t('module.completed') : '<i class="fa-regular fa-circle-check"></i> ' + t('module.markComplete')) +
       '</button></div>';
 
-    stepEl.innerHTML = html;
-    container.appendChild(stepEl);
+    html += '</div>';
+
+    itemEl.innerHTML = html;
+    timelineEl.appendChild(itemEl);
   });
+
+  container.appendChild(timelineEl);
 
   // Module navigation
   const navHtml = '<div class="module-nav">' +
@@ -6946,8 +7404,23 @@ function completeStep(moduleId, stepIndex, btn) {
   btn.innerHTML = '<i class="fa-solid fa-check-circle"></i> ' + t('module.completed');
   btn.classList.add('completed');
   btn.disabled = true;
-  var stepCard = btn.closest('.step-card');
-  if (stepCard) stepCard.classList.add('step-completed');
+  var timelineItem = btn.closest('.step-timeline-item');
+  if (timelineItem) {
+    timelineItem.classList.add('step-completed');
+    var node = timelineItem.querySelector('.step-number');
+    if (node) {
+      node.classList.add('step-number-done');
+      node.classList.remove('step-number-current');
+      node.innerHTML = '<i class="fa-solid fa-check"></i>';
+    }
+    var nextItem = timelineItem.nextElementSibling;
+    if (nextItem && nextItem.classList.contains('step-timeline-item')) {
+      var nextNode = nextItem.querySelector('.step-number');
+      if (nextNode && !nextNode.classList.contains('step-number-done')) {
+        nextNode.classList.add('step-number-current');
+      }
+    }
+  }
   // Update all progress indicators
   var bar = document.getElementById('module-progress-bar');
   var text = document.getElementById('module-progress-text');
@@ -7404,8 +7877,11 @@ function toggleTheme() {
   const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
   html.setAttribute('data-theme', next);
   localStorage.setItem('gitmaster-theme', next);
+  var icon = next === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
   const btn = document.getElementById('theme-toggle');
-  if (btn) btn.innerHTML = next === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+  if (btn) btn.innerHTML = icon;
+  var mobileBtn = document.getElementById('mobile-theme-toggle');
+  if (mobileBtn) mobileBtn.innerHTML = icon;
   if (gitGraph) setTimeout(() => gitGraph.render(), 50);
 }
 
@@ -7430,6 +7906,8 @@ function setLanguage(lang) {
   });
   const langBtn = document.getElementById('lang-toggle');
   if (langBtn) langBtn.textContent = lang === 'en' ? 'العربية' : 'English';
+  var mobileLangBtn = document.getElementById('mobile-lang-toggle');
+  if (mobileLangBtn) mobileLangBtn.innerHTML = '<span>' + (lang === 'en' ? 'Ar' : 'En') + '</span>';
 
   // Re-render dynamic content
   renderModules();
@@ -7501,8 +7979,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedOS = localStorage.getItem('gitmaster-os') || detectOS();
 
   document.documentElement.setAttribute('data-theme', savedTheme);
+  var themeIcon = savedTheme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
   const themeBtn = document.getElementById('theme-toggle');
-  if (themeBtn) themeBtn.innerHTML = savedTheme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+  if (themeBtn) themeBtn.innerHTML = themeIcon;
+  var mobileThemeBtnInit = document.getElementById('mobile-theme-toggle');
+  if (mobileThemeBtnInit) mobileThemeBtnInit.innerHTML = themeIcon;
 
   currentOS = savedOS;
   const osSelect = document.getElementById('os-select');
@@ -7549,6 +8030,14 @@ document.addEventListener('DOMContentLoaded', () => {
       a.addEventListener('click', () => { navLinks.classList.remove('active'); hamburger.classList.remove('active'); });
     });
   }
+
+  // Event: Mobile theme toggle
+  var mobileThemeBtn = document.getElementById('mobile-theme-toggle');
+  if (mobileThemeBtn) mobileThemeBtn.addEventListener('click', toggleTheme);
+
+  // Event: Mobile language toggle
+  var mobileLangBtn = document.getElementById('mobile-lang-toggle');
+  if (mobileLangBtn) mobileLangBtn.addEventListener('click', toggleLanguage);
 
   // Event: Module filter
   document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -7693,7 +8182,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Hide loader
   const loader = document.getElementById('loader');
-  if (loader) setTimeout(() => { loader.style.opacity = '0'; setTimeout(() => loader.style.display = 'none', 500); }, 600);
+  if (loader) setTimeout(() => { loader.style.opacity = '0'; setTimeout(() => loader.style.display = 'none', 400); }, 100);
 
   // Intersection observer for animations (delayed so elements are rendered)
   setTimeout(setupIntersectionObserver, 100);
