@@ -8529,7 +8529,7 @@ function setupIntersectionObserver() {
 // ==================== EVENT LISTENERS & INIT ====================
 document.addEventListener('DOMContentLoaded', () => {
   // Load preferences
-  const savedTheme = localStorage.getItem('gitmaster-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  const savedTheme = localStorage.getItem('gitmaster-theme') || 'dark';
   const savedLang = localStorage.getItem('gitmaster-lang') || 'en';
   const savedOS = localStorage.getItem('gitmaster-os') || detectOS();
 
