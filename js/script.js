@@ -1,5 +1,5 @@
-/* ============================================================
-   GitMaster Pro — Complete JavaScript
+﻿/* ============================================================
+   GitMaster Pro - Complete JavaScript
    Author: Dr. Mohammad Arafah, University of Petra, Jordan
    ============================================================ */
 
@@ -144,12 +144,12 @@ en: {
 'mod4.s1.explain': 'A new folder called "my-project" was created and you navigated into it. This will be the root of your Git project.',
 'mod4.s2.explain': 'Git created a hidden .git folder inside your project. This folder stores all version history, branches, and configuration. Your folder is now a Git repository!',
 'mod4.s3.explain': 'You inspected the .git directory structure. It contains: HEAD (current branch pointer), config, hooks, objects (stored data), and refs (branch/tag pointers).',
-'mod4.s4.explain': 'A new README.md file was created with a project heading. This file is not yet tracked by Git — it exists only in your working directory.',
+'mod4.s4.explain': 'A new README.md file was created with a project heading. This file is not yet tracked by Git - it exists only in your working directory.',
 'mod4.s5.explain': 'Git status shows README.md as an "untracked file" in red. Git sees the file but is not tracking its changes yet. You need to use "git add" to start tracking it.',
 'mod4.s6.explain': 'You reviewed the basic Git workflow: edit files → stage changes (git add) → commit snapshot (git commit). This cycle repeats for every change.',
 'mod5.s1.explain': 'Git status revealed untracked files in your working directory. These files exist on disk but Git doesn\'t know about them yet.',
 'mod5.s2.explain': 'README.md was moved from the working directory to the staging area. It\'s now queued up and ready to be included in the next commit.',
-'mod5.s3.explain': 'The dot (.) tells Git to stage ALL changes — new files, modified files, and deleted files. Everything is now in the staging area.',
+'mod5.s3.explain': 'The dot (.) tells Git to stage ALL changes - new files, modified files, and deleted files. Everything is now in the staging area.',
 'mod5.s4.explain': 'Git status now shows README.md under "Changes to be committed" in green. The file has moved from untracked → staged, ready for commit.',
 'mod5.s5.explain': 'A snapshot of your staged changes was saved permanently as a commit. The commit has a unique hash (a1b2c3d), your author info, and the message "Initial commit".',
 'mod5.s6.explain': 'Git log shows the history of commits. You can see each commit\'s hash, author, date, and message. The --oneline flag shows a compact single-line format.',
@@ -162,13 +162,13 @@ en: {
 'mod6.s5.explain': '"git diff" shows unstaged changes (working directory vs staging). "git diff --staged" shows staged changes (staging vs last commit). Together they cover all pending changes.',
 'mod6.s6.explain': 'Git blame shows who last modified each line of a file, with the commit hash and date. Useful for understanding when and why a line was changed.',
 'mod7.s2.explain': 'Git listed all local branches. The asterisk (*) marks the current active branch. Right now only "main" exists.',
-'mod7.s3.explain': 'A new branch called "feature-login" was created pointing to the same commit as your current branch. No files changed — it\'s just a new pointer.',
+'mod7.s3.explain': 'A new branch called "feature-login" was created pointing to the same commit as your current branch. No files changed - it\'s just a new pointer.',
 'mod7.s4.explain': 'You switched to the "feature-login" branch. Your working directory now reflects this branch. Any new commits will be added to this branch, not main.',
 'mod7.s5.explain': 'The -c flag creates and switches to a new branch in one command. "feature-signup" now exists and is your active branch.',
-'mod7.s6.explain': 'A new file was created, staged, and committed — all on the feature-login branch. This commit only exists on this branch; main doesn\'t have it.',
-'mod7.s7.explain': 'The branch was deleted. The -d flag only works if the branch has been fully merged. Use -D to force-delete an unmerged branch (careful — you\'ll lose unmerged commits).',
-'mod8.s2.explain': 'You switched back to the main branch. Your working directory now reflects main\'s state — the feature files are temporarily hidden.',
-'mod8.s3.explain': 'The feature-login branch was merged into main. "Fast-forward" means main simply moved its pointer forward to include the new commits — no merge commit needed.',
+'mod7.s6.explain': 'A new file was created, staged, and committed - all on the feature-login branch. This commit only exists on this branch; main doesn\'t have it.',
+'mod7.s7.explain': 'The branch was deleted. The -d flag only works if the branch has been fully merged. Use -D to force-delete an unmerged branch (careful - you\'ll lose unmerged commits).',
+'mod8.s2.explain': 'You switched back to the main branch. Your working directory now reflects main\'s state - the feature files are temporarily hidden.',
+'mod8.s3.explain': 'The feature-login branch was merged into main. "Fast-forward" means main simply moved its pointer forward to include the new commits - no merge commit needed.',
 'mod8.s6.explain': 'The graph shows the merge history visually. You can see where the feature branch diverged and where it was merged back into main.',
 'mod8.s7.explain': 'The feature branch was cleaned up after merging. It\'s good practice to delete branches after merging to keep the repository tidy.',
 'mod9.s3.explain': 'A remote called "origin" was added, pointing to your GitHub repository URL. "origin" is the conventional name for your primary remote.',
@@ -182,7 +182,7 @@ en: {
 'mod10.s3.explain': 'Git pulled (fetched + merged) the latest changes from the remote into your local branch. Your working files are now up to date with the remote.',
 'mod10.s5.explain': 'Your local commits were pushed to the remote repository. Other team members can now see and pull your changes.',
 'mod10.s6.explain': 'Git listed all remote-tracking branches and set up tracking between your local main and origin/main for automatic push/pull.',
-'mod11.s2.explain': 'Two branches modified the same file differently, causing a merge conflict. Git cannot automatically decide which version to keep — you must resolve it manually.',
+'mod11.s2.explain': 'Two branches modified the same file differently, causing a merge conflict. Git cannot automatically decide which version to keep - you must resolve it manually.',
 'mod11.s3.explain': 'The conflict markers show both versions: <<<<<<< HEAD is your current branch, ======= separates them, and >>>>>>> branch-b is the incoming branch. You choose what to keep.',
 'mod11.s4.explain': 'After manually editing the file to resolve the conflict (removing markers and keeping the desired content), "git add" marks the conflict as resolved.',
 'mod11.s6.explain': 'The resolved file was committed, completing the merge. The merge conflict is now permanently resolved in the project history.',
@@ -195,19 +195,19 @@ en: {
 'mod13.s3.explain': 'Git showed all saved stashes in a numbered list. Each entry shows the branch, commit, and optional message for that stash.',
 'mod13.s4.explain': '"stash pop" restored your saved changes back to the working directory and removed the stash entry. Use "stash apply" instead to keep the stash for later.',
 'mod13.s5.explain': 'The specified stash entry was permanently deleted from the stash list. The changes in that stash are now gone.',
-'mod13.s7.explain': 'A specific commit from another branch was copied to your current branch. Unlike merge, cherry-pick only brings one commit — useful for hotfixes.',
-'mod14.s1.explain': 'The file was restored to its last committed state. All uncommitted changes in the working directory were discarded — this cannot be undone!',
+'mod13.s7.explain': 'A specific commit from another branch was copied to your current branch. Unlike merge, cherry-pick only brings one commit - useful for hotfixes.',
+'mod14.s1.explain': 'The file was restored to its last committed state. All uncommitted changes in the working directory were discarded - this cannot be undone!',
 'mod14.s2.explain': 'The file was removed from the staging area back to the working directory. Your changes are still there, just no longer staged for commit.',
 'mod14.s3.explain': 'The last commit was undone, but changes are kept in the staging area. You can edit and re-commit. The commit is gone from history, but no work is lost.',
 'mod14.s4.explain': 'The last commit was undone and changes were moved back to the working directory (unstaged). You\'ll need to "git add" again before committing.',
-'mod14.s5.explain': 'The last commit was completely erased — commit AND all changes are gone permanently. HEAD moved back one commit. This is destructive and cannot be undone!',
-'mod14.s6.explain': 'A NEW commit was created that reverses the changes of the specified commit. Unlike reset, revert is safe because it preserves history — it adds, not removes.',
+'mod14.s5.explain': 'The last commit was completely erased - commit AND all changes are gone permanently. HEAD moved back one commit. This is destructive and cannot be undone!',
+'mod14.s6.explain': 'A NEW commit was created that reverses the changes of the specified commit. Unlike reset, revert is safe because it preserves history - it adds, not removes.',
 'mod14.s8.explain': 'Reflog shows every position HEAD has been at. Even after reset or rebase, you can find "lost" commits here and recover them within ~90 days.',
 'mod15.s1.explain': 'A .gitignore file was created with rules to exclude: node_modules (dependencies), .env (secrets), *.log (logs), and dist (build output) from Git tracking.',
-'mod15.s2.explain': 'A global .gitignore was configured. Patterns in this file apply to ALL your repositories — useful for OS files (.DS_Store) or IDE configs (.idea/).',
-'mod15.s3.explain': 'A lightweight tag was created at the current commit. It\'s just a label — a named pointer to a specific commit. No additional metadata.',
-'mod15.s4.explain': 'An annotated tag was created with a message. Annotated tags store the tagger name, date, and message — recommended for releases.',
-'mod15.s5.explain': 'All local tags were pushed to the remote repository. Tags are not pushed by default with "git push" — you need --tags explicitly.',
+'mod15.s2.explain': 'A global .gitignore was configured. Patterns in this file apply to ALL your repositories - useful for OS files (.DS_Store) or IDE configs (.idea/).',
+'mod15.s3.explain': 'A lightweight tag was created at the current commit. It\'s just a label - a named pointer to a specific commit. No additional metadata.',
+'mod15.s4.explain': 'An annotated tag was created with a message. Annotated tags store the tagger name, date, and message - recommended for releases.',
+'mod15.s5.explain': 'All local tags were pushed to the remote repository. Tags are not pushed by default with "git push" - you need --tags explicitly.',
 'mod16.s4.explain': 'Three commits were created following Conventional Commits format: feat (new feature), fix (bug fix), docs (documentation). This format enables automated changelogs.',
 // Terminal
 'terminal.title': 'Interactive Git Terminal',
@@ -218,7 +218,7 @@ en: {
 'terminal.state.branch': 'Branch',
 'terminal.state.files': 'File Explorer',
 'terminal.state.commits': 'Commits',
-'terminal.state.noFiles': 'No files yet — try touch file.txt',
+'terminal.state.noFiles': 'No files yet - try touch file.txt',
 'terminal.state.noCommits': 'No commits yet',
 'terminal.achievements': 'Achievements',
 'terminal.history': 'History',
@@ -284,11 +284,11 @@ en: {
 'terminal.ch.basicStatus.s1.hint': 'git init',
 'terminal.ch.basicStatus.s2': 'Create a file',
 'terminal.ch.basicStatus.s2.hint': 'touch index.html',
-'terminal.ch.basicStatus.s3': 'Check the status — see untracked files',
+'terminal.ch.basicStatus.s3': 'Check the status - see untracked files',
 'terminal.ch.basicStatus.s3.hint': 'git status',
 'terminal.ch.basicStatus.s4': 'Stage the file',
 'terminal.ch.basicStatus.s4.hint': 'git add .',
-'terminal.ch.basicStatus.s5': 'Check status again — see staged changes',
+'terminal.ch.basicStatus.s5': 'Check status again - see staged changes',
 'terminal.ch.basicStatus.s5.hint': 'git status',
 'terminal.ch.basicStatus.s6': 'Commit the changes',
 'terminal.ch.basicStatus.s6.hint': 'git commit -m "Add index"',
@@ -469,7 +469,7 @@ en: {
 'viz.bp5.title': 'Never force push to shared branches',
 'viz.bp5.good': 'git push (normal push, or --force-with-lease on your own branch)',
 'viz.bp5.bad': 'git push --force origin main',
-'viz.bp5.why': 'Force push overwrites history — other developers lose their work.',
+'viz.bp5.why': 'Force push overwrites history - other developers lose their work.',
 'viz.bp6.title': 'Review changes before committing',
 'viz.bp6.good': 'git diff --staged → review → git commit',
 'viz.bp6.bad': 'git add . && git commit -m "done" (without checking)',
@@ -543,7 +543,7 @@ en: {
 'mod3.desc': 'Configure Git with your identity, preferred editor, default branch name, and other essential settings.',
 'mod4.title': 'Your First Repository',
 'mod4.desc': 'Create your first Git repository, understand the .git directory structure, and learn about the staging area.',
-'mod5.title': 'Basic Workflow — add, commit, status',
+'mod5.title': 'Basic Workflow - add, commit, status',
 'mod5.desc': 'Master the fundamental Git workflow: staging changes, creating commits, and viewing your project history.',
 'mod6.title': 'Viewing History & Understanding Changes',
 'mod6.desc': 'Explore powerful Git log options, compare differences between commits, and trace changes in your codebase.',
@@ -642,14 +642,14 @@ en: {
 'mod5.s2.vscode': 'In VSCode, click the + icon next to a file in the Source Control panel to stage it.',
 'mod5.s3.title': 'Stage Multiple Files',
 'mod5.s3.desc': 'You can stage multiple files at once by listing them, or use "git add ." to stage all changes in the current directory.',
-'mod5.s3.tip': 'Use "git add ." with caution — it stages everything. Make sure you are not accidentally staging files you do not want to commit.',
-'mod5.s3.warning': 'Be careful with "git add ." — it will stage ALL changes including files you might not want to commit. Always run git status first.',
+'mod5.s3.tip': 'Use "git add ." with caution - it stages everything. Make sure you are not accidentally staging files you do not want to commit.',
+'mod5.s3.warning': 'Be careful with "git add ." - it will stage ALL changes including files you might not want to commit. Always run git status first.',
 'mod5.s4.title': 'Check Status After Staging',
 'mod5.s4.desc': 'After staging, run git status again. Staged files appear in green under "Changes to be committed".',
 'mod5.s5.title': 'Create Your First Commit',
 'mod5.s5.desc': 'A commit creates a snapshot of all staged changes. The -m flag lets you write a commit message inline.',
 'mod5.s5.vscode': 'In VSCode, type your commit message in the text box at the top of the Source Control panel and click the checkmark (or press Ctrl+Enter) to commit.',
-'mod5.s5.tip': 'Write meaningful commit messages. A good format: "Add user authentication feature" — start with a verb, be specific.',
+'mod5.s5.tip': 'Write meaningful commit messages. A good format: "Add user authentication feature" - start with a verb, be specific.',
 'mod5.s6.title': 'View Commit History',
 'mod5.s6.desc': 'View the log of all commits. The --oneline flag shows a condensed view with just the hash and message.',
 'mod5.s7.title': 'Make Changes and Commit Again',
@@ -681,7 +681,7 @@ en: {
 'mod7.s2.title': 'List Branches',
 'mod7.s2.desc': 'View all local branches in your repository. The current branch is highlighted with an asterisk (*).',
 'mod7.s3.title': 'Create a New Branch',
-'mod7.s3.desc': 'Create a new branch pointing to the current commit. This does not switch to the new branch — you remain on your current branch.',
+'mod7.s3.desc': 'Create a new branch pointing to the current commit. This does not switch to the new branch - you remain on your current branch.',
 'mod7.s4.title': 'Switch to a Branch',
 'mod7.s4.desc': 'Switch your working directory to the specified branch. Git updates your files to match the branch tip. The modern command is "git switch", though "git checkout" also works.',
 'mod7.s4.tip': 'The "git switch" command was introduced in Git 2.23 as a clearer alternative to "git checkout" for branch switching.',
@@ -703,7 +703,7 @@ en: {
 'mod8.s3.desc': 'Merge the feature branch into your current branch. Git will automatically determine the best merge strategy.',
 'mod8.s3.vscode': 'In VSCode, use the Command Palette (Ctrl+Shift+P) and search for "Git: Merge Branch" to merge visually.',
 'mod8.s4.title': 'Fast-Forward Merge',
-'mod8.s4.desc': 'A fast-forward merge occurs when the target branch has no new commits since the feature branch was created. Git simply moves the branch pointer forward — no new merge commit is created.',
+'mod8.s4.desc': 'A fast-forward merge occurs when the target branch has no new commits since the feature branch was created. Git simply moves the branch pointer forward - no new merge commit is created.',
 'mod8.s5.title': 'Three-Way Merge',
 'mod8.s5.desc': 'A three-way merge occurs when both branches have diverged (both have new commits). Git creates a new merge commit that has two parents, combining the changes from both branches.',
 'mod8.s6.title': 'View Merge History',
@@ -716,7 +716,7 @@ en: {
 'mod9.s1.desc': 'A remote repository is a version of your project hosted on the internet or a network. It allows collaboration: multiple developers can push and pull changes. GitHub, GitLab, and Bitbucket are popular hosting services.',
 'mod9.s2.title': 'Create a GitHub Repository',
 'mod9.s2.desc': 'Go to github.com, click "New repository", give it a name, choose public or private, and click "Create repository". Do NOT initialize with a README if you already have a local repo.',
-'mod9.s2.tip': 'If you already have a local repository with commits, do not add a README, .gitignore, or license on GitHub — it creates conflicts.',
+'mod9.s2.tip': 'If you already have a local repository with commits, do not add a README, .gitignore, or license on GitHub - it creates conflicts.',
 'mod9.s3.title': 'Add Remote Origin',
 'mod9.s3.desc': 'Link your local repository to the remote GitHub repository. "origin" is the conventional name for your primary remote.',
 'mod9.s4.title': 'Verify Remote',
@@ -742,7 +742,7 @@ en: {
 'mod10.s3.desc': 'Pull is a combination of fetch + merge. It downloads remote changes and immediately integrates them into your current branch.',
 'mod10.s3.warning': 'If you have local uncommitted changes, pull may fail or create conflicts. Commit or stash your changes first.',
 'mod10.s4.title': 'Fetch vs Pull',
-'mod10.s4.desc': 'Fetch is safer — it downloads changes without modifying your work. You can review with "git diff main origin/main" before merging. Pull is convenient but can surprise you with merge conflicts.',
+'mod10.s4.desc': 'Fetch is safer - it downloads changes without modifying your work. You can review with "git diff main origin/main" before merging. Pull is convenient but can surprise you with merge conflicts.',
 'mod10.s5.title': 'Push Your Changes',
 'mod10.s5.desc': 'Upload your local commits to the remote repository. Others can then pull your changes.',
 'mod10.s6.title': 'Track Remote Branches',
@@ -759,7 +759,7 @@ en: {
 'mod11.s3.title': 'Identify Conflict Markers',
 'mod11.s3.desc': 'When a conflict occurs, Git marks the conflicting areas in the file with special markers: <<<<<<< HEAD shows your current branch changes, ======= separates the two versions, and >>>>>>> branch-name shows the incoming changes.',
 'mod11.s4.title': 'Resolve Manually',
-'mod11.s4.desc': 'Edit the file to remove the conflict markers and keep the desired content. You decide what the final version should look like — you can keep one side, the other, or combine both.',
+'mod11.s4.desc': 'Edit the file to remove the conflict markers and keep the desired content. You decide what the final version should look like - you can keep one side, the other, or combine both.',
 'mod11.s5.title': 'Resolve in VSCode',
 'mod11.s5.desc': 'VSCode provides a visual merge editor with options to "Accept Current Change", "Accept Incoming Change", "Accept Both Changes", or "Compare Changes". This makes conflict resolution much easier.',
 'mod11.s5.vscode': 'VSCode highlights conflicts with colored backgrounds and provides clickable buttons above each conflict to quickly choose a resolution.',
@@ -767,7 +767,7 @@ en: {
 'mod11.s6.desc': 'After resolving all conflicts, stage the resolved files with git add and complete the merge with git commit.',
 'mod11.s7.title': 'Abort a Merge',
 'mod11.s7.desc': 'If you want to cancel the merge and go back to the state before you started merging, use git merge --abort.',
-'mod11.s7.tip': 'Aborting a merge is safe — it restores your working directory and index to the pre-merge state.',
+'mod11.s7.tip': 'Aborting a merge is safe - it restores your working directory and index to the pre-merge state.',
 
 // Module 12 steps
 'mod12.s1.title': 'What is Rebasing?',
@@ -814,7 +814,7 @@ en: {
 'mod14.s2.desc': 'Remove a file from the staging area without discarding the changes. The file goes back to "modified" status in the working directory.',
 'mod14.s3.title': 'Soft Reset',
 'mod14.s3.desc': 'Move the branch pointer back one commit but keep all changes staged. Useful for re-doing a commit message or combining with more changes.',
-'mod14.s3.tip': 'Soft reset is the safest reset — it only moves HEAD. All your changes remain staged and ready to commit.',
+'mod14.s3.tip': 'Soft reset is the safest reset - it only moves HEAD. All your changes remain staged and ready to commit.',
 'mod14.s4.title': 'Mixed Reset (Default)',
 'mod14.s4.desc': 'Move the branch pointer back and unstage changes, but keep them in the working directory. This is the default behavior of git reset.',
 'mod14.s5.title': 'Hard Reset',
@@ -824,8 +824,8 @@ en: {
 'mod14.s6.desc': 'Create a new commit that undoes the changes of a previous commit. Unlike reset, revert is safe for shared branches because it does not rewrite history.',
 'mod14.s6.tip': 'Use revert instead of reset on shared branches. Revert adds a new commit rather than removing old ones.',
 'mod14.s7.title': 'Reset vs Revert',
-'mod14.s7.desc': 'Reset rewrites history (moves the branch pointer backward) — dangerous for shared branches. Revert creates a new commit that undoes changes — safe for shared branches. Use reset for local cleanup, revert for public history.',
-'mod14.s8.title': 'Reflog — Recovering Lost Commits',
+'mod14.s7.desc': 'Reset rewrites history (moves the branch pointer backward) - dangerous for shared branches. Revert creates a new commit that undoes changes - safe for shared branches. Use reset for local cleanup, revert for public history.',
+'mod14.s8.title': 'Reflog - Recovering Lost Commits',
 'mod14.s8.desc': 'The reflog records every change to HEAD, even those "lost" by reset. If you accidentally reset too far, use reflog to find the commit hash and recover.',
 'mod14.s8.tip': 'Reflog is your safety net. Even after a hard reset, you can recover commits within about 90 days using the reflog.',
 
@@ -836,7 +836,7 @@ en: {
 'mod15.s2.title': 'Global .gitignore',
 'mod15.s2.desc': 'Set up a global .gitignore for files you always want to ignore across all repositories (like OS-specific files .DS_Store, Thumbs.db).',
 'mod15.s3.title': 'Lightweight Tags',
-'mod15.s3.desc': 'Lightweight tags are simple pointers to a commit. They are like bookmarks — just a name pointing to a specific commit.',
+'mod15.s3.desc': 'Lightweight tags are simple pointers to a commit. They are like bookmarks - just a name pointing to a specific commit.',
 'mod15.s4.title': 'Annotated Tags',
 'mod15.s4.desc': 'Annotated tags store extra metadata: tagger name, email, date, and a message. They are recommended for releases.',
 'mod15.s4.tip': 'Use annotated tags for releases (v1.0, v2.0) and lightweight tags for temporary or internal markers.',
@@ -862,25 +862,25 @@ en: {
 'mod16.s6.title': 'Code Review Best Practices',
 'mod16.s6.desc': 'Effective code reviews: keep PRs small and focused, write clear PR descriptions, review for logic and design (not just style), be constructive in feedback, use automated linting and tests, approve or request changes promptly.',
 
-// Module 17 — HEAD & Relative Refs
+// Module 17 - HEAD & Relative Refs
 'mod17.title': 'HEAD & Relative Refs',
 'mod17.desc': 'Understand what HEAD is, navigate commit history using relative references (^ and ~), and learn to move branch pointers.',
 'mod17.s1.title': 'Understanding HEAD',
 'mod17.s1.desc': 'HEAD is a pointer to the current commit you are working on. Usually it points to a branch name (like main), which in turn points to a commit. Think of HEAD as "where am I right now?" in the Git history.',
 'mod17.s2.title': 'Detached HEAD State',
-'mod17.s2.desc': 'When you checkout a specific commit hash instead of a branch, HEAD points directly to that commit — this is called "detached HEAD." You can look around and make experimental changes, but any commits you make won\'t belong to any branch unless you create one.',
+'mod17.s2.desc': 'When you checkout a specific commit hash instead of a branch, HEAD points directly to that commit - this is called "detached HEAD." You can look around and make experimental changes, but any commits you make won\'t belong to any branch unless you create one.',
 'mod17.s2.tip': 'If you accidentally end up in detached HEAD, run "git switch -" or "git switch main" to get back.',
 'mod17.s3.title': 'Relative Refs with Caret (^)',
 'mod17.s3.desc': 'The caret (^) moves up one parent in the commit tree. HEAD^ means "the parent of HEAD." At merge commits, ^1 is the first parent (the branch you merged into) and ^2 is the second parent (the branch that was merged).',
 'mod17.s4.title': 'Relative Refs with Tilde (~)',
 'mod17.s4.desc': 'The tilde (~) followed by a number moves up that many generations. HEAD~3 means "go back 3 commits from HEAD." It always follows the first parent, making it ideal for linear navigation.',
 'mod17.s5.title': 'Branch Forcing',
-'mod17.s5.desc': 'Use "git branch -f <branch> <target>" to move a branch pointer to any commit. For example, "git branch -f main HEAD~3" moves main back 3 commits. This is powerful but dangerous — never do this on shared branches.',
+'mod17.s5.desc': 'Use "git branch -f <branch> <target>" to move a branch pointer to any commit. For example, "git branch -f main HEAD~3" moves main back 3 commits. This is powerful but dangerous - never do this on shared branches.',
 'mod17.s5.warning': 'Moving branch pointers with -f can cause data loss if you are not careful. Always make sure you know where the branch will end up.',
 'mod17.s6.title': 'Practical Navigation',
 'mod17.s6.desc': 'Use "git log --oneline --graph --all" to visualize your history, then use relative refs to navigate. Combine with "git show HEAD~2" to inspect specific commits without leaving your current branch.',
 
-// Module 18 — Interactive Rebase Mastery
+// Module 18 - Interactive Rebase Mastery
 'mod18.title': 'Interactive Rebase Mastery',
 'mod18.desc': 'Master interactive rebase to reorder, squash, edit, and drop commits for a clean, professional commit history.',
 'mod18.s1.title': 'What is Interactive Rebase',
@@ -899,7 +899,7 @@ en: {
 'mod18.s7.title': 'Rebase vs Merge',
 'mod18.s7.desc': 'Merge preserves the exact history (including merge commits) while rebase creates a linear history. Use rebase for feature branches before merging to keep history clean. Use merge for integrating long-lived branches where the merge point matters.',
 
-// Module 19 — Git Hooks & Automation
+// Module 19 - Git Hooks & Automation
 'mod19.title': 'Git Hooks & Automation',
 'mod19.desc': 'Automate your workflow with Git hooks. Run linters, tests, and formatters automatically on commit, push, and other Git events.',
 'mod19.s1.title': 'What are Git Hooks',
@@ -909,13 +909,13 @@ en: {
 'mod19.s3.title': 'Commit-msg Hook',
 'mod19.s3.desc': 'The commit-msg hook runs after you write your commit message. It receives the message file path as an argument. Use it to enforce commit message conventions like Conventional Commits (feat:, fix:, docs:, etc.).',
 'mod19.s4.title': 'Pre-push Hook',
-'mod19.s4.desc': 'The pre-push hook runs before git push sends data to the remote. Use it to run your test suite — if tests fail, the push is cancelled. This is your last line of defense before code reaches the shared repository.',
+'mod19.s4.desc': 'The pre-push hook runs before git push sends data to the remote. Use it to run your test suite - if tests fail, the push is cancelled. This is your last line of defense before code reaches the shared repository.',
 'mod19.s5.title': 'Setting Up Husky',
 'mod19.s5.desc': 'Husky is an npm package that makes Git hooks easy to manage and share across a team. Run "npx husky init" to set it up. Hooks are stored in a .husky/ directory that gets committed to the repo, so every team member gets the same hooks.',
 'mod19.s6.title': 'lint-staged',
 'mod19.s6.desc': 'lint-staged runs linters only on files that are staged for commit (not the entire codebase). Combined with Husky, it makes pre-commit hooks fast. Configure it in package.json with patterns like "*.js": ["eslint --fix", "prettier --write"].',
 
-// Module 20 — Advanced Remote Operations
+// Module 20 - Advanced Remote Operations
 'mod20.title': 'Advanced Remote Operations',
 'mod20.desc': 'Master advanced remote workflows: refspecs, upstream tracking, force pushing safely, handling diverged histories, and managing multiple remotes.',
 'mod20.s1.title': 'Remote Tracking Branches',
@@ -934,7 +934,7 @@ en: {
 'mod20.s7.title': 'Multiple Remotes & Forks',
 'mod20.s7.desc': 'When contributing to open-source, you typically have two remotes: "origin" (your fork) and "upstream" (the original repo). Add upstream with "git remote add upstream <url>", then "git fetch upstream" to stay in sync with the original project.',
 
-// Module 21 — Git Bisect & Debugging
+// Module 21 - Git Bisect & Debugging
 'mod21.title': 'Git Bisect & Debugging',
 'mod21.desc': 'Use Git bisect to efficiently find the commit that introduced a bug, and git blame to track who changed what and when.',
 'mod21.s1.title': 'What is Git Bisect',
@@ -946,14 +946,14 @@ en: {
 'mod21.s4.title': 'Ending Bisect',
 'mod21.s4.desc': 'When Git has identified the first bad commit, it shows you the culprit with its hash, author, date, and message. Run "git bisect reset" to return to your original HEAD and end the bisect session.',
 'mod21.s5.title': 'Automated Bisect',
-'mod21.s5.desc': 'For automated testing, use "git bisect run <test-script>". Git will automatically run your script at each step — if it returns 0 (pass) Git marks it good, non-zero means bad. This can find bugs in seconds without any manual intervention.',
+'mod21.s5.desc': 'For automated testing, use "git bisect run <test-script>". Git will automatically run your script at each step - if it returns 0 (pass) Git marks it good, non-zero means bad. This can find bugs in seconds without any manual intervention.',
 'mod21.s6.title': 'Git Blame',
 'mod21.s6.desc': 'Use "git blame <file>" to see who last modified each line, along with the commit hash and date. This helps trace when and why a specific change was made. In VSCode, the GitLens extension provides inline blame annotations.',
 'mod21.s6.vscode': 'Install the GitLens extension for inline blame annotations, commit details on hover, and rich history visualization.',
 
 // Module 22: Command Line Essentials
 'mod22.title': 'Command Line Essentials',
-'mod22.desc': 'Master the terminal basics every developer needs — navigating directories, creating and managing files, and understanding paths before diving into Git.',
+'mod22.desc': 'Master the terminal basics every developer needs - navigating directories, creating and managing files, and understanding paths before diving into Git.',
 'mod22.s1.title': 'What is the Command Line?',
 'mod22.s1.desc': 'The command line (terminal, shell, CLI) is a text-based interface for interacting with your computer. Unlike graphical interfaces, you type commands to navigate folders, create files, and run programs. On macOS it\'s called Terminal, on Windows you can use Command Prompt, PowerShell, or Git Bash.',
 'mod22.s2.title': 'Navigating Directories',
@@ -967,7 +967,7 @@ en: {
 'mod22.s5.desc': 'Copy files with "cp source destination" and directories with "cp -r source destination". Move or rename files with "mv source destination". Moving a file to a new name in the same directory renames it.',
 'mod22.s6.title': 'Essential Commands Overview',
 'mod22.s6.desc': 'Quick reference: "cat filename" displays file contents, "head/tail" shows beginning/end, "clear" clears the screen, "history" shows recent commands, and "man command" (Mac/Linux) opens the manual page. On Windows Git Bash, most Unix commands work the same way.',
-'mod22.s6.tip': 'Use the Tab key to auto-complete file and folder names — this saves time and avoids typos.',
+'mod22.s6.tip': 'Use the Tab key to auto-complete file and folder names - this saves time and avoids typos.',
 
 // Module 23: SSH Authentication for GitHub
 'mod23.title': 'SSH Authentication for GitHub',
@@ -986,8 +986,8 @@ en: {
 'mod23.s6.desc': 'Now use SSH URLs instead of HTTPS when cloning repositories. SSH URLs look like git@github.com:user/repo.git. For existing repositories, update the remote URL from HTTPS to SSH.',
 'mod23.s6.tip': 'If you have multiple GitHub accounts, create an SSH config file (~/.ssh/config) to map different keys to different hosts.',
 
-// Module 24: GitHub Deep Dive — Organizations & Permissions
-'mod24.title': 'GitHub Deep Dive — Organizations & Permissions',
+// Module 24: GitHub Deep Dive - Organizations & Permissions
+'mod24.title': 'GitHub Deep Dive - Organizations & Permissions',
 'mod24.desc': 'Explore GitHub account types, organizations, teams, collaborator permissions, and project management features for professional workflows.',
 'mod24.s1.title': 'GitHub Account Types',
 'mod24.s1.desc': 'GitHub offers personal accounts (free and Pro) and organization accounts. Personal accounts own repositories directly. Organizations provide shared ownership, team management, and enhanced collaboration features for companies and open-source projects.',
@@ -1002,33 +1002,33 @@ en: {
 'mod24.s6.title': 'GitHub Projects & Issues',
 'mod24.s6.desc': 'GitHub Projects provide kanban-style boards for task management. Create issues to track bugs, features, and tasks. Link issues to pull requests for automatic closure. Use labels, milestones, and assignees to organize work.',
 'mod24.s7.title': 'GitHub Stars, README & Presenting Yourself',
-'mod24.s7.desc': 'Star repositories you find useful — it bookmarks them and shows appreciation. Create a README.md in your profile repository (username/username) to showcase yourself. A good README includes your bio, skills, projects, and contribution graph.',
+'mod24.s7.desc': 'Star repositories you find useful - it bookmarks them and shows appreciation. Create a README.md in your profile repository (username/username) to showcase yourself. A good README includes your bio, skills, projects, and contribution graph.',
 'mod24.s7.tip': 'Create a special repository named after your GitHub username to add a profile README that appears on your GitHub profile page.',
-'mod24.s8.title': 'GitHub Pages — Free Static Site Hosting',
-'mod24.s8.desc': 'GitHub Pages lets you host static websites directly from a repository — perfect for project documentation, portfolios, or blogs. Enable it in Settings → Pages, choose a branch (usually main or gh-pages) and optionally a /docs folder. Your site is live at username.github.io/repo-name. You can add a custom domain and HTTPS is free.',
+'mod24.s8.title': 'GitHub Pages - Free Static Site Hosting',
+'mod24.s8.desc': 'GitHub Pages lets you host static websites directly from a repository - perfect for project documentation, portfolios, or blogs. Enable it in Settings → Pages, choose a branch (usually main or gh-pages) and optionally a /docs folder. Your site is live at username.github.io/repo-name. You can add a custom domain and HTTPS is free.',
 'mod24.s8.tip': 'Use GitHub Actions to auto-build and deploy your site on every push. Frameworks like Jekyll, Hugo, and Next.js have built-in GitHub Pages support.',
 
 // Module 25: Git Diff, Restore & Clean
 'mod25.title': 'Git Diff, Restore & Clean',
-'mod25.desc': 'Master the essential inspection and undo commands — comparing changes with diff, restoring files with restore, and cleaning untracked files.',
-'mod25.s1.title': 'Git Diff — Unstaged Changes',
+'mod25.desc': 'Master the essential inspection and undo commands - comparing changes with diff, restoring files with restore, and cleaning untracked files.',
+'mod25.s1.title': 'Git Diff - Unstaged Changes',
 'mod25.s1.desc': 'The "git diff" command shows line-by-line differences between your working directory and the staging area. Lines prefixed with "+" are additions, "-" are deletions. This helps you review exactly what changed before staging.',
-'mod25.s2.title': 'Git Diff — Staged Changes',
+'mod25.s2.title': 'Git Diff - Staged Changes',
 'mod25.s2.desc': 'Use "git diff --staged" (or --cached) to see changes that have been staged but not yet committed. This is your last chance to review what will be included in the next commit.',
 'mod25.s3.title': 'Comparing Branches & Commits',
 'mod25.s3.desc': 'Compare two branches with "git diff branch1..branch2" or two commits with "git diff commit1..commit2". Add "--stat" for a summary showing which files changed and how many lines were added/removed.',
-'mod25.s4.title': 'Git Restore — Discard Working Changes',
+'mod25.s4.title': 'Git Restore - Discard Working Changes',
 'mod25.s4.desc': 'The "git restore <file>" command discards changes in your working directory, reverting the file to its last committed/staged state. This is the modern replacement for "git checkout -- <file>".',
-'mod25.s4.warning': 'git restore discards changes permanently — there is no undo. Make sure you really want to lose those changes before running it.',
-'mod25.s5.title': 'Git Restore — Unstage Files',
+'mod25.s4.warning': 'git restore discards changes permanently - there is no undo. Make sure you really want to lose those changes before running it.',
+'mod25.s5.title': 'Git Restore - Unstage Files',
 'mod25.s5.desc': 'Use "git restore --staged <file>" to unstage a file without losing the working directory changes. This is the modern replacement for "git reset HEAD <file>".',
-'mod25.s6.title': 'Git Clean — Remove Untracked Files',
+'mod25.s6.title': 'Git Clean - Remove Untracked Files',
 'mod25.s6.desc': 'The "git clean" command removes untracked files from your working directory. Use "-n" for a dry run (preview), "-f" to force deletion, and "-d" to include untracked directories. Combine with "-x" to also remove files listed in .gitignore.',
 'mod25.s6.warning': 'Always run "git clean -n" first to preview what will be deleted. Once removed, untracked files cannot be recovered!',
 
 // Module 26: Forking & Open Source Contribution
 'mod26.title': 'Forking & Open Source Contribution',
-'mod26.desc': 'Learn the fork-and-pull workflow used in open-source development — fork a repository, make changes, and submit pull requests to contribute back.',
+'mod26.desc': 'Learn the fork-and-pull workflow used in open-source development - fork a repository, make changes, and submit pull requests to contribute back.',
 'mod26.s1.title': 'What is Forking?',
 'mod26.s1.desc': 'Forking creates your own copy of someone else\'s repository on GitHub. Unlike cloning (which creates a local copy), forking creates a remote copy under your account. You have full push access to your fork but not to the original repository.',
 'mod26.s2.title': 'Fork a Repository',
@@ -1036,21 +1036,21 @@ en: {
 'mod26.s3.title': 'Set Up the Upstream Remote',
 'mod26.s3.desc': 'After cloning your fork, add the original repository as an "upstream" remote. This lets you pull in new changes from the original project to keep your fork up to date.',
 'mod26.s4.title': 'Make Changes & Push to Your Fork',
-'mod26.s4.desc': 'Create a feature branch, make your changes, commit, and push to your fork (origin). Never work directly on the main branch of your fork — always use feature branches for clean pull requests.',
+'mod26.s4.desc': 'Create a feature branch, make your changes, commit, and push to your fork (origin). Never work directly on the main branch of your fork - always use feature branches for clean pull requests.',
 'mod26.s4.tip': 'Name your branch descriptively: fix/typo-in-readme, feature/add-dark-mode, docs/update-api-guide.',
 'mod26.s5.title': 'Create a Pull Request',
 'mod26.s5.desc': 'On GitHub, navigate to your fork and click "Contribute → Open pull request". Write a clear title and description explaining your changes. The PR will be submitted to the original repository for review by the maintainers.',
 'mod26.s6.title': 'Sync Your Fork',
 'mod26.s6.desc': 'Keep your fork updated by fetching from upstream and merging or rebasing. On GitHub, you can also click "Sync fork" to update your fork\'s main branch with one click. Locally, fetch upstream and merge into your main branch.',
 'mod26.s7.title': 'Code Review & Iteration',
-'mod26.s7.desc': 'Maintainers may request changes to your PR. Push new commits to the same branch — the PR updates automatically. Address review comments, resolve conversations, and once approved, the maintainer merges your contribution.',
+'mod26.s7.desc': 'Maintainers may request changes to your PR. Push new commits to the same branch - the PR updates automatically. Address review comments, resolve conversations, and once approved, the maintainer merges your contribution.',
 'mod26.s7.tip': 'Read the project\'s CONTRIBUTING.md before submitting a PR. It explains code style, testing requirements, and PR conventions.',
 
 // ── Module 27: Git Reflog & Recovery ──
 'mod27.title': 'Git Reflog & Recovery',
 'mod27.desc': 'Master git reflog to recover lost commits, deleted branches, and undo disastrous resets. Your safety net for Git mistakes.',
 'mod27.s1.title': 'What is the Reflog?',
-'mod27.s1.desc': 'The reflog (reference log) records every time HEAD moves — commits, checkouts, resets, merges, rebases. Unlike git log which shows commit ancestry, reflog shows your local history of actions. It\'s your personal undo history that persists even when commits seem lost.',
+'mod27.s1.desc': 'The reflog (reference log) records every time HEAD moves - commits, checkouts, resets, merges, rebases. Unlike git log which shows commit ancestry, reflog shows your local history of actions. It\'s your personal undo history that persists even when commits seem lost.',
 'mod27.s2.title': 'Viewing the Reflog',
 'mod27.s2.desc': 'Use git reflog to see a chronological list of all HEAD movements. Each entry has an index (HEAD@{n}) you can reference. The reflog keeps entries for 90 days by default (30 for unreachable commits).',
 'mod27.s3.title': 'Recovering a Deleted Branch',
@@ -1065,7 +1065,7 @@ en: {
 'mod27.s6.desc': 'Each branch has its own reflog. You can inspect a specific branch\'s reflog to see its movement history, which is useful when debugging what happened to a particular branch.',
 'mod27.s7.title': 'Expiring and Managing Reflog',
 'mod27.s7.desc': 'Reflog entries expire automatically, but you can manage them manually. You can expire old entries or clear the reflog entirely. Understanding expiration helps you know your recovery window.',
-'mod27.s7.tip': 'In a team, each person\'s reflog is local — you cannot recover someone else\'s lost work from your reflog.',
+'mod27.s7.tip': 'In a team, each person\'s reflog is local - you cannot recover someone else\'s lost work from your reflog.',
 
 // ── Module 28: Git Submodules ──
 'mod28.title': 'Git Submodules',
@@ -1080,7 +1080,7 @@ en: {
 'mod28.s4.title': 'Updating Submodules',
 'mod28.s4.desc': 'Submodules don\'t auto-update when the remote changes. You must explicitly fetch and update them. You can update to the latest remote commit or to the specific commit the parent repo tracks.',
 'mod28.s5.title': 'Working Inside a Submodule',
-'mod28.s5.desc': 'You can cd into a submodule, make changes, commit, and push just like any normal repo. Then in the parent repo, the submodule reference will show as modified — you need to commit that change too.',
+'mod28.s5.desc': 'You can cd into a submodule, make changes, commit, and push just like any normal repo. Then in the parent repo, the submodule reference will show as modified - you need to commit that change too.',
 'mod28.s5.warning': 'Submodules track a specific commit, not a branch. If you make changes inside a submodule, commit and push them before updating the parent repo\'s reference.',
 'mod28.s6.title': 'Running Commands Across Submodules',
 'mod28.s6.desc': 'Use git submodule foreach to run a command in every submodule at once. This is powerful for batch operations like pulling updates, checking status, or running builds across all submodules.',
@@ -1099,7 +1099,7 @@ en: {
 'mod29.s3.desc': 'Use git lfs track to tell LFS which files to manage. This creates or updates a .gitattributes file with filter rules. Always commit the .gitattributes file so other collaborators get the same LFS configuration.',
 'mod29.s3.tip': 'Track file patterns, not individual files: git lfs track "*.psd" is better than tracking each file by name.',
 'mod29.s4.title': 'Working with LFS Files',
-'mod29.s4.desc': 'Once tracking is set up, use Git normally — add, commit, push. Git LFS intercepts the tracked files transparently. You can list LFS-managed files and check their status at any time.',
+'mod29.s4.desc': 'Once tracking is set up, use Git normally - add, commit, push. Git LFS intercepts the tracked files transparently. You can list LFS-managed files and check their status at any time.',
 'mod29.s5.title': 'Understanding .gitattributes',
 'mod29.s5.desc': 'The .gitattributes file controls per-path settings: line ending normalization (text/binary), diff behavior, merge strategies, and LFS filters. It ensures consistent behavior across platforms and contributors.',
 'mod29.s6.title': 'Line Ending Normalization',
@@ -1124,7 +1124,7 @@ en: {
 'mod30.s5.desc': 'Configure branch protection rules to require CI checks to pass before merging. This prevents broken code from reaching the main branch. On GitHub, go to Settings → Branches → Branch protection rules. On GitLab, use Protected Branches settings.',
 'mod30.s5.warning': 'Never skip CI checks to merge faster. A broken main branch blocks the entire team.',
 'mod30.s6.title': 'Secrets and Environment Variables',
-'mod30.s6.desc': 'CI/CD pipelines often need API keys, tokens, or credentials. Store these as encrypted secrets in your platform\'s settings — never commit them to the repository. Reference secrets in workflow files using the platform\'s secret syntax.',
+'mod30.s6.desc': 'CI/CD pipelines often need API keys, tokens, or credentials. Store these as encrypted secrets in your platform\'s settings - never commit them to the repository. Reference secrets in workflow files using the platform\'s secret syntax.',
 'mod30.s6.warning': 'Never hardcode secrets in workflow files or commit them to the repository. Use your platform\'s encrypted secrets feature.',
 'mod30.s7.title': 'Skipping CI and Status Badges',
 'mod30.s7.desc': 'Add [skip ci] or [ci skip] to a commit message to skip pipeline execution for trivial changes like documentation updates. Add status badges to your README to show build status at a glance.',
@@ -1135,8 +1135,8 @@ en: {
 'mod31.desc': 'Develop in the cloud with GitHub Codespaces, github.dev editor, and configure reproducible dev environments with devcontainers.',
 'mod31.s1.title': 'What Are Cloud Dev Environments?',
 'mod31.s1.desc': 'Cloud development environments run your code in remote machines, giving you a fully configured IDE in the browser. This eliminates "works on my machine" problems and lets you start coding on any project in seconds without local setup.',
-'mod31.s2.title': 'GitHub.dev — Instant Browser Editor',
-'mod31.s2.desc': 'Press the period key (.) on any GitHub repository to open it in github.dev, a lightweight VS Code editor in the browser. It\'s perfect for quick edits, code reviews, and navigation — no Codespace needed. Changes can be committed directly.',
+'mod31.s2.title': 'GitHub.dev - Instant Browser Editor',
+'mod31.s2.desc': 'Press the period key (.) on any GitHub repository to open it in github.dev, a lightweight VS Code editor in the browser. It\'s perfect for quick edits, code reviews, and navigation - no Codespace needed. Changes can be committed directly.',
 'mod31.s2.tip': 'Use github.dev for quick edits and code review. Switch to a full Codespace when you need a terminal, build tools, or running servers.',
 'mod31.s3.title': 'Creating a Codespace',
 'mod31.s3.desc': 'Click "Code" → "Codespaces" → "Create codespace on main" on any GitHub repository. GitHub provisions a cloud VM with VS Code, a terminal, and your repo cloned. You can also create Codespaces from branches or pull requests for isolated testing.',
@@ -1146,7 +1146,7 @@ en: {
 'mod31.s5.desc': 'When you start a server in a Codespace, ports are automatically forwarded. You can access your running application in the browser, share the URL with teammates for review, and control port visibility (private, org, or public).',
 'mod31.s6.title': 'Managing Codespaces',
 'mod31.s6.desc': 'List, stop, restart, and delete Codespaces from GitHub or the CLI. Stopped Codespaces retain your work but don\'t consume compute hours. Set auto-delete policies to clean up idle Codespaces and manage costs.',
-'mod31.s6.tip': 'Stop Codespaces when not in use — active ones consume billable compute hours. Use "gh codespace stop" or set idle timeout in your settings.',
+'mod31.s6.tip': 'Stop Codespaces when not in use - active ones consume billable compute hours. Use "gh codespace stop" or set idle timeout in your settings.',
 
 // ── Module 32: GPG Signing & Commit Verification ──
 'mod32.title': 'GPG Signing & Commit Verification',
@@ -1154,7 +1154,7 @@ en: {
 'mod32.s1.title': 'Why Sign Commits?',
 'mod32.s1.desc': 'Anyone can set any name and email in git config. Signed commits use cryptographic keys to prove that the commit actually came from the claimed author. Platforms like GitHub show a "Verified" badge on signed commits, building trust in open-source contributions.',
 'mod32.s2.title': 'Generating a GPG Key',
-'mod32.s2.desc': 'Generate a GPG key pair (public + private) to use for signing. The key should use your Git email address. After generating, note the key ID — you\'ll need it for Git configuration.',
+'mod32.s2.desc': 'Generate a GPG key pair (public + private) to use for signing. The key should use your Git email address. After generating, note the key ID - you\'ll need it for Git configuration.',
 'mod32.s3.title': 'Configuring Git for Signing',
 'mod32.s3.desc': 'Tell Git which GPG key to use for signing, and optionally enable auto-signing so every commit is signed without the -S flag.',
 'mod32.s4.title': 'Signing Commits',
@@ -1174,7 +1174,7 @@ en: {
 'quiz.b9.o2': '"git switch" is for switching branches; "git checkout" can also restore files',
 'quiz.b9.o3': '"git switch" is deprecated in favor of "git checkout"',
 'quiz.b9.o4': '"git switch" only works with remote branches',
-'quiz.b9.explain': '"git switch" was introduced in Git 2.23 specifically for branch switching. "git checkout" is overloaded — it can switch branches AND restore files, which was confusing. Use "git switch" for branches and "git restore" for files.',
+'quiz.b9.explain': '"git switch" was introduced in Git 2.23 specifically for branch switching. "git checkout" is overloaded - it can switch branches AND restore files, which was confusing. Use "git switch" for branches and "git restore" for files.',
 'quiz.b10.q': 'What does "git log --oneline" show?',
 'quiz.b10.o1': 'A condensed log with one commit per line showing hash and message',
 'quiz.b10.o2': 'Only the most recent commit',
@@ -1192,7 +1192,7 @@ en: {
 'quiz.b12.o2': 'To list files that should be deleted from the repository',
 'quiz.b12.o3': 'To hide files from other collaborators',
 'quiz.b12.o4': 'To compress files to save space in the repository',
-'quiz.b12.explain': '.gitignore tells Git which files or patterns to ignore. Common entries include node_modules/, .env, *.log, and build output directories. Files already tracked by Git are not affected — you must untrack them first.',
+'quiz.b12.explain': '.gitignore tells Git which files or patterns to ignore. Common entries include node_modules/, .env, *.log, and build output directories. Files already tracked by Git are not affected - you must untrack them first.',
 'quiz.i9.q': 'What is a detached HEAD state?',
 'quiz.i9.o1': 'When HEAD points directly to a commit instead of a branch reference',
 'quiz.i9.o2': 'When the HEAD file is corrupted',
@@ -1254,13 +1254,13 @@ en: {
 'quiz.a14.o4': 'Identifies merge conflicts in a file',
 'quiz.a14.explain': '"git blame <file>" annotates each line with the commit hash, author, and date of the last modification. It helps you understand when and why a line was changed and who to ask about it.',
 
-// Quiz — Intermediate (new: reflog, codespaces)
+// Quiz - Intermediate (new: reflog, codespaces)
 'quiz.i13.q': 'What does "git reflog" show?',
 'quiz.i13.o1': 'A chronological log of all HEAD movements in your local repository',
 'quiz.i13.o2': 'A list of all commits on the remote server',
 'quiz.i13.o3': 'A log of file changes in the working directory',
 'quiz.i13.o4': 'A list of branches that have been merged',
-'quiz.i13.explain': 'git reflog records every time HEAD changes — commits, checkouts, resets, merges, rebases. It\'s local only and is your safety net for recovering lost commits.',
+'quiz.i13.explain': 'git reflog records every time HEAD changes - commits, checkouts, resets, merges, rebases. It\'s local only and is your safety net for recovering lost commits.',
 
 'quiz.i14.q': 'How can you recover a branch you accidentally deleted?',
 'quiz.i14.o1': 'Find the commit hash in git reflog and create a new branch pointing to it',
@@ -1283,7 +1283,7 @@ en: {
 'quiz.i16.o4': 'Deletes all branches except main',
 'quiz.i16.explain': '"git clean -fd" removes untracked files (-f for force) and directories (-d). Always run "git clean -n" first for a dry run to see what would be deleted.',
 
-// Quiz — Advanced (new: submodules, LFS, CI/CD, signing)
+// Quiz - Advanced (new: submodules, LFS, CI/CD, signing)
 'quiz.a15.q': 'What is the purpose of Git submodules?',
 'quiz.a15.o1': 'To include and track external Git repositories inside your project at specific commits',
 'quiz.a15.o2': 'To split a single repository into smaller files',
@@ -1426,7 +1426,7 @@ en: {
 'terminal.ch.gitignore.s2.hint': 'touch app.js',
 'terminal.ch.gitignore.s3': 'Create a .gitignore and add a pattern',
 'terminal.ch.gitignore.s3.hint': 'touch .gitignore',
-'terminal.ch.gitignore.s4': 'Check status — ignored files are hidden',
+'terminal.ch.gitignore.s4': 'Check status - ignored files are hidden',
 'terminal.ch.gitignore.s4.hint': 'git status',
 'terminal.ch.gitignore.s5': 'Stage the tracked files only',
 'terminal.ch.gitignore.s5.hint': 'git add .',
@@ -1464,7 +1464,7 @@ en: {
 'terminal.ch.removingFiles.s4.hint': 'git commit -m "Add initial files"',
 'terminal.ch.removingFiles.s5': 'Remove the old file from Git tracking and disk',
 'terminal.ch.removingFiles.s5.hint': 'git rm old.txt',
-'terminal.ch.removingFiles.s6': 'Check status — deletion is staged',
+'terminal.ch.removingFiles.s6': 'Check status - deletion is staged',
 'terminal.ch.removingFiles.s6.hint': 'git status',
 'terminal.ch.removingFiles.s7': 'Commit the removal',
 'terminal.ch.removingFiles.s7.hint': 'git commit -m "Remove old.txt"',
@@ -1479,7 +1479,7 @@ en: {
 'terminal.ch.renameMove.s4.hint': 'git commit -m "Add old-name.txt"',
 'terminal.ch.renameMove.s5': 'Rename it using git mv',
 'terminal.ch.renameMove.s5.hint': 'git mv old-name.txt new-name.txt',
-'terminal.ch.renameMove.s6': 'Check status — Git shows a rename, not delete+add',
+'terminal.ch.renameMove.s6': 'Check status - Git shows a rename, not delete+add',
 'terminal.ch.renameMove.s6.hint': 'git status',
 'terminal.ch.renameMove.s7': 'Commit the rename',
 'terminal.ch.renameMove.s7.hint': 'git commit -m "Rename to new-name.txt"',
@@ -1502,7 +1502,7 @@ en: {
 'terminal.ch.mergeConflict.s8.hint': 'git commit -m "Feature edit"',
 'terminal.ch.mergeConflict.s9': 'Switch back to main',
 'terminal.ch.mergeConflict.s9.hint': 'git switch main',
-'terminal.ch.mergeConflict.s10': 'Merge feature — observe and resolve the conflict',
+'terminal.ch.mergeConflict.s10': 'Merge feature - observe and resolve the conflict',
 'terminal.ch.mergeConflict.s10.hint': 'git merge feature',
 'terminal.ch.cloneFetch.desc': 'Clone a remote repository locally, then use git fetch to download updates without merging automatically.',
 'terminal.ch.cloneFetch.s1': 'Clone a remote repository',
@@ -1549,7 +1549,7 @@ en: {
 'terminal.ch.gitRevert.s7.hint': 'git commit -m "Bad commit"',
 'terminal.ch.gitRevert.s8': 'View log to identify the bad commit hash',
 'terminal.ch.gitRevert.s8.hint': 'git log --oneline',
-'terminal.ch.gitRevert.s9': 'Revert the bad commit — creates a new undo commit',
+'terminal.ch.gitRevert.s9': 'Revert the bad commit - creates a new undo commit',
 'terminal.ch.gitRevert.s9.hint': 'git revert HEAD',
 'terminal.ch.submodules.desc': 'Embed another Git repository inside your project as a submodule and learn to initialize and update it.',
 'terminal.ch.submodules.s1': 'Initialize the parent repository',
@@ -1562,7 +1562,7 @@ en: {
 'terminal.ch.submodules.s4.hint': 'git commit -m "Initial project"',
 'terminal.ch.submodules.s5': 'Add an external repo as a submodule',
 'terminal.ch.submodules.s5.hint': 'git submodule add https://github.com/user/lib.git libs/lib',
-'terminal.ch.submodules.s6': 'Check status — see .gitmodules and the submodule folder',
+'terminal.ch.submodules.s6': 'Check status - see .gitmodules and the submodule folder',
 'terminal.ch.submodules.s6.hint': 'git status',
 'terminal.ch.submodules.s7': 'Commit the new submodule reference',
 'terminal.ch.submodules.s7.hint': 'git commit -m "Add submodule"',
@@ -1637,7 +1637,7 @@ en: {
 'cheat.cherrypick': 'Apply a specific commit to current branch',
 'cheat.merge.squash': 'Squash merge a branch',
 
-// Cheat sheet — Navigation & Refs
+// Cheat sheet - Navigation & Refs
 'cheat.cat.navigation': 'Navigation & Refs',
 'cheat.nav.detach': 'Switch to a specific commit (detached HEAD)',
 'cheat.nav.parent': 'Move to the parent commit',
@@ -1646,7 +1646,7 @@ en: {
 'cheat.nav.describe': 'Describe current position relative to tags',
 'cheat.nav.graph': 'Visual commit graph in terminal',
 
-// Cheat sheet — Git Hooks
+// Cheat sheet - Git Hooks
 'cheat.cat.hooks': 'Git Hooks',
 'cheat.hooks.list': 'List available hook templates',
 'cheat.hooks.chmod': 'Make hook executable',
@@ -1654,7 +1654,7 @@ en: {
 'cheat.hooks.huskyAdd': 'Add pre-commit hook',
 'cheat.hooks.skip': 'Skip hooks for this commit',
 
-// Cheat sheet — Debugging
+// Cheat sheet - Debugging
 'cheat.cat.debugging': 'Debugging',
 'cheat.debug.start': 'Start binary search for bugs',
 'cheat.debug.bad': 'Mark current commit as bad',
@@ -1663,7 +1663,7 @@ en: {
 'cheat.debug.run': 'Automate bisect with a test script',
 'cheat.debug.blame': 'Show who last modified each line',
 
-// Cheat sheet — Advanced Operations
+// Cheat sheet - Advanced Operations
 'cheat.cat.advanced': 'Advanced Operations',
 'cheat.adv.rebaseInteractive': 'Interactive rebase last 4 commits',
 'cheat.adv.amend': 'Modify the last commit',
@@ -1673,7 +1673,7 @@ en: {
 'cheat.adv.fetchUpstream': 'Fetch from upstream remote',
 'cheat.adv.worktree': 'Create a linked worktree',
 
-// Cheat sheet — Submodules
+// Cheat sheet - Submodules
 'cheat.cat.submodules': 'Submodules',
 'cheat.sub.add': 'Add an external repo as a submodule',
 'cheat.sub.init': 'Initialize submodule configuration locally',
@@ -1684,7 +1684,7 @@ en: {
 'cheat.sub.deinit': 'Unregister a submodule',
 'cheat.sub.cloneRecurse': 'Clone a repo and initialize all submodules',
 
-// Cheat sheet — LFS & .gitattributes
+// Cheat sheet - LFS & .gitattributes
 'cheat.cat.lfs': 'LFS & .gitattributes',
 'cheat.lfs.install': 'Initialize Git LFS for your user account',
 'cheat.lfs.track': 'Track a file pattern with LFS',
@@ -1695,7 +1695,7 @@ en: {
 'cheat.lfs.binary': 'Mark files as binary to skip diff (.gitattributes)',
 'cheat.lfs.checkAttr': 'Check .gitattributes rules for a specific file',
 
-// Cheat sheet — CI/CD
+// Cheat sheet - CI/CD
 'cheat.cat.cicd': 'CI/CD Integration',
 'cheat.ci.mkdirWorkflows': 'Create GitHub Actions workflow directory',
 'cheat.ci.skipCi': 'Skip CI pipeline for this commit',
@@ -1704,7 +1704,7 @@ en: {
 'cheat.ci.runView': 'View details of a specific workflow run',
 'cheat.ci.runWatch': 'Watch a workflow run in real-time',
 
-// Cheat sheet — GPG Signing
+// Cheat sheet - GPG Signing
 'cheat.cat.signing': 'GPG Signing & Verification',
 'cheat.sign.genKey': 'Generate a new GPG key pair',
 'cheat.sign.listKeys': 'List your GPG secret keys with long format',
@@ -1715,7 +1715,7 @@ en: {
 'cheat.sign.verify': 'Show commit signatures in log',
 'cheat.sign.sshFormat': 'Use SSH keys for signing instead of GPG',
 
-// Quiz questions — Beginner
+// Quiz questions - Beginner
 'quiz.b1.q': 'What does the command "git init" do?',
 'quiz.b1.o1': 'Installs Git on your computer',
 'quiz.b1.o2': 'Creates a new Git repository in the current directory',
@@ -1765,13 +1765,13 @@ en: {
 'quiz.b8.o4': 'A directory created on GitHub',
 'quiz.b8.explain': 'The .git directory stores all the information Git needs: object database, refs, hooks, config, and more. Deleting it removes all version history.',
 
-// Quiz questions — Intermediate
+// Quiz questions - Intermediate
 'quiz.i1.q': 'What is a fast-forward merge?',
 'quiz.i1.o1': 'A merge that is faster than a normal merge',
 'quiz.i1.o2': 'A merge where the target branch pointer moves forward to the feature branch tip without a merge commit',
 'quiz.i1.o3': 'A merge that skips conflict resolution',
 'quiz.i1.o4': 'A merge that only works on remote branches',
-'quiz.i1.explain': 'A fast-forward merge occurs when there are no new commits on the target branch. Git simply moves the pointer forward — no merge commit needed.',
+'quiz.i1.explain': 'A fast-forward merge occurs when there are no new commits on the target branch. Git simply moves the pointer forward - no merge commit needed.',
 'quiz.i2.q': 'What is the difference between "git fetch" and "git pull"?',
 'quiz.i2.o1': 'They are the same command with different names',
 'quiz.i2.o2': 'Fetch downloads changes without merging; pull downloads AND merges',
@@ -1815,7 +1815,7 @@ en: {
 'quiz.i8.o4': 'Uploads only untracked files',
 'quiz.i8.explain': 'The -u (--set-upstream) flag creates a tracking relationship between local and remote branches, simplifying future push and pull commands.',
 
-// Quiz questions — Advanced
+// Quiz questions - Advanced
 'quiz.a1.q': 'What is rebasing in Git?',
 'quiz.a1.o1': 'Renaming the base branch',
 'quiz.a1.o2': 'Re-applying commits on top of a different base tip to create a linear history',
@@ -1827,7 +1827,7 @@ en: {
 'quiz.a2.o2': 'Soft keeps changes staged; hard discards all changes permanently',
 'quiz.a2.o3': 'There is no difference',
 'quiz.a2.o4': 'Hard is only for remote repos; soft is for local',
-'quiz.a2.explain': '--soft moves HEAD but keeps changes staged. --hard moves HEAD and discards ALL changes in the staging area and working directory — this is destructive.',
+'quiz.a2.explain': '--soft moves HEAD but keeps changes staged. --hard moves HEAD and discards ALL changes in the staging area and working directory - this is destructive.',
 'quiz.a3.q': 'What is cherry-pick?',
 'quiz.a3.o1': 'Selecting which files to include in a commit',
 'quiz.a3.o2': 'Applying a specific commit from one branch onto another branch',
@@ -1845,10 +1845,10 @@ en: {
 'quiz.a5.o2': 'Every update to the tip of branches and HEAD, including resets and rebases',
 'quiz.a5.o3': 'File modification timestamps',
 'quiz.a5.o4': 'Network connection logs',
-'quiz.a5.explain': 'Reflog records every change to HEAD locally — commits, resets, rebases, checkouts. It is your safety net for recovering "lost" commits.',
+'quiz.a5.explain': 'Reflog records every change to HEAD locally - commits, resets, rebases, checkouts. It is your safety net for recovering "lost" commits.',
 'quiz.a6.q': 'What is an annotated tag?',
 'quiz.a6.o1': 'A tag with comments in the code',
-'quiz.a6.o2': 'A full tag object with tagger name, email, date, and message — recommended for releases',
+'quiz.a6.o2': 'A full tag object with tagger name, email, date, and message - recommended for releases',
 'quiz.a6.o3': 'A tag that is automatically synced with remote',
 'quiz.a6.o4': 'A tag that includes a code review',
 'quiz.a6.explain': 'Annotated tags are full Git objects with metadata (name, email, date, message). Created with "git tag -a v1.0 -m message". Preferred for release versions.',
@@ -1948,12 +1948,12 @@ ar: {
 'mod4.s1.explain': 'تم إنشاء مجلد جديد باسم "my-project" وانتقلت إليه. سيكون هذا جذر مشروع Git الخاص بك.',
 'mod4.s2.explain': 'أنشأ Git مجلد .git مخفياً داخل مشروعك. يخزن هذا المجلد كل سجل الإصدارات والفروع والإعدادات. مجلدك أصبح الآن مستودع Git!',
 'mod4.s3.explain': 'فحصت بنية مجلد .git. يحتوي على: HEAD (مؤشر الفرع الحالي)، config، hooks، objects (البيانات المخزنة)، وrefs (مؤشرات الفروع/العلامات).',
-'mod4.s4.explain': 'تم إنشاء ملف README.md جديد. هذا الملف غير متتبع بعد — موجود فقط في مجلد العمل.',
+'mod4.s4.explain': 'تم إنشاء ملف README.md جديد. هذا الملف غير متتبع بعد - موجود فقط في مجلد العمل.',
 'mod4.s5.explain': 'أظهر git status أن README.md "ملف غير متتبع" باللون الأحمر. يرى Git الملف لكنه لا يتتبع تغييراته بعد. تحتاج "git add" لبدء التتبع.',
 'mod4.s6.explain': 'راجعت سير عمل Git الأساسي: تعديل الملفات ← تجهيز التغييرات (git add) ← إيداع اللقطة (git commit). تتكرر هذه الدورة مع كل تغيير.',
 'mod5.s1.explain': 'كشف git status عن ملفات غير متتبعة في مجلد العمل. هذه الملفات موجودة لكن Git لا يعرف عنها شيئاً بعد.',
 'mod5.s2.explain': 'تم نقل README.md من مجلد العمل إلى منطقة التجهيز. الآن هو في قائمة الانتظار وجاهز للإيداع التالي.',
-'mod5.s3.explain': 'النقطة (.) تخبر Git بتجهيز جميع التغييرات — ملفات جديدة ومعدلة ومحذوفة. كل شيء الآن في منطقة التجهيز.',
+'mod5.s3.explain': 'النقطة (.) تخبر Git بتجهيز جميع التغييرات - ملفات جديدة ومعدلة ومحذوفة. كل شيء الآن في منطقة التجهيز.',
 'mod5.s4.explain': 'يُظهر git status الآن README.md تحت "تغييرات جاهزة للإيداع" باللون الأخضر. انتقل الملف من غير متتبع ← مُجهّز.',
 'mod5.s5.explain': 'تم حفظ لقطة من تغييراتك المُجهّزة كإيداع دائم. للإيداع رمز فريد (a1b2c3d) ومعلومات المؤلف والرسالة.',
 'mod5.s6.explain': 'يُظهر git log سجل الإيداعات. يمكنك رؤية رمز كل إيداع ومؤلفه وتاريخه ورسالته. العلم --oneline يعرض تنسيقاً مختصراً.',
@@ -1966,12 +1966,12 @@ ar: {
 'mod6.s5.explain': '"git diff" يُظهر التغييرات غير المُجهّزة. "git diff --staged" يُظهر التغييرات المُجهّزة. معاً يغطيان كل التغييرات المعلقة.',
 'mod6.s6.explain': 'يُظهر git blame من عدّل آخر مرة كل سطر في الملف، مع رمز الإيداع والتاريخ. مفيد لفهم متى ولماذا تم تغيير سطر.',
 'mod7.s2.explain': 'عرض Git قائمة الفروع المحلية. النجمة (*) تُحدد الفرع النشط الحالي. حالياً يوجد فقط "main".',
-'mod7.s3.explain': 'تم إنشاء فرع جديد "feature-login" يشير لنفس الإيداع. لم تتغير أي ملفات — إنه مجرد مؤشر جديد.',
+'mod7.s3.explain': 'تم إنشاء فرع جديد "feature-login" يشير لنفس الإيداع. لم تتغير أي ملفات - إنه مجرد مؤشر جديد.',
 'mod7.s4.explain': 'انتقلت إلى فرع "feature-login". أي إيداعات جديدة ستُضاف لهذا الفرع وليس main.',
 'mod7.s5.explain': 'العلم -c يُنشئ وينتقل لفرع جديد في أمر واحد. "feature-signup" موجود الآن وهو فرعك النشط.',
-'mod7.s6.explain': 'تم إنشاء ملف جديد وتجهيزه وإيداعه — كل ذلك على فرع feature-login. هذا الإيداع موجود فقط على هذا الفرع.',
-'mod7.s7.explain': 'تم حذف الفرع. العلم -d يعمل فقط إذا تم دمج الفرع بالكامل. استخدم -D للحذف القسري (احذر — ستفقد الإيداعات غير المدمجة).',
-'mod8.s2.explain': 'عدت إلى الفرع الرئيسي main. مجلد عملك يعكس الآن حالة main — ملفات الميزة مخفية مؤقتاً.',
+'mod7.s6.explain': 'تم إنشاء ملف جديد وتجهيزه وإيداعه - كل ذلك على فرع feature-login. هذا الإيداع موجود فقط على هذا الفرع.',
+'mod7.s7.explain': 'تم حذف الفرع. العلم -d يعمل فقط إذا تم دمج الفرع بالكامل. استخدم -D للحذف القسري (احذر - ستفقد الإيداعات غير المدمجة).',
+'mod8.s2.explain': 'عدت إلى الفرع الرئيسي main. مجلد عملك يعكس الآن حالة main - ملفات الميزة مخفية مؤقتاً.',
 'mod8.s3.explain': 'تم دمج فرع feature-login في main. "Fast-forward" يعني أن main تقدم ببساطة ليشمل الإيداعات الجديدة.',
 'mod8.s6.explain': 'يُظهر الرسم البياني سجل الدمج بصرياً. يمكنك رؤية أين تفرّع فرع الميزة وأين تم دمجه مجدداً.',
 'mod8.s7.explain': 'تم تنظيف فرع الميزة بعد الدمج. من الممارسات الجيدة حذف الفروع بعد دمجها للحفاظ على نظافة المستودع.',
@@ -1986,7 +1986,7 @@ ar: {
 'mod10.s3.explain': 'قام Git بسحب (جلب + دمج) أحدث التغييرات من البعيد. ملفاتك محدثة الآن مع البعيد.',
 'mod10.s5.explain': 'تم دفع إيداعاتك المحلية إلى المستودع البعيد. يمكن لأعضاء الفريق الآخرين رؤية وسحب تغييراتك.',
 'mod10.s6.explain': 'عرض Git قائمة فروع التتبع البعيدة وأعدّ التتبع بين فرعك المحلي main وorigin/main.',
-'mod11.s2.explain': 'عدّل فرعان نفس الملف بشكل مختلف، مما تسبب في تعارض دمج. لا يمكن لـ Git أن يقرر تلقائياً — عليك حله يدوياً.',
+'mod11.s2.explain': 'عدّل فرعان نفس الملف بشكل مختلف، مما تسبب في تعارض دمج. لا يمكن لـ Git أن يقرر تلقائياً - عليك حله يدوياً.',
 'mod11.s3.explain': 'علامات التعارض تُظهر كلا الإصدارين: <<<<<<< HEAD هو فرعك الحالي، ======= يفصل بينهما، و>>>>>>> branch-b هو الفرع القادم.',
 'mod11.s4.explain': 'بعد تعديل الملف يدوياً لحل التعارض، "git add" يُحدد التعارض كمحلول.',
 'mod11.s6.explain': 'تم إيداع الملف المحلول، مُكملاً عملية الدمج. التعارض الآن محلول بشكل دائم في سجل المشروع.',
@@ -2000,17 +2000,17 @@ ar: {
 'mod13.s4.explain': '"stash pop" استعاد تغييراتك المحفوظة إلى مجلد العمل وأزال إدخال التخزين. استخدم "apply" للإبقاء على التخزين.',
 'mod13.s5.explain': 'تم حذف إدخال التخزين المحدد نهائياً من القائمة. التغييرات في ذلك التخزين اختفت الآن.',
 'mod13.s7.explain': 'تم نسخ إيداع محدد من فرع آخر إلى فرعك الحالي. على عكس الدمج، cherry-pick يجلب إيداعاً واحداً فقط.',
-'mod14.s1.explain': 'تمت استعادة الملف لحالته في آخر إيداع. كل التغييرات غير المودعة في مجلد العمل تم تجاهلها — لا يمكن التراجع!',
+'mod14.s1.explain': 'تمت استعادة الملف لحالته في آخر إيداع. كل التغييرات غير المودعة في مجلد العمل تم تجاهلها - لا يمكن التراجع!',
 'mod14.s2.explain': 'تمت إزالة الملف من منطقة التجهيز إلى مجلد العمل. تغييراتك لا تزال موجودة، لكن لم تعد مُجهّزة للإيداع.',
 'mod14.s3.explain': 'تم التراجع عن آخر إيداع، لكن التغييرات محفوظة في منطقة التجهيز. يمكنك التعديل وإعادة الإيداع.',
 'mod14.s4.explain': 'تم التراجع عن آخر إيداع ونُقلت التغييرات إلى مجلد العمل (غير مُجهّزة). تحتاج "git add" مجدداً قبل الإيداع.',
-'mod14.s5.explain': 'تم مسح آخر إيداع بالكامل — الإيداع وجميع التغييرات اختفت نهائياً. هذا أمر مدمر ولا يمكن التراجع عنه!',
-'mod14.s6.explain': 'تم إنشاء إيداع جديد يعكس تغييرات الإيداع المحدد. على عكس reset، يحافظ revert على السجل — يُضيف ولا يحذف.',
+'mod14.s5.explain': 'تم مسح آخر إيداع بالكامل - الإيداع وجميع التغييرات اختفت نهائياً. هذا أمر مدمر ولا يمكن التراجع عنه!',
+'mod14.s6.explain': 'تم إنشاء إيداع جديد يعكس تغييرات الإيداع المحدد. على عكس reset، يحافظ revert على السجل - يُضيف ولا يحذف.',
 'mod14.s8.explain': 'يُظهر Reflog كل موقع كان فيه HEAD. حتى بعد reset أو rebase، يمكنك إيجاد الإيداعات "المفقودة" واستعادتها.',
 'mod15.s1.explain': 'تم إنشاء ملف .gitignore بقواعد لاستبعاد: node_modules وملفات .env وملفات السجل ومجلد dist من تتبع Git.',
-'mod15.s2.explain': 'تم إعداد .gitignore عام. الأنماط في هذا الملف تنطبق على جميع مستودعاتك — مفيد لملفات نظام التشغيل وإعدادات IDE.',
-'mod15.s3.explain': 'تم إنشاء علامة خفيفة عند الإيداع الحالي. إنها مجرد تسمية — مؤشر مسمى لإيداع محدد.',
-'mod15.s4.explain': 'تم إنشاء علامة مشروحة برسالة. العلامات المشروحة تخزن اسم المُعلّم والتاريخ والرسالة — موصى بها للإصدارات.',
+'mod15.s2.explain': 'تم إعداد .gitignore عام. الأنماط في هذا الملف تنطبق على جميع مستودعاتك - مفيد لملفات نظام التشغيل وإعدادات IDE.',
+'mod15.s3.explain': 'تم إنشاء علامة خفيفة عند الإيداع الحالي. إنها مجرد تسمية - مؤشر مسمى لإيداع محدد.',
+'mod15.s4.explain': 'تم إنشاء علامة مشروحة برسالة. العلامات المشروحة تخزن اسم المُعلّم والتاريخ والرسالة - موصى بها للإصدارات.',
 'mod15.s5.explain': 'تم دفع جميع العلامات المحلية إلى المستودع البعيد. العلامات لا تُدفع افتراضياً مع "git push".',
 'mod16.s4.explain': 'تم إنشاء ثلاث إيداعات بتنسيق Conventional Commits: feat (ميزة جديدة)، fix (إصلاح خطأ)، docs (توثيق). يُمكّن من إنشاء سجل تغييرات تلقائي.',
 // Terminal
@@ -2022,7 +2022,7 @@ ar: {
 'terminal.state.branch': 'الفرع',
 'terminal.state.files': 'مستكشف الملفات',
 'terminal.state.commits': 'الإيداعات',
-'terminal.state.noFiles': 'لا ملفات بعد — جرّب touch file.txt',
+'terminal.state.noFiles': 'لا ملفات بعد - جرّب touch file.txt',
 'terminal.state.noCommits': 'لا إيداعات بعد',
 'terminal.achievements': 'الإنجازات',
 'terminal.history': 'السجل',
@@ -2088,11 +2088,11 @@ ar: {
 'terminal.ch.basicStatus.s1.hint': 'git init',
 'terminal.ch.basicStatus.s2': 'إنشاء ملف',
 'terminal.ch.basicStatus.s2.hint': 'touch index.html',
-'terminal.ch.basicStatus.s3': 'فحص الحالة — شاهد الملفات غير المتتبعة',
+'terminal.ch.basicStatus.s3': 'فحص الحالة - شاهد الملفات غير المتتبعة',
 'terminal.ch.basicStatus.s3.hint': 'git status',
 'terminal.ch.basicStatus.s4': 'تجهيز الملف',
 'terminal.ch.basicStatus.s4.hint': 'git add .',
-'terminal.ch.basicStatus.s5': 'فحص الحالة مجدداً — شاهد التغييرات المُجهّزة',
+'terminal.ch.basicStatus.s5': 'فحص الحالة مجدداً - شاهد التغييرات المُجهّزة',
 'terminal.ch.basicStatus.s5.hint': 'git status',
 'terminal.ch.basicStatus.s6': 'إيداع التغييرات',
 'terminal.ch.basicStatus.s6.hint': 'git commit -m "Add index"',
@@ -2273,7 +2273,7 @@ ar: {
 'viz.bp5.title': 'لا تدفع إجبارياً على الفروع المشتركة',
 'viz.bp5.good': 'git push (دفع عادي)',
 'viz.bp5.bad': 'git push --force origin main',
-'viz.bp5.why': 'الدفع الإجباري يحذف التاريخ — يفقد المطورون الآخرون عملهم.',
+'viz.bp5.why': 'الدفع الإجباري يحذف التاريخ - يفقد المطورون الآخرون عملهم.',
 'viz.bp6.title': 'راجع التغييرات قبل الإيداع',
 'viz.bp6.good': 'git diff --staged → مراجعة → git commit',
 'viz.bp6.bad': 'git add . && git commit -m "done" (بدون مراجعة)',
@@ -2348,7 +2348,7 @@ ar: {
 'mod3.desc': 'قم بإعداد Git بهويتك والمحرر المفضل واسم الفرع الافتراضي وإعدادات أساسية أخرى.',
 'mod4.title': 'مستودعك الأول',
 'mod4.desc': 'أنشئ أول مستودع Git، افهم بنية مجلد .git، وتعرّف على منطقة التهيئة.',
-'mod5.title': 'سير العمل الأساسي — add, commit, status',
+'mod5.title': 'سير العمل الأساسي - add, commit, status',
 'mod5.desc': 'أتقن سير عمل Git الأساسي: تهيئة التغييرات، إنشاء الإيداعات، وعرض تاريخ مشروعك.',
 'mod6.title': 'عرض السجل وفهم التغييرات',
 'mod6.desc': 'استكشف خيارات سجل Git القوية، قارن الفروقات بين الإيداعات، وتتبع التغييرات في قاعدة الشيفرة.',
@@ -2447,14 +2447,14 @@ ar: {
 'mod5.s2.vscode': 'في VSCode، انقر على أيقونة + بجانب ملف في لوحة التحكم بالمصدر لتهيئته.',
 'mod5.s3.title': 'تهيئة ملفات متعددة',
 'mod5.s3.desc': 'يمكنك تهيئة عدة ملفات دفعة واحدة بإدراجها، أو استخدم "git add ." لتهيئة جميع التغييرات في المجلد الحالي.',
-'mod5.s3.tip': 'استخدم "git add ." بحذر — إنه يهيئ كل شيء. تأكد من أنك لا تهيئ ملفات لا تريد إيداعها بالخطأ.',
-'mod5.s3.warning': 'كن حذراً مع "git add ." — سيُهيئ جميع التغييرات بما فيها ملفات قد لا ترغب بإيداعها. شغّل git status أولاً دائماً.',
+'mod5.s3.tip': 'استخدم "git add ." بحذر - إنه يهيئ كل شيء. تأكد من أنك لا تهيئ ملفات لا تريد إيداعها بالخطأ.',
+'mod5.s3.warning': 'كن حذراً مع "git add ." - سيُهيئ جميع التغييرات بما فيها ملفات قد لا ترغب بإيداعها. شغّل git status أولاً دائماً.',
 'mod5.s4.title': 'التحقق من الحالة بعد التهيئة',
 'mod5.s4.desc': 'بعد التهيئة، شغّل git status مرة أخرى. تظهر الملفات المُهيأة باللون الأخضر تحت "Changes to be committed".',
 'mod5.s5.title': 'إنشاء أول إيداع',
 'mod5.s5.desc': 'الإيداع ينشئ لقطة من جميع التغييرات المُهيأة. علامة -m تتيح لك كتابة رسالة الإيداع مباشرة.',
 'mod5.s5.vscode': 'في VSCode، اكتب رسالة الإيداع في مربع النص أعلى لوحة التحكم بالمصدر وانقر علامة الصح (أو اضغط Ctrl+Enter) للإيداع.',
-'mod5.s5.tip': 'اكتب رسائل إيداع ذات معنى. صيغة جيدة: "Add user authentication feature" — ابدأ بفعل، وكن محدداً.',
+'mod5.s5.tip': 'اكتب رسائل إيداع ذات معنى. صيغة جيدة: "Add user authentication feature" - ابدأ بفعل، وكن محدداً.',
 'mod5.s6.title': 'عرض سجل الإيداعات',
 'mod5.s6.desc': 'اعرض سجل جميع الإيداعات. علامة --oneline تعرض عرضاً مختصراً بالتجزئة والرسالة فقط.',
 'mod5.s7.title': 'إجراء تغييرات وإيداع مرة أخرى',
@@ -2486,7 +2486,7 @@ ar: {
 'mod7.s2.title': 'عرض الفروع',
 'mod7.s2.desc': 'اعرض جميع الفروع المحلية في مستودعك. الفرع الحالي يُميّز بنجمة (*).',
 'mod7.s3.title': 'إنشاء فرع جديد',
-'mod7.s3.desc': 'أنشئ فرعاً جديداً يشير إلى الإيداع الحالي. هذا لا يبدّل إلى الفرع الجديد — تبقى على فرعك الحالي.',
+'mod7.s3.desc': 'أنشئ فرعاً جديداً يشير إلى الإيداع الحالي. هذا لا يبدّل إلى الفرع الجديد - تبقى على فرعك الحالي.',
 'mod7.s4.title': 'التبديل إلى فرع',
 'mod7.s4.desc': 'بدّل مجلد عملك إلى الفرع المحدد. يحدّث Git ملفاتك لتتطابق مع رأس الفرع. الأمر الحديث هو "git switch"، وكذلك "git checkout" يعمل.',
 'mod7.s4.tip': 'أمر "git switch" قُدّم في Git 2.23 كبديل أوضح لـ "git checkout" لتبديل الفروع.',
@@ -2508,7 +2508,7 @@ ar: {
 'mod8.s3.desc': 'ادمج فرع الميزة في فرعك الحالي. سيحدد Git تلقائياً أفضل استراتيجية دمج.',
 'mod8.s3.vscode': 'في VSCode، استخدم لوحة الأوامر (Ctrl+Shift+P) وابحث عن "Git: Merge Branch" للدمج بصرياً.',
 'mod8.s4.title': 'الدمج السريع',
-'mod8.s4.desc': 'يحدث الدمج السريع عندما لا يحتوي الفرع المستهدف على إيداعات جديدة منذ إنشاء فرع الميزة. يقوم Git ببساطة بتحريك مؤشر الفرع للأمام — لا يُنشأ إيداع دمج.',
+'mod8.s4.desc': 'يحدث الدمج السريع عندما لا يحتوي الفرع المستهدف على إيداعات جديدة منذ إنشاء فرع الميزة. يقوم Git ببساطة بتحريك مؤشر الفرع للأمام - لا يُنشأ إيداع دمج.',
 'mod8.s5.title': 'الدمج الثلاثي',
 'mod8.s5.desc': 'يحدث الدمج الثلاثي عندما يتفرّع كلا الفرعين (كلاهما لديه إيداعات جديدة). ينشئ Git إيداع دمج جديد له والدان، يجمع التغييرات من كلا الفرعين.',
 'mod8.s6.title': 'عرض سجل الدمج',
@@ -2521,7 +2521,7 @@ ar: {
 'mod9.s1.desc': 'المستودع البعيد هو نسخة من مشروعك مستضافة على الإنترنت أو شبكة. يتيح التعاون: يمكن لعدة مطورين دفع وسحب التغييرات. GitHub و GitLab و Bitbucket هي خدمات استضافة شائعة.',
 'mod9.s2.title': 'إنشاء مستودع GitHub',
 'mod9.s2.desc': 'اذهب إلى github.com، انقر "New repository"، أعطه اسماً، اختر عام أو خاص، وانقر "Create repository". لا تقم بتهيئة README إذا كان لديك مستودع محلي بالفعل.',
-'mod9.s2.tip': 'إذا كان لديك مستودع محلي بإيداعات بالفعل، لا تضف README أو .gitignore أو ترخيص على GitHub — سينشئ ذلك تعارضات.',
+'mod9.s2.tip': 'إذا كان لديك مستودع محلي بإيداعات بالفعل، لا تضف README أو .gitignore أو ترخيص على GitHub - سينشئ ذلك تعارضات.',
 'mod9.s3.title': 'إضافة الأصل البعيد',
 'mod9.s3.desc': 'اربط مستودعك المحلي بالمستودع البعيد على GitHub. "origin" هو الاسم التقليدي للمصدر البعيد الرئيسي.',
 'mod9.s4.title': 'التحقق من البعيد',
@@ -2547,7 +2547,7 @@ ar: {
 'mod10.s3.desc': 'السحب هو مزيج من الجلب + الدمج. يحمّل التغييرات البعيدة ويدمجها فوراً في فرعك الحالي.',
 'mod10.s3.warning': 'إذا كان لديك تغييرات محلية غير مودعة، قد يفشل السحب أو ينشئ تعارضات. أودع أو خبّئ تغييراتك أولاً.',
 'mod10.s4.title': 'الفرق بين الجلب والسحب',
-'mod10.s4.desc': 'الجلب أكثر أماناً — يحمّل التغييرات بدون تعديل عملك. يمكنك المراجعة بـ "git diff main origin/main" قبل الدمج. السحب مريح لكن قد يفاجئك بتعارضات.',
+'mod10.s4.desc': 'الجلب أكثر أماناً - يحمّل التغييرات بدون تعديل عملك. يمكنك المراجعة بـ "git diff main origin/main" قبل الدمج. السحب مريح لكن قد يفاجئك بتعارضات.',
 'mod10.s5.title': 'دفع تغييراتك',
 'mod10.s5.desc': 'ارفع إيداعاتك المحلية إلى المستودع البعيد. يمكن للآخرين بعدها سحب تغييراتك.',
 'mod10.s6.title': 'تتبع الفروع البعيدة',
@@ -2564,7 +2564,7 @@ ar: {
 'mod11.s3.title': 'تحديد علامات التعارض',
 'mod11.s3.desc': 'عند حدوث تعارض، يميّز Git المناطق المتعارضة في الملف بعلامات خاصة: <<<<<<< HEAD يعرض تغييرات فرعك الحالي، ======= يفصل بين النسختين، و >>>>>>> branch-name يعرض التغييرات الواردة.',
 'mod11.s4.title': 'الحل اليدوي',
-'mod11.s4.desc': 'حرر الملف لإزالة علامات التعارض والاحتفاظ بالمحتوى المطلوب. أنت تقرر كيف يجب أن تبدو النسخة النهائية — يمكنك الاحتفاظ بجانب أو الآخر أو دمج الاثنين.',
+'mod11.s4.desc': 'حرر الملف لإزالة علامات التعارض والاحتفاظ بالمحتوى المطلوب. أنت تقرر كيف يجب أن تبدو النسخة النهائية - يمكنك الاحتفاظ بجانب أو الآخر أو دمج الاثنين.',
 'mod11.s5.title': 'الحل في VSCode',
 'mod11.s5.desc': 'يوفر VSCode محرر دمج مرئي مع خيارات "Accept Current Change" و "Accept Incoming Change" و "Accept Both Changes" أو "Compare Changes". هذا يجعل حل التعارضات أسهل بكثير.',
 'mod11.s5.vscode': 'يميّز VSCode التعارضات بخلفيات ملونة ويوفر أزراراً قابلة للنقر فوق كل تعارض لاختيار الحل بسرعة.',
@@ -2572,7 +2572,7 @@ ar: {
 'mod11.s6.desc': 'بعد حل جميع التعارضات، هيّئ الملفات المحلولة بـ git add وأكمل الدمج بـ git commit.',
 'mod11.s7.title': 'إلغاء الدمج',
 'mod11.s7.desc': 'إذا أردت إلغاء الدمج والعودة إلى الحالة قبل بدء الدمج، استخدم git merge --abort.',
-'mod11.s7.tip': 'إلغاء الدمج آمن — يستعيد مجلد عملك والفهرس إلى حالة ما قبل الدمج.',
+'mod11.s7.tip': 'إلغاء الدمج آمن - يستعيد مجلد عملك والفهرس إلى حالة ما قبل الدمج.',
 
 // Module 12 steps
 'mod12.s1.title': 'ما هو إعادة القاعدة (Rebase)؟',
@@ -2619,7 +2619,7 @@ ar: {
 'mod14.s2.desc': 'أزل ملفاً من منطقة التهيئة بدون التخلص من التغييرات. يعود الملف إلى حالة "معدّل" في مجلد العمل.',
 'mod14.s3.title': 'إعادة التعيين الناعمة',
 'mod14.s3.desc': 'حرّك مؤشر الفرع إلى الوراء إيداعاً واحداً لكن أبقِ جميع التغييرات مُهيأة. مفيد لإعادة كتابة رسالة الإيداع أو الدمج مع تغييرات أخرى.',
-'mod14.s3.tip': 'إعادة التعيين الناعمة هي الأكثر أماناً — تحرّك HEAD فقط. جميع تغييراتك تبقى مُهيأة وجاهزة للإيداع.',
+'mod14.s3.tip': 'إعادة التعيين الناعمة هي الأكثر أماناً - تحرّك HEAD فقط. جميع تغييراتك تبقى مُهيأة وجاهزة للإيداع.',
 'mod14.s4.title': 'إعادة التعيين المختلطة (الافتراضية)',
 'mod14.s4.desc': 'حرّك مؤشر الفرع إلى الوراء وألغِ تهيئة التغييرات، لكن أبقها في مجلد العمل. هذا هو السلوك الافتراضي لـ git reset.',
 'mod14.s5.title': 'إعادة التعيين الصلبة',
@@ -2629,8 +2629,8 @@ ar: {
 'mod14.s6.desc': 'أنشئ إيداعاً جديداً يلغي تغييرات إيداع سابق. بخلاف reset، الـ revert آمن للفروع المشتركة لأنه لا يعيد كتابة التاريخ.',
 'mod14.s6.tip': 'استخدم revert بدلاً من reset على الفروع المشتركة. Revert يضيف إيداعاً جديداً بدلاً من إزالة القديم.',
 'mod14.s7.title': 'Reset مقابل Revert',
-'mod14.s7.desc': 'Reset يعيد كتابة التاريخ (يحرّك مؤشر الفرع للخلف) — خطر على الفروع المشتركة. Revert ينشئ إيداعاً جديداً يلغي التغييرات — آمن للفروع المشتركة. استخدم reset للتنظيف المحلي و revert للتاريخ العام.',
-'mod14.s8.title': 'Reflog — استرجاع الإيداعات المفقودة',
+'mod14.s7.desc': 'Reset يعيد كتابة التاريخ (يحرّك مؤشر الفرع للخلف) - خطر على الفروع المشتركة. Revert ينشئ إيداعاً جديداً يلغي التغييرات - آمن للفروع المشتركة. استخدم reset للتنظيف المحلي و revert للتاريخ العام.',
+'mod14.s8.title': 'Reflog - استرجاع الإيداعات المفقودة',
 'mod14.s8.desc': 'الـ reflog يسجل كل تغيير على HEAD، حتى تلك "المفقودة" بسبب reset. إذا أعدت التعيين بعيداً بالخطأ، استخدم reflog للعثور على تجزئة الإيداع واستعادته.',
 'mod14.s8.tip': 'Reflog هو شبكة أمانك. حتى بعد إعادة تعيين صلبة، يمكنك استرجاع الإيداعات خلال حوالي 90 يوماً باستخدام reflog.',
 
@@ -2641,7 +2641,7 @@ ar: {
 'mod15.s2.title': '.gitignore العام',
 'mod15.s2.desc': 'أعدّ .gitignore عام للملفات التي تريد تجاهلها دائماً في جميع المستودعات (مثل ملفات نظام التشغيل .DS_Store و Thumbs.db).',
 'mod15.s3.title': 'العلامات الخفيفة',
-'mod15.s3.desc': 'العلامات الخفيفة هي مؤشرات بسيطة إلى إيداع. إنها مثل الإشارات المرجعية — مجرد اسم يشير إلى إيداع محدد.',
+'mod15.s3.desc': 'العلامات الخفيفة هي مؤشرات بسيطة إلى إيداع. إنها مثل الإشارات المرجعية - مجرد اسم يشير إلى إيداع محدد.',
 'mod15.s4.title': 'العلامات المشروحة',
 'mod15.s4.desc': 'العلامات المشروحة تخزن بيانات وصفية إضافية: اسم الواضع وبريده وتاريخه ورسالة. يُنصح بها للإصدارات.',
 'mod15.s4.tip': 'استخدم العلامات المشروحة للإصدارات (v1.0, v2.0) والعلامات الخفيفة للعلامات المؤقتة أو الداخلية.',
@@ -2667,20 +2667,20 @@ ar: {
 'mod16.s6.title': 'أفضل ممارسات مراجعة الشيفرة',
 'mod16.s6.desc': 'مراجعات شيفرة فعّالة: أبقِ PRs صغيرة ومركّزة، اكتب أوصاف PR واضحة، راجع المنطق والتصميم (ليس فقط الأسلوب)، كن بنّاءً في التعليقات، استخدم الفحص الآلي والاختبارات، وافق أو اطلب تغييرات بسرعة.',
 
-// Module 17 — HEAD والمراجع النسبية
+// Module 17 - HEAD والمراجع النسبية
 'mod17.title': 'HEAD والمراجع النسبية',
 'mod17.desc': 'افهم ما هو HEAD، تنقّل في تاريخ الإيداعات باستخدام المراجع النسبية (^ و ~)، وتعلّم تحريك مؤشرات الفروع.',
 'mod17.s1.title': 'فهم HEAD',
 'mod17.s1.desc': 'HEAD هو مؤشر إلى الإيداع الحالي الذي تعمل عليه. عادةً يشير إلى اسم فرع (مثل main)، والذي بدوره يشير إلى إيداع. فكّر في HEAD على أنه "أين أنا الآن؟" في تاريخ Git.',
 'mod17.s2.title': 'حالة HEAD المنفصل',
-'mod17.s2.desc': 'عندما تنتقل إلى إيداع محدد بدلاً من فرع، يشير HEAD مباشرة إلى ذلك الإيداع — وهذا يسمى "HEAD منفصل." يمكنك تصفح الكود وإجراء تغييرات تجريبية، لكن أي إيداعات لن تنتمي لأي فرع ما لم تنشئ واحداً.',
+'mod17.s2.desc': 'عندما تنتقل إلى إيداع محدد بدلاً من فرع، يشير HEAD مباشرة إلى ذلك الإيداع - وهذا يسمى "HEAD منفصل." يمكنك تصفح الكود وإجراء تغييرات تجريبية، لكن أي إيداعات لن تنتمي لأي فرع ما لم تنشئ واحداً.',
 'mod17.s2.tip': 'إذا وجدت نفسك في HEAD منفصل بالخطأ، نفّذ "git switch -" أو "git switch main" للعودة.',
 'mod17.s3.title': 'المراجع النسبية مع (^)',
 'mod17.s3.desc': 'علامة (^) تنقلك أباً واحداً لأعلى في شجرة الإيداعات. HEAD^ تعني "أب HEAD." في إيداعات الدمج، ^1 هو الأب الأول (الفرع الذي دُمج فيه) و ^2 هو الأب الثاني (الفرع الذي تم دمجه).',
 'mod17.s4.title': 'المراجع النسبية مع (~)',
 'mod17.s4.desc': 'علامة (~) متبوعة برقم تنقلك ذلك العدد من الأجيال للخلف. HEAD~3 تعني "ارجع 3 إيداعات من HEAD." تتبع دائماً الأب الأول، مما يجعلها مثالية للتنقل الخطي.',
 'mod17.s5.title': 'تحريك الفروع إجبارياً',
-'mod17.s5.desc': 'استخدم "git branch -f <branch> <target>" لنقل مؤشر فرع إلى أي إيداع. مثلاً "git branch -f main HEAD~3" ينقل main للخلف 3 إيداعات. هذا قوي لكن خطير — لا تفعله على الفروع المشتركة.',
+'mod17.s5.desc': 'استخدم "git branch -f <branch> <target>" لنقل مؤشر فرع إلى أي إيداع. مثلاً "git branch -f main HEAD~3" ينقل main للخلف 3 إيداعات. هذا قوي لكن خطير - لا تفعله على الفروع المشتركة.',
 'mod17.s5.warning': 'تحريك مؤشرات الفروع بـ -f قد يسبب فقدان البيانات. تأكد دائماً من معرفة أين سينتهي الفرع.',
 'mod17.s6.title': 'التنقل العملي',
 'mod17.s6.desc': 'استخدم "git log --oneline --graph --all" لتصور تاريخك، ثم استخدم المراجع النسبية للتنقل. ادمجها مع "git show HEAD~2" لفحص إيداعات محددة دون مغادرة فرعك الحالي.',
@@ -2712,7 +2712,7 @@ ar: {
 'mod19.s3.title': 'خطاف Commit-msg',
 'mod19.s3.desc': 'خطاف commit-msg يعمل بعد كتابة رسالة الإيداع. استخدمه لفرض اتفاقيات رسائل الإيداع مثل Conventional Commits.',
 'mod19.s4.title': 'خطاف Pre-push',
-'mod19.s4.desc': 'خطاف pre-push يعمل قبل إرسال git push البيانات. استخدمه لتشغيل اختباراتك — إذا فشلت، يُلغى الدفع.',
+'mod19.s4.desc': 'خطاف pre-push يعمل قبل إرسال git push البيانات. استخدمه لتشغيل اختباراتك - إذا فشلت، يُلغى الدفع.',
 'mod19.s5.title': 'إعداد Husky',
 'mod19.s5.desc': 'Husky هي حزمة npm تسهّل إدارة خطافات Git ومشاركتها مع الفريق. نفّذ "npx husky init" لإعدادها. الخطافات تُخزن في مجلد .husky/ الذي يُضاف للمستودع.',
 'mod19.s6.title': 'lint-staged',
@@ -2747,14 +2747,14 @@ ar: {
 'mod21.s4.title': 'إنهاء Bisect',
 'mod21.s4.desc': 'عندما يحدد Git أول إيداع سيئ، يعرضه مع الهاش والمؤلف والتاريخ والرسالة. نفّذ "git bisect reset" للعودة إلى HEAD الأصلي.',
 'mod21.s5.title': 'Bisect الآلي',
-'mod21.s5.desc': 'للاختبار الآلي، استخدم "git bisect run <test-script>". سيشغّل Git سكريبتك تلقائياً في كل خطوة — إذا أرجع 0 يعتبره جيداً، غير ذلك سيئاً.',
+'mod21.s5.desc': 'للاختبار الآلي، استخدم "git bisect run <test-script>". سيشغّل Git سكريبتك تلقائياً في كل خطوة - إذا أرجع 0 يعتبره جيداً، غير ذلك سيئاً.',
 'mod21.s6.title': 'Git Blame',
 'mod21.s6.desc': 'استخدم "git blame <file>" لرؤية من عدّل كل سطر آخر مرة، مع هاش الإيداع والتاريخ. في VSCode، إضافة GitLens توفر تعليقات blame مدمجة.',
 'mod21.s6.vscode': 'ثبّت إضافة GitLens للحصول على تعليقات blame مدمجة وتفاصيل الإيداعات عند التمرير.',
 
 // Module 22: أساسيات سطر الأوامر
 'mod22.title': 'أساسيات سطر الأوامر',
-'mod22.desc': 'أتقن أساسيات الطرفية التي يحتاجها كل مطور — التنقل بين المجلدات، إنشاء وإدارة الملفات، وفهم المسارات قبل البدء بـ Git.',
+'mod22.desc': 'أتقن أساسيات الطرفية التي يحتاجها كل مطور - التنقل بين المجلدات، إنشاء وإدارة الملفات، وفهم المسارات قبل البدء بـ Git.',
 'mod22.s1.title': 'ما هو سطر الأوامر؟',
 'mod22.s1.desc': 'سطر الأوامر (الطرفية، الشِل، CLI) هو واجهة نصية للتفاعل مع حاسوبك. بدلاً من الواجهات الرسومية، تكتب أوامر للتنقل بين المجلدات وإنشاء الملفات وتشغيل البرامج. في macOS يُسمى Terminal، وفي Windows يمكنك استخدام Command Prompt أو PowerShell أو Git Bash.',
 'mod22.s2.title': 'التنقل بين المجلدات',
@@ -2768,7 +2768,7 @@ ar: {
 'mod22.s5.desc': 'انسخ ملفات بـ "cp source destination" ومجلدات بـ "cp -r source destination". انقل أو أعد تسمية ملفات بـ "mv source destination". نقل ملف لاسم جديد في نفس المجلد يعيد تسميته.',
 'mod22.s6.title': 'نظرة عامة على الأوامر الأساسية',
 'mod22.s6.desc': 'مرجع سريع: "cat filename" يعرض محتوى الملف، "head/tail" يعرض البداية/النهاية، "clear" يمسح الشاشة، "history" يعرض الأوامر الأخيرة، و"man command" (Mac/Linux) يفتح صفحة المساعدة.',
-'mod22.s6.tip': 'استخدم مفتاح Tab للإكمال التلقائي لأسماء الملفات والمجلدات — يوفر الوقت ويتجنب الأخطاء الإملائية.',
+'mod22.s6.tip': 'استخدم مفتاح Tab للإكمال التلقائي لأسماء الملفات والمجلدات - يوفر الوقت ويتجنب الأخطاء الإملائية.',
 
 // Module 23: مصادقة SSH لـ GitHub
 'mod23.title': 'مصادقة SSH لـ GitHub',
@@ -2787,8 +2787,8 @@ ar: {
 'mod23.s6.desc': 'الآن استخدم روابط SSH بدلاً من HTTPS عند استنساخ المستودعات. روابط SSH تبدو مثل git@github.com:user/repo.git. للمستودعات الموجودة، حدّث رابط الريموت من HTTPS إلى SSH.',
 'mod23.s6.tip': 'إذا كان لديك حسابات GitHub متعددة، أنشئ ملف إعدادات SSH (~/.ssh/config) لربط مفاتيح مختلفة بمضيفين مختلفين.',
 
-// Module 24: GitHub بالتفصيل — المنظمات والصلاحيات
-'mod24.title': 'GitHub بالتفصيل — المنظمات والصلاحيات',
+// Module 24: GitHub بالتفصيل - المنظمات والصلاحيات
+'mod24.title': 'GitHub بالتفصيل - المنظمات والصلاحيات',
 'mod24.desc': 'استكشف أنواع حسابات GitHub، المنظمات، الفرق، صلاحيات المتعاونين، وميزات إدارة المشاريع لسير العمل الاحترافي.',
 'mod24.s1.title': 'أنواع حسابات GitHub',
 'mod24.s1.desc': 'يوفر GitHub حسابات شخصية (مجانية و Pro) وحسابات منظمات. الحسابات الشخصية تملك المستودعات مباشرة. المنظمات توفر ملكية مشتركة وإدارة الفرق وميزات تعاون محسّنة للشركات ومشاريع المصدر المفتوح.',
@@ -2803,33 +2803,33 @@ ar: {
 'mod24.s6.title': 'مشاريع GitHub والقضايا',
 'mod24.s6.desc': 'مشاريع GitHub توفر لوحات بنمط كانبان لإدارة المهام. أنشئ قضايا لتتبع الأخطاء والميزات والمهام. اربط القضايا بطلبات السحب للإغلاق التلقائي. استخدم التسميات والمعالم والمعيّنين لتنظيم العمل.',
 'mod24.s7.title': 'نجوم GitHub وREADME وتقديم نفسك',
-'mod24.s7.desc': 'أنجم المستودعات المفيدة — يضعها في المفضلة ويُظهر التقدير. أنشئ README.md في مستودع ملفك الشخصي (username/username) لعرض نفسك. README جيد يتضمن سيرتك ومهاراتك ومشاريعك.',
+'mod24.s7.desc': 'أنجم المستودعات المفيدة - يضعها في المفضلة ويُظهر التقدير. أنشئ README.md في مستودع ملفك الشخصي (username/username) لعرض نفسك. README جيد يتضمن سيرتك ومهاراتك ومشاريعك.',
 'mod24.s7.tip': 'أنشئ مستودعاً خاصاً باسم مستخدم GitHub الخاص بك لإضافة README للملف الشخصي يظهر على صفحة ملفك الشخصي في GitHub.',
-'mod24.s8.title': 'GitHub Pages — استضافة مواقع ثابتة مجانية',
-'mod24.s8.desc': 'يتيح لك GitHub Pages استضافة مواقع ويب ثابتة مباشرة من مستودع — مثالي لتوثيق المشاريع أو المحافظ أو المدونات. فعّله من Settings → Pages، اختر فرعاً (عادةً main أو gh-pages) واختيارياً مجلد /docs. موقعك يعمل على username.github.io/repo-name. يمكنك إضافة نطاق مخصص وHTTPS مجاني.',
+'mod24.s8.title': 'GitHub Pages - استضافة مواقع ثابتة مجانية',
+'mod24.s8.desc': 'يتيح لك GitHub Pages استضافة مواقع ويب ثابتة مباشرة من مستودع - مثالي لتوثيق المشاريع أو المحافظ أو المدونات. فعّله من Settings → Pages، اختر فرعاً (عادةً main أو gh-pages) واختيارياً مجلد /docs. موقعك يعمل على username.github.io/repo-name. يمكنك إضافة نطاق مخصص وHTTPS مجاني.',
 'mod24.s8.tip': 'استخدم GitHub Actions لبناء ونشر موقعك تلقائياً عند كل دفع. أطر مثل Jekyll وHugo وNext.js لديها دعم مدمج لـ GitHub Pages.',
 
 // Module 25: Git Diff و Restore و Clean
 'mod25.title': 'Git Diff و Restore و Clean',
-'mod25.desc': 'أتقن أوامر الفحص والتراجع الأساسية — مقارنة التغييرات بـ diff، استعادة الملفات بـ restore، وتنظيف الملفات غير المتتبعة.',
-'mod25.s1.title': 'Git Diff — التغييرات غير المُرحّلة',
+'mod25.desc': 'أتقن أوامر الفحص والتراجع الأساسية - مقارنة التغييرات بـ diff، استعادة الملفات بـ restore، وتنظيف الملفات غير المتتبعة.',
+'mod25.s1.title': 'Git Diff - التغييرات غير المُرحّلة',
 'mod25.s1.desc': 'أمر "git diff" يعرض الفروقات سطراً بسطر بين مجلد العمل ومنطقة الترحيل. الأسطر بعلامة "+" إضافات، و"-" حذف. يساعدك على مراجعة ما تغيّر بالضبط قبل الترحيل.',
-'mod25.s2.title': 'Git Diff — التغييرات المُرحّلة',
+'mod25.s2.title': 'Git Diff - التغييرات المُرحّلة',
 'mod25.s2.desc': 'استخدم "git diff --staged" (أو --cached) لرؤية التغييرات المُرحّلة التي لم تُودع بعد. هذه فرصتك الأخيرة لمراجعة ما سيُضمّن في الإيداع القادم.',
 'mod25.s3.title': 'مقارنة الفروع والإيداعات',
 'mod25.s3.desc': 'قارن فرعين بـ "git diff branch1..branch2" أو إيداعين بـ "git diff commit1..commit2". أضف "--stat" لملخص يوضح الملفات المتغيرة وعدد الأسطر المضافة/المحذوفة.',
-'mod25.s4.title': 'Git Restore — التراجع عن تغييرات العمل',
+'mod25.s4.title': 'Git Restore - التراجع عن تغييرات العمل',
 'mod25.s4.desc': 'أمر "git restore <file>" يتجاهل التغييرات في مجلد عملك ويعيد الملف لحالته الأخيرة المودعة/المُرحّلة. هذا البديل الحديث لـ "git checkout -- <file>".',
-'mod25.s4.warning': 'git restore يتجاهل التغييرات نهائياً — لا يوجد تراجع. تأكد أنك تريد فقدان تلك التغييرات قبل تنفيذه.',
-'mod25.s5.title': 'Git Restore — إلغاء ترحيل الملفات',
+'mod25.s4.warning': 'git restore يتجاهل التغييرات نهائياً - لا يوجد تراجع. تأكد أنك تريد فقدان تلك التغييرات قبل تنفيذه.',
+'mod25.s5.title': 'Git Restore - إلغاء ترحيل الملفات',
 'mod25.s5.desc': 'استخدم "git restore --staged <file>" لإلغاء ترحيل ملف بدون فقدان تغييرات مجلد العمل. هذا البديل الحديث لـ "git reset HEAD <file>".',
-'mod25.s6.title': 'Git Clean — إزالة الملفات غير المتتبعة',
+'mod25.s6.title': 'Git Clean - إزالة الملفات غير المتتبعة',
 'mod25.s6.desc': 'أمر "git clean" يزيل الملفات غير المتتبعة من مجلد عملك. استخدم "-n" للمعاينة، "-f" للحذف الإجباري، و"-d" لتشمل المجلدات غير المتتبعة. ادمج مع "-x" لإزالة ملفات .gitignore أيضاً.',
 'mod25.s6.warning': 'دائماً نفّذ "git clean -n" أولاً لمعاينة ما سيُحذف. بعد الإزالة، لا يمكن استرداد الملفات غير المتتبعة!',
 
 // Module 26: الـ Fork والمساهمة في المصدر المفتوح
 'mod26.title': 'الـ Fork والمساهمة في المصدر المفتوح',
-'mod26.desc': 'تعلّم سير عمل Fork-and-Pull المستخدم في تطوير المصدر المفتوح — انسخ مستودعاً، أجرِ تعديلات، وقدّم طلبات سحب للمساهمة.',
+'mod26.desc': 'تعلّم سير عمل Fork-and-Pull المستخدم في تطوير المصدر المفتوح - انسخ مستودعاً، أجرِ تعديلات، وقدّم طلبات سحب للمساهمة.',
 'mod26.s1.title': 'ما هو الـ Fork؟',
 'mod26.s1.desc': 'الـ Fork ينشئ نسختك الخاصة من مستودع شخص آخر على GitHub. بخلاف الاستنساخ (الذي ينشئ نسخة محلية)، الـ Fork ينشئ نسخة بعيدة تحت حسابك. لديك صلاحية دفع كاملة لنسختك لكن ليس للمستودع الأصلي.',
 'mod26.s2.title': 'عمل Fork لمستودع',
@@ -2837,21 +2837,21 @@ ar: {
 'mod26.s3.title': 'إعداد الريموت Upstream',
 'mod26.s3.desc': 'بعد استنساخ نسختك، أضف المستودع الأصلي كريموت "upstream". هذا يسمح لك بسحب التغييرات الجديدة من المشروع الأصلي للحفاظ على نسختك محدّثة.',
 'mod26.s4.title': 'إجراء تغييرات ودفعها لنسختك',
-'mod26.s4.desc': 'أنشئ فرع ميزة، أجرِ تغييراتك، أودع، وادفع لنسختك (origin). لا تعمل مباشرة على الفرع الرئيسي لنسختك — استخدم دائماً فروع الميزات لطلبات سحب نظيفة.',
+'mod26.s4.desc': 'أنشئ فرع ميزة، أجرِ تغييراتك، أودع، وادفع لنسختك (origin). لا تعمل مباشرة على الفرع الرئيسي لنسختك - استخدم دائماً فروع الميزات لطلبات سحب نظيفة.',
 'mod26.s4.tip': 'سمّ فرعك بشكل وصفي: fix/typo-in-readme, feature/add-dark-mode, docs/update-api-guide.',
 'mod26.s5.title': 'إنشاء طلب سحب',
 'mod26.s5.desc': 'على GitHub، انتقل لنسختك واضغط "Contribute → Open pull request". اكتب عنواناً ووصفاً واضحاً يشرح تغييراتك. سيُقدَّم طلب السحب للمستودع الأصلي لمراجعته من المشرفين.',
 'mod26.s6.title': 'مزامنة نسختك',
 'mod26.s6.desc': 'حافظ على تحديث نسختك بالجلب من upstream والدمج أو إعادة الأساس. على GitHub، يمكنك الضغط على "Sync fork" لتحديث الفرع الرئيسي لنسختك بنقرة واحدة.',
 'mod26.s7.title': 'مراجعة الكود والتكرار',
-'mod26.s7.desc': 'قد يطلب المشرفون تغييرات على طلب السحب. ادفع إيداعات جديدة لنفس الفرع — يتحدث طلب السحب تلقائياً. عالج تعليقات المراجعة، حلّ المحادثات، وبعد الموافقة يدمج المشرف مساهمتك.',
+'mod26.s7.desc': 'قد يطلب المشرفون تغييرات على طلب السحب. ادفع إيداعات جديدة لنفس الفرع - يتحدث طلب السحب تلقائياً. عالج تعليقات المراجعة، حلّ المحادثات، وبعد الموافقة يدمج المشرف مساهمتك.',
 'mod26.s7.tip': 'اقرأ ملف CONTRIBUTING.md للمشروع قبل تقديم طلب سحب. يشرح أسلوب الكود ومتطلبات الاختبار واتفاقيات طلبات السحب.',
 
 // ── Module 27: Git Reflog & Recovery (Arabic) ──
 'mod27.title': 'سجل المراجع والاسترداد في Git',
 'mod27.desc': 'أتقن git reflog لاسترداد الإيداعات المفقودة والفروع المحذوفة والتراجع عن عمليات إعادة التعيين الكارثية. شبكة الأمان لأخطاء Git.',
 'mod27.s1.title': 'ما هو سجل المراجع (Reflog)؟',
-'mod27.s1.desc': 'يسجل reflog (سجل المراجع) كل مرة يتحرك فيها HEAD — الإيداعات والتبديلات وإعادة التعيين والدمج وإعادة القاعدة. بخلاف git log الذي يعرض سلسلة الإيداعات، يعرض reflog سجل أفعالك المحلي. إنه سجل التراجع الشخصي الذي يستمر حتى عندما تبدو الإيداعات مفقودة.',
+'mod27.s1.desc': 'يسجل reflog (سجل المراجع) كل مرة يتحرك فيها HEAD - الإيداعات والتبديلات وإعادة التعيين والدمج وإعادة القاعدة. بخلاف git log الذي يعرض سلسلة الإيداعات، يعرض reflog سجل أفعالك المحلي. إنه سجل التراجع الشخصي الذي يستمر حتى عندما تبدو الإيداعات مفقودة.',
 'mod27.s2.title': 'عرض سجل المراجع',
 'mod27.s2.desc': 'استخدم git reflog لرؤية قائمة زمنية لجميع حركات HEAD. كل إدخال له فهرس (HEAD@{n}) يمكنك الإشارة إليه. يحتفظ سجل المراجع بالإدخالات لمدة 90 يومًا افتراضيًا (30 يومًا للإيداعات غير القابلة للوصول).',
 'mod27.s3.title': 'استرداد فرع محذوف',
@@ -2866,7 +2866,7 @@ ar: {
 'mod27.s6.desc': 'كل فرع له سجل مراجع خاص به. يمكنك فحص سجل مراجع فرع محدد لرؤية تاريخ حركته، وهو مفيد عند تصحيح ما حدث لفرع معين.',
 'mod27.s7.title': 'انتهاء صلاحية وإدارة سجل المراجع',
 'mod27.s7.desc': 'تنتهي صلاحية إدخالات سجل المراجع تلقائيًا، لكن يمكنك إدارتها يدويًا. يمكنك إنهاء صلاحية الإدخالات القديمة أو مسح سجل المراجع بالكامل. فهم انتهاء الصلاحية يساعدك على معرفة نافذة الاسترداد الخاصة بك.',
-'mod27.s7.tip': 'في الفريق، سجل المراجع لكل شخص محلي — لا يمكنك استرداد عمل شخص آخر المفقود من سجل مراجعك.',
+'mod27.s7.tip': 'في الفريق، سجل المراجع لكل شخص محلي - لا يمكنك استرداد عمل شخص آخر المفقود من سجل مراجعك.',
 
 // ── Module 28: Git Submodules (Arabic) ──
 'mod28.title': 'الوحدات الفرعية في Git',
@@ -2881,7 +2881,7 @@ ar: {
 'mod28.s4.title': 'تحديث الوحدات الفرعية',
 'mod28.s4.desc': 'لا تتحدث الوحدات الفرعية تلقائيًا عندما يتغير المصدر البعيد. يجب عليك جلبها وتحديثها صراحة. يمكنك التحديث إلى أحدث إيداع بعيد أو إلى الإيداع المحدد الذي يتتبعه المستودع الأصل.',
 'mod28.s5.title': 'العمل داخل وحدة فرعية',
-'mod28.s5.desc': 'يمكنك الدخول إلى مجلد وحدة فرعية وإجراء تغييرات وإيداعها ودفعها تمامًا مثل أي مستودع عادي. ثم في المستودع الأصل، سيظهر مرجع الوحدة الفرعية كمعدّل — تحتاج إلى إيداع هذا التغيير أيضًا.',
+'mod28.s5.desc': 'يمكنك الدخول إلى مجلد وحدة فرعية وإجراء تغييرات وإيداعها ودفعها تمامًا مثل أي مستودع عادي. ثم في المستودع الأصل، سيظهر مرجع الوحدة الفرعية كمعدّل - تحتاج إلى إيداع هذا التغيير أيضًا.',
 'mod28.s5.warning': 'تتتبع الوحدات الفرعية إيداعًا محددًا وليس فرعًا. إذا أجريت تغييرات داخل وحدة فرعية، قم بإيداعها ودفعها قبل تحديث مرجع المستودع الأصل.',
 'mod28.s6.title': 'تنفيذ أوامر عبر الوحدات الفرعية',
 'mod28.s6.desc': 'استخدم git submodule foreach لتنفيذ أمر في كل وحدة فرعية دفعة واحدة. هذا مفيد للعمليات المجمعة مثل سحب التحديثات أو التحقق من الحالة أو تنفيذ عمليات البناء عبر جميع الوحدات الفرعية.',
@@ -2900,7 +2900,7 @@ ar: {
 'mod29.s3.desc': 'استخدم git lfs track لإخبار LFS بالملفات التي يجب إدارتها. ينشئ هذا ملف .gitattributes أو يحدّثه بقواعد التصفية. قم دائمًا بإيداع ملف .gitattributes حتى يحصل المتعاونون الآخرون على نفس تكوين LFS.',
 'mod29.s3.tip': 'تتبع أنماط الملفات وليس الملفات الفردية: git lfs track "*.psd" أفضل من تتبع كل ملف باسمه.',
 'mod29.s4.title': 'العمل مع ملفات LFS',
-'mod29.s4.desc': 'بمجرد إعداد التتبع، استخدم Git بشكل طبيعي — add و commit و push. يعترض Git LFS الملفات المتتبعة بشكل شفاف. يمكنك سرد الملفات المدارة بواسطة LFS والتحقق من حالتها في أي وقت.',
+'mod29.s4.desc': 'بمجرد إعداد التتبع، استخدم Git بشكل طبيعي - add و commit و push. يعترض Git LFS الملفات المتتبعة بشكل شفاف. يمكنك سرد الملفات المدارة بواسطة LFS والتحقق من حالتها في أي وقت.',
 'mod29.s5.title': 'فهم .gitattributes',
 'mod29.s5.desc': 'يتحكم ملف .gitattributes في الإعدادات لكل مسار: تطبيع نهايات الأسطر (نصي/ثنائي)، سلوك الفروقات، استراتيجيات الدمج، ومرشحات LFS. يضمن سلوكًا متسقًا عبر المنصات والمساهمين.',
 'mod29.s6.title': 'تطبيع نهايات الأسطر',
@@ -2925,7 +2925,7 @@ ar: {
 'mod30.s5.desc': 'قم بتكوين قواعد حماية الفروع لتتطلب نجاح فحوصات CI قبل الدمج. هذا يمنع الكود المعطل من الوصول إلى الفرع الرئيسي. على GitHub، اذهب إلى Settings → Branches → Branch protection rules. على GitLab، استخدم إعدادات الفروع المحمية.',
 'mod30.s5.warning': 'لا تتخطَ أبدًا فحوصات CI للدمج بشكل أسرع. الفرع الرئيسي المعطل يعيق الفريق بأكمله.',
 'mod30.s6.title': 'الأسرار ومتغيرات البيئة',
-'mod30.s6.desc': 'تحتاج خطوط أنابيب CI/CD غالبًا إلى مفاتيح API ورموز وبيانات اعتماد. خزّنها كأسرار مشفرة في إعدادات منصتك — لا تقم أبدًا بإيداعها في المستودع. أشر إلى الأسرار في ملفات سير العمل باستخدام صيغة الأسرار الخاصة بالمنصة.',
+'mod30.s6.desc': 'تحتاج خطوط أنابيب CI/CD غالبًا إلى مفاتيح API ورموز وبيانات اعتماد. خزّنها كأسرار مشفرة في إعدادات منصتك - لا تقم أبدًا بإيداعها في المستودع. أشر إلى الأسرار في ملفات سير العمل باستخدام صيغة الأسرار الخاصة بالمنصة.',
 'mod30.s6.warning': 'لا تقم أبدًا بتضمين الأسرار في ملفات سير العمل أو إيداعها في المستودع. استخدم ميزة الأسرار المشفرة في منصتك.',
 'mod30.s7.title': 'تخطي CI وشارات الحالة',
 'mod30.s7.desc': 'أضف [skip ci] أو [ci skip] إلى رسالة الإيداع لتخطي تنفيذ خط الأنابيب للتغييرات البسيطة مثل تحديثات التوثيق. أضف شارات الحالة إلى ملف README لعرض حالة البناء بنظرة سريعة.',
@@ -2936,8 +2936,8 @@ ar: {
 'mod31.desc': 'طوّر في السحابة مع GitHub Codespaces ومحرر github.dev وقم بتكوين بيئات تطوير قابلة لإعادة الإنتاج باستخدام devcontainers.',
 'mod31.s1.title': 'ما هي بيئات التطوير السحابية؟',
 'mod31.s1.desc': 'تشغّل بيئات التطوير السحابية كودك على أجهزة بعيدة، مما يمنحك بيئة تطوير متكاملة مكونة بالكامل في المتصفح. هذا يزيل مشاكل "يعمل على جهازي" ويتيح لك البدء بالبرمجة في أي مشروع خلال ثوانٍ دون إعداد محلي.',
-'mod31.s2.title': 'github.dev — محرر فوري في المتصفح',
-'mod31.s2.desc': 'اضغط على مفتاح النقطة (.) على أي مستودع GitHub لفتحه في github.dev، محرر VS Code خفيف في المتصفح. إنه مثالي للتعديلات السريعة ومراجعة الكود والتنقل — لا حاجة لـ Codespace. يمكن إيداع التغييرات مباشرة.',
+'mod31.s2.title': 'github.dev - محرر فوري في المتصفح',
+'mod31.s2.desc': 'اضغط على مفتاح النقطة (.) على أي مستودع GitHub لفتحه في github.dev، محرر VS Code خفيف في المتصفح. إنه مثالي للتعديلات السريعة ومراجعة الكود والتنقل - لا حاجة لـ Codespace. يمكن إيداع التغييرات مباشرة.',
 'mod31.s2.tip': 'استخدم github.dev للتعديلات السريعة ومراجعة الكود. انتقل إلى Codespace كامل عندما تحتاج إلى طرفية أو أدوات بناء أو خوادم قيد التشغيل.',
 'mod31.s3.title': 'إنشاء Codespace',
 'mod31.s3.desc': 'انقر على "Code" ← "Codespaces" ← "Create codespace on main" على أي مستودع GitHub. يوفر GitHub جهازًا افتراضيًا سحابيًا مع VS Code وطرفية ومستودعك مستنسخًا. يمكنك أيضًا إنشاء Codespaces من الفروع أو طلبات السحب للاختبار المعزول.',
@@ -2947,7 +2947,7 @@ ar: {
 'mod31.s5.desc': 'عند تشغيل خادم في Codespace، يتم توجيه المنافذ تلقائيًا. يمكنك الوصول إلى تطبيقك قيد التشغيل في المتصفح ومشاركة الرابط مع الزملاء للمراجعة والتحكم في رؤية المنفذ (خاص، مؤسسة، أو عام).',
 'mod31.s6.title': 'إدارة Codespaces',
 'mod31.s6.desc': 'اسرد وأوقف وأعد تشغيل واحذف Codespaces من GitHub أو واجهة سطر الأوامر. تحتفظ Codespaces المتوقفة بعملك لكنها لا تستهلك ساعات الحوسبة. عيّن سياسات الحذف التلقائي لتنظيف Codespaces الخاملة وإدارة التكاليف.',
-'mod31.s6.tip': 'أوقف Codespaces عند عدم الاستخدام — النشطة تستهلك ساعات حوسبة مدفوعة. استخدم "gh codespace stop" أو عيّن مهلة الخمول في إعداداتك.',
+'mod31.s6.tip': 'أوقف Codespaces عند عدم الاستخدام - النشطة تستهلك ساعات حوسبة مدفوعة. استخدم "gh codespace stop" أو عيّن مهلة الخمول في إعداداتك.',
 
 // ── Module 32: GPG Signing & Commit Verification (Arabic) ──
 'mod32.title': 'توقيع GPG والتحقق من الإيداعات',
@@ -2955,7 +2955,7 @@ ar: {
 'mod32.s1.title': 'لماذا نوقّع الإيداعات؟',
 'mod32.s1.desc': 'يمكن لأي شخص تعيين أي اسم وبريد إلكتروني في git config. تستخدم الإيداعات الموقعة مفاتيح تشفير لإثبات أن الإيداع جاء فعلاً من المؤلف المُدّعى. تعرض منصات مثل GitHub شارة "Verified" على الإيداعات الموقعة، مما يبني الثقة في المساهمات مفتوحة المصدر.',
 'mod32.s2.title': 'إنشاء مفتاح GPG',
-'mod32.s2.desc': 'أنشئ زوج مفاتيح GPG (عام + خاص) لاستخدامه في التوقيع. يجب أن يستخدم المفتاح عنوان بريدك الإلكتروني في Git. بعد الإنشاء، سجّل معرّف المفتاح — ستحتاجه لتكوين Git.',
+'mod32.s2.desc': 'أنشئ زوج مفاتيح GPG (عام + خاص) لاستخدامه في التوقيع. يجب أن يستخدم المفتاح عنوان بريدك الإلكتروني في Git. بعد الإنشاء، سجّل معرّف المفتاح - ستحتاجه لتكوين Git.',
 'mod32.s3.title': 'تكوين Git للتوقيع',
 'mod32.s3.desc': 'أخبر Git بمفتاح GPG الذي يجب استخدامه للتوقيع، واختياريًا فعّل التوقيع التلقائي لتوقيع كل إيداع بدون علامة -S.',
 'mod32.s4.title': 'توقيع الإيداعات',
@@ -3055,13 +3055,13 @@ ar: {
 'quiz.a14.o4': 'يحدد تعارضات الدمج في ملف',
 'quiz.a14.explain': '"git blame <file>" يضع تعليقاً على كل سطر بهاش الإيداع والمؤلف والتاريخ لآخر تعديل.',
 
-// Quiz — Intermediate (Arabic: new reflog, codespaces)
+// Quiz - Intermediate (Arabic: new reflog, codespaces)
 'quiz.i13.q': 'ماذا يعرض "git reflog"؟',
 'quiz.i13.o1': 'سجل زمني لجميع حركات HEAD في مستودعك المحلي',
 'quiz.i13.o2': 'قائمة بجميع الإيداعات على الخادم البعيد',
 'quiz.i13.o3': 'سجل لتغييرات الملفات في مجلد العمل',
 'quiz.i13.o4': 'قائمة بالفروع التي تم دمجها',
-'quiz.i13.explain': 'يسجل git reflog كل مرة يتغير فيها HEAD — الإيداعات والتبديلات وإعادة التعيين والدمج وإعادة القاعدة. إنه محلي فقط وهو شبكة أمانك لاسترداد الإيداعات المفقودة.',
+'quiz.i13.explain': 'يسجل git reflog كل مرة يتغير فيها HEAD - الإيداعات والتبديلات وإعادة التعيين والدمج وإعادة القاعدة. إنه محلي فقط وهو شبكة أمانك لاسترداد الإيداعات المفقودة.',
 
 'quiz.i14.q': 'كيف يمكنك استرداد فرع حذفته عن طريق الخطأ؟',
 'quiz.i14.o1': 'ابحث عن هاش الإيداع في git reflog وأنشئ فرعاً جديداً يشير إليه',
@@ -3084,7 +3084,7 @@ ar: {
 'quiz.i16.o4': 'يحذف جميع الفروع ما عدا main',
 'quiz.i16.explain': '"git clean -fd" يزيل الملفات غير المتتبعة (-f للإجبار) والمجلدات (-d). شغّل دائماً "git clean -n" أولاً لمعاينة ما سيُحذف.',
 
-// Quiz — Advanced (Arabic: new submodules, LFS, CI/CD, signing)
+// Quiz - Advanced (Arabic: new submodules, LFS, CI/CD, signing)
 'quiz.a15.q': 'ما الغرض من الوحدات الفرعية في Git؟',
 'quiz.a15.o1': 'تضمين وتتبع مستودعات Git خارجية داخل مشروعك عند إيداعات محددة',
 'quiz.a15.o2': 'تقسيم مستودع واحد إلى ملفات أصغر',
@@ -3227,7 +3227,7 @@ ar: {
 'terminal.ch.gitignore.s2.hint': 'touch app.js',
 'terminal.ch.gitignore.s3': 'إنشاء .gitignore وإضافة نمط تجاهل',
 'terminal.ch.gitignore.s3.hint': 'touch .gitignore',
-'terminal.ch.gitignore.s4': 'فحص الحالة — يجب أن تختفي الملفات المتجاهلة',
+'terminal.ch.gitignore.s4': 'فحص الحالة - يجب أن تختفي الملفات المتجاهلة',
 'terminal.ch.gitignore.s4.hint': 'git status',
 'terminal.ch.gitignore.s5': 'تجهيز الملفات المتتبعة فقط',
 'terminal.ch.gitignore.s5.hint': 'git add .',
@@ -3265,7 +3265,7 @@ ar: {
 'terminal.ch.removingFiles.s4.hint': 'git commit -m "Add initial files"',
 'terminal.ch.removingFiles.s5': 'حذف الملف القديم من تتبع Git والقرص',
 'terminal.ch.removingFiles.s5.hint': 'git rm old.txt',
-'terminal.ch.removingFiles.s6': 'فحص الحالة — الحذف مُجهَّز للإيداع',
+'terminal.ch.removingFiles.s6': 'فحص الحالة - الحذف مُجهَّز للإيداع',
 'terminal.ch.removingFiles.s6.hint': 'git status',
 'terminal.ch.removingFiles.s7': 'إيداع الحذف',
 'terminal.ch.removingFiles.s7.hint': 'git commit -m "Remove old.txt"',
@@ -3280,7 +3280,7 @@ ar: {
 'terminal.ch.renameMove.s4.hint': 'git commit -m "Add old-name.txt"',
 'terminal.ch.renameMove.s5': 'إعادة تسميته باستخدام git mv',
 'terminal.ch.renameMove.s5.hint': 'git mv old-name.txt new-name.txt',
-'terminal.ch.renameMove.s6': 'فحص الحالة — Git يُظهر إعادة تسمية وليس حذفاً وإضافة',
+'terminal.ch.renameMove.s6': 'فحص الحالة - Git يُظهر إعادة تسمية وليس حذفاً وإضافة',
 'terminal.ch.renameMove.s6.hint': 'git status',
 'terminal.ch.renameMove.s7': 'إيداع إعادة التسمية',
 'terminal.ch.renameMove.s7.hint': 'git commit -m "Rename to new-name.txt"',
@@ -3303,7 +3303,7 @@ ar: {
 'terminal.ch.mergeConflict.s8.hint': 'git commit -m "Feature edit"',
 'terminal.ch.mergeConflict.s9': 'العودة إلى main',
 'terminal.ch.mergeConflict.s9.hint': 'git switch main',
-'terminal.ch.mergeConflict.s10': 'دمج الميزة — لاحظ التعارض وحلّه',
+'terminal.ch.mergeConflict.s10': 'دمج الميزة - لاحظ التعارض وحلّه',
 'terminal.ch.mergeConflict.s10.hint': 'git merge feature',
 'terminal.ch.cloneFetch.desc': 'استنسخ مستودعاً بعيداً محلياً، ثم استخدم git fetch لتنزيل التحديثات دون دمج تلقائي.',
 'terminal.ch.cloneFetch.s1': 'استنساخ مستودع بعيد',
@@ -3350,7 +3350,7 @@ ar: {
 'terminal.ch.gitRevert.s7.hint': 'git commit -m "Bad commit"',
 'terminal.ch.gitRevert.s8': 'عرض السجل لتحديد hash الإيداع السيئ',
 'terminal.ch.gitRevert.s8.hint': 'git log --oneline',
-'terminal.ch.gitRevert.s9': 'إرجاع الإيداع السيئ — ينشئ إيداع تراجع جديداً',
+'terminal.ch.gitRevert.s9': 'إرجاع الإيداع السيئ - ينشئ إيداع تراجع جديداً',
 'terminal.ch.gitRevert.s9.hint': 'git revert HEAD',
 'terminal.ch.submodules.desc': 'أدرج مستودع Git آخر داخل مشروعك كوحدة فرعية وتعلّم كيفية تهيئتها وتحديثها.',
 'terminal.ch.submodules.s1': 'تهيئة المستودع الأصلي',
@@ -3363,7 +3363,7 @@ ar: {
 'terminal.ch.submodules.s4.hint': 'git commit -m "Initial project"',
 'terminal.ch.submodules.s5': 'إضافة مستودع خارجي كوحدة فرعية',
 'terminal.ch.submodules.s5.hint': 'git submodule add https://github.com/user/lib.git libs/lib',
-'terminal.ch.submodules.s6': 'فحص الحالة — شاهد .gitmodules ومجلد الوحدة الفرعية',
+'terminal.ch.submodules.s6': 'فحص الحالة - شاهد .gitmodules ومجلد الوحدة الفرعية',
 'terminal.ch.submodules.s6.hint': 'git status',
 'terminal.ch.submodules.s7': 'إيداع مرجع الوحدة الفرعية الجديدة',
 'terminal.ch.submodules.s7.hint': 'git commit -m "Add submodule"',
@@ -3438,7 +3438,7 @@ ar: {
 'cheat.cherrypick': 'تطبيق إيداع محدد على الفرع الحالي',
 'cheat.merge.squash': 'دمج فرع مع ضغط الإيداعات',
 
-// Cheat sheet — Navigation & Refs (Arabic)
+// Cheat sheet - Navigation & Refs (Arabic)
 'cheat.cat.navigation': 'التنقل والمراجع',
 'cheat.nav.detach': 'الانتقال إلى إيداع محدد (HEAD منفصل)',
 'cheat.nav.parent': 'الانتقال إلى الإيداع الأب',
@@ -3447,7 +3447,7 @@ ar: {
 'cheat.nav.describe': 'وصف الموقع الحالي نسبة إلى العلامات',
 'cheat.nav.graph': 'رسم بياني مرئي للإيداعات في الطرفية',
 
-// Cheat sheet — Git Hooks (Arabic)
+// Cheat sheet - Git Hooks (Arabic)
 'cheat.cat.hooks': 'خطافات Git',
 'cheat.hooks.list': 'عرض قوالب الخطافات المتاحة',
 'cheat.hooks.chmod': 'جعل الخطاف قابلاً للتنفيذ',
@@ -3455,7 +3455,7 @@ ar: {
 'cheat.hooks.huskyAdd': 'إضافة خطاف ما قبل الإيداع',
 'cheat.hooks.skip': 'تخطي الخطافات لهذا الإيداع',
 
-// Cheat sheet — Debugging (Arabic)
+// Cheat sheet - Debugging (Arabic)
 'cheat.cat.debugging': 'تصحيح الأخطاء',
 'cheat.debug.start': 'بدء البحث الثنائي عن الأخطاء',
 'cheat.debug.bad': 'تحديد الإيداع الحالي كسيئ',
@@ -3464,7 +3464,7 @@ ar: {
 'cheat.debug.run': 'أتمتة البحث الثنائي بسكريبت اختبار',
 'cheat.debug.blame': 'عرض من عدّل كل سطر آخر مرة',
 
-// Cheat sheet — Advanced Operations (Arabic)
+// Cheat sheet - Advanced Operations (Arabic)
 'cheat.cat.advanced': 'العمليات المتقدمة',
 'cheat.adv.rebaseInteractive': 'إعادة قاعدة تفاعلية لآخر 4 إيداعات',
 'cheat.adv.amend': 'تعديل آخر إيداع',
@@ -3474,7 +3474,7 @@ ar: {
 'cheat.adv.fetchUpstream': 'جلب من المصدر البعيد الأصلي',
 'cheat.adv.worktree': 'إنشاء شجرة عمل مرتبطة',
 
-// Cheat sheet — Submodules (Arabic)
+// Cheat sheet - Submodules (Arabic)
 'cheat.cat.submodules': 'الوحدات الفرعية',
 'cheat.sub.add': 'إضافة مستودع خارجي كوحدة فرعية',
 'cheat.sub.init': 'تهيئة تكوين الوحدة الفرعية محلياً',
@@ -3485,7 +3485,7 @@ ar: {
 'cheat.sub.deinit': 'إلغاء تسجيل وحدة فرعية',
 'cheat.sub.cloneRecurse': 'استنساخ مستودع وتهيئة جميع الوحدات الفرعية',
 
-// Cheat sheet — LFS & .gitattributes (Arabic)
+// Cheat sheet - LFS & .gitattributes (Arabic)
 'cheat.cat.lfs': 'LFS و .gitattributes',
 'cheat.lfs.install': 'تهيئة Git LFS لحساب المستخدم',
 'cheat.lfs.track': 'تتبع نمط ملفات باستخدام LFS',
@@ -3496,7 +3496,7 @@ ar: {
 'cheat.lfs.binary': 'تحديد الملفات كثنائية لتخطي الفروقات (.gitattributes)',
 'cheat.lfs.checkAttr': 'فحص قواعد .gitattributes لملف محدد',
 
-// Cheat sheet — CI/CD (Arabic)
+// Cheat sheet - CI/CD (Arabic)
 'cheat.cat.cicd': 'تكامل CI/CD',
 'cheat.ci.mkdirWorkflows': 'إنشاء مجلد سير عمل GitHub Actions',
 'cheat.ci.skipCi': 'تخطي خط أنابيب CI لهذا الإيداع',
@@ -3505,7 +3505,7 @@ ar: {
 'cheat.ci.runView': 'عرض تفاصيل تشغيل محدد',
 'cheat.ci.runWatch': 'مراقبة تشغيل سير العمل في الوقت الفعلي',
 
-// Cheat sheet — GPG Signing (Arabic)
+// Cheat sheet - GPG Signing (Arabic)
 'cheat.cat.signing': 'توقيع GPG والتحقق',
 'cheat.sign.genKey': 'إنشاء زوج مفاتيح GPG جديد',
 'cheat.sign.listKeys': 'سرد مفاتيح GPG السرية بالتنسيق الطويل',
@@ -3516,7 +3516,7 @@ ar: {
 'cheat.sign.verify': 'عرض توقيعات الإيداعات في السجل',
 'cheat.sign.sshFormat': 'استخدام مفاتيح SSH للتوقيع بدلاً من GPG',
 
-// Quiz questions — Beginner (Arabic)
+// Quiz questions - Beginner (Arabic)
 'quiz.b1.q': 'ماذا يفعل أمر "git init"؟',
 'quiz.b1.o1': 'يثبّت Git على حاسوبك',
 'quiz.b1.o2': 'ينشئ مستودع Git جديد في المجلد الحالي',
@@ -3566,13 +3566,13 @@ ar: {
 'quiz.b8.o4': 'مجلد يُنشأ على GitHub',
 'quiz.b8.explain': 'مجلد .git يخزن جميع المعلومات التي يحتاجها Git: قاعدة بيانات الكائنات والمراجع والخطافات والتكوين وأكثر. حذفه يزيل كل تاريخ الإصدارات.',
 
-// Quiz questions — Intermediate (Arabic)
+// Quiz questions - Intermediate (Arabic)
 'quiz.i1.q': 'ما هو الدمج السريع (fast-forward merge)؟',
 'quiz.i1.o1': 'دمج أسرع من الدمج العادي',
 'quiz.i1.o2': 'دمج يتحرك فيه مؤشر الفرع المستهدف للأمام إلى رأس فرع الميزة بدون إيداع دمج',
 'quiz.i1.o3': 'دمج يتجاوز حل التعارضات',
 'quiz.i1.o4': 'دمج يعمل فقط على الفروع البعيدة',
-'quiz.i1.explain': 'يحدث الدمج السريع عندما لا توجد إيداعات جديدة على الفرع المستهدف. يحرّك Git المؤشر ببساطة للأمام — لا حاجة لإيداع دمج.',
+'quiz.i1.explain': 'يحدث الدمج السريع عندما لا توجد إيداعات جديدة على الفرع المستهدف. يحرّك Git المؤشر ببساطة للأمام - لا حاجة لإيداع دمج.',
 'quiz.i2.q': 'ما الفرق بين "git fetch" و "git pull"؟',
 'quiz.i2.o1': 'هما نفس الأمر بأسماء مختلفة',
 'quiz.i2.o2': 'الجلب يحمّل التغييرات بدون دمج؛ السحب يحمّل ويدمج',
@@ -3616,7 +3616,7 @@ ar: {
 'quiz.i8.o4': 'ترفع الملفات غير المتتبعة فقط',
 'quiz.i8.explain': 'علامة -u (--set-upstream) تنشئ علاقة تتبع بين الفروع المحلية والبعيدة، مما يبسّط أوامر الدفع والسحب المستقبلية.',
 
-// Quiz questions — Advanced (Arabic)
+// Quiz questions - Advanced (Arabic)
 'quiz.a1.q': 'ما هو إعادة القاعدة (rebase) في Git؟',
 'quiz.a1.o1': 'إعادة تسمية الفرع الأساسي',
 'quiz.a1.o2': 'إعادة تطبيق الإيداعات فوق رأس قاعدة مختلفة لإنشاء تاريخ خطي',
@@ -3628,7 +3628,7 @@ ar: {
 'quiz.a2.o2': 'الناعم يبقي التغييرات مُهيأة؛ الصلب يتخلص من جميع التغييرات نهائياً',
 'quiz.a2.o3': 'لا فرق بينهما',
 'quiz.a2.o4': 'الصلب للمستودعات البعيدة فقط؛ الناعم للمحلية',
-'quiz.a2.explain': '--soft يحرّك HEAD لكن يبقي التغييرات مُهيأة. --hard يحرّك HEAD ويتخلص من جميع التغييرات في منطقة التهيئة ومجلد العمل — هذا مدمّر.',
+'quiz.a2.explain': '--soft يحرّك HEAD لكن يبقي التغييرات مُهيأة. --hard يحرّك HEAD ويتخلص من جميع التغييرات في منطقة التهيئة ومجلد العمل - هذا مدمّر.',
 'quiz.a3.q': 'ما هو Cherry-pick؟',
 'quiz.a3.o1': 'اختيار الملفات لتضمينها في إيداع',
 'quiz.a3.o2': 'تطبيق إيداع محدد من فرع على فرع آخر',
@@ -3646,10 +3646,10 @@ ar: {
 'quiz.a5.o2': 'كل تحديث لرأس الفروع و HEAD، بما في ذلك إعادات التعيين وإعادات القاعدة',
 'quiz.a5.o3': 'طوابع زمنية لتعديل الملفات',
 'quiz.a5.o4': 'سجلات اتصال الشبكة',
-'quiz.a5.explain': 'Reflog يسجل كل تغيير على HEAD محلياً — إيداعات، إعادات تعيين، إعادات قاعدة، تبديلات. إنه شبكة أمانك لاسترجاع الإيداعات "المفقودة".',
+'quiz.a5.explain': 'Reflog يسجل كل تغيير على HEAD محلياً - إيداعات، إعادات تعيين، إعادات قاعدة، تبديلات. إنه شبكة أمانك لاسترجاع الإيداعات "المفقودة".',
 'quiz.a6.q': 'ما هي العلامة المشروحة (annotated tag)؟',
 'quiz.a6.o1': 'علامة مع تعليقات في الشيفرة',
-'quiz.a6.o2': 'كائن علامة كامل مع اسم الواضع وبريده وتاريخه ورسالة — يُنصح بها للإصدارات',
+'quiz.a6.o2': 'كائن علامة كامل مع اسم الواضع وبريده وتاريخه ورسالة - يُنصح بها للإصدارات',
 'quiz.a6.o3': 'علامة تتزامن تلقائياً مع البعيد',
 'quiz.a6.o4': 'علامة تتضمن مراجعة شيفرة',
 'quiz.a6.explain': 'العلامات المشروحة هي كائنات Git كاملة مع بيانات وصفية (الاسم، البريد، التاريخ، الرسالة). تُنشأ بـ "git tag -a v1.0 -m message". مفضّلة لإصدارات الإنتاج.',
@@ -5157,7 +5157,7 @@ function detectCommonMistake(cmd) {
     { pattern: /^git brach/i, msg: 'git brach', correct: 'git branch', hint: 'Typo: Did you mean <code>git branch</code>?' },
     { pattern: /^git reset --hard HEAD$/i, msg: 'git reset --hard HEAD', correct: 'git reset --hard HEAD~1', hint: '<span class="terminal-warning">⚠ Careful!</span> <code>git reset --hard</code> discards all uncommitted changes permanently. Use <code>git stash</code> first if you want to save them.' },
     { pattern: /^git rm /i, msg: 'git rm', correct: null, hint: '<code>git rm</code> removes files from both the working directory and staging area. To only unstage, use <code>git restore --staged &lt;file&gt;</code>.' },
-    { pattern: /^git checkout -- \./i, msg: 'git checkout -- .', correct: 'git restore .', hint: 'The modern way to discard changes is <code>git restore .</code> — <code>git checkout --</code> is the older syntax.' },
+    { pattern: /^git checkout -- \./i, msg: 'git checkout -- .', correct: 'git restore .', hint: 'The modern way to discard changes is <code>git restore .</code> - <code>git checkout --</code> is the older syntax.' },
   ];
 
   for (var i = 0; i < mistakes.length; i++) {
@@ -5309,7 +5309,7 @@ function setupQuickCommands() {
 // --- 1. Live Git State Panel + File Explorer ---
 function renderTerminalState() {
   var bp = document.getElementById('state-branch-name');
-  if (bp) bp.textContent = terminalState.initialized ? terminalState.branch : '—';
+  if (bp) bp.textContent = terminalState.initialized ? terminalState.branch : '-';
 
   var ft = document.getElementById('file-tree');
   if (ft) {
@@ -6235,7 +6235,7 @@ class GitGraphVisualizer {
     const ctx = this.ctx;
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-    // Background — always dark to match the dark visualizer section
+    // Background - always dark to match the dark visualizer section
     ctx.fillStyle = '#0a0514';
     ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
@@ -6363,7 +6363,7 @@ function getVizScenarios() {
       id: 'basic',
       icon: 'fa-solid fa-circle-check',
       label: t('viz.scenario.basic'),
-      desc: en ? 'Linear commit history on a single branch — the simplest workflow.' : 'تاريخ إيداعات خطي على فرع واحد — أبسط سير عمل.',
+      desc: en ? 'Linear commit history on a single branch - the simplest workflow.' : 'تاريخ إيداعات خطي على فرع واحد - أبسط سير عمل.',
       commands: [
         'git init',
         'git add index.html',
@@ -6410,7 +6410,7 @@ function getVizScenarios() {
       id: 'fastForward',
       icon: 'fa-solid fa-forward',
       label: t('viz.scenario.fastForward'),
-      desc: en ? 'When main has no new commits, Git moves the pointer forward — no merge commit needed.' : 'عندما لا يحتوي main على إيداعات جديدة، ينقل Git المؤشر للأمام — لا حاجة لإيداع دمج.',
+      desc: en ? 'When main has no new commits, Git moves the pointer forward - no merge commit needed.' : 'عندما لا يحتوي main على إيداعات جديدة، ينقل Git المؤشر للأمام - لا حاجة لإيداع دمج.',
       commands: [
         'git init',
         'git commit -m "Initial commit"',
@@ -6432,7 +6432,7 @@ function getVizScenarios() {
       id: 'rebase',
       icon: 'fa-solid fa-arrow-right-arrow-left',
       label: t('viz.scenario.rebase'),
-      desc: en ? 'Rebase replays your branch commits on top of the latest main — keeps history linear.' : 'يعيد Rebase تشغيل إيداعات فرعك فوق آخر main — يحافظ على تاريخ خطي.',
+      desc: en ? 'Rebase replays your branch commits on top of the latest main - keeps history linear.' : 'يعيد Rebase تشغيل إيداعات فرعك فوق آخر main - يحافظ على تاريخ خطي.',
       commands: [
         'git init',
         'git commit -m "Initial commit"',
@@ -6478,7 +6478,7 @@ function getVizScenarios() {
       id: 'conflict',
       icon: 'fa-solid fa-triangle-exclamation',
       label: t('viz.scenario.conflict'),
-      desc: en ? 'Both branches edit the same file — Git asks you to resolve the conflict manually.' : 'كلا الفرعين يعدلان نفس الملف — يطلب Git حل التعارض يدوياً.',
+      desc: en ? 'Both branches edit the same file - Git asks you to resolve the conflict manually.' : 'كلا الفرعين يعدلان نفس الملف - يطلب Git حل التعارض يدوياً.',
       commands: [
         'git init',
         'git commit -m "Initial commit"',
@@ -6523,7 +6523,7 @@ function getVizScenarios() {
       id: 'reset',
       icon: 'fa-solid fa-backward-step',
       label: t('viz.scenario.reset'),
-      desc: en ? 'Move HEAD backwards — soft keeps changes staged, hard discards everything.' : 'حرك HEAD للخلف — soft يحتفظ بالتغييرات، hard يحذف كل شيء.',
+      desc: en ? 'Move HEAD backwards - soft keeps changes staged, hard discards everything.' : 'حرك HEAD للخلف - soft يحتفظ بالتغييرات، hard يحذف كل شيء.',
       commands: [
         'git init',
         'git commit -m "Initial commit"',
@@ -6569,7 +6569,7 @@ function getVizScenarios() {
       id: 'tag',
       icon: 'fa-solid fa-tag',
       label: t('viz.scenario.tag'),
-      desc: en ? 'Tag specific commits as release versions — they never move unlike branches.' : 'وسم إيداعات معينة كإصدارات — لا تتحرك على عكس الفروع.',
+      desc: en ? 'Tag specific commits as release versions - they never move unlike branches.' : 'وسم إيداعات معينة كإصدارات - لا تتحرك على عكس الفروع.',
       commands: [
         'git init',
         'git commit -m "Initial commit"',
@@ -6592,7 +6592,7 @@ function getVizScenarios() {
       id: 'detachedHead',
       icon: 'fa-solid fa-unlink',
       label: t('viz.scenario.detachedHead'),
-      desc: en ? 'Checking out a specific commit detaches HEAD — new commits are orphaned unless you create a branch.' : 'الانتقال لإيداع معين يفصل HEAD — الإيداعات الجديدة تضيع ما لم تنشئ فرعاً.',
+      desc: en ? 'Checking out a specific commit detaches HEAD - new commits are orphaned unless you create a branch.' : 'الانتقال لإيداع معين يفصل HEAD - الإيداعات الجديدة تضيع ما لم تنشئ فرعاً.',
       commands: [
         'git init',
         'git commit -m "Initial commit"',
@@ -8122,7 +8122,7 @@ function showQuizResults() {
 
   result.innerHTML = '<div class="quiz-result-content ' + cls + '">' +
     '<div class="quiz-result-score">' + pct + '%</div>' +
-    '<div class="quiz-result-text">' + quizScore + '/' + quizTotal + ' — ' + msg + '</div>' +
+    '<div class="quiz-result-text">' + quizScore + '/' + quizTotal + ' - ' + msg + '</div>' +
     '<button class="btn btn-primary" onclick="renderQuiz(\'' + currentQuizLevel + '\')"><i class="fa-solid fa-rotate"></i> ' + (currentLang === 'ar' ? 'إعادة المحاولة' : 'Try Again') + '</button>' +
     '</div>';
   result.style.display = 'block';

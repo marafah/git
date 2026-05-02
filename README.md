@@ -31,7 +31,7 @@
 <br/><br/>
 
 > **The most comprehensive, interactive Git learning platform on the web.**
-> Practice real commands in a safe terminal, visualize branches in real-time, and master version control — all in your browser.
+> Practice real commands in a safe terminal, visualize branches in real-time, and master version control - all in your browser.
 
 <br/>
 
@@ -65,7 +65,7 @@
 
 **GitMaster Pro** is a feature-rich, browser-based Git tutorial designed for learners at every level. Whether you're writing your first `git init` or mastering interactive rebases, this platform provides hands-on, risk-free practice with instant visual feedback.
 
-Built as a single-page application with **zero backend dependencies**, it runs entirely in your browser — no installation, no sign-up, no risk to real repositories.
+Built as a single-page application with **zero backend dependencies**, it runs entirely in your browser with no installation, no sign-up, and no risk to real repositories.
 
 ### Why GitMaster Pro?
 
@@ -198,7 +198,7 @@ Built as a single-page application with **zero backend dependencies**, it runs e
 
 ## Interactive Terminal
 
-A fully simulated Git terminal running in your browser — no real repositories affected.
+A fully simulated Git terminal running in your browser. No real repositories affected.
 
 **Supported operations include:**
 ```
@@ -245,9 +245,9 @@ Watch Git operations come alive with animated, canvas-based commit graphs.
 | Hotfix Workflow | Emergency production fix |
 
 **Workflow Strategies Covered:**
-- **GitFlow** — Feature/develop/release/hotfix branching model
-- **GitHub Flow** — Simplified continuous deployment
-- **Trunk-Based Development** — Short-lived feature branches
+- **GitFlow** - Feature/develop/release/hotfix branching model
+- **GitHub Flow** - Simplified continuous deployment
+- **Trunk-Based Development** - Short-lived feature branches
 
 ---
 
@@ -346,7 +346,7 @@ Full RTL layout with Tajawal typography
 
 ### Option 1: Use Online (Recommended)
 
-Visit **[marafah.github.io/git](https://marafah.github.io/git/)** — nothing to install.
+Visit **[marafah.github.io/git](https://marafah.github.io/git/)** - nothing to install.
 
 ### Option 2: Run Locally
 
@@ -358,7 +358,7 @@ git clone https://github.com/marafah/git.git
 cd git
 
 # Open in your browser
-# Simply open index.html — no build step needed
+# Simply open index.html - no build step needed
 start index.html        # Windows
 open index.html         # macOS
 xdg-open index.html     # Linux
@@ -418,7 +418,7 @@ Unlock **12 achievements** as you learn:
 
 **Dr. Mohammad Arafah**
 
-*Assistant Professor — University of Petra, Amman, Jordan*
+*Assistant Professor - University of Petra, Amman, Jordan*
 *PhD in Cybersecurity & Artificial Intelligence*
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-4000A5?style=for-the-badge&logo=googlechrome&logoColor=white)](https://marafah.github.io/Portfolio/)
@@ -444,7 +444,7 @@ Contributions are welcome! If you'd like to improve GitMaster Pro:
 
 ## License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
