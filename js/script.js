@@ -474,6 +474,22 @@ en: {
 'viz.bp6.good': 'git diff --staged → review → git commit',
 'viz.bp6.bad': 'git add . && git commit -m "done" (without checking)',
 'viz.bp6.why': 'Prevents accidentally committing debug code, secrets, or unfinished work.',
+// Scenarios
+'viz.scenarios.title': '<i class="fa-solid fa-film"></i> Common Scenarios',
+'viz.scenarios.subtitle': 'Select a scenario to watch the commands and graph animate step by step',
+'viz.scenarios.replay': '<i class="fa-solid fa-rotate-right"></i> Replay',
+'viz.scenario.basic': 'Basic Commits',
+'viz.scenario.featureBranch': 'Feature Branch',
+'viz.scenario.fastForward': 'Fast-Forward Merge',
+'viz.scenario.rebase': 'Rebase',
+'viz.scenario.cherryPick': 'Cherry-Pick',
+'viz.scenario.conflict': 'Merge Conflict',
+'viz.scenario.revert': 'Revert Commit',
+'viz.scenario.reset': 'Reset (soft/hard)',
+'viz.scenario.stash': 'Stash & Apply',
+'viz.scenario.tag': 'Tagging Releases',
+'viz.scenario.detachedHead': 'Detached HEAD',
+'viz.scenario.hotfix': 'Hotfix Workflow',
 // Cheatsheet
 'cheatsheet.title': 'Git Cheat Sheet',
 'cheatsheet.subtitle': 'Quick reference for the most commonly used Git commands',
@@ -2262,6 +2278,22 @@ ar: {
 'viz.bp6.good': 'git diff --staged → مراجعة → git commit',
 'viz.bp6.bad': 'git add . && git commit -m "done" (بدون مراجعة)',
 'viz.bp6.why': 'يمنع إيداع كود التصحيح أو المعلومات السرية عن طريق الخطأ.',
+// Scenarios
+'viz.scenarios.title': '<i class="fa-solid fa-film"></i> السيناريوهات الشائعة',
+'viz.scenarios.subtitle': 'اختر سيناريو لمشاهدة الأوامر والرسم البياني خطوة بخطوة',
+'viz.scenarios.replay': '<i class="fa-solid fa-rotate-right"></i> إعادة',
+'viz.scenario.basic': 'إيداعات أساسية',
+'viz.scenario.featureBranch': 'فرع الميزة',
+'viz.scenario.fastForward': 'دمج Fast-Forward',
+'viz.scenario.rebase': 'إعادة تأسيس (Rebase)',
+'viz.scenario.cherryPick': 'Cherry-Pick',
+'viz.scenario.conflict': 'تعارض الدمج',
+'viz.scenario.revert': 'التراجع عن إيداع',
+'viz.scenario.reset': 'إعادة تعيين (Reset)',
+'viz.scenario.stash': 'التخزين المؤقت (Stash)',
+'viz.scenario.tag': 'وسم الإصدارات',
+'viz.scenario.detachedHead': 'رأس منفصل (Detached HEAD)',
+'viz.scenario.hotfix': 'سير عمل الإصلاح العاجل',
 // Cheatsheet
 'cheatsheet.title': 'المرجع السريع لأوامر Git',
 'cheatsheet.subtitle': 'مرجع سريع لأكثر أوامر Git استخداماً',
@@ -6087,6 +6119,8 @@ class GitGraphVisualizer {
     this.branchY = { main: 200 };
     this.nextX = 80;
     this.branchCount = 0;
+    this.zoom = 1.0;
+    this.panX = 0;
     this.resize();
     window.addEventListener('resize', () => this.resize());
   }
@@ -6126,9 +6160,6 @@ class GitGraphVisualizer {
 
     this.nodes.push(node);
     this.nextX += 130;
-    if (this.nextX > this.canvas.width - 80) {
-      this.canvas.width += 250;
-    }
     this.render();
     this.updateInfo('Commit ' + hash + ' added to ' + branch + ': "' + (message || 'New commit') + '"');
   }
@@ -6150,7 +6181,6 @@ class GitGraphVisualizer {
       this.nodes.push(branchNode);
       this.nextX += 130;
     }
-    if (this.nextX > this.canvas.width - 80) this.canvas.width += 250;
     this.render();
     this.updateInfo('Branch "' + name + '" created from main.');
   }
@@ -6169,7 +6199,6 @@ class GitGraphVisualizer {
 
     this.nodes.push(mergeNode);
     this.nextX += 130;
-    if (this.nextX > this.canvas.width - 80) this.canvas.width += 250;
     this.render();
     this.updateInfo('Merged "' + from + '" into "' + to + '".');
   }
@@ -6177,9 +6206,28 @@ class GitGraphVisualizer {
   reset() {
     this.nodes = []; this.edges = [];
     this.branchY = { main: 200 }; this.nextX = 80; this.branchCount = 0;
+    this.zoom = 1.0; this.panX = 0;
     this.canvas.width = this.canvas.parentElement ? this.canvas.parentElement.clientWidth - 40 : 800;
     this.render();
     this.updateInfo('Graph cleared.');
+  }
+
+  setZoom(level) {
+    this.zoom = Math.max(0.4, Math.min(2.0, level));
+    this.render();
+  }
+
+  zoomIn() { this.setZoom(this.zoom + 0.15); }
+  zoomOut() { this.setZoom(this.zoom - 0.15); }
+  zoomFit() {
+    if (this.nodes.length < 2) { this.setZoom(1.0); this.panX = 0; this.render(); return; }
+    var maxX = Math.max.apply(null, this.nodes.map(function(n) { return n.x; }));
+    var contentW = maxX + 80;
+    var canvasW = this.canvas.width;
+    var fitZoom = Math.min(canvasW / contentW, 1.5);
+    this.zoom = Math.max(0.4, Math.min(2.0, fitZoom));
+    this.panX = 0;
+    this.render();
   }
 
   render() {
@@ -6190,6 +6238,10 @@ class GitGraphVisualizer {
     // Background — always dark to match the dark visualizer section
     ctx.fillStyle = '#0a0514';
     ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+
+    ctx.save();
+    ctx.translate(this.panX, 0);
+    ctx.scale(this.zoom, this.zoom);
 
     // Branch lines
     Object.entries(this.branchY).forEach(([name, y]) => {
@@ -6273,15 +6325,504 @@ class GitGraphVisualizer {
         ctx.fillText('HEAD', node.x, node.y - 25);
       }
     });
+
+    ctx.restore();
   }
 
   updateInfo(text) {
     const info = document.getElementById('visualizer-info');
     if (info) info.textContent = text;
   }
+
+  runScenarioSteps(steps, onStep, onDone) {
+    this.reset();
+    var self = this;
+    var i = 0;
+    function next() {
+      if (i >= steps.length) { if (onDone) onDone(); return; }
+      var step = steps[i];
+      if (step.action === 'init') self.init();
+      else if (step.action === 'commit') self.addCommit(step.message, step.branch);
+      else if (step.action === 'branch') self.createBranch(step.name);
+      else if (step.action === 'merge') self.merge(step.from, step.to);
+      if (onStep) onStep(i, step);
+      i++;
+      setTimeout(next, 700);
+    }
+    next();
+  }
 }
 
 let gitGraph = null;
+
+// ==================== SCENARIO PRESETS ====================
+function getVizScenarios() {
+  var en = currentLang !== 'ar';
+  return [
+    {
+      id: 'basic',
+      icon: 'fa-solid fa-circle-check',
+      label: t('viz.scenario.basic'),
+      desc: en ? 'Linear commit history on a single branch — the simplest workflow.' : 'تاريخ إيداعات خطي على فرع واحد — أبسط سير عمل.',
+      commands: [
+        'git init',
+        'git add index.html',
+        'git commit -m "Initial commit"',
+        'git add style.css',
+        'git commit -m "Add styling"',
+        'git add app.js',
+        'git commit -m "Add JavaScript"',
+        'git add README.md',
+        'git commit -m "Add documentation"'
+      ],
+      steps: [
+        { action: 'init' },
+        { action: 'commit', message: 'Add styling', branch: 'main' },
+        { action: 'commit', message: 'Add JavaScript', branch: 'main' },
+        { action: 'commit', message: 'Add documentation', branch: 'main' }
+      ]
+    },
+    {
+      id: 'featureBranch',
+      icon: 'fa-solid fa-code-branch',
+      label: t('viz.scenario.featureBranch'),
+      desc: en ? 'Create a feature branch, work on it, then merge back into main.' : 'أنشئ فرع ميزة، اعمل عليه، ثم ادمجه مع main.',
+      commands: [
+        'git init',
+        'git commit -m "Initial commit"',
+        'git switch -c feature/login',
+        'git commit -m "Add login form"',
+        'git commit -m "Add validation"',
+        'git switch main',
+        'git commit -m "Update README"',
+        'git merge feature/login'
+      ],
+      steps: [
+        { action: 'init' },
+        { action: 'branch', name: 'feature' },
+        { action: 'commit', message: 'Add login form', branch: 'feature' },
+        { action: 'commit', message: 'Add validation', branch: 'feature' },
+        { action: 'commit', message: 'Update README', branch: 'main' },
+        { action: 'merge', from: 'feature', to: 'main' }
+      ]
+    },
+    {
+      id: 'fastForward',
+      icon: 'fa-solid fa-forward',
+      label: t('viz.scenario.fastForward'),
+      desc: en ? 'When main has no new commits, Git moves the pointer forward — no merge commit needed.' : 'عندما لا يحتوي main على إيداعات جديدة، ينقل Git المؤشر للأمام — لا حاجة لإيداع دمج.',
+      commands: [
+        'git init',
+        'git commit -m "Initial commit"',
+        'git switch -c feature/navbar',
+        'git commit -m "Add navbar HTML"',
+        'git commit -m "Style navbar"',
+        'git switch main',
+        'git merge feature/navbar  # fast-forward!'
+      ],
+      steps: [
+        { action: 'init' },
+        { action: 'branch', name: 'feature' },
+        { action: 'commit', message: 'Add navbar HTML', branch: 'feature' },
+        { action: 'commit', message: 'Style navbar', branch: 'feature' },
+        { action: 'merge', from: 'feature', to: 'main' }
+      ]
+    },
+    {
+      id: 'rebase',
+      icon: 'fa-solid fa-arrow-right-arrow-left',
+      label: t('viz.scenario.rebase'),
+      desc: en ? 'Rebase replays your branch commits on top of the latest main — keeps history linear.' : 'يعيد Rebase تشغيل إيداعات فرعك فوق آخر main — يحافظ على تاريخ خطي.',
+      commands: [
+        'git init',
+        'git commit -m "Initial commit"',
+        'git switch -c feature/api',
+        'git commit -m "Add API routes"',
+        'git switch main',
+        'git commit -m "Update config"',
+        'git switch feature/api',
+        'git rebase main',
+        '# Commits replayed on top of main'
+      ],
+      steps: [
+        { action: 'init' },
+        { action: 'branch', name: 'feature' },
+        { action: 'commit', message: 'Add API routes', branch: 'feature' },
+        { action: 'commit', message: 'Update config', branch: 'main' },
+        { action: 'commit', message: 'Add API routes (rebased)', branch: 'main' }
+      ]
+    },
+    {
+      id: 'cherryPick',
+      icon: 'fa-solid fa-hand-point-up',
+      label: t('viz.scenario.cherryPick'),
+      desc: en ? 'Pick specific commits from one branch and apply them to another.' : 'اختر إيداعات معينة من فرع وطبقها على فرع آخر.',
+      commands: [
+        'git init',
+        'git commit -m "Initial commit"',
+        'git switch -c feature/utils',
+        'git commit -m "Add helpers"',
+        'git commit -m "Add logger"',
+        'git switch main',
+        'git cherry-pick <hash>  # pick "Add logger"'
+      ],
+      steps: [
+        { action: 'init' },
+        { action: 'branch', name: 'feature' },
+        { action: 'commit', message: 'Add helpers', branch: 'feature' },
+        { action: 'commit', message: 'Add logger', branch: 'feature' },
+        { action: 'commit', message: 'Add logger (cherry-picked)', branch: 'main' }
+      ]
+    },
+    {
+      id: 'conflict',
+      icon: 'fa-solid fa-triangle-exclamation',
+      label: t('viz.scenario.conflict'),
+      desc: en ? 'Both branches edit the same file — Git asks you to resolve the conflict manually.' : 'كلا الفرعين يعدلان نفس الملف — يطلب Git حل التعارض يدوياً.',
+      commands: [
+        'git init',
+        'git commit -m "Initial commit"',
+        'git switch -c feature/style',
+        'git commit -m "Change header color"',
+        'git switch main',
+        'git commit -m "Update header font"',
+        'git merge feature/style',
+        '# CONFLICT! Edit file, then:',
+        'git add .',
+        'git commit -m "Resolve merge conflict"'
+      ],
+      steps: [
+        { action: 'init' },
+        { action: 'branch', name: 'feature' },
+        { action: 'commit', message: 'Change header color', branch: 'feature' },
+        { action: 'commit', message: 'Update header font', branch: 'main' },
+        { action: 'merge', from: 'feature', to: 'main' }
+      ]
+    },
+    {
+      id: 'revert',
+      icon: 'fa-solid fa-rotate-left',
+      label: t('viz.scenario.revert'),
+      desc: en ? 'Safely undo a commit by creating a new commit that reverses the changes.' : 'التراجع بأمان عن إيداع بإنشاء إيداع جديد يعكس التغييرات.',
+      commands: [
+        'git init',
+        'git commit -m "Initial commit"',
+        'git commit -m "Add feature"',
+        'git commit -m "Introduce bug"',
+        'git revert HEAD',
+        '# Creates new commit undoing the bug'
+      ],
+      steps: [
+        { action: 'init' },
+        { action: 'commit', message: 'Add feature', branch: 'main' },
+        { action: 'commit', message: 'Introduce bug', branch: 'main' },
+        { action: 'commit', message: 'Revert "Introduce bug"', branch: 'main' }
+      ]
+    },
+    {
+      id: 'reset',
+      icon: 'fa-solid fa-backward-step',
+      label: t('viz.scenario.reset'),
+      desc: en ? 'Move HEAD backwards — soft keeps changes staged, hard discards everything.' : 'حرك HEAD للخلف — soft يحتفظ بالتغييرات، hard يحذف كل شيء.',
+      commands: [
+        'git init',
+        'git commit -m "Initial commit"',
+        'git commit -m "Add feature"',
+        'git commit -m "Bad commit"',
+        'git reset --soft HEAD~1  # undo commit, keep changes',
+        '# OR',
+        'git reset --hard HEAD~1  # undo commit AND changes'
+      ],
+      steps: [
+        { action: 'init' },
+        { action: 'commit', message: 'Add feature', branch: 'main' },
+        { action: 'commit', message: 'Bad commit', branch: 'main' },
+        { action: 'commit', message: 'Fixed version', branch: 'main' }
+      ]
+    },
+    {
+      id: 'stash',
+      icon: 'fa-solid fa-box-archive',
+      label: t('viz.scenario.stash'),
+      desc: en ? 'Temporarily save uncommitted changes, switch branches, then restore them.' : 'احفظ التغييرات غير المودعة مؤقتاً، بدّل الفروع، ثم استعدها.',
+      commands: [
+        'git init',
+        'git commit -m "Initial commit"',
+        'git switch -c feature/wip',
+        '# ... editing files ...',
+        'git stash           # save changes',
+        'git switch main',
+        'git commit -m "Hotfix"',
+        'git switch feature/wip',
+        'git stash pop       # restore changes',
+        'git commit -m "Complete feature"'
+      ],
+      steps: [
+        { action: 'init' },
+        { action: 'branch', name: 'feature' },
+        { action: 'commit', message: 'Hotfix', branch: 'main' },
+        { action: 'commit', message: 'Complete feature', branch: 'feature' },
+        { action: 'merge', from: 'feature', to: 'main' }
+      ]
+    },
+    {
+      id: 'tag',
+      icon: 'fa-solid fa-tag',
+      label: t('viz.scenario.tag'),
+      desc: en ? 'Tag specific commits as release versions — they never move unlike branches.' : 'وسم إيداعات معينة كإصدارات — لا تتحرك على عكس الفروع.',
+      commands: [
+        'git init',
+        'git commit -m "Initial commit"',
+        'git commit -m "Core features"',
+        'git tag v1.0.0',
+        'git commit -m "Add extras"',
+        'git commit -m "Stabilize"',
+        'git tag v1.1.0',
+        'git push origin --tags'
+      ],
+      steps: [
+        { action: 'init' },
+        { action: 'commit', message: 'Core features', branch: 'main' },
+        { action: 'commit', message: 'v1.0.0 (tagged)', branch: 'main' },
+        { action: 'commit', message: 'Add extras', branch: 'main' },
+        { action: 'commit', message: 'v1.1.0 (tagged)', branch: 'main' }
+      ]
+    },
+    {
+      id: 'detachedHead',
+      icon: 'fa-solid fa-unlink',
+      label: t('viz.scenario.detachedHead'),
+      desc: en ? 'Checking out a specific commit detaches HEAD — new commits are orphaned unless you create a branch.' : 'الانتقال لإيداع معين يفصل HEAD — الإيداعات الجديدة تضيع ما لم تنشئ فرعاً.',
+      commands: [
+        'git init',
+        'git commit -m "Initial commit"',
+        'git commit -m "Add feature"',
+        'git commit -m "Latest"',
+        'git checkout HEAD~2    # detached HEAD!',
+        'git commit -m "Orphan commit"',
+        'git switch -c rescue   # save the work!'
+      ],
+      steps: [
+        { action: 'init' },
+        { action: 'commit', message: 'Add feature', branch: 'main' },
+        { action: 'commit', message: 'Latest', branch: 'main' },
+        { action: 'branch', name: 'detached' },
+        { action: 'commit', message: 'Orphan commit', branch: 'detached' }
+      ]
+    },
+    {
+      id: 'hotfix',
+      icon: 'fa-solid fa-fire-extinguisher',
+      label: t('viz.scenario.hotfix'),
+      desc: en ? 'Fix a critical bug in production: branch from main, fix, merge back, then continue feature work.' : 'أصلح خطأ حرجاً في الإنتاج: افرع من main، أصلح، ادمج، ثم أكمل العمل.',
+      commands: [
+        'git init',
+        'git commit -m "Initial release"',
+        'git switch -c feature/dashboard',
+        'git commit -m "Add dashboard"',
+        'git switch main',
+        'git switch -c hotfix/crash',
+        'git commit -m "Fix crash bug"',
+        'git switch main',
+        'git merge hotfix/crash',
+        'git switch feature/dashboard',
+        'git commit -m "Finish dashboard"',
+        'git switch main',
+        'git merge feature/dashboard'
+      ],
+      steps: [
+        { action: 'init' },
+        { action: 'branch', name: 'feature' },
+        { action: 'commit', message: 'Add dashboard', branch: 'feature' },
+        { action: 'branch', name: 'hotfix' },
+        { action: 'commit', message: 'Fix crash bug', branch: 'hotfix' },
+        { action: 'merge', from: 'hotfix', to: 'main' },
+        { action: 'commit', message: 'Finish dashboard', branch: 'feature' },
+        { action: 'merge', from: 'feature', to: 'main' }
+      ]
+    }
+  ];
+}
+
+function renderScenarioTabs() {
+  var container = document.getElementById('viz-scenario-tabs');
+  if (!container) return;
+  var scenarios = getVizScenarios();
+  var html = '';
+  scenarios.forEach(function(s, i) {
+    html += '<button class="viz-scenario-tab' + (i === 0 ? ' active' : '') + '" data-scenario="' + s.id + '">' +
+      '<i class="' + s.icon + '"></i> <span>' + s.label + '</span></button>';
+  });
+  container.innerHTML = html;
+  container.querySelectorAll('.viz-scenario-tab').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      container.querySelectorAll('.viz-scenario-tab').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      renderScenarioContent(btn.dataset.scenario);
+    });
+  });
+  renderScenarioContent(scenarios[0].id);
+}
+
+var scenarioAnimating = false;
+var scenarioRunId = 0;
+var scenarioGraph = null;
+
+function renderScenarioContent(id) {
+  scenarioAnimating = false;
+  scenarioRunId++;
+  var container = document.getElementById('viz-scenario-content');
+  if (!container) return;
+  var scenarios = getVizScenarios();
+  var s = scenarios.find(function(x) { return x.id === id; });
+  if (!s) return;
+
+  var html = '<div class="viz-scenario-layout">';
+
+  // Top row: description + replay button
+  html += '<div class="viz-scenario-top">';
+  html += '<div class="viz-scenario-desc"><i class="' + s.icon + '" style="color:#A78BFA;margin-right:8px;"></i>' + s.desc + '</div>';
+  html += '<button class="viz-scenario-play" data-scenario="' + s.id + '">' + t('viz.scenarios.replay') + '</button>';
+  html += '</div>';
+
+  // Bottom row: commands left, graph right
+  html += '<div class="viz-scenario-bottom">';
+
+  // Left: commands
+  html += '<div class="viz-scenario-left">';
+  html += '<div class="viz-scenario-code">';
+  html += '<div class="viz-scenario-code-header"><i class="fa-solid fa-terminal"></i> Commands</div>';
+  html += '<div class="viz-scenario-code-body">';
+  s.commands.forEach(function(cmd, i) {
+    var isComment = cmd.trim().charAt(0) === '#';
+    html += '<div class="viz-scenario-line' + (isComment ? ' viz-line-comment' : '') + '" data-line="' + i + '">';
+    if (!isComment) html += '<span class="viz-line-prompt">$</span> ';
+    html += '<span class="viz-line-text">' + escapeHtml(cmd) + '</span></div>';
+  });
+  html += '</div></div>';
+  html += '</div>';
+
+  // Right: graph canvas + info
+  html += '<div class="viz-scenario-right">';
+  html += '<div class="viz-scenario-canvas-wrap">';
+  html += '<div class="viz-scenario-zoom-controls">';
+  html += '<button class="viz-zoom-btn" id="viz-zoom-in" title="Zoom In"><i class="fa-solid fa-plus"></i></button>';
+  html += '<button class="viz-zoom-btn" id="viz-zoom-out" title="Zoom Out"><i class="fa-solid fa-minus"></i></button>';
+  html += '<button class="viz-zoom-btn" id="viz-zoom-fit" title="Fit"><i class="fa-solid fa-expand"></i></button>';
+  html += '</div>';
+  html += '<canvas id="viz-scenario-canvas" width="800" height="350"></canvas>';
+  html += '</div>';
+  html += '<div class="viz-scenario-graph-info" id="viz-scenario-info"></div>';
+  html += '</div>';
+
+  html += '</div>';
+  html += '</div>';
+  container.innerHTML = html;
+
+  container.querySelector('.viz-scenario-play').addEventListener('click', function() {
+    playScenario(s.id);
+  });
+
+  document.getElementById('viz-zoom-in').addEventListener('click', function() {
+    if (scenarioGraph) scenarioGraph.zoomIn();
+  });
+  document.getElementById('viz-zoom-out').addEventListener('click', function() {
+    if (scenarioGraph) scenarioGraph.zoomOut();
+  });
+  document.getElementById('viz-zoom-fit').addEventListener('click', function() {
+    if (scenarioGraph) scenarioGraph.zoomFit();
+  });
+
+  playScenario(s.id);
+}
+
+function playScenario(id) {
+  scenarioAnimating = false;
+  scenarioRunId++;
+  var myRunId = scenarioRunId;
+
+  var scenarios = getVizScenarios();
+  var s = scenarios.find(function(x) { return x.id === id; });
+  if (!s) return;
+
+  scenarioGraph = new GitGraphVisualizer('viz-scenario-canvas');
+  if (!scenarioGraph || !scenarioGraph.canvas) return;
+
+  scenarioAnimating = true;
+  var lines = document.querySelectorAll('.viz-scenario-line');
+  lines.forEach(function(l) { l.classList.remove('viz-line-active', 'viz-line-done'); });
+
+  var info = document.getElementById('viz-scenario-info');
+
+  scenarioGraph.reset();
+  var stepIdx = 0;
+  var cmdIdx = 0;
+
+  function highlightNextCmd() {
+    while (cmdIdx < lines.length) {
+      var line = lines[cmdIdx];
+      if (line.classList.contains('viz-line-comment')) {
+        line.classList.add('viz-line-done');
+        cmdIdx++;
+      } else {
+        break;
+      }
+    }
+    if (cmdIdx < lines.length) {
+      lines[cmdIdx].classList.add('viz-line-active');
+      var codeBody = lines[cmdIdx].closest('.viz-scenario-code-body');
+      if (codeBody) {
+        var lineTop = lines[cmdIdx].offsetTop - codeBody.offsetTop;
+        codeBody.scrollTop = lineTop - codeBody.clientHeight / 2;
+      }
+    }
+  }
+
+  function markRemainingDone() {
+    for (var k = cmdIdx; k < lines.length; k++) {
+      lines[k].classList.remove('viz-line-active');
+      lines[k].classList.add('viz-line-done');
+    }
+  }
+
+  function runNext() {
+    if (myRunId !== scenarioRunId) return;
+
+    if (stepIdx >= s.steps.length) {
+      scenarioAnimating = false;
+      markRemainingDone();
+      scenarioGraph.zoomFit();
+      if (info) info.innerHTML = '<i class="fa-solid fa-circle-check" style="color:#10b981"></i> ' +
+        (currentLang === 'ar' ? 'اكتمل السيناريو!' : 'Scenario complete!');
+      return;
+    }
+
+    highlightNextCmd();
+
+    var step = s.steps[stepIdx];
+    if (step.action === 'init') scenarioGraph.init();
+    else if (step.action === 'commit') scenarioGraph.addCommit(step.message, step.branch);
+    else if (step.action === 'branch') scenarioGraph.createBranch(step.name);
+    else if (step.action === 'merge') scenarioGraph.merge(step.from, step.to);
+
+    if (cmdIdx < lines.length) {
+      lines[cmdIdx].classList.remove('viz-line-active');
+      lines[cmdIdx].classList.add('viz-line-done');
+      cmdIdx++;
+    }
+
+    var lastNode = scenarioGraph.nodes.length > 0 ? scenarioGraph.nodes[scenarioGraph.nodes.length - 1] : null;
+    if (info && lastNode) {
+      var stepLabel = (currentLang === 'ar' ? 'خطوة' : 'Step') + ' ' + (stepIdx + 1) + '/' + s.steps.length;
+      info.innerHTML = '<span class="viz-step-counter">' + stepLabel + '</span> ' + lastNode.message;
+    }
+
+    stepIdx++;
+    setTimeout(runNext, 900);
+  }
+
+  setTimeout(runNext, 300);
+}
 
 // === Custom inline input for visualizer (replaces browser prompt) ===
 function showVizInput(label, defaultVal, callback) {
@@ -7136,6 +7677,7 @@ function initVisualizer() {
     container.appendChild(nextPanel);
   }
   renderBestPractices();
+  renderScenarioTabs();
 }
 
 // ==================== RENDERING FUNCTIONS ====================
@@ -7476,12 +8018,24 @@ function renderCheatSheet() {
     cat.commands.forEach(c => {
       html += '<div class="cheat-item">' +
         '<span class="cheat-command">' + c.cmd + '</span>' +
+        '<button class="cheat-copy-btn" data-cmd="' + escapeHtml(c.cmd) + '" title="Copy"><i class="fa-solid fa-copy"></i></button>' +
         '<span class="cheat-desc">' + t(c.descKey) + '</span>' +
         '</div>';
     });
     html += '</div>';
     card.innerHTML = html;
     grid.appendChild(card);
+  });
+}
+
+function initCheatCopyButtons() {
+  const grid = document.getElementById('cheat-grid');
+  if (!grid) return;
+  grid.addEventListener('click', function(e) {
+    const btn = e.target.closest('.cheat-copy-btn');
+    if (!btn) return;
+    const cmd = btn.getAttribute('data-cmd');
+    if (cmd) copyToClipboard(cmd, btn);
   });
 }
 
@@ -7919,6 +8473,7 @@ function setLanguage(lang) {
   }
   renderWorkflow(document.querySelector('.workflow-tab.active')?.dataset.workflow || 'gitflow');
   renderBestPractices();
+  renderScenarioTabs();
   renderChallengeBar();
   renderGuidePanel();
   animateHeroSubtitle();
@@ -7992,6 +8547,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Render everything
   renderModules();
   renderCheatSheet();
+  initCheatCopyButtons();
   renderQuiz('beginner');
   setupTerminal();
   setupQuickCommands();
