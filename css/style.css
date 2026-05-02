@@ -974,6 +974,7 @@ section {
 .terminal {
   background: #0a0514;
   border-radius: var(--radius-lg);
+  border: 1px solid rgba(139, 92, 246, 0.25);
   box-shadow: 0 0 30px rgba(64, 0, 165, 0.2), var(--shadow-xl);
   overflow: hidden;
   width: 100%;
